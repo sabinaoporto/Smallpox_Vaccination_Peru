@@ -222,9 +222,13 @@ iframe	{width: 70%;
 
 	/* El menú horizontal no funciona bien en pantallas estrechas:
 	   lo convertimos en una lista vertical */
+	nav 	{position: static;
+		}
+
 	#menu {
 		flex-direction: column;
 		align-items: center;
+		text-align: center;
 		gap: 10px;
 		padding: 15px;
 		font-size: 16px;
@@ -234,9 +238,9 @@ iframe	{width: 70%;
 	   los mostramos siempre, ya insertados debajo de su padre */
 	#menu ul {
 		display: block;
-		position: static;
+		position: static;		
 		border-left: none;
-		padding: 5px 0 0 0;
+		padding: 10px 0 0 0;
 		background-color: transparent;
 		text-align: center;
 		}
