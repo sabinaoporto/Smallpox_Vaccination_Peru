@@ -33,18 +33,45 @@
 <h1>Home</h1>
 
 <div class="text">
+
 	<article>
-		<h2>What is this? Content of the website</h2>
-		<p>In this website, you will find the transcribed version of the most relevant documents used for the study of this Expedition.</p>
-		<p>Pellentesque neque neque, pulvinar non ex a, porttitor ultricies nibh. Integer sed tellus ut neque sagittis laoreet ac nec sapien. Curabitur varius eros quis elit semper, non facilisis mauris feugiat. Mauris ac ultricies libero. Vivamus dui leo, viverra vulputate sem id, interdum accumsan purus. Aenean enim tellus, ullamcorper et vulputate vitae, luctus eu justo. Phasellus ultricies egestas ligula sodales tincidunt. Maecenas elit diam, vehicula sit amet quam in, ullamcorper rutrum tortor. Mauris vitae lobortis leo. Ut condimentum dapibus lobortis. In hendrerit eget ipsum in malesuada. Etiam imperdiet mi non ligula convallis ullamcorper. Integer scelerisque non sapien sit amet auctor. Morbi eleifend leo arcu, sed posuere sapien fringilla eget.</p>
+		<h2>Purpose of this website</h2>
+		<p> <i>La Real Expedición Filantrópica de la Vacuna</i> or The Balmis Expedition was the first "global" healthcare attempt on preventing the spreading of a desease: smallpox. It has been studied extensively by scholars in fields that go from humanities to medicine; one of the most prominent being Dr. Susana María Ramírez Martín. When listening her talk, she will often refer to the manuscripts on the Expedition guarded by the General Archive of Indies as two piles of papers with a considerable height. Of course, at the time of her first contact with these files, the Archive handed them as they are; currently, you are not longer allowed to touch them and can only access them by the digital version they provide you with in their Researcher's room. Despite that, we can not deny the documentation on this topic is publicly available on site (and not behind a pay-wall). Still, not everyone interested in the matter can easily go this Spanish archive to consult the manuscripts and read them. Thus, my main objective here is to facilitate the accesibility of this documents for other researchers interested in the subject.</p>
 	</article>
 
 	<article>
-		<h2>Why? Purpose of this website</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet ornare ex. In nec diam quis lacus convallis pharetra. Ut ultrices risus tellus, sit amet suscipit justo tristique id. Nullam aliquam velit vel pulvinar sollicitudin. Ut accumsan dictum purus et pretium. Ut in purus eu nibh consequat venenatis. Sed sed rutrum eros. Curabitur eu auctor dui. Phasellus quis nisi dignissim, molestie velit in, dapibus enim.</p>
-		<p>Suspendisse rhoncus, leo ut dapibus rutrum, eros nisl aliquam sapien, id tincidunt nunc purus eu urna. Integer ut dui sed diam porttitor posuere a quis elit. Quisque sollicitudin turpis a tincidunt venenatis. Vestibulum ipsum quam, lacinia hendrerit lobortis at, finibus sit amet nisi. Aliquam a imperdiet dolor. Etiam tellus erat, tristique a massa vel, ultricies consectetur lacus. Ut vitae lacus rhoncus, tristique ante ac, vulputate ipsum. Sed aliquam pellentesque elementum. Cras nunc metus, imperdiet a consequat vitae, consectetur et odio. Sed mollis volutpat mi, at pulvinar felis pharetra eget. Sed rutrum velit lectus, ac pretium sapien tempor vitae. Praesent mattis ornare lorem.</p>
-		<p>Duis rhoncus tortor tincidunt mattis varius. In hac habitasse platea dictumst. Pellentesque tempor felis quis ex egestas tempus. Etiam interdum metus eu felis ultrices, et pellentesque mi varius. Etiam gravida sed tortor ac aliquam. Ut convallis, lorem ut volutpat luctus, ipsum ante feugiat neque, luctus lobortis erat nisi ac mi. Suspendisse molestie, tortor id fringilla commodo, magna elit fermentum massa, nec bibendum ipsum lectus et mauris. Vestibulum efficitur augue at arcu laoreet varius.</p>
+		<h2>Content of the website</h2>
+		<p>Here you will find, among other things, transcribed versions of some of the most relevant documents used for the study of this Balmis Expedition in their passing through what is now the Peruvian territory.</p>
+		<p>
+			<ul>
+				<li>Transcriptions of several documents from the <i>Indiferente 1558A</i></li>
+				<li>Transcriptions the Record Book of the <i>Junta de Vacuna of Lima</i></li>
+				<li>Personal attempts at classifying the documentation showcase here</li>
+				<li>Maps that showcase some routes the Expedition did in America</li>
+			</ul></p>
 	</article>
+
+	<article>
+		<h2>What can I do with this data? Mini project for the ESU DH 2026</h2>
+		<p>It is possible to do experiments with the data available. For example, I would like to know whether summary and non summary versions of some of the expedition's documents are possible to measure in terms of entropy level.
+		</p>
+		<p>In just one sentence, it can be framed as: <strong>Does the entropy in a text correlates with an specific version of a text?</strong></p>
+		<h3>Hypothesis</h3>
+		<p>
+			<strong>Hypothesis 1:</strong> A high entropy level in a summary version is explained by the use of very specific words to account for something that can be written with common ones in a non summary version of the same event.
+		</p>
+		<p>
+			<strong>Hypothesis 2:</strong> A low entropy level in a summary version is explained by the use of fixed phrases that can account for different statements that use more detailed vocabulary in a non summary version of the same event.
+		</p>
+		<h3>Results</h3>
+		<img src="entropy.png">
+		<h3>Data</h3>
+		<p>The files needed for this calculation are .txt runned by a Python code. You can find them <a href="https://github.com/sabinaoporto/Smallpox_Vaccination_Peru/tree/5e8c6e094b27555db0bb20f3b73781ec166ff64b/Data%20Esu%202026">here.</a></p>
+		<h3>How it was made</h3>
+		<p>The transcriptions that are available in this website are all in .html for display purposes. In order to work with them, it is necessary to convert them into .txt files, wich are easier to handle with Python when it comes to text analysis. Once the .txt are ready, it is a must to make the data "nicer"; this means to strip out all ortographic elements (?, !, ", [, ., etc.) and extra annotation information (number of folio, metadata, etc.).</p>
+		<p>The rest is pretty straight forward. I used the <a href="https://christiancasey.github.io/measuring-manuscripts/">scripts</a> on entropy provided during the classes of the ESU DH 2026 on Measuring Manuscripts by Christian Casey. Finally, I presented my results in a simple bar grap using Python's library Matplotlib.</p>
+	</article>
+
 </div>
 
 <footer>Website developed by Sabina Oporto Pérez as part of a Thesis for the Master Rare Book and Digital Humanities</footer>
