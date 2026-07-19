@@ -115,10 +115,23 @@ article	{text-align: justify;
 		gap: 10px;
 		width: 100%;
 		margin-bottom: 10px;
+		#border: 1px solid blue;
+		padding-left: 10%;
+		padding-right: 10%;
+		}
+
+.text2 	{display: flex;
+		gap: 10px;
+		width: 100%;
+		margin-bottom: 10px;
+		#border: 1px solid green;
+		padding-left: 20%;
+		padding-right: 20%;
 		}
 
 .text article 	{flex: 1;
 				box-sizing: border-box;
+				#border: 1px solid red;
 				}
 
 .text article figure img	{width: 80%;
