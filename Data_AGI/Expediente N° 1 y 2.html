@@ -1,0 +1,785 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Expediente N° 1 y 2</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="1faf3b61-2379-8092-90de-edaa14d6ac0e" class="page sans"><header><h1 class="page-title" dir="auto">Expediente N° 1 y 2</h1><p class="page-description" dir="auto"></p><table class="properties"><tbody><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/hashtag_gray.svg" style="width:14px;height:14px;display:block"/></span>Folio</th><td>3 - 37</td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/run_gray.svg" style="width:14px;height:14px;display:block"/></span>From (Remitente)</th><td><span class="selected-value select-value-color-pink">Francisco Balmis</span></td></tr><tr class="property-row property-row-date"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/calendar_gray.svg" style="width:14px;height:14px;display:block"/></span>Date</th><td><time datetime="1813-03-12">12/03/1813</time></td></tr><tr class="property-row property-row-status"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/burst_gray.svg" style="width:14px;height:14px;display:block"/></span>Estado</th><td><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Transcrito</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/map-pin-alternate_gray.svg" style="width:14px;height:14px;display:block"/></span>Place</th><td><span class="selected-value select-value-color-orange">Cadiz</span></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>Summary</th><td>Origen de la expedición, elección de los expedicionarios y diligencias llevadas a cabo antes de la partida desde la Coruña (sueldos y derrotero a seguir)</td></tr></tbody></table></header><div class="page-body"><p id="1faf3b61-2379-8031-b6f8-da73e8c024e9" class="" dir="auto">[3]</p><div id="360f3b61-2379-80d6-ba3d-c8be0c4888e4" class="column-list" data-notion-column-list="" dir="auto"><div id="360f3b61-2379-800c-bda0-ee49bad4ac02" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1faf3b61-2379-8057-8105-f0c5701a8cd1" class="" dir="auto">Expediente N. 1°.</p></div><div id="360f3b61-2379-80fe-b228-d12fa8f322d4" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1fbf3b61-2379-80cb-bd21-dcc692d93acc" class="" dir="auto">Con fecha del 19 de junio de 1802, dio cuenta el Ayuntamiento de Santa Fe con testimonio de que viendo amenazada aquella capital de una epidemia de viruelas y teniendo presente los estragos que causó una parecida diez y ocho años antes, acudió al Virrey proponiéndoles varios medios para precaver esta desgracia, tanto más inminente cuanto que no había allí más hospital que el de San Juan de Dios, [3v] y este tan reducido que ni aún para los pobres de enfermedades ordinarias había ya cabida; y para cubrir los gastos que forzosamente se originarían en semejante caso, proponía se echase mano del caudal depositado en los hospitales vacantes, pues los fondos del Ayuntamiento eran cortísimos y apenas suficientes para las pensiones comunes y sueldos de los empleados. Añadía el Cabildo que el Virrey puso solo su atención en [4] cortar el contagio, cosa imposible de lograrse, según se le hizo ver, por hallarse aquel muy [inmediato?] a la ciudad y esta franca por todos lados, como por desgracia lo acreditó la experiencia. La entrada del invierno calmó en términos la fuerza de este mal que llegó a creerse cortado enteramente; pero hubo de retoñar con nueva fuerza pasado aquel, y el Ayuntamiento se vio precisado a repetir sus representaciones al [4v] Virrey, aunque no produjeron otro efecto que haber mandado al mayordomo de la ciudad que suspendiere todo gasto y contribución del ramo de propios. El Cabildo manifestó de nuevo cuanto creyó oportuno acerca de esta providencia, cuyo resultado fue nombrar el Virrey dos diputados, que lo fueron el alcalde ordinario de segundo voto y el alcalde mayor provincial para que formasen uno de los hospitales que aquella corporación había propuesto en [5] el Convento de las Aguas a cargo de los religiosos dominicos y situado en un barrio de la ciudad, aplicando desde luego para los primeros gastos el cortísimo fondo de quinientos a seiscientos pesos de la lotería que se había proyectado para el establecimiento de una Casa de Recogidas, tan necesaria en su clase como el hospital en la suya. Viendo después el Virrey que dicho fondo no alcanzaba aún para los primeros gastos, se vio [5v] precisado a resolver en Junta de la Real Hacienda se franquease del depósito de hospitales vacantes lo necesario para proveer los provisionales en que se asistiese y curase a los enfermos; y concluye el Ayuntamiento pidiendo tres puntos: a saber,</p><p id="1faf3b61-2379-803d-b52d-e321bf6b58cb" class="" dir="auto">1.° = Que para evitar en lo sucesivo todo tropiezo e inconveniente se señalasen los ramos o caudales de que podría echarse mano en tales casos.</p><p id="1faf3b61-2379-8019-8822-cc09ab476e14" class="" dir="auto">2.° = Que se desapruebe al Virrey el entredicho [6] que ha puesto a la ciudad en la administración de sus propios contra lo dispuesto por las leyes, y en perjuicio de los gastos públicos que se costean de sus productos, mayormente los sueldos de empleados que son créditos alimenticios, pues bien podía haber adoptado aquel jefe otros medios más prudentes en vez de una providencia que cede en deshonor de un cuerpo que representa al público.</p><p id="1faf3b61-2379-8096-aeca-d3de5b179b62" class="" dir="auto">3.° = Que se mande reponer el fondo que se ha [6v] consumido de la lotería, estando destinado con anuencia de los vecinos a un establecimiento tan útil como el de recoger mujeres perdidas, y no debiendo haberse tocado a él, tanto más cuanto que semejantes ejemplares retraerían a aquellos habitantes de concurrir a otras obras tan importantes al buen orden de la ciudad.</p><p id="1faf3b61-2379-8038-817f-e77755d59c58" class="" dir="auto">____________________________</p><p id="1faf3b61-2379-80e4-b84a-e93b70e5ac66" class="" dir="auto">Conformándose el Rey con el parecer de la secretaría, se pasó esta representación al Consejo que fue de Indias [7] en 25 de diciembre de 1802 para que consultase lo que tuviese por conveniente. </p><p id="1faf3b61-2379-80e2-bf6e-e4a63072e4be" class="" dir="auto">____________________________</p></div></div><p id="1fbf3b61-2379-80ab-b46c-ec9651a56b97" class="" dir="auto">El Consejo que fue de Indias 19 de febrero 1803.</p><div id="360f3b61-2379-8002-b35f-fba5b35d0a39" class="column-list" data-notion-column-list="" dir="auto"><div id="360f3b61-2379-808f-b757-d4be25405d05" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="360f3b61-2379-80e6-8cbe-ee8870215e6d" class="" dir="auto">
+</p></div><div id="360f3b61-2379-80af-8ef2-c381e344395e" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1faf3b61-2379-80e2-a5aa-ff84d75448a8" class="" dir="auto">En cumplimiento de esta resolución, hecho cargo de cuanto representaba el Ayuntamiento de Santa Fe y de lo que expuso el fiscal, con cuyo dictamen se conformaba manifestaba que los testimonios dados por el secretario de dicho cuerpo eran tan diminutos que no era posible formar juicio por ellos de las providencias [7v] tomadas en el particular, ni se comprendía que rentas o caudales eran los de hospitales vacantes, el motivo de hallarse sin destino que produjeren los oficios al Diocesano, Cabildo y demás cuerpos políticos, y la subscripción general para el resto del vecindario: si se propagó mucho por la ciudad la epidemia de viruelas o se contuvo su progreso con las precauciones indicadas, si se llevó a efecto las inoculaciones, y si hay proporción para reponer [8] el fondo de la lotería destinada al establecimiento de la Casa de Recogidas. Así que era de parecer el Consejo que, no debiendo desaprobarse las providencias del Virrey sin tener un conocimiento más cabal de los motivos que le asistieren para dictarlas, debía remitirse copia de la representación del Ayuntamiento y prevenir que informe sobre ello con justificación y brevedad cuanto se le ofreciese. Y acerca de lo que debía practicar [8v] en semejantes casos, se le podía mandar que, con presencia del expediente instruido con ocasión de la citada epidemia de viruelas y las resultas de ellas, oyera al fiscal de lo civil y a su asesor, y lo pasara al Real Acuerdo por voto consultivo, para que teniendo a la vista aquellas circunstancias, los fondos de la ciudad y los demás recursos que fueren adaptables, provea el Virrey lo que estime conveniente, dando cuenta con su informe. </p><p id="1faf3b61-2379-8098-b91e-c701d8b7651c" class="" dir="auto">____________________________</p><p id="1faf3b61-2379-80b1-842a-fe01540b2348" class="" dir="auto">Conformándose el Rey [9] con el parecer del Consejo tuvo a bien mandar que se dijese a aquel tribunal por separado que expusiese si creía posible el extender la vacuna a los países de ultramar y qué medios serían más acertados para el intento? Así se ejecutó en 13 de marzo de 1803.</p><p id="1faf3b61-2379-804c-9faa-c625f2c9d38b" class="" dir="auto">____________________________</p></div></div><p id="1fbf3b61-2379-8008-b954-f67855969c31" class="" dir="auto">En 22 del mismo mes</p><div id="360f3b61-2379-8098-9526-fa08b8ad553f" class="column-list" data-notion-column-list="" dir="auto"><div id="360f3b61-2379-800d-9b46-c289787c31b5" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="360f3b61-2379-80ae-a96d-e1e0d532183e" class="" dir="auto">
+</p></div><div id="360f3b61-2379-80be-8420-f7ea14ec5f1a" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1faf3b61-2379-802d-a245-d037e740ad65" class="" dir="auto">Contestó el Consejo; que habiendo manifestado Don Francisco Requena, ministro del mismo Consejo, la utilidad que produciría en ultramar la inoculación de la vacuna, se previno [9v] al Médico de Cámara Don José Flores informase sobre este importante asunto lo que tuviere por conveniente; y en su cumplimiento, después de referir con fecha de 28 de febrero último los estragos que hacen las viruelas en Américas; recomienda la inoculación de la vacuna, que si no se había puesto ya en ejecución en Guatemala era por no haberse encontrado viruelas en las vacas y haber llegado desvirtuado el fluido conducido entre dos cristales a La [10] Habana y Veracruz, de donde se había pedido con instancia. </p><p id="1faf3b61-2379-8052-9595-c98e4a2aa7ae" class="" dir="auto"><mark class="highlight-default" data-notion-highlight="default"><mark class="highlight-default_background" data-notion-highlight="default_background">Para propagar este útil descubrimiento proponía Flores se despachasen de Cádiz dos barcos ligeros que condujesen algunas vacas con viruelas verdaderas, y algunos jóvenes inoculados sucesivamente en los brazos, llevándose además el pus escogido entre dos cristales cerrados con extremo cuidado, dirigiéndose uno de los barcos a La Habana para introducir desde allí la [10v] vacuna en Puerto Rico, Trujillo, Yucatán y Veracruz, y el otro a Cartagena de donde se surtiría a Santa Fe, la Guaira, Montevideo, Portobelo, Panamá y demás provincias meridionales</mark></mark>; a todo lo cual añadía varias medidas y disposiciones para el mejor acierto de esta interesante empresa y fácil propagación de la vacuna en los países de ultramar, cual es, entre otras, la de interesar a los prelados y demás eclesiásticos a contribuir [11] a ella con sus exhortaciones y su ejemplo.</p><p id="1fbf3b61-2379-80b7-96b2-f93a1af56c0b" class="" dir="auto">El Consejo, conformándose con el dictamen del fiscal, opinaba que en uno de los buques correos que saliese para Veracruz fuese un facultativo inteligente, que, llevando consigo algunos muchachos de la Casa de los Desamparados, los vacunase sucesivamente y dejase introducido este remedio en Canarias, Puerto Rico y La Habana, dándose orden [11v] a los gobernadores y Virrey de Nueva España para que introdujesen y propagasen la vacunación en sus respectivos distritos, y a las provincias internas. </p></div></div><div id="360f3b61-2379-8046-aae3-f3e21d7b85dc" class="column-list" data-notion-column-list="" dir="auto"><div id="360f3b61-2379-800d-846c-c695ede2de73" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="2fbf3b61-2379-8041-9ed1-f095bf8f3f34" class="" dir="auto">*Don Francisco Xavier de Balmis, Físico de Cámara</p></div><div id="360f3b61-2379-8036-ad3d-fd6ef730541f" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="2fbf3b61-2379-80d0-9a2f-e4b96d7f7246" class="" dir="auto">Proponía al mismo Flores para desempeñar esta comisión y a Balmis* por la otra parte, que por haber traducido al castellano el tratado de la vacuna de Moreau de la Sarthe, y permanecido largo tiempo en Nueva España, podía ser muy a propósito para el caso: que en caso de no prestarse estos profesores [12] a este servicio voluntario, o no fuese de la aprobación del Rey conferirles el encargo, se nombrasen otros, debiendo ser la primera y más precisa condición que no recibiesen paga ni obsequio alguno de nadie por estas operaciones. Concluía el Consejo indicando que los jóvenes que fuesen a esta expedición quedasen bajo la protección del Gobierno, y que en caso de no tenerse por conveniente echar mano de los buques correos para [12v] ella, no podía ser de consideración los gastos que originarían el habilitar dos buques pequeños con este solo objeto.</p><p id="1fbf3b61-2379-80f0-83ab-cfbc8e483df4" class="" dir="auto">____________________</p></div></div><div id="360f3b61-2379-80b0-8f24-fd88f00c2963" class="column-list" data-notion-column-list="" dir="auto"><div id="360f3b61-2379-80bf-8863-e32c771c1785" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1fbf3b61-2379-8009-9a04-fa59d024f07f" class="" dir="auto">Resolución = </p></div><div id="360f3b61-2379-80d4-8292-d413a60685fc" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1fbf3b61-2379-803a-b0ca-ce5358a95f5a" class="" dir="auto">“Antes de resolver esta consulta quiere Su Majestad que el Consejo proponga los medios de costear los profesores y demás necesario para esta expedición en que interesan tanto aquellos naturales.”</p><p id="1fbf3b61-2379-80f6-bee1-e6d7294b20d4" class="" dir="auto">______________________________</p></div></div><div id="360f3b61-2379-803f-a589-efc510afb2be" class="column-list" data-notion-column-list="" dir="auto"><div id="360f3b61-2379-8041-86e9-dd4a0d53f37e" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1fbf3b61-2379-80b7-8e61-c2979cfb5512" class="" dir="auto">Pasa a Santa Fe en compañía del Virrey electo Amat el médico Don Lorenzo Verges</p></div><div id="360f3b61-2379-802e-bef5-e3ae7ffb7657" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1fbf3b61-2379-80ea-9ab1-e726ebb4feb8" class="" dir="auto">A los seis días de haberse pasado al Consejo la orden correspondiente a esta resolución, esto es, con fecha de 12 de abril de 1803, ocurrió Don Lorenzo Verges, Médico de Familia de Su Majestad, joven, robusto [13] y soltero, haciendo presente sus deseos de pasar al Virreinato de Santa Fe a adelantar sus conocimientos, tanto en química como en botánica, mayormente habiendo tan pocos facultativos en aquel país, donde por esta razón podría ser muy útil. Manifestaba haberse puesto ya de acuerdo con el nuevo Virrey Don Antonio Amat, así para que le auxiliare en esta parte como en la de la propagación de la vacuna en aquel reino, y pedía licencia [13v] para ir en compañía de aquel jefe, con solo que se le conservase su empleo y sueldo de Médico de Familia, y que se le atendiera en lo sucesivo en proporción a sus adelantamientos en la facultad que profesaba.</p><p id="1fbf3b61-2379-8028-982a-d1b4e424e3f6" class="" dir="auto">______________________</p><p id="1fbf3b61-2379-80cc-9354-f9ff64e411cd" class="" dir="auto">Tomando el Rey en consideración cuanto Verges exponía en su solicitud y las circunstancias en que la presentaba, tuvo a bien acceder en un todo a sus deseos, previniendo al Virrey diese cuenta de los progresos que observare.</p><p id="1fbf3b61-2379-806f-83c6-e968a1457156" class="" dir="auto">[14]</p><p id="1fbf3b61-2379-80e4-b4e7-ed1abf2fda7c" class="" dir="auto">_______________________</p></div></div><p id="1fbf3b61-2379-8098-bbc7-da8e80da7723" class="" dir="auto">El Consejo de Indias a 26 de mayo 1803.</p><div id="360f3b61-2379-8089-b9c1-d59b5f6d5f1a" class="column-list" data-notion-column-list="" dir="auto"><div id="360f3b61-2379-80d6-8bf4-cd3917ff052a" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="360f3b61-2379-80ad-b9fc-d3ce05a78133" class="" dir="auto">
+</p></div><div id="360f3b61-2379-8085-872f-c5983162d761" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1fbf3b61-2379-8033-912b-dd2d1893f4e5" class="" dir="auto">Cumpliendo con lo prevenido en Real Orden de 6 de abril anterior pasada que dijese los medios que juzgase adaptables para costear los profesores que hubiesen de pasar a ultramar, hace presente que hecho cargo de todo, pasó el expediente a la contaduría general y al fiscal.</p><p id="1fbf3b61-2379-8052-af9e-e0c4906a6e36" class="" dir="auto">Aquella oficina expresó que tenía noticia de que un profesor que pasaba a América había promovido [14v] este asunto por el Ministerio de Estado y que el Tribunal del Protomedicato había propuesto los medios oportunos para administrar la vacuna y propagarla. </p><p id="1fbf3b61-2379-8091-9931-c6c016cfb71e" class="" dir="auto">El fiscal, desentendiéndose del verdadero punto de la cuestión, decía: que aunque se había determinado fuere Verges a Santa Fe, no por eso podía excusarse el envío de otros dos profesores para lo restante de la tierra firme, suponiendo que el Virrey, en cuya compañía iba Verges, [15] se dirigiría precisamente a Cartagena, y que desde allí subiría directamente a la capital por el río de la Magdalena.</p><p id="1fbf3b61-2379-808a-995b-c8702f07fcef" class="" dir="auto">El Consejo, acompañando dichas respuestas, era de parecer: que siendo tan interesante la conservación de los indios y demás castas, y tan útil a la Hacienda por el aumento de tributos que se disminuían considerablemente por falta de individuos en las epidemias de viruelas, sería muy propio de la benignidad del Rey que costease la Real Hacienda los [15v] primeros gastos que se originasen, con calidad de reintegro de los propios y arbitrios de los pueblos y de los bienes de Comunidad de Indios, haciéndose las correspondientes prevenciones a los jefes de ultramar para que proporcionasen fondos con que atender a este objeto. </p></div></div><p id="1fbf3b61-2379-8067-9347-ef714b732c07" class="" dir="auto">En oficio de 26 del mismo dirigió el Marqués de Bajamar su voto por separado,</p><div id="360f3b61-2379-805d-bb09-f8a5b454c122" class="column-list" data-notion-column-list="" dir="auto"><div id="360f3b61-2379-800e-b506-fc4c0698803a" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1fbf3b61-2379-8015-8901-c381b4e84ab6" class="" dir="auto">
+</p></div><div id="360f3b61-2379-8017-96f1-cc37232d7cd6" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1fbf3b61-2379-80b5-bb4e-d9fd2e24ca18" class="" dir="auto">y acompañaba el apunto que había formado de las razones que tenía para no convenir en todo con la mayoría del Consejo.</p><p id="1fbf3b61-2379-802f-8e0d-eaf8ec232aaa" class="" dir="auto">Supone lo 1.° en dicho [16] apunte que el gobierno y jurisdicción de todas las provincias de ultramar está distribuido en cuatro virreinatos, y que los jefes de ellos tienen, no solo el conocimiento territorial de su mando, sino también las facultades necesarias para promover el bien público, y así cree que a estos es a quienes debe hacerse principalmente el encargo de promover la vacuna, enviado a cada uno de ellos un profesor experimentado en esta [16v] operación, que empezando a introducir el fluido en las capitales, la extiendan sucesivamente a las provincias, se ponga de acuerdo con el Protomedicato establecido en cada una de aquellas con el objeto de crear nuevos operarios, que auxiliados por este y por el Virrey puedan propagarla con felicidad y prontitud, dejando al cuidado y prudencia de este jefe las providencias de toda clase que considere oportunas. </p><p id="1fbf3b61-2379-805a-a4d4-c4a18d9e5748" class="" dir="auto">Así que, supuesto que<strong> </strong>[17] Verges está destinado a Santa Fe, se envíen otros tres profesores, uno a Nueva España, otro al Perú y otro a Buenos-Aires, debiendo ser transportados de cuenta de la Real Hacienda o de la renta de correos: que el que vaya a Nueva España podrá detenerse en La Habana y empezar allí sus operaciones y dejar instruidos a los médicos y facultativos: que comunicada que fuese la vacuna a las islas de Puerto Rico, podría dirigirse a Veracruz y México, [17v] y establecer el método y reglas que deberían observarse para introducir y perpetuarla en todo el reino: que el que fuese al Perú debería dirigirse a Cartagena, Portobelo y Panamá, y pasar enseguida a Lima. Últimamente que el destinado para Buenos Aires fuese en derechura a aquella capital, debiendo todos llevar el pus o vacuna bien experimentada en la península. </p><p id="1fbf3b61-2379-8068-9417-e8af5f27780c" class="" dir="auto">En cuanto a los medios de costear estos [18] profesores, opinaba Bajamar que debía ser enteramente de cuenta de la Real Hacienda como la más interesada en ello, así por el mayor ingreso de tributos con el mayor número de indios, como por el fomento que estos darán a la agricultura, minas y comercio que tanto menoscabo padecían antes por la mortandad que ocasionaban las viruelas naturales. </p><p id="1fbf3b61-2379-80e0-a809-cc042a447a93" class="" dir="auto">El ramo de Censos de Indios pudiera atender también a [18v] cubrir estos gastos, si es caso que lo hubiere establecido en Nueva España, Perú y Chile como en distrito de Charcas, aunque no creía Bajamar que debiere echarse mano del de propios y arbitrios por estar destinado a los gastos municipales y otros objetos determinados. Concluía finalmente diciendo que convendría dirigir circulares a los arzobispados y obispos exhortándoles a que cooperasen con el estado eclesiástico a verificar el [19] uso y práctica de la vacuna.</p><p id="1fbf3b61-2379-8001-8494-fa0e44682e2e" class="" dir="auto">______________________</p></div></div><p id="1fbf3b61-2379-802c-940f-e627300f80d7" class="" dir="auto">La resolución que recayó en 5 de junio a la consulta del Consejo contenía los puntos siguientes: que Su Majestad lo costeaba todo de cuenta de la Real Hacienda: que buscase el Consejo facultativos de satisfacción para los tres virreinatos, y que así estos como el destinado a Santa Fe llevasen el número suficiente de muchachos (de cuenta de la Real Hacienda), para que vacunados sucesivamente durante la navegación llegase fresco el fluido: que estos se: sacasen de los Expósitos o de los Desamparados, corriendo de cuenta de Su Majestad hasta que tuviesen oficio o modo de vivir, de lo que cuidarían los Virreyes respectivos: que se les manifestase a estos cuan importante era la empresa de la vacuna, y se excitase el celo de los obispos y religiosos de las misiones para que la auxiliasen [19v] con su persuasión y ejemplo.</p><p id="1fbf3b61-2379-805c-a6df-f36c55397ed4" class="" dir="auto">Comunicada esta resolución por disposición del señor secretario del Despacho de Gracia y Justicia a los Cirujanos de Cámara Gimbernat, Galli y Lacaba para que tratasen en Junta los medios de llevarla a efecto, y propusieren facultativos hábiles que quisiesen pasar a América, y las dotaciones, condiciones y auxilios que deberían llevar; recibió el Cirujano de Cámara Don Francisco Xavier de Balmis, que diariamente se ejercitaba en propagar la vacuna en Madrid como buen lucero, que había estado dos veces en América, y era traductor del Tratado Histórico de la Vacuna de Moreau de la Sarthe, ofreciéndose a realizar por sí mismo una expedición tan gloriosa, a cuyo fin presentó el reglamento siguiente y derrotero que debería seguir: </p><div id="364f3b61-2379-8099-914a-fdb866b24fb4" class="column-list" data-notion-column-list="" dir="auto"><div id="364f3b61-2379-80c4-a81f-e0a2225257ae" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="364f3b61-2379-80cd-9311-e889077a1a8e" class="" dir="auto">
+</p></div><div id="364f3b61-2379-80ee-9bd4-ea0bd8dc0faf" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1fbf3b61-2379-80fd-a86d-efbec080bf05" class="" dir="auto">[20]</p><p id="1fbf3b61-2379-8003-b026-fd46005a033a" class="" dir="auto">Propone que ha de componerse aquella de un Director, que sería él mismo, dos ayudantes, dos enfermeros y 15 o 20 niños de 8 a 10 años que no hubiesen pasado viruelas, a fin de que fuesen vacunados durante la navegación: que se sacasen de la Casa de Expósitos de Santiago a fin de evitar el transporte de ellos desde Madrid a la Coruña, donde se embarcarán todos en buque destinado únicamente para la expedición: [20v] que el comandante del buque les asistiría con la mesa de cuenta de Su Majestad, y los gobernadores de los parajes en que hicieren escala para vacunar los proveerían igualmente de alojamiento y de los víveres necesarios.</p></div></div><div id="364f3b61-2379-802f-b967-c606fa38f091" class="column-list" data-notion-column-list="" dir="auto"><div id="364f3b61-2379-80b1-9db6-d44960d45c76" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1fbf3b61-2379-80c8-88ac-e372cb356e08" class="" dir="auto">Obligaciones del Director de la expedición</p><p id="1fbf3b61-2379-800f-bf7c-d5fdc9c5caf6" class="" dir="auto">
+</p></div><div id="364f3b61-2379-8001-850a-ec2c63f5be82" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1fbf3b61-2379-8072-8388-f4d2a6aa0a8c" class="" dir="auto">El Director, como encargado de la expedición, quedaba responsable a las faltas que se cometiesen: cuidaría de que llegase fresco el pus, al menos a Puerto Rico, vacunando progresivamente a los niños: que en [21] llegando a ultramar vacunarían gratuitamente a cuantos se presentasen: que los jefes de aquellas provincias podrán en caso de necesidad facilitar algunos niños: que el Director cuidará también de instruir a los profesores americanos a fin de que puedan continuar las operaciones, proporcionándoles ejemplares del Tratado de Moreau de la Sarthe, que deberá llevar para este efecto. Llevará así mismo un botiquín, y un libro [21v] con el diario o resultado de las operaciones de mar y tierra con el visto bueno del jefe del distrito para presentarlo y publicarlo a su regreso a la península.</p></div></div><div id="364f3b61-2379-8001-bd32-f8a51c997312" class="column-list" data-notion-column-list="" dir="auto"><div id="364f3b61-2379-80b2-bbe5-f36941c862cc" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1fbf3b61-2379-8052-be29-f0c95a70ce23" class="" dir="auto">Obligaciones de los ayudantes</p><p id="364f3b61-2379-805a-b614-fc85fe8bf92f" class="" dir="auto">
+</p></div><div id="364f3b61-2379-80bd-a7ec-f65491eaa060" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1fbf3b61-2379-80f1-89f6-c2208cd3db2a" class="" dir="auto">Los ayudantes nombrados para esta expedición deberán ser sujetos de buena educación y de acreditado celo en la práctica de la vacuna, á fin de que instruyéndose competentemente al lado del Director pudiesen continuar las operaciones donde fuese necesario y observar [22] con perfecto conocimiento las anomalías que encontraren en el discurso de ellas. Cuidarán así mismo del botiquín y demás utensilios e instrumentos que se lleven, estando obligados a ejercer todo lo que ocurra perteneciente a cirugía.</p></div></div><div id="364f3b61-2379-80a8-88e4-ce33a1cc0dd3" class="column-list" data-notion-column-list="" dir="auto"><div id="364f3b61-2379-80de-8fad-e5a1bb34a13d" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1fbf3b61-2379-80e4-b7df-c05e80639ee5" class="" dir="auto">Obligaciones de los enfermeros</p><p id="364f3b61-2379-8036-b430-d35321bdff6b" class="" dir="auto">
+</p></div><div id="364f3b61-2379-80a6-b8d7-fb28d30b6a03" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1fbf3b61-2379-8006-b716-e66a67fa55ac" class="" dir="auto">Los enfermeros han de ser personas de juicio y prudencia, que cuiden del aseo y asistencia de los niños, acompañándolos cuando salten en tierra, y que deberán entenderse en cuanto ocurra con [22v] el Director o con sus ayudantes en falta de este.</p><p id="1fbf3b61-2379-802f-9b01-ff89980344a5" class="" dir="auto">Considerando Balmis que cuanto más larga sea la navegación tanto más se aumentan las dificultades para que no degenere el fluido, y que por esta razón las expediciones que fuesen directamente a Lima y Buenos Aires correrían grande riesgo de malograrse, propone el derrotero siguiente como el más corto y adaptable en este caso. </p></div></div><div id="364f3b61-2379-8070-ac0e-c4c0cddd0b4a" class="column-list" data-notion-column-list="" dir="auto"><div id="364f3b61-2379-8091-9460-f4740c2f20b5" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1fbf3b61-2379-8079-b0a0-f352b70acaf6" class="" dir="auto">[23] <mark class="highlight-default_background" data-notion-highlight="default_background">Derrotero de Balmis</mark></p><p id="364f3b61-2379-806c-865a-c3ebab96b679" class="" dir="auto">
+</p></div><div id="364f3b61-2379-80cd-89b9-d6ccf3a321a9" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1fbf3b61-2379-8054-a608-fbc79a508733" class="" dir="auto"><mark class="highlight-default_background" data-notion-highlight="default_background">Que la expedición sea una sola para los cuatro virreinatos e Islas Filipinas: que esta saldrá en buque destinado a este fin de la Coruña para Tenerife, llevando un niño vacunado para que se propague a las demás Islas Canarias.</mark></p><p id="1fbf3b61-2379-80c5-8253-d99e020e9aa3" class="" dir="auto"><mark class="highlight-default_background" data-notion-highlight="default_background">De Tenerife a Puerto Rico en 20 días poco más o menos.</mark></p><p id="1fbf3b61-2379-808b-bc0c-d3a08d7c16a4" class="" dir="auto"><mark class="highlight-default_background" data-notion-highlight="default_background">De Puerto Rico a la Guaira y Caracas en 8 días.</mark></p><p id="1fbf3b61-2379-80b9-907f-d11c1e22e74f" class="" dir="auto"><mark class="highlight-default_background" data-notion-highlight="default_background">De Caracas a La Habana en 8 días.</mark></p><p id="1fbf3b61-2379-8097-adac-e6c0bfb9296c" class="" dir="auto"><mark class="highlight-default_background" data-notion-highlight="default_background">De La Habana a Yucatán [23v] y Campeche en cuatro días.</mark></p><p id="1fbf3b61-2379-8029-a65f-f77d207db73f" class="" dir="auto"><mark class="highlight-default_background" data-notion-highlight="default_background">De Campeche a Veracruz en otros cuatro. </mark></p><p id="1fbf3b61-2379-8066-9235-fc253eee87bd" class="" dir="auto"><mark class="highlight-default_background" data-notion-highlight="default_background">Dejando establecida la vacuna en Veracruz, y al paso en Xalapa y la Puebla, en México y otros lugares, e instruidos a los profesores del país para que puedan continuar las operaciones, distribuirá el Director de acuerdo con el Virrey los empleados para rumbos de Nueva España que más convenga, y concluido este trabajo se reunirán en México [24] para la expedición del Perú, que se embarcará en Acapulco para Lima, llevando 12 o 16 niños del Hospicio de México, que son los necesarios para 25 o 30 días que suele durar esta navegación.</mark></p><p id="1fbf3b61-2379-80c4-9336-c508e47fb2ff" class="" dir="auto"><mark class="highlight-default_background" data-notion-highlight="default_background">Introducida en Lima la vacuna, dispondrá el Director de acuerdo con el Virrey formar tres divisiones de los empleados, dirigiendo la una a Buenos Aires por Oruro y Tucumán, otro, directamente desde Lima al reino de Chile, y la tercera a Guayaquil, Quito, Popayán [24v] y Santa Fe. </mark></p><p id="1fbf3b61-2379-804c-9395-d1418a9bf7b7" class="" dir="auto"><mark class="highlight-default_background" data-notion-highlight="default_background">Por lo que hace a la expedición de Filipinas, podría verificarse desde Acapulco a las islas Marianas en 30 o 40 días y de estas a Manila en 8 o 10.</mark></p><p id="1fbf3b61-2379-80ee-b6bb-e59fef61d13d" class="" dir="auto">__________________________</p></div></div><p id="1fbf3b61-2379-8040-874a-e354f7ce9939" class="" dir="auto">Habiéndose pasado este proyecto de Balmis a informe de los tres Cirujanos de Cámara, para que al tiempo de evacuar  la propuesta que les estaba encargada, dijesen su parecer, así sobre el nombramiento de aquel como Director que solicitaba ser de la empresa, como sobre lo demás que propone, teniendo presente que acaso Verges no habría introducido la vacuna en Santa Fe, pues no habiendo llevado niños consigo era muy posible [25] se hubiese malogrado el fluido que se le entregó entre cristales, con fecha de 23 de aquel mismo mes.</p><div id="364f3b61-2379-80d9-bdfa-e5f7cc14d80e" class="column-list" data-notion-column-list="" dir="auto"><div id="364f3b61-2379-8099-ab8e-c7ec5562013b" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="364f3b61-2379-80a4-a007-e3deeb0048f2" class="" dir="auto">
+</p></div><div id="364f3b61-2379-80af-b42d-fec0426c7987" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1fbf3b61-2379-80e5-b9ae-e5984b3022d2" class="" dir="auto">Exponen que el derrotero que propone Balmis es casi el mismo que ellos habían imaginado, aunque creían conveniente hacer a su plan tres o cuatro adiciones.</p><p id="1fbf3b61-2379-80c3-8d5e-e5bc2f1a955a" class="" dir="auto">1.<span data-notion-inline-equation="^{a}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span></span></span></span></span></span> Que a su salida de cada puerto saque la expedición más de un niño vacunado y con señales positivas de estarlo realmente, por la contingencia que puede haber de que se [25v] malogre el pus de uno. </p><p id="1fbf3b61-2379-80e9-82a6-f9bd56fabed8" class="" dir="auto">2.<span data-notion-inline-equation="^{a}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span></span></span></span></span></span> Que se coloquen en vidrios la materia que se extraiga de los vacunados durante la navegación para poder recurrir a ella si por algún contingente fallase la inoculación de brazo a brazo.</p><p id="1fbf3b61-2379-80c9-b621-f975a42bcbb3" class="" dir="auto">3.<span data-notion-inline-equation="^{a}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span></span></span></span></span></span> Que al paso que consideran acreedor a Balmis al empleo de Director, conviene que lleve tres ayudantes más, ya porque pueden enfermar o morir algunos, ya por la proposición que él mismo hace de que se [26] distribuyan tres comisiones desde Lima, o para repartirlos a diferentes pueblos a un mismo tiempo según lo exijan las circunstancias.</p><p id="1fbf3b61-2379-8012-955b-f77db257196b" class="" dir="auto">4.<span data-notion-inline-equation="^{a}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span></span></span></span></span></span> Que además de los ejemplares de la traducción hechas por Balmis, convendrá que lleve considerable número de vidrios para repartirlos entre los profesores del país por la que pueda convenir. </p><p id="1fbf3b61-2379-80dd-90cf-d6e7071c5dc4" class="" dir="auto">Proponen para ayudantes a los licenciados Don José Salvany, que podrá suplir al Director en falta o ausencia: a Don Ramón [26v] Fernandez Ochoa y Don Manuel Julián Grajales individuos del Colegio de San Carlos, sujetos de aptitud para este encargo.</p><p id="1fbf3b61-2379-808a-91ee-c40ffcaa1957" class="" dir="auto">Propone la dotación de 10 pesos fuertes a cado uno de los ayudantes, que deberán disfrutarlos desde su salida de Madrid hasta que regresen de su comisión, y la mitad después hasta que se les coloque en destino competente, dándoles de contado cien doblones para que se habiliten, a condición [27] de ser mantenidos de todo durante la navegación y pagárseles los transportes, así en España, como en América.</p><p id="1fbf3b61-2379-803e-8344-c36fe061052a" class="" dir="auto">Nada dice la Junta en cuanto al sueldo de Balmis, y concluye diciendo que cree debe ser de su cargo la elección o propuesta de enfermeros.</p><p id="1fbf3b61-2379-80ef-9687-d7d39e2a8600" class="" dir="auto">_____________________</p><p id="1fbf3b61-2379-803c-ac13-d9d3afddd455" class="" dir="auto">La secretaría expuso por nota que podría señalarse a Balmis la dotación de 20 pesos en los mismos términos que propone la Junta la correspondiente a los ayudantes, señalándole [27v] de pronto 200 doblones para su habilitación: que se encargase a Balmis a copiar 900 ejemplares de su obra y de 400 a 900 vidrios, y que proponga para enfermeros sujetos capaces de suplir en su caso la falta de ayudantes, y qué dotaciones han de gozar: que convendría que al arribo de la expedición a Caracas o a La Habana enviase Balmis un enfermero u otro comisionado que llevando uno o más niños vacunados arribase [28] a Cartagena, y renovando allí de vacuna pasase a Santa Fe por el río de la Magdalena, resultándole a Balmis la ventaja de quedar expedito para el desempeño de su comisión sin tener que atender a este virreinato retrocediendo más de mil leguas de muy mal camino por tierra desde Lima a Santa Fe, como él propone.</p><p id="1fbf3b61-2379-803d-90be-d5fce16890ba" class="" dir="auto">Consideraba también la secretaría que si el derrotero que propone Balmis desde la Coruña a Veracruz [28v] era exacto, no así el que señala desde Acapulco a Lima y de esta capital a Chile y Buenos Aires, pues hay por lo menos 50 días de navegación desde Acapulco a Lima, no se conoce camino alguno por tierra desde esta capital a Chile, y desde la misma a Buenos Aires hay mil leguas de malos y penosos tránsitos para niños: así que juzgaba debía dejarse este punto al arbitrio y prudencia de ambos Virreyes.</p><p id="1fbf3b61-2379-800b-a3c9-eb6113ff06e0" class="" dir="auto">[29] Su Majestad se conformó con el dictamen de la Junta, señalando dos mil pesos a Balmis: que este propusiese la dotación de los enfermeros, que debería elegir él mismo: que en cuanto a la ruta de su viaje se gobernase por lo que dijesen los Virreyes de México y Lima, conformándose con lo expuesto en la nota anterior por lo que hace a Santa Fe.</p><p id="1fbf3b61-2379-80e2-8ea6-d74e4c45a045" class="" dir="auto">_____________________</p></div></div><p id="1fbf3b61-2379-8062-8d75-c754b4f1260f" class="" dir="auto">Se comunicaron las órdenes respectivas al Ministerio de Marina para el apronto [29v] de los buques, y a Balmis las de su nombramiento y el de los ayudantes encargándole propusiese enfermeros y sus dotaciones.</p><div id="364f3b61-2379-8057-802d-ebca3d9997b9" class="column-list" data-notion-column-list="" dir="auto"><div id="364f3b61-2379-80f7-9993-f7e3685218a1" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="364f3b61-2379-808a-ad4b-c690e162113d" class="" dir="auto">
+</p></div><div id="364f3b61-2379-8046-8dde-ce7acd178d12" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1fbf3b61-2379-805a-adb4-f940bfa2a492" class="" dir="auto">Contesta dando gracias, y protestando que no tiene miras de interés, reflexiona que la Junta de Cirujanos, falta de noticias de los crecidos gastos que se ofrecen en América, había propuesto unos sueldos muy cortos, insuficientes aún para los establecidos en aquel país.</p></div></div><div id="364f3b61-2379-8007-95fc-d4dd1c4f49f3" class="column-list" data-notion-column-list="" dir="auto"><div id="364f3b61-2379-804f-939a-dad8abc6fe49" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="2fbf3b61-2379-80ba-b25d-f929ad18b5bb" class="" dir="auto"><span style="border-bottom:0.05em solid">*Resolución.</span></p><p id="2fbf3b61-2379-80cd-9882-e397ae3b8a10" class="" dir="auto">“Negado.”</p></div><div id="364f3b61-2379-80ed-9e7e-ed773880072f" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="2fbf3b61-2379-80ad-9d6d-c0b6664027a1" class="" dir="auto">Pide *que se les doble el sueldo, quedando lo demás en su fuerza y origen.</p></div></div><div id="364f3b61-2379-80c2-aaf5-f7e4e5151169" class="column-list" data-notion-column-list="" dir="auto"><div id="364f3b61-2379-8050-9053-e6d8a2cb3e5b" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1fbf3b61-2379-80b6-b455-c16e44e28a04" class="" dir="auto">*<span style="border-bottom:0.05em solid">Resolución</span></p><p id="1fbf3b61-2379-8080-909b-eb680289a3db" class="" dir="auto">“Con 400 pesos.”</p></div><div id="364f3b61-2379-803d-b399-fbae4a26e16e" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1fbf3b61-2379-80af-ba4f-ee389ebb16ec" class="" dir="auto">[30] Usando de las facultades que se le concedieron propone para enfermeros a Don Basilio Bolaños, Don Angel Crespo y Don Pedro Ortega, de quienes hace elogio, con la dotación* 800 pesos fuertes.</p><p id="1fbf3b61-2379-80e8-9cfc-e36446695b92" class="" dir="auto">Propone que la manutención de los niños por tierra quede a cargo de la Real Hacienda, aunque le parece mejor que los Virreyes les asignasen un tanto, siendo de cuenta de los enfermeros el procurarles y disponerles la comida, de que deberán cuidar el Director [30v] y los ayudantes, y que aquellos vuelvan a la península por la primer ocasión de buque de la Real Armada, asignando cuatro o cinco reales a caso uno, para evitar mayores gastos y una mala educación.</p><p id="1fbf3b61-2379-808e-88fc-f01d56debd9a" class="" dir="auto">Considera indispensable nombrar un ayudante y dos practicantes más, no siendo suficientes los nombrados, proponiendo para la clase de aquel a Don Antonino Gutierrez y Robredo Médico de Número que [31] fue del ejército de Extremadura, sujeto de sobresalientes luces y en quien concurre la ventaja de haberse ejercitado en las operaciones de la vacuna al lado del mismo Balmis: </p></div></div><div id="364f3b61-2379-8033-9e6f-df2928f4d849" class="column-list" data-notion-column-list="" dir="auto"><div id="364f3b61-2379-8006-b878-d50336f821f3" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="2fbf3b61-2379-80de-8cd1-f756de919f3e" class="" dir="auto">*<span style="border-bottom:0.05em solid">Resolución</span></p><p id="2fbf3b61-2379-801b-bd7a-cfdbc052c2ae" class="" dir="auto">“A los practicantes 500 pesos.”</p></div><div id="364f3b61-2379-80ae-b9c1-e93a73d466a4" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="2fbf3b61-2379-8025-a41a-c912a056117d" class="" dir="auto">para practicantes a Don Francisco Pastor y Balmis, en quien concurre igualmente esta última circunstancia, y al cirujano Don Rafael Lozano Pérez, ambos con el suelo de* mil pesos.</p><p id="2fbf3b61-2379-80c6-a5d8-cd264ebc152e" class="" dir="auto"><mark class="highlight-default_background" data-notion-highlight="default_background">Presenta una adición al derrotero, que  [31v] ha alterado en parte con el objeto de llegar cuanto antes a Santa Fe. Redúcese este a no pasar al Perú por el Mar del Sur, sino retroceder desde México a Veracruz y La Habana, y de aquí a Caracas, Cartagena y Santa Fe, donde dejarán a Verges el pus fresco, y la expedición continuará a Popayán y Quito por tierra, Guayaquil y Lima. Desde esta ciudad pasando por muchas otras hasta Córdoba del Tucumán, [32] donde se distribuirán algunos individuos de la expedición para Chile y otros para Buenos Aires. Que en México se quedará un ayudante con un practicante y un enfermero, que salgan para Filipinas en la Nao de Acapulco por marzo de 1804 con niños de la casa de expósitos de aquella ciudad. Ofrece sin embargo conformarse con lo que dispongan los Virreyes.</mark></p></div></div><div id="364f3b61-2379-8080-9507-ccb0a2bdf1d9" class="column-list" data-notion-column-list="" dir="auto"><div id="364f3b61-2379-807a-b3e9-c47897e0ef37" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="2fbf3b61-2379-80df-806c-e204fa97698f" class="" dir="auto">*<span style="border-bottom:0.05em solid">Resolución</span></p><p id="2fbf3b61-2379-805a-9547-e8872b616da7" class="" dir="auto">“Aprobado.”</p></div><div id="364f3b61-2379-80b0-9c5c-cfc3a0c25015" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="2fbf3b61-2379-803b-bdf7-ffbb79204af3" class="" dir="auto">Acompaña además dos listas, una del [32v] botiquín y medicamentos de que ha de componerse para que se mande aprontar en la Botica Real, y otra de los utensilios necesarios y habilitaciones que han de facilitarse antes de salir de Madrid, que se reducen a porción de lienzo para las vacunaciones, dos mil pares de vidrios, seis libros en blanco para las observaciones, 500 ejemplares de su traducción, una máquina neumática, cuatro [33] barómetros, igual número de termómetros, cuyos gastos ascenderían a 80 o 90 doblones reales de vellón.</p><p id="1fbf3b61-2379-80aa-af01-c45f581fb95b" class="" dir="auto">Después de haber averiguado que no será fácil encontrar en el puerto suficiente número de niños que no hayan pasado viruelas, propone, como medio más acertado, que se pase orden a los administradores de las Casas de las Inclusas y de los Desamparados de Madrid para que le permitan escoger los que le parezcan más [33v] a propósito, y que se vista a los que elija.</p></div></div><div id="364f3b61-2379-802a-b70d-cc3faadeef1c" class="column-list" data-notion-column-list="" dir="auto"><div id="364f3b61-2379-801d-8477-e7058b11929b" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1fbf3b61-2379-80f0-9420-f51fa5e76c25" class="" dir="auto">*<span style="border-bottom:0.05em solid">Resolución</span></p><p id="2fbf3b61-2379-80cc-b5bd-cb9469f70240" class="" dir="auto">“Concedido.”</p></div><div id="364f3b61-2379-80d5-8216-eb151dd70e15" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1fbf3b61-2379-8091-a672-f39b69e880b7" class="" dir="auto">Que para la mayor economía y decencia de los individuos de la expedición se permita a los ayudantes usar el mismo uniforme* que los de los hospitales de ejército, y para los practicantes y enfermeros el de los porteros del Jardín Botánico.</p></div></div><div id="364f3b61-2379-80fc-8f8e-c521a68aa585" class="column-list" data-notion-column-list="" dir="auto"><div id="364f3b61-2379-80c6-9635-dccf9506b1c9" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1fbf3b61-2379-80bc-b5a5-dd53d0e35bf8" class="" dir="auto">*<span style="border-bottom:0.05em solid">Resolución</span></p><p id="1fbf3b61-2379-808e-978f-e454c65bcde4" class="" dir="auto">“Que las pague y las cargue en cuenta”</p><p id="364f3b61-2379-804e-804e-da49d2194994" class="" dir="auto">
+</p></div><div id="364f3b61-2379-80e9-9932-ed025b8ac7f1" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1fbf3b61-2379-80aa-ad49-ea79542015b0" class="" dir="auto">Pide que se le entregue franca la correspondencia*, pues no le bastaría el sueldo para costear [34] las que ha de mantener con los Ayuntamientos y facultativos de los pueblos.</p><p id="1fbf3b61-2379-8096-8653-dfb93d2fb160" class="" dir="auto">____________________________ </p></div></div><p id="1fbf3b61-2379-804d-aa75-eb08939cdb4f" class="" dir="auto">En 24 de agosto de 1803</p><div id="364f3b61-2379-80fe-b4a0-e8e3c35f7d78" class="column-list" data-notion-column-list="" dir="auto"><div id="364f3b61-2379-80a2-86ec-def4c51955e2" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1fbf3b61-2379-8033-b0ed-d1e8669b6ef3" class="" dir="auto">Expediente N. 2.</p></div><div id="364f3b61-2379-8028-a1bc-f9abdb9d1ddf" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1fbf3b61-2379-800b-9dda-eef4cdedb686" class="" dir="auto">Manifestó Balmis hallarse habilitada la expedición y pronta para ponerse en camino para la Coruña, con cuyo motivo recomienda la solicitud de los individuos de la expedición de que se les permitiese dejar y se mandase abonar a sus mujeres y familias parte de los sueldos que se les habían señalado. Acompaña con este objeto [34v] un plan comprehensivo de los sueldos de cada uno; la parte que quieren dejar, y los lugares y sujetos que los han de percibir, añaden que las tesorerías de la península no exijan a los tales sujetos fe de vida en razón de la tardanza que experimentarían en cobrarlos los individuos de la expedición hallándose en continuo movimiento e incesantes viajes.</p><p id="1fbf3b61-2379-80d4-933b-d5e1f723f793" class="" dir="auto">Pedía en segundo lugar que necesitando todo [35] su sueldo en ultramar, se le mandase continuar pagando por la Tesorería Mayor, como hasta aquí, el que goza como consultor de los Reales Ejércitos, dispensándole el presentar su fe de vida por las mismas razones expuestas. </p><p id="1fbf3b61-2379-807b-820f-ea3e4a4415dd" class="" dir="auto">En lugar de Don Angel Crespo, que se ha imposibilitado, propone para enfermero a Don Antonio Pastor, persona muy a propósito aun para practicante. </p><p id="1fbf3b61-2379-80be-9e6c-cd30a19fcc3e" class="" dir="auto">Finalmente en atención a ser tan reducidas las posadas [35v] para que puedan estar en ellas con comodidad los individuos de la expedición, así en el viaje de Madrid a la Coruña como durante su mansión en aquel puerto, se les facilite alojamiento regular destinando para ellos en la Coruña el Convento de Agustinos que antes fue de los jesuitas.</p></div></div><p id="1fbf3b61-2379-808a-92f3-f9e7f6842be1" class="" dir="auto"><span style="border-bottom:0.05em solid">Resolución</span> = “Aprobado, y en cuanto a los pasaportes sea para solo el alojamiento, y en la Coruña orden al General para que vea el modo mejor de alojarlos.”</p><div id="364f3b61-2379-80ed-a737-c47b1831e6a1" class="column-list" data-notion-column-list="" dir="auto"><div id="364f3b61-2379-8027-9fad-c8ad6206290e" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1fbf3b61-2379-802d-9124-f76e169f3f4a" class="" dir="auto">
+</p></div><div id="364f3b61-2379-80d5-b3bc-de91ea22a055" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="364f3b61-2379-80ae-81dd-ceda2224851a" class="" dir="auto">__________________</p></div></div><p id="1fbf3b61-2379-80d4-a0fe-c863f9787d28" class="" dir="auto">[36]</p><p id="1fbf3b61-2379-8065-a984-e9249771896d" class="" dir="auto">En 30 de noviembre de 1803, y después de haber llegado ya la expedición a la Coruña, al Intendente de ejército.</p><div id="1fbf3b61-2379-809e-b9da-e6763ca88ff9" class="column-list" data-notion-column-list="" dir="auto"><div id="1fbf3b61-2379-805e-960e-f71c14d64031" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1fbf3b61-2379-8046-bdf7-dcb1e2b1886d" class="" dir="auto">
+</p></div><div id="1fbf3b61-2379-8009-b362-f419a81acd15" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1fbf3b61-2379-80de-acd2-c12245e2e58b" class="" dir="auto">Comunicada la resolución anterior al gobernador militar y político de la Coruña, participó que habiendo franqueado y propuesto al Director y demás individuos de la expedición varios edificios para su alojamiento, escogieron el Hospital Nuevo de Caridad, donde empezarían luego á vacunar. Balmis pasó [36v] oficio al gobernador en 22 de octubre solicitando se les abonasen los alquileres de las habitaciones que ocupaban. El gobernador pasó esta solicitud al Intendente estimándola justa, y en 29 de noviembre estando ya para embarcarse la expedición remitió Balmis al Intendente una relación del importe de dichos alquileres, que asciende a 2.769 reales, pidiendo que se abonasen por la Real Hacienda. El Intendente [37] participa haberlo hecho así, considerando que no había tiempo para consultar y esperar la resolución.</p><p id="3a3f3b61-2379-8017-a965-f363f9a47cff" class="" dir="auto">
+</p></div></div><p id="1fbf3b61-2379-80da-8455-e25a68e63a29" class="" dir="auto">La Secretaría manifestó por nota que no comprendía qué alquileres podían ser estos habiéndose alojado la expedición en un edificio público, fuera de que no estaba obligada la Real Hacienda al abono de su importe, pues no se les había ofrecido alojamiento en la península sino en América.</p><div id="364f3b61-2379-802a-96d8-d90e89f1e3a2" class="column-list" data-notion-column-list="" dir="auto"><div id="364f3b61-2379-809b-b78e-fede261d7ef5" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1fbf3b61-2379-80d7-873e-ed0976cd6803" class="" dir="auto">
+</p></div><div id="364f3b61-2379-80bb-acf6-f0351dd12bf0" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="364f3b61-2379-80fa-9721-f72b29a0bd7f" class="" dir="auto">___________________________</p></div></div><p id="1fbf3b61-2379-80c3-9494-ffdbc6becf13" class="" dir="auto">Habiéndose pedido informe al Intendente a fin de aclarar estas dudas,</p><div id="1fbf3b61-2379-8026-81c6-c5f9b02c60b5" class="column-list" data-notion-column-list="" dir="auto"><div id="1fbf3b61-2379-8046-8278-ff3d017bef3a" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1fbf3b61-2379-80ba-88d6-e404dcfe1e81" class="" dir="auto">
+</p></div><div id="1fbf3b61-2379-80e7-8519-e60ea08f82c9" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1fbf3b61-2379-806f-af54-f62fe99d680d" class="" dir="auto">Manifestó en 18 de enero de 1804 de acuerdo con la Contaduría de Ejército, que en el Hospital de Caridad solo estuvieron alojados los niños; pero que los individuos de la expedición lo estuvieron en casas particulares donde devengaron alquileres.</p><p id="1fbf3b61-2379-8024-8c13-d75eac91255a" class="" dir="auto">___________________</p><p id="1fbf3b61-2379-808f-9adb-db6421433d4b" class="" dir="auto">Por Real Orden de 7 de febrero de 1804 se le mandó que abonase el importe de dichos alquileres, aunque debían haberlos pagado los individuos de la expedición.</p><p id="1fbf3b61-2379-809f-a52f-ccc0ca673d4a" class="" dir="auto">____________________ </p><p id="2f4f3b61-2379-80b8-b26b-ced7e8c5ab05" class="" dir="auto">
+</p></div></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

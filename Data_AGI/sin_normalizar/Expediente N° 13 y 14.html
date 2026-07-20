@@ -1,0 +1,894 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Expediente N° 13 y 14</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="200f3b61-2379-8035-8db4-d0c774af2aec" class="page sans"><header><h1 class="page-title" dir="auto">Expediente N° 13 y 14</h1><p class="page-description" dir="auto"></p><table class="properties"><tbody><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/hashtag_gray.svg" style="width:14px;height:14px;display:block"/></span>Folio</th><td>83v - 109</td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/run_gray.svg" style="width:14px;height:14px;display:block"/></span>From (Remitente)</th><td><span class="selected-value select-value-color-pink">Francisco Balmis</span></td></tr><tr class="property-row property-row-date"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/calendar_gray.svg" style="width:14px;height:14px;display:block"/></span>Date</th><td><time datetime="1813-03-12">12/03/1813</time></td></tr><tr class="property-row property-row-status"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/burst_gray.svg" style="width:14px;height:14px;display:block"/></span>Estado</th><td><span class="status-value select-value-color-blue"><div class="status-dot status-dot-color-blue"></div>Sin normalizar</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/map-pin-alternate_gray.svg" style="width:14px;height:14px;display:block"/></span>Place</th><td><span class="selected-value select-value-color-orange">Cadiz</span></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>Summary</th><td>Expediente 13: Paso de la expedición por Caracas y sus provincias: Puerto Caballo, Guayra, Caracas, Maracaibo, Isla Margarita, provincias de Cumaná y Guayana<br/>Formación de Juntas de vacunación en Caracas<br/>Instrucciones para Salvany en su viaje a la América Meridional<br/>Observaciones sobre el efecto de la inoculación pus de las vacas en hombres<br/>Expediente 14: Circular del 20 de Mayo de 1804 (salas de vacunación)</td></tr></tbody></table></header><div class="page-body"><p id="22bf3b61-2379-80e3-bf09-ebc3aeaa99da" class="" dir="auto">[83v]</p><p id="200f3b61-2379-80a9-b701-ed73e4b87865" class="" dir="auto">Carácas y sus provincias</p><p id="200f3b61-2379-800c-8ab7-fd56c38485b9" class="" dir="auto">Expediente N. 13.</p><p id="200f3b61-2379-80e6-898b-e6e69405aacc" class="" dir="auto">_________________</p><p id="200f3b61-2379-8083-a466-fdebabfccb73" class="" dir="auto">En 20 de Marzo de 1804</p><div id="22bf3b61-2379-8051-ba55-f5600f9756cb" class="column-list" data-notion-column-list="" dir="auto"><div id="22bf3b61-2379-800e-9e81-e7dfc94136ac" style="width:56.25%" class="column" data-notion-column-ratio="0.5625" dir="auto"><p id="22bf3b61-2379-804e-b962-d8dbab8b8411" class="" dir="auto">Llega Balmis á Puerto-Cabello, donde vacuna desde luego 28 niños.</p><p id="22bf3b61-2379-8077-9803-ce3c1cfcc46c" class="" dir="auto">
+</p><p id="22bf3b61-2379-807a-acea-cad062b82286" class="" dir="auto">
+</p><p id="22bf3b61-2379-80cd-9f67-fc84cf593044" class="" dir="auto">
+</p><p id="22bf3b61-2379-80f6-9621-fc1cda3db0c2" class="" dir="auto">
+</p><p id="22bf3b61-2379-80b0-9bc2-fad5d0ef2a71" class="" dir="auto">
+</p><p id="22bf3b61-2379-80fc-95f8-d7ea165750fa" class="" dir="auto">
+</p><p id="22bf3b61-2379-80b1-9fd9-ff8e5846350e" class="" dir="auto">Plan de dividir la operacion en dos: una al Cargo de Salvany para la América meridional, y otra al suyo para la septentrional.</p></div><div id="22bf3b61-2379-8096-90fd-d4b6dd7a6972" style="width:87.49999999999999%" class="column" data-notion-column-ratio="0.8749999999999999" dir="auto"><p id="22bf3b61-2379-8036-8ac3-dc3065df55e6" class="" dir="auto">Avisaba Balmis desde Puerto-Cabello que habiendo sabido de Puerto-Rico en 12 del mismo mal previsto de niños, porque el Gobernador Castro no le permitió escogerlos, llegó á verse en la mayor afliccion al hallarse sobre una costa desconocida con solo un niño con vacuna, y esta en sazon de [84] ser empleada en el mismo dia, hasta q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> felizmente entraron en Puerto-Cabello, donde al punto vacunó veinte y ocho niños de los principales del pueblo.</p><p id="22bf3b61-2379-80e6-9bf5-f369c777a648" class="" dir="auto">Comunicaba su pensamiento de llevar la vacuna á Carácas por tierra á fin de propagarla en el pais y preservarlo de los estragos de las viruelas naturales q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> á la sazon reynaban en él dirigiendo el resto de la expedicion con la corveta á la Guayra donde se reunirían. [84v] En este Caso y con el fun de apresurar el desempeño de su Comisión, particularmente habiendo sabido la muerte del médio Verges, había resulto dividir la expedicion en dos: una, destinada á internarse en todo el reyno de Santa-Fé, Perú y Buenos Aires, debería embarcarse en la Guayra en un correo ó Guarda-Costa para Cartagena, desde donde subiría á la capital por el rio de la Magdalena, á cargo del Vice-Director [85] D.<span data-notion-inline-equation="^{n}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span></span></span> José Salvany , de los Ayudantes D.<span data-notion-inline-equation="^{n}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span></span></span> Manuel Grajales, D.<span data-notion-inline-equation="^{n}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span></span></span> Antonio Gutierrez Robredo y del enfermero D.<span data-notion-inline-equation="^{n}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span></span></span> Basilio Bolaños. La otra parte de la expedicion, á sus órdenes, y Compuesta solo de enfermeros y practicantes que pudiesen asistir á los ninos [sic], se dirigía desde la Guayra á la Havana; de aquí á Campeche y Yucatan, y pasando á Veracruz se internará por la Puebla de los Ángeles á México, recorriendo las diversas ciudades de provincia hasta [85v] llegar al Reyno de Guatemala.</p><p id="22bf3b61-2379-80d1-ac21-dd9954099c7f" class="" dir="auto">______________</p></div></div><p id="22bf3b61-2379-807d-933b-d67882c49602" class="" dir="auto">Con fecha de 3 de Abril de 1804</p><div id="22bf3b61-2379-80a3-b30c-f87a2a659e77" class="column-list" data-notion-column-list="" dir="auto"><div id="22bf3b61-2379-8043-99c9-ec501e17ba77" style="width:56.25%" class="column" data-notion-column-ratio="0.5625" dir="auto"><p id="22bf3b61-2379-806b-8806-d5eb1003e6bb" class="" dir="auto">
+</p><p id="22bf3b61-2379-802a-872b-fc9dbad561d6" class="" dir="auto">Llegada de Grajales á la Guayra donde es bien recibido y agasajado.</p><p id="22bf3b61-2379-8063-b43a-ed24c6625b47" class="" dir="auto">
+</p><p id="22bf3b61-2379-800d-8c89-e40b002084e2" class="" dir="auto">
+</p><p id="22bf3b61-2379-8023-bcde-e69375327a07" class="" dir="auto">Llegada de Balmis á Carácas, donde es bien recibido y festejado.</p></div><div id="22bf3b61-2379-8048-80ee-c51ac34885f5" style="width:87.49999999999999%" class="column" data-notion-column-ratio="0.8749999999999999" dir="auto"><p id="22bf3b61-2379-8066-91d6-c926e74e7b43" class="" dir="auto">Participaba desde Carácas haber enviado á Grajales con la parte de la expedicion q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> le encomendó de Puerto Cabello á la Guayra donde fué recibido con las mayores demostraciones de júbilo y aprecio á tiempo q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> él pasó en persona á Carácas en la estacion precisamente en q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> mas estragos hacen las viruelas [86] naturales. Daba cuenta mui <mark class="highlight-yellow_background" data-notion-highlight="yellow_background">pormenor</mark> de los agasajos extraordinarios que había merecido á aquellos habitantes, y á todas las autoridades, así civiles como militares y eclesiásticas, q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> se esmeraron á porfía en manifestar su agradecimiento.</p><p id="22bf3b61-2379-8003-862b-f8b41590b72a" class="" dir="auto">______________</p></div></div><p id="22bf3b61-2379-80b3-80c5-f8d473598993" class="" dir="auto">El Capitan General de Carácas con fecha</p><div id="22bf3b61-2379-803b-825c-c887b37e658c" class="column-list" data-notion-column-list="" dir="auto"><div id="22bf3b61-2379-805b-a772-f9dbd9217eb8" style="width:56.25%" class="column" data-notion-column-ratio="0.5625" dir="auto"><p id="22bf3b61-2379-80c0-9d4c-f7f78bd54985" class="" dir="auto">
+</p><p id="22bf3b61-2379-8063-8b58-fa3fe43f19f6" class="" dir="auto">Providencias del Cap.<span data-notion-inline-equation="^{n}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span></span></span> Grãl. y del Ayuntamiento de Carácas para el buen recibimiento de la expedicion.</p><p id="22bf3b61-2379-802a-9a6d-f02192cf9a7f" class="" dir="auto">
+</p><p id="22bf3b61-2379-80c5-811a-e772f45faa5d" class="" dir="auto">
+</p><p id="22bf3b61-2379-807f-8082-c4d404e59cf7" class="" dir="auto">
+</p><p id="22bf3b61-2379-80ec-bf39-fdb801cf6e57" class="" dir="auto">
+</p><p id="22bf3b61-2379-80e1-9a5c-e85c33cb9276" class="" dir="auto">En tres operaciones vacuna Balmis 2064 niños.</p></div><div id="22bf3b61-2379-80b6-abdc-ddb017d3d78c" style="width:87.5%" class="column" data-notion-column-ratio="0.875" dir="auto"><p id="22bf3b61-2379-805f-bb91-e87479bc012c" class="" dir="auto">de 24 del mismo dá cuenta de las providencias que había tomado para el buen recibimiento de la expedicion, habiendo destinado 8 D pesos el [86v] Ayuntamiento para costear los gastos q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> ocasionase durante su permanencia en la provincia, despues de haber destinado Diputados á la Guayra para acompañarla desde el momento de su desembarco. Dice que á los dos dias de haber llegado Balmis principió las vacunaciones, cuyo número á la tercera operacion, ascendía ya á 2064, y se proponía Continuarlas, á cuyo efecto lo había hecho publicar por bando en la Capital, cabezas de partido y de- [87] mas subalternos de sus jurisdiccion. Concluía manifestando que había aprobado el pensamiento de Balmis acerca de dividir la expedicion, aunque difiere algo esta medida de la Circular de 1.° de Septiembre de 1803.</p><p id="22bf3b61-2379-80b3-8928-ff14034016d7" class="" dir="auto">_______________</p></div></div><p id="22bf3b61-2379-805b-ba4b-f68c774f3d7d" class="" dir="auto">En 9 de Mayo del mismo</p><div id="22bf3b61-2379-80a8-9201-f3809f109c86" class="column-list" data-notion-column-list="" dir="auto"><div id="22bf3b61-2379-80d5-80c8-ce42e5649801" style="width:56.25%" class="column" data-notion-column-ratio="0.5625" dir="auto"><p id="22bf3b61-2379-80d4-907a-f9eb04f4eba8" class="" dir="auto">
+</p><p id="22bf3b61-2379-80fc-9a26-e401b9449932" class="" dir="auto">
+</p><p id="22bf3b61-2379-80bc-8e89-cb266e496b69" class="" dir="auto">
+</p><p id="22bf3b61-2379-803a-9945-de7dbb044b69" class="" dir="auto">
+</p><p id="22bf3b61-2379-8015-a5bb-ef71eba87402" class="" dir="auto">
+</p><p id="22bf3b61-2379-801a-870b-ed82ce65c3f9" class="" dir="auto">Crease la Junta Central de Vacuna en Carácas.</p><p id="22bf3b61-2379-80d5-990c-cb26c5b6b685" class="" dir="auto">
+</p><p id="22bf3b61-2379-808c-bdc1-e79100a0e28f" class="" dir="auto">
+</p><p id="22bf3b61-2379-8080-858c-cb329772ab60" class="" dir="auto">
+</p><p id="22bf3b61-2379-8088-afb7-ea692e48b7f2" class="" dir="auto">
+</p><p id="22bf3b61-2379-8000-b39f-cf1fdbacde18" class="" dir="auto">Personas de que se Compone la Junta.</p><p id="22bf3b61-2379-8043-a4b3-d40d6e49bf61" class="" dir="auto">
+</p><p id="22bf3b61-2379-8038-9a32-db18b31cb6bd" class="" dir="auto">
+</p><p id="22bf3b61-2379-8037-be4f-c29e977cf5a8" class="" dir="auto">
+</p><p id="22bf3b61-2379-8027-a5e7-f633e0b06b5c" class="" dir="auto">
+</p><p id="22bf3b61-2379-8063-835c-d3b8514e4871" class="" dir="auto">Atenciones de la Junta.</p><p id="22bf3b61-2379-80a6-9f39-da51e89f2c4e" class="" dir="auto">
+</p><p id="22bf3b61-2379-8045-8cb5-c91a10273086" class="" dir="auto">
+</p><p id="22bf3b61-2379-8031-9c8c-c9b06a9a985c" class="" dir="auto">
+</p><p id="22bf3b61-2379-8071-965d-ee079303f5dc" class="" dir="auto">
+</p><p id="22bf3b61-2379-8014-b215-cc331a25d224" class="" dir="auto">
+</p><p id="22bf3b61-2379-8013-8dd6-f58794ca7bd3" class="" dir="auto">Obligaciones de los Secretarios.</p><p id="22bf3b61-2379-8012-89bb-f9a9e0594f08" class="" dir="auto">
+</p><p id="22bf3b61-2379-8019-b79a-c40faa879ab5" class="" dir="auto">
+</p><p id="22bf3b61-2379-80f0-8345-d792bbe7a7bc" class="" dir="auto">
+</p><p id="22bf3b61-2379-808a-b848-e9a3e3952b54" class="" dir="auto">
+</p><p id="22bf3b61-2379-8070-9d68-d69bb61aeba4" class="" dir="auto">
+</p><p id="22bf3b61-2379-80c6-bbe8-e44d3fada4f8" class="" dir="auto">Dos profesores individuos de la Junta alternarán por meses para las vacunaciones.</p><p id="22bf3b61-2379-80cb-8eae-cf2cb77c35b6" class="" dir="auto">
+</p><p id="22bf3b61-2379-8088-9a81-fd664421d92a" class="" dir="auto">Tentativas para hallar el pus en las vacas, q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> de nada sirvieron hasta la llegada de la expedicion.</p><p id="22bf3b61-2379-80e5-809a-e422b296a692" class="" dir="auto">
+</p><p id="22bf3b61-2379-8099-9fbc-e393b2de9b80" class="" dir="auto">
+</p><p id="22bf3b61-2379-80c6-bbd0-c149055c7887" class="" dir="auto">Concedese á Balmis el título de Regidor honorario de aquel Ayuntamiento</p><p id="22bf3b61-2379-80b7-95aa-e74fce23dd83" class="" dir="auto"><span style="border-bottom:0.05em solid">Nota</span></p><p id="22bf3b61-2379-802f-84ca-f4be7ad77447" class="" dir="auto">Se Confirmó esta gracia por Decreto del 19 de Julio, y en 22 se Comunicó la ord.<span data-notion-inline-equation="^{n}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span></span></span> correspond.<span data-notion-inline-equation="^{te}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7936em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7936em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> al Cap.<span data-notion-inline-equation="^{n}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span></span></span> gen.<span data-notion-inline-equation="^{l}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8491em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span></span></span></span></span></span></span></span></span></span></span></span></span></p></div><div id="22bf3b61-2379-80ce-b931-c184fbc2686e" style="width:87.5%" class="column" data-notion-column-ratio="0.875" dir="auto"><p id="22bf3b61-2379-8066-a1e9-e6590e604203" class="" dir="auto">Continuó dando cuenta de los progresos de la vacuna, cutos efectos han sido succesivam.<span data-notion-inline-equation="^{te}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7936em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7936em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> mas generales y benignos en personas de todas clases y sexôs, [87v] desde la edad de 6 dias de nacimiento hasta las de 84 años, habiendose observado q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> los granos de los Yndios eran mas hermosos. A fin de perpetuar este precioso descubrimiento dispuso, de acuerdo con lo propuesto por Balmis, la creasion de una Junta Central de Vacuna en aquella ciudad, que debía conocer en la tocante á este ramo en todas las provincias de aquellas Capitanía General. Para ello se establecieron las siguientes reglas, si [88] bien sugetas á las alteraciones que exîgiesen la experiencia y las circunstancias.</p><p id="22bf3b61-2379-80ed-b4b8-f11e8d49e51a" class="" dir="auto">1.<span data-notion-inline-equation="^{a}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span></span></span></span></span></span>= Se compondrá esta Junta de diez personas seculares y eclesiásticas, que no disfrutarán sueldo alguno por este encargo, condecoradas, y de probidad é influxo en la opinion pública: de 7 profesores de Medicina y Cirugía, y de dos Secretarios, uno de los quales deberá ser de la Clase de los facultativos; todo baxo los auspicios de las autoridades de la provincia.</p><p id="22bf3b61-2379-80b4-83b9-c6f6357cfcc2" class="" dir="auto">2.<span data-notion-inline-equation="^{a}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span></span></span></span></span></span>= A cargo de estas [88v] Junta estará la conservacion del fluido vacuno en una casa destinada al intento baxo su inmediata inspeccion, y en la qual deberá exîstir uno de los quatro niños q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> nacen diariamente en aquella Ciudad. Cuidará ademas de la remision del fluido á los parages en que sea necesario, y de las medidas que deberán adaptarme p.<span data-notion-inline-equation="^{a}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span></span></span></span></span></span> mantener este establecimiento.</p><p id="22bf3b61-2379-809c-9c34-c1569ba9393a" class="" dir="auto">3.<span data-notion-inline-equation="^{a}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span></span></span></span></span></span>= Celebrará sus sesiones una vez á la semana semana, y en ellas [89] los dos secretarios expondrán, cada una en su respectivo ramo, las observaciones que juzguen mas oportunas para llenar el obg.<span data-notion-inline-equation="^{to}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7936em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7936em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">o</span></span></span></span></span></span></span></span></span></span></span></span></span> de este establecimiento, debiendo estar á su cargo el llevar exâctamente su respectiva correspondencia, y Comunicar al Capitan General y al R.<span data-notion-inline-equation="^{do}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8491em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">d</span><span class="mord mathnormal mtight">o</span></span></span></span></span></span></span></span></span></span></span></span></span> Obispo los estados y noticias cuyo conocimiento pueda importarles.</p><p id="22bf3b61-2379-8097-8fd8-fd8fc6369905" class="" dir="auto">4.<span data-notion-inline-equation="^{a}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span></span></span></span></span></span> Entre los profesores individuos de la Junta habrá constantemente dos que de- [89v] berán alternar por meses y encargarse de practicar las vacunaciones que se necesiten, y á los quales se les concederá una gratificacion quando hubiere fondos para ello.</p><p id="22bf3b61-2379-80f7-9b5f-dc88e50da7cb" class="" dir="auto">Añadía el Capitan General que, sabedor por los papeles públicos de Europa del feliz hallazgo de Jenner, y deseoso de atajar los estragos de la viruela natural, encargó al médico D.<span data-notion-inline-equation="^{n}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span></span></span> José Domingo Diaz procurase adquirir el fluido en los para- [90] ges en q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> mas abunda las vacas. Logró en efecto por varias partes; p.<span data-notion-inline-equation="^{o}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">o</span></span></span></span></span></span></span></span></span></span></span></span></span> no pudo sacar partido alguno hasta q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> llegó Balmis; á quien, á propuesta del Cabildo, se concedió el título de Regidor honorario en demostracion de gratitud y aprecio.</p><p id="22bf3b61-2379-80d4-91f4-ed4ebfcd76b5" class="" dir="auto">________________</p><p id="22bf3b61-2379-804a-9ed9-cfb1af07a43a" class="" dir="auto">
+</p></div></div><p id="22bf3b61-2379-8080-9855-e8fae9da16f6" class="" dir="auto">Con fecha de 29 de Abril 1804</p><div id="22bf3b61-2379-80ef-8d62-e25a22c4e281" class="column-list" data-notion-column-list="" dir="auto"><div id="22bf3b61-2379-808c-abd0-db0eb7e37c34" style="width:62.5%" class="column" data-notion-column-ratio="0.625" dir="auto"><p id="22bf3b61-2379-800d-93ad-fdea72ae58e9" class="" dir="auto">
+</p><p id="22bf3b61-2379-80e1-b00f-f7396028c4b0" class="" dir="auto">
+</p><p id="22bf3b61-2379-807c-9c54-c21226476df5" class="" dir="auto">
+</p><p id="22bf3b61-2379-806e-9021-f160954ca397" class="" dir="auto">Asciende á 12D el número de los vacunados durante la permanencia de Balmis en Carácas.</p><p id="22bf3b61-2379-80d1-b4bd-ea9ee6551259" class="" dir="auto">
+</p><p id="22bf3b61-2379-8038-b13c-fe2ba6d3e4b5" class="" dir="auto">
+</p><p id="22bf3b61-2379-80ab-a41c-f2d456167819" class="" dir="auto">Instrucciones á Salvany para su viage á la América meridional</p></div><div id="22bf3b61-2379-8064-950d-e0432769297b" style="width:106.25%" class="column" data-notion-column-ratio="1.0625" dir="auto"><p id="22bf3b61-2379-80da-9c9c-e8f28ef8d12b" class="" dir="auto">Próxîmo á pasar ya á la Guayra escribía Balmis encareciendo sobremanera el grande agasajo que había encontrado en aquellos naturales y autoridades. [90v] Hacía subir el núm.<span data-notion-inline-equation="^{o}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">o</span></span></span></span></span></span></span></span></span></span></span></span></span> de los vacunados en aquella época á 12 D, y manifestaba que tenía resuelto sus viages para el 6 de Mayo próxîmo. Acompañaba copia de las instrucciones que dexó para la Junta Central de Vacuna de aquella ciudad, q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> son en substancia las mismas que indicaba el Capitan General; y de las que dió á Salvany y demas de la expedicion destinada á Santa-Fé y resto de la América meriodinal, aconsejandoles la union entre [91] sí, la eficacia, presteza y exâctitud en sus operaciones, y la atencion y deferencia debida á los Gefes con quienes tubiesen que entenderse. Indicabales en estas instrucciones el modo de difundir mas facilm.<span data-notion-inline-equation="^{te}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7936em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7936em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> la Vacuna por las provincias de su tránsito y Conservar constantemente el fluido, sacando con este obgeto dos ó mas niños en cada parage ó poblacion, de constitucion robusta y nó demasiado tiernos, pues la experiencia tenía acreditado que ade- [91v] mas de Causas estos muchas molestias, son expuestos y peligrosos por su debilidad y por la facilidad con que se altera su máquina. Proponíales al mismo tiempo el medio de pedir anticipadamente á los Gefes de cada territorio un itinerario de él, y procurar llegar á las ciudades y capitales quando el fluido esté en sazon para que así pudiesen hacer las operaciones sin demora: tomar de acuerdo con dichos Gefes las medidas conducen- [92] tes para Comunicar el fluido á las provincias de su mando que estubiesen á grandes distancias de la Capital, ya fuese disponiendo q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> acudiesen á instruirse á ellos los facultativos de los pueblos, ó haciendo que pasasen á ellos otros instruidos en las operaciones: establecer en Cada capital, de acuerdo con el Gefe de ella, una Junta Central de Vacuna baxo la misma forma y reglas que en Carácas, aunque con aquellas modificacio- [92v] nes que exîjan las circunstancias locales de Cada una: observar las influencias que tiene la vacuna en otras varias enfermedades comunes, y fixan sus resultados posibles: extender sus observaciones á la historia natural, industrial y artes, á la botánica y á la medicina como expresión de las enfermedades propias de cada pais, sus síntomas y régimen curativo; y ya que no pudiese la expe- [93] dicion adquirir por sí misma estas noticias a Causa de la rapidez de su tránsito por los diversos paises á que iba destinada, deberá pedirlas á los facultativos mas instruidos de ellos y demas personas en cuyas luces pueda tener Confianza.</p><p id="22bf3b61-2379-80fc-982b-f5c10d6becae" class="" dir="auto">_______________</p></div></div><p id="22bf3b61-2379-80ae-b958-fd573c6b4e89" class="" dir="auto">En 7 de Mayo de 1804 dio Cuen-</p><div id="22bf3b61-2379-80ca-aa6a-f2ae2f6b9d3f" class="column-list" data-notion-column-list="" dir="auto"><div id="22bf3b61-2379-808f-a457-ee4135e92fe2" style="width:62.5%" class="column" data-notion-column-ratio="0.625" dir="auto"><p id="22bf3b61-2379-8021-a7f0-e8721bb24d66" class="" dir="auto">
+</p></div><div id="22bf3b61-2379-8089-ab34-e5baff73819b" style="width:106.25%" class="column" data-notion-column-ratio="1.0625" dir="auto"><p id="22bf3b61-2379-807a-8fc7-e08f8f522857" class="" dir="auto">ta el Ayuntamiento de Carácas de los agasajos que había hecho á la expedicion, cuya substan- [93v] cia es lo que expuso el Capitan Gen.<span data-notion-inline-equation="^{l}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8491em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span></span></span></span></span></span></span></span></span></span></span></span></span> en 24 de Abril, y queda extractado.</p></div></div><p id="22bf3b61-2379-80e0-8313-c55f39ac77e1" class="" dir="auto">Con fecha de 12 de Noviembre 1804.</p><div id="22bf3b61-2379-800e-b00b-fac878802fdf" class="column-list" data-notion-column-list="" dir="auto"><div id="22bf3b61-2379-807c-821b-d1fa4f9a99c5" style="width:62.5%" class="column" data-notion-column-ratio="0.625" dir="auto"><p id="22bf3b61-2379-801a-ad3c-ec3b232b53e5" class="" dir="auto">Progresos de la vacuna en Carácas.</p><p id="22bf3b61-2379-8061-97e5-c2500020742e" class="" dir="auto">
+</p><p id="22bf3b61-2379-80f1-9481-f137275e157c" class="" dir="auto">
+</p><p id="22bf3b61-2379-8018-aa24-f3d9b59f6482" class="" dir="auto">
+</p><p id="22bf3b61-2379-805d-9104-d4732549cc7e" class="" dir="auto">
+</p><p id="22bf3b61-2379-80e3-be84-eda3ce4eafc1" class="" dir="auto">
+</p><p id="22bf3b61-2379-80a5-bbcc-e39c20ed34cc" class="" dir="auto">
+</p><p id="22bf3b61-2379-80b2-8aad-f629925ef880" class="" dir="auto">
+</p><p id="22bf3b61-2379-8000-a9fa-ce5715e447e1" class="" dir="auto">
+</p><p id="22bf3b61-2379-8000-8211-ed3172f0465b" class="" dir="auto">
+</p><p id="22bf3b61-2379-803d-a897-c62997dd9a32" class="" dir="auto">
+</p><p id="22bf3b61-2379-806d-83e3-f0fa613b68ea" class="" dir="auto">Hasta 12 de Nov.<span data-notion-inline-equation="^{bre}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8491em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">b</span><span class="mord mathnormal mtight">re</span></span></span></span></span></span></span></span></span></span></span></span></span> de 1804 resultaban vacunadas de 20 á 25 D personas.</p><p id="22bf3b61-2379-8069-acec-ca991a486d8d" class="" dir="auto">
+</p><p id="22bf3b61-2379-805b-8627-ed37b54c6b48" class="" dir="auto">
+</p><p id="22bf3b61-2379-8070-b480-d04b44f1d3a3" class="" dir="auto">
+</p><p id="22bf3b61-2379-80c1-816e-d2ee2ab26d2f" class="" dir="auto">
+</p><p id="22bf3b61-2379-8095-bb91-ec0bc7b15e52" class="" dir="auto">
+</p><p id="22bf3b61-2379-8073-a678-ce5546a25299" class="" dir="auto">
+</p><p id="22bf3b61-2379-8032-864b-f4397fabc150" class="" dir="auto">
+</p><p id="22bf3b61-2379-80c2-84d7-fe46a9aba7e8" class="" dir="auto">
+</p><p id="22bf3b61-2379-80f6-9041-cc6af4d66018" class="" dir="auto">
+</p><p id="22bf3b61-2379-80cb-ac57-eae62fa3b017" class="" dir="auto">
+</p><p id="22bf3b61-2379-80a1-98db-e391df86e702" class="" dir="auto">
+</p><p id="22bf3b61-2379-8057-8072-d1f6a0ac6409" class="" dir="auto">
+</p><p id="22bf3b61-2379-80e6-b34a-ecf2ef247fed" class="" dir="auto">
+</p><p id="22bf3b61-2379-80d1-8012-c3375a6b31c4" class="" dir="auto">
+</p><p id="22bf3b61-2379-80bb-b53f-e32425018ae4" class="" dir="auto">Observaciones del D.<span data-notion-inline-equation="^{r}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span></span></span></span></span></span></span></span></span></span></span></span></span> Diaz sobre la vacuna, y su influencia en el sistema.</p></div><div id="22bf3b61-2379-801c-9a75-f94dd03a8a42" style="width:106.25%" class="column" data-notion-column-ratio="1.0625" dir="auto"><p id="22bf3b61-2379-803d-93de-da7cac0b8c8b" class="" dir="auto">Cumpliendo este Gefe con lo que tenía ofrecido de comunicar los progresos de la vacuna y medida adoptados para su conservacion, remitió una memoria histórica de todas las providencias que se habían tomado con este obgeto, otra copia de las actas de la Junta en sus [94] sesiones semanales y otra de las memorias que por encargo suyo habían trabajado algunos individuos de ella.</p><p id="22bf3b61-2379-80a2-a32e-e1f440275bf5" class="" dir="auto">Gracias al celo infatigable y acertadas providencias del Capitan General y de la Junta, se había Comunicado de el fluido á los pueblos de lo interior sin el menor gravámen de los particulares: se habían dado reglas claras y seguras para precaver los graves inconven.<span data-notion-inline-equation="^{tes}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7936em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7936em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">es</span></span></span></span></span></span></span></span></span></span></span></span></span> [94v] de las vacunaciones falsas. Resultaban vacunadas hasta aquella fecha de 20 á 25 D personas, y asegurado el trato, la Comunicacion y la libertad en el mismo pais en que el estrago de la viruelas naturales reducía á sus habitantes al estado mas lastimado de abandono y miseria. Estas resultados son efecto de medidas oportunas y acertadas providencias, como las publica- [95] cion de bandos, qual fué el que se fixó á tiempo que empezaron á parecer las viruelas naturales, mandando que acudiesen á vacunarse todos los que no las hubiesen padecido: la asistencia continua del Capitan General á las Juntas y á presenciar las operaciones: el haber nombrado personas que exâminasen y graduasen la capacidad de los facultativos encargados de propagar [95v] el fluido, así en la capital como en las provincias, con obligaciones de formar memorias acerca del resultado de sus observaciones.</p><p id="22bf3b61-2379-805f-a998-eaca5336bc60" class="" dir="auto">La que trabajó el D.<span data-notion-inline-equation="^{r}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span></span></span></span></span></span></span></span></span></span></span></span></span> D.<span data-notion-inline-equation="^{n}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span></span></span> Domingo Diaz, uno de los individuos de la Junta, contiene una larga é interesante historia del establecim.<span data-notion-inline-equation="^{to}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7936em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7936em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">o</span></span></span></span></span></span></span></span></span></span></span></span></span>y tareas de este cuerpo, y presenta por resultados de sus observaciones y práctica las proporciones siguientes: [96] Las pustulas vacunas modifican su Carácter por el estado de la atmósfera.</p><p id="22bf3b61-2379-8094-ae0e-ca449a51dc1d" class="" dir="auto">El fluido vacuno obra generalmente en todo el sistema.</p><p id="22bf3b61-2379-80eb-9cf9-dd8a60a585a9" class="" dir="auto">El fluido vacuno aumenta secreciones, y su accion mecánica es mas activa de lo que se ha sospechado.</p><p id="22bf3b61-2379-80b7-963a-ca1f0b58e1d6" class="" dir="auto">Como consecuencia de la generalidad y fuerza de esta accion, el fluido vacuno tiene ya casos determinados en q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> puede ser ofensivo.</p><p id="22bf3b61-2379-80a0-9c4a-d5b0b197b6f8" class="" dir="auto">El fluido vacuno [96v] obra con mas certidumbre y benignidad en aquellas razas de hombres en quienes es mas violenta la accion de las viruelas.”</p><p id="22bf3b61-2379-80cf-a424-c70b9a6dad9c" class="" dir="auto">Concluía este papel manifestando que á pesar de la bondad del fluido y del esmero con que la expedicion procuró propagarlo y asegurar su permanencia, no se hubiera conseguido tan completamente este obgeto á no haber hallado un apoyo tan decidido en [97] aquellos Gefes, cuyo desvelo y actividad deben Considerarse por lo tanto como la Causa mas eficaz del bien que ha resultado á aquellas provincias; y en otras memorias trabajadas igualemente de orden de la Junta, hace nuevamente varias reflexîones sobre las propiedades del fluido, medios de difundirlo y conservarlo, y arbitrios que pudieran establecerse para la dotacion de los profesores: todo ello, en general, con bastan- [97v] te acierto y exâctitud.</p></div></div><p id="22bf3b61-2379-806f-849b-c89b619b5465" class="" dir="auto">En R.<span data-notion-inline-equation="^{l}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8491em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span></span></span></span></span></span></span></span></span></span></span></span></span> Orden de 31 de Marzo de</p><div id="22bf3b61-2379-8004-98aa-c446551eae06" class="column-list" data-notion-column-list="" dir="auto"><div id="22bf3b61-2379-80f5-987f-f426312a51c6" style="width:62.5%" class="column" data-notion-column-ratio="0.625" dir="auto"><p id="22bf3b61-2379-806b-b721-dca0bde3ffe6" class="" dir="auto">
+</p></div><div id="22bf3b61-2379-8060-b96b-c080a05fdb8d" style="width:112.5%" class="column" data-notion-column-ratio="1.125" dir="auto"><p id="22bf3b61-2379-80e6-89a2-dd73c9a6509d" class="" dir="auto">1805 se le contestó dandole gracias por su celo, y encargandole que continuase dando Cuenta de las observaciones de los facultativos.</p><p id="22bf3b61-2379-806b-937c-d5dcf89e3ffd" class="" dir="auto">________________</p></div></div><p id="22bf3b61-2379-807d-941a-c6ad35447527" class="" dir="auto">El mismo Capitan General en Carta</p><div id="22bf3b61-2379-8021-8c8f-ed2e7cea69d4" class="column-list" data-notion-column-list="" dir="auto"><div id="22bf3b61-2379-807b-9d81-c65bbdae955e" style="width:62.5%" class="column" data-notion-column-ratio="0.625" dir="auto"><p id="22bf3b61-2379-80c7-bb33-deb3cb427688" class="" dir="auto">
+</p></div><div id="22bf3b61-2379-8094-af30-f8037ff3723f" style="width:137.5%" class="column" data-notion-column-ratio="1.375" dir="auto"><p id="22bf3b61-2379-80a4-9025-ec41ed83952e" class="" dir="auto">posterior de 6 de Abril de 1805 remitió una memoria leida en la Junta Central de Vacuna en sesion de 22 de Diciembre de 1804 por su Secretario el D.<span data-notion-inline-equation="^{r}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span></span></span></span></span></span></span></span></span></span></span></span></span> D.<span data-notion-inline-equation="^{n}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span></span></span> [98] José Domingo Diaz sobre haberse encontrado el cow-pox en las vacas del partido de Calabozo, segun las observaciones hechas por D.<span data-notion-inline-equation="^{n}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span></span></span> Cárlos del Pozo vecino de él. Reducense estas á haber vacunado con el fluido de los granos de una vaca que consideró bastante Caracterizados á dos niños, en quienes al Cuarto dia comenzo á elevarse en el lugar de cada incision un botoncito hundido ó deprimido en su Centro que creció succesivamente apare- [98v] ciendo dolor en las axîlas y la <mark class="highlight-yellow_background" data-notion-highlight="yellow_background">cresta </mark>en su Circunferencia: q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> en los dias décimo y undécimo se manifestó algun delirio en los vacunados, nauseas, y uno ú otro síntoma de poca Consideracion: que en estos dias tenían las pústulas la misma figura y la mayor identidad con los que producía el fluido llevado por la expedicion: que el 12° y 14° dia desaparecieron todos los síntomas y quedaron enteramente sanos; y [99] finalmente que habiendo vacunado en seguida ocho personas con aquel fluido tubieron pústulas iguales á las de la expedicion en la figura y benignidad, sin los síntomas de los primeros; pero que aguardaría á Continuar sus observaciones á los meses de Junio y Julio, época en que es general esta afeccion en las vacas.</p><p id="22cf3b61-2379-80b9-b7c4-e22feaf920f1" class="" dir="auto">______________</p></div></div><p id="22cf3b61-2379-804d-b414-e8b31d0c78c3" class="" dir="auto">En 22 de Julio de 1805 se le Constestó</p><div id="22cf3b61-2379-80bc-a37f-ea4de0d1eba4" class="column-list" data-notion-column-list="" dir="auto"><div id="22cf3b61-2379-80f3-b06d-ebe7c4f67b64" style="width:62.5%" class="column" data-notion-column-ratio="0.625" dir="auto"><p id="22cf3b61-2379-80aa-8c45-e34a17e5043d" class="" dir="auto">
+</p></div><div id="22cf3b61-2379-808b-8ab3-f432ef1f1c03" style="width:106.25%" class="column" data-notion-column-ratio="1.0625" dir="auto"><p id="22cf3b61-2379-80aa-a742-f31eac78281e" class="" dir="auto">q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> el Rey quedaba enterado con satisfaccion, y que avi- [99v] sase las resueltas de los experimentos ulteriores.</p><p id="22cf3b61-2379-8079-9bdb-da3c66e24220" class="" dir="auto">______________</p></div></div><p id="22cf3b61-2379-80c0-a4e8-c9e9deaa0f16" class="" dir="auto">Ultimamente en 15 de Nov.<span data-notion-inline-equation="^{bre}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8491em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">b</span><span class="mord mathnormal mtight">re</span></span></span></span></span></span></span></span></span></span></span></span></span></p><div id="22cf3b61-2379-80b3-96c9-c31f671accf5" class="column-list" data-notion-column-list="" dir="auto"><div id="22cf3b61-2379-809b-8c61-c9dcc57159a9" style="width:62.5%" class="column" data-notion-column-ratio="0.625" dir="auto"><p id="22cf3b61-2379-8093-8206-ef06ba5e7e67" class="" dir="auto">
+</p><p id="22cf3b61-2379-809b-8c1e-fa9b43b1e65c" class="" dir="auto">
+</p><p id="22cf3b61-2379-802f-86e0-c5d1a7c38767" class="" dir="auto">
+</p><p id="22cf3b61-2379-803d-9107-efab3c0661a0" class="" dir="auto">Resultan vacunados en Carácas 38 D 724 personas.</p><p id="22cf3b61-2379-8097-b09a-d24bafa4fa84" class="" dir="auto">
+</p><p id="22cf3b61-2379-80ab-b551-fcfb23eba818" class="" dir="auto">
+</p><p id="22cf3b61-2379-804a-98d0-cebc68ce655d" class="" dir="auto">
+</p><p id="22cf3b61-2379-805c-8135-ce2daadceba4" class="" dir="auto">
+</p><p id="22cf3b61-2379-8059-a6d4-da3a5821cbf2" class="" dir="auto">Nuevas observaciones del D.<span data-notion-inline-equation="^{r}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span></span></span></span></span></span></span></span></span></span></span></span></span> Diaz sobre la virtud é influencia del fluido vacuno.</p><p id="22cf3b61-2379-80b0-8870-f14c98394618" class="" dir="auto">
+</p><p id="22cf3b61-2379-802b-b618-d4d66f4a5529" class="" dir="auto">
+</p><p id="22cf3b61-2379-80ce-a81f-d1d40f6051b8" class="" dir="auto">
+</p><p id="22cf3b61-2379-806c-9fc4-e9264525699a" class="" dir="auto">
+</p><p id="22cf3b61-2379-8031-9924-c170a9d8ad4b" class="" dir="auto">
+</p><p id="22cf3b61-2379-80b9-9dbc-dd2ce5113ac3" class="" dir="auto">
+</p><p id="22cf3b61-2379-8060-8591-dc60bd8d5f12" class="" dir="auto">
+</p><p id="22cf3b61-2379-8016-9217-ffee5e0e2aeb" class="" dir="auto">
+</p><p id="22cf3b61-2379-80f6-8643-eca28d5bfa28" class="" dir="auto">
+</p><p id="22cf3b61-2379-80cf-ab60-e700fc0d6c03" class="" dir="auto">
+</p><p id="22cf3b61-2379-80a8-8380-cb2beb12be2b" class="" dir="auto">Fenómenos observados por Diaz en la Vacuna</p><p id="22cf3b61-2379-808d-a253-c631934e5b9a" class="" dir="auto">
+</p><p id="22cf3b61-2379-80dd-b6ed-dbf87b2abf2e" class="" dir="auto">
+</p><p id="22cf3b61-2379-80ea-8e86-d40944c912bc" class="" dir="auto">
+</p><p id="22cf3b61-2379-80e6-bd96-ec168c048c8c" class="" dir="auto">
+</p><p id="22cf3b61-2379-80cc-b319-c5f61a954c6c" class="" dir="auto">
+</p><p id="22cf3b61-2379-80dd-9612-cfe79a4915b5" class="" dir="auto">
+</p><p id="22cf3b61-2379-8053-9fb2-e8e7d471df77" class="" dir="auto">
+</p><p id="22cf3b61-2379-809c-95cb-f36995af132a" class="" dir="auto">
+</p><p id="22cf3b61-2379-8085-b05d-fd86066a3fda" class="" dir="auto">
+</p><p id="22cf3b61-2379-806b-9377-f2c96869dfce" class="" dir="auto">
+</p><p id="22cf3b61-2379-8065-986c-ea4345b8e0d9" class="" dir="auto">
+</p><p id="22cf3b61-2379-808e-892c-cf69a236187d" class="" dir="auto">
+</p><p id="22cf3b61-2379-80a1-addb-f2bf99559c4c" class="" dir="auto">
+</p><p id="22cf3b61-2379-8077-bd0a-d93112a0a011" class="" dir="auto">
+</p><p id="22cf3b61-2379-80e2-b8cf-c55a6c5f9390" class="" dir="auto">
+</p><p id="22cf3b61-2379-80ff-911f-c15dba893b58" class="" dir="auto">
+</p><p id="22cf3b61-2379-808e-8f25-c82a9f7dee67" class="" dir="auto">
+</p><p id="22cf3b61-2379-807b-8231-dc677b1f706f" class="" dir="auto">
+</p><p id="22cf3b61-2379-8071-80b9-f423af2e1aa8" class="" dir="auto">Observaciones q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> parecen Comprobar la exîstencia del Cow-pox en las vacas del partido de Calabozo.</p></div><div id="22cf3b61-2379-80a5-a0a1-e10395d3e569" style="width:112.5%" class="column" data-notion-column-ratio="1.125" dir="auto"><p id="22cf3b61-2379-8072-a873-f3f14e69be2a" class="" dir="auto">de 1805 dió Cuenta de los progresos de la vacuna y acompanó [sic] copia de una memoria del D.<span data-notion-inline-equation="^{r}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span></span></span></span></span></span></span></span></span></span></span></span></span> D.<span data-notion-inline-equation="^{n}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span></span></span> José Domingo Diaz, que presenta un resúmen de las tarreas de la Junta desde su establecimiento, y el resultado de 38 D 724 personas vacunadas, de ellas 17.900 Blancos, 18.369 Pardos, 5.017 indios, 7.438 Ne- [100] gros, notandose ocho de 95 á 100 años, y dos de 100 á 105. En dicha memoria establece su autor las proposiciones siguientes, como resultado de sus observaciones y experiencia.</p><p id="22cf3b61-2379-802a-8a97-cb398234481f" class="" dir="auto">1.<span data-notion-inline-equation="^{a}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span></span></span></span></span></span> El fluido vacuno introducido en brazos de mugeres no libres del contagio de las viruelas, y cuya menstruacion se habia interrumpido en varios tiempos hasta la edad de 19 años, habia hecho desaparecer esta enfermedad ántes q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> se [100v] terminase del todo la Carrera de sus pústulas.</p><p id="22cf3b61-2379-800f-956c-ca8422d1670b" class="" dir="auto">2.<span data-notion-inline-equation="^{a}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span></span></span></span></span></span> La vacuna restableció el movim.<span data-notion-inline-equation="^{to}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7936em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7936em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">o</span></span></span></span></span></span></span></span></span></span></span></span></span>, sentido y nutricion perdidos enteramente en los brazos y piernas de algunos afectos á la paralisis.</p><p id="22cf3b61-2379-8038-972e-cc52913e758d" class="" dir="auto">3.<span data-notion-inline-equation="^{a}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span></span></span></span></span></span> La vacuna disipó casi de rrepente el astma <mark class="highlight-yellow_background" data-notion-highlight="yellow_background">imeterado </mark>de varios sugetos, particularmente jóvenes.</p><p id="22cf3b61-2379-8076-ac0b-f57b9ac1001d" class="" dir="auto">4.<span data-notion-inline-equation="^{a}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span></span></span></span></span></span> Ha fortalecido igualmente la vista de algunas personas que la tenían debilitada, y ha hecho [101] Cesar del todo los dolores de Cabeza que padecían algunas mugeres.</p><p id="22cf3b61-2379-8029-ab82-f27fd58cd35e" class="" dir="auto">Añade igualm.<span data-notion-inline-equation="^{te}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7936em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7936em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> los fenómenos sig.<span data-notion-inline-equation="^{tes}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7936em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7936em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">es</span></span></span></span></span></span></span></span></span></span></span></span></span>:</p><p id="22cf3b61-2379-801e-bea6-d18c2d38ca39" class="" dir="auto">1.° En el puerto de la Guayra el fluido vacuno pierde su actividad con mayor rapidez que en ningun otro punto de los situados entre los trópicos, y todas las precauciones que se puedan tomar no son bastantes á impedir obren sobre él al momento de la operacion el calor y la luz, de lo que resulta ser infructuosa [101v] en la mitad de los que se vacunan.</p><p id="22cf3b61-2379-8021-b9aa-e11a28300214" class="" dir="auto">2.<span data-notion-inline-equation="^{do}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8491em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">d</span><span class="mord mathnormal mtight">o</span></span></span></span></span></span></span></span></span></span></span></span></span> En el clima del partido de San Carlos, comparable á lo mas ardiente de la Siria, la vacuna obra con mayor actividad, particularmente en las personas robustas, acostumbradas á coger soles, á quienes suele Causar erisipelas en lso brazos, fiebres, vómitos y otros síntomas, aunque poco peligrosos.</p><p id="22cf3b61-2379-801e-b43b-c6955b4c9d8f" class="" dir="auto">3.° Comunicado el fluido inadvertida é imprudentemente [102] con lancetas que habían servido para dilatar bubones ú otros tumores de igual naturaleza, produxeron en los vacunados al caer las costras tumorcitos <mark class="highlight-yellow_background" data-notion-highlight="yellow_background">concrosos</mark><mark class="highlight-default_background" data-notion-highlight="default_background">, q.</mark><span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> se curaron al cabo de algunos días con la aplicacion de Caústicos.</p><p id="22cf3b61-2379-8042-b080-e664cc052972" class="" dir="auto">4.° El fluido vacuno obra sobre todo el sistema.</p><p id="22cf3b61-2379-8072-8906-f63b4f8f7296" class="" dir="auto">Continuaba ademas participando las reflexîones del facultativo D.<span data-notion-inline-equation="^{n}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span></span></span> Cárlos Pozo sobre la exîstencia del cow-pox [102v] en las vacas del partido de Calabozo, las qual queda Comprobada por las observaciones siguientes:</p><p id="22cf3b61-2379-80b5-9fa0-fbc41d3be7e0" class="" dir="auto">Llegada que fué la estacion oportuna y exâminados los granos de las vacas, los reconoció por hallarse en sazon, y con el fluido de ellos vacunó otras vacas y algunas personas. En aquellas las pústulas siguieron su curso Con los mismos síntomas y períodos que había visto en las anteriores; [103] pero advirtió que el fluido transmitido de las vacas á los brazos de un hombre obra con más rapidez y produce efectos mas sensibles, en vez que es ineficaz en el Caso contrario. Añade que habiendo vacunado quatro personas con el fluido llevado desde una grande distancia conservado en un poco de algodon, que fué preciso humedecer por haberse secado, había notado que la car- [103v] rera de la pústula era mas lenta en su aparecimiento, en su maduracion y terminacion: que las pústulas eran mucho mayores q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> las Comunicadas de brazo á brazo, mas chatas, algo Cenicientas, y el centro mas profundo y de un color morado obscuro: que al descubrirse el boton principiaba la fiebre y succesivam.<span data-notion-inline-equation="^{te}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7936em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7936em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> dolores gravativos, de Cabeza, hinchazones en las axîlas que Corren á las [104] brazos, y aun al pecho y espalda, acompañados de un intolerable ardor erisipelos: que terminada en el octavo dia esta serie de síntomas, acompañados alguna vez de vómitos y delirio, queda una comezon tan viva en las pústulas que parece poner á los pacientes en un estado de desesperacion: que estos efectos son menores quando con el cow-pox primeramente introducido en brazos humanos se han va- [104v] cunado otros; y que las vacas que habían llevado pústulas eran las q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> habían ido del otro lado del rio Apure, habiendo pasado allí el verano y salido de aquel pais despues de las primeras inundaciones. Todo lo Comprobaba Pozo con certificaciones de la Justicia y Ayuntamiento y de los dueños de las vacas.</p><p id="22cf3b61-2379-80c2-98fb-dc9bc995ad2a" class="" dir="auto">________________</p></div></div><p id="22cf3b61-2379-80ed-a99d-d107079caf93" class="" dir="auto">La Junta Superior de Medici-</p><div id="22cf3b61-2379-8071-b70d-c6b270db7e82" class="column-list" data-notion-column-list="" dir="auto"><div id="22cf3b61-2379-80d5-8651-cebcfd21f6da" style="width:62.5%" class="column" data-notion-column-ratio="0.625" dir="auto"><p id="22cf3b61-2379-80f2-a3f5-e0dcf2b65172" class="" dir="auto">
+</p></div><div id="22cf3b61-2379-8055-ab0b-c84e4b404e0a" style="width:106.25%" class="column" data-notion-column-ratio="1.0625" dir="auto"><p id="22cf3b61-2379-8084-9509-c0f1219197b7" class="" dir="auto">na, á cuyo informe se pasó la memoria anterior, Contestó elo- [105] giando la actividad y celo de la Junta Central de Vacuna de Carácas, y proponiendo que se le remitiese unos exemplares de la instruccion impresa que había circulado aquella con aprobacion del Rey en la península, por lo q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> pudiese Convenirles.</p><p id="22cf3b61-2379-80f5-9a94-e5619ad20e11" class="" dir="auto">________________</p><p id="22cf3b61-2379-8043-b824-cff2579c3769" class="" dir="auto">Así se executó en 3 de Agosto de 1807.</p></div></div><p id="22cf3b61-2379-8030-bb58-cc30ce339082" class="" dir="auto">Maracaybo.</p><p id="22cf3b61-2379-8021-a22b-dd0fd8b92e5c" class="" dir="auto">En 22 de Noviembre de 1804.</p><div id="22cf3b61-2379-8038-95f7-d6eced2278d9" class="column-list" data-notion-column-list="" dir="auto"><div id="22cf3b61-2379-80e0-b08d-c3d60027353b" style="width:62.5%" class="column" data-notion-column-ratio="0.625" dir="auto"><p id="22cf3b61-2379-80d2-ac13-cdb388a8b9db" class="" dir="auto">
+</p><p id="22cf3b61-2379-802a-bb98-c1bd859eeb8d" class="" dir="auto">Propagase felizm.<span data-notion-inline-equation="^{te}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7936em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7936em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> el fluido en Maracaybo</p></div><div id="22cf3b61-2379-80bf-89d1-e4483c29a17b" style="width:137.5%" class="column" data-notion-column-ratio="1.375" dir="auto"><p id="22cf3b61-2379-8081-a423-dba350d38632" class="" dir="auto">Participó el Gobernador de Maracaybo Miyares que con el fluido de algunas personas vacunadas en Puerto Cabello al arribo de la expedicion y conducidas á Maracaybo en buena sazon, empezó á propagarle en 15 de Abril con arreglo á la instruccion que dexó Balmis: q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> se: que se propagó felizmente, y q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> ha señalado para su [106] Conservacion en facultativo con la gratificacion de 15 pesos mensuales asignada sobre los propios de la ciudad, por no poder mantener el hospital arriba de seis Camas.</p><p id="22cf3b61-2379-80e7-85a6-cc9be57c6227" class="" dir="auto">_______________</p><p id="22cf3b61-2379-8070-80b5-f553c3417513" class="" dir="auto">En 12 de Noviembre de 1805 se le Contestó quedar el Rey enterado, dandole gracias por todo. </p><p id="22cf3b61-2379-809e-a28c-df9ef9bbcab8" class="" dir="auto">_______________</p></div></div><p id="22cf3b61-2379-8037-8fd1-c26d4d6e39c4" class="" dir="auto">Ysla Magarita</p><p id="22cf3b61-2379-80c5-99a8-c076fdcb94b7" class="" dir="auto">_______</p><div id="22cf3b61-2379-80ca-8fce-f2e782ee75df" class="column-list" data-notion-column-list="" dir="auto"><div id="22cf3b61-2379-8053-8ce4-c6b1a52529c6" style="width:62.5%" class="column" data-notion-column-ratio="0.625" dir="auto"><p id="22cf3b61-2379-80db-b9f6-d69cd7d82353" class="" dir="auto">
+</p><p id="22cf3b61-2379-8037-831f-eb5dc0c78ce2" class="" dir="auto">
+</p><p id="22cf3b61-2379-80e2-9d53-ea28e8161427" class="" dir="auto">
+</p><p id="22cf3b61-2379-800a-87a5-e9ade0612a17" class="" dir="auto">Vacunanse mas de 2D personas en la isla Margarita.</p></div><div id="22cf3b61-2379-801c-a9ab-c97454eb7a9a" style="width:106.25%" class="column" data-notion-column-ratio="1.0625" dir="auto"><p id="22cf3b61-2379-806b-aba7-c2d602cce71a" class="" dir="auto">En 22 de Diciembre 1804.</p><p id="22cf3b61-2379-80dd-9847-e61fac6a2493" class="" dir="auto">Avisaba el Gobernador de la isla Her- [106v] rera que no habiendo llegado allí individuo alguno de la expedicion, procuró adquirir el fluido, y habiendolo recibido un Médico frances llamado D.<span data-notion-inline-equation="^{n}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span></span></span> Estanislao La Roche, la Comunicó gratuita y felizmente á mas de dos mil personas.</p><p id="22cf3b61-2379-80fb-b005-e7d8ad155b67" class="" dir="auto">Informaba ademas que no le era posible formar el establecimiento permanente de la vacuna por no haber hospitales propios sus facultativos de instruccion, [107] cuya falta de representó por el Conducto dél Capitan. Grãl de Carácas en 20 de Julio de 1803, habiendosele Contestado en 21 de Junio de 1804 q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> solo en tiempo de guerra se estableciese hospital provisionalmente.</p><p id="22cf3b61-2379-8022-93e0-d6c0c9719b0d" class="" dir="auto">_______________</p><p id="22cf3b61-2379-8006-9b2d-f2b8998ec51e" class="" dir="auto">Siendo lo principal del asunto de la atribucion del Ministerio de la Guerra, se pasó á él la Carta del Gobernador en 14 de Ag.<span data-notion-inline-equation="^{to}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7936em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7936em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">o</span></span></span></span></span></span></span></span></span></span></span></span></span> 1805.</p></div></div><p id="22cf3b61-2379-8006-ad7f-f3934e89b201" class="" dir="auto">[107v]</p><p id="22cf3b61-2379-8041-b505-f6fa351da9a1" class="" dir="auto">Provincias de Cumaná.</p><p id="22cf3b61-2379-80ca-a57b-edb90a0e5c93" class="" dir="auto">_______</p><p id="22cf3b61-2379-8053-a2b4-fd8250a6c05d" class="" dir="auto">En 22 de Mayo de 1805.</p><div id="22cf3b61-2379-8090-8a8c-f4231c7c2b30" class="column-list" data-notion-column-list="" dir="auto"><div id="22cf3b61-2379-8025-8fd7-e68ac26ef509" style="width:62.5%" class="column" data-notion-column-ratio="0.625" dir="auto"><p id="22cf3b61-2379-809a-99f4-d816dd8f17ff" class="" dir="auto">
+</p><p id="22cf3b61-2379-803c-b170-f523067b6255" class="" dir="auto">Llegan á 20 D los indios vacunados en Cumaná</p></div><div id="22cf3b61-2379-80f2-8216-c02abf61b0ce" style="width:106.25%" class="column" data-notion-column-ratio="1.0625" dir="auto"><p id="22cf3b61-2379-807f-8b7f-cb7d40b436d2" class="" dir="auto">Participó el Gobernador Cagigal que llegaban á 20 D los indios vacunados en aquella provincia, ademas de los criollos, y manifestaba quan útil era la vacuna en aquel pais en q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> tantos estragos hacía la viruela natural.</p><p id="22cf3b61-2379-807b-a11f-dd47b67f7205" class="" dir="auto">______________</p></div></div><p id="22cf3b61-2379-8005-b25c-f398ab065021" class="" dir="auto">[108]</p><p id="22cf3b61-2379-80a6-bcbe-da57eca43e14" class="" dir="auto">Guayana.</p><div id="22cf3b61-2379-80e5-85cf-f1cd5097461d" class="column-list" data-notion-column-list="" dir="auto"><div id="22cf3b61-2379-808d-a661-f33314fa19d8" style="width:62.5%" class="column" data-notion-column-ratio="0.625" dir="auto"><p id="22cf3b61-2379-80cf-8ff9-c48d5a6d821d" class="" dir="auto">
+</p><p id="22cf3b61-2379-80f5-a62c-feb55d9447e1" class="" dir="auto">
+</p><p id="22cf3b61-2379-8068-a915-c34a95078b08" class="" dir="auto">
+</p><p id="22cf3b61-2379-80ac-9362-f4c573b61416" class="" dir="auto">
+</p><p id="22cf3b61-2379-8008-b5f7-f9ce1ea8d269" class="" dir="auto">
+</p><p id="22cf3b61-2379-80da-a71d-f3ad65d3668d" class="" dir="auto">
+</p><p id="22cf3b61-2379-8028-8000-caab2d93ef5e" class="" dir="auto">
+</p><p id="22cf3b61-2379-800a-a73e-e002d5aece1b" class="" dir="auto">
+</p><p id="22cf3b61-2379-8039-8345-c769bae064b5" class="" dir="auto">
+</p><p id="22cf3b61-2379-805f-8905-edce4b1d42c3" class="" dir="auto">
+</p><p id="22cf3b61-2379-8016-9965-e1e2c6d903a6" class="" dir="auto">
+</p><p id="22cf3b61-2379-8008-9c45-fa9fff27d41b" class="" dir="auto">
+</p><p id="22cf3b61-2379-80e0-9a42-e341f06609a6" class="" dir="auto">Experiencia de usar las costras de la vac.<span data-notion-inline-equation="^{a}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span></span></span></span></span></span> desleidas en agua Comun con la punta de la lanceta misma destinada para las operaciones.</p></div><div id="22cf3b61-2379-8080-8da2-d56d2098b7a2" style="width:112.49999999999997%" class="column" data-notion-column-ratio="1.1249999999999998" dir="auto"><p id="22cf3b61-2379-808d-a1b4-f4b0ac5a3fdf" class="" dir="auto">En 12 de Febrero de 1804 manifestó el Obispo de Guayana algun reparo en la admision y propagacion de la vacuna, y se le previno en 6 de Septiembre que llevase á efecto lo dispuesto por la circular de 1.° se Septiembre anterior.</p><p id="22cf3b61-2379-80fb-af49-da5eae82185a" class="" dir="auto">______________</p><p id="22cf3b61-2379-80e5-9b55-c3393857c2d5" class="" dir="auto">En R.<span data-notion-inline-equation="^{l}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8491em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span></span></span></span></span></span></span></span></span></span></span></span></span> Órden de 6 7.<span data-notion-inline-equation="^{bre}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8491em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">b</span><span class="mord mathnormal mtight">re</span></span></span></span></span></span></span></span></span></span></span></span></span> 1805, y á consecuencia de una Carta del Gobernador de Guayana [108v] Inciarte, de 8 de Abril del mismo año, en que manifestaba este Gefe que por dos veces se había malogrado el fluido vacuno q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> le envió el Gobernador de Cumaná, á Causa sin duda de la grande distancia y excesivos calores, y que estando á punto de enviar una expedicion para lograrlo supo q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> se habia extinguido en Aragua y en la provincia de Barinas, se encargó procurase adquirir costras de buena vacuna en Carácas ú otra pro- [109] vincia imediata, las quales, pulverizadas y desleidas en agua comun con la punta de la lanceta destinada para las operaciones, producen el mismo efecto; y que, á falta de hospital, destinase el Ayuntamiento para este obgeto una Casa particular.</p></div></div><div id="22cf3b61-2379-8032-a0bc-f2e6814cb594" class="column-list" data-notion-column-list="" dir="auto"><div id="22cf3b61-2379-8049-afc4-dd9b6bf7c5da" style="width:25%" class="column" data-notion-column-ratio="0.25" dir="auto"><p id="22cf3b61-2379-8074-bd27-db6ebd5cfd33" class="" dir="auto">Exped.<span data-notion-inline-equation="^{te}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7936em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7936em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> N. 14.</p><p id="22cf3b61-2379-8019-b1b5-cb3c40c3e9df" class="" dir="auto">Circular de 20 de Mayo de 1804.</p></div><div id="22cf3b61-2379-80d8-8c1a-fcb5fb1c8321" style="width:106.25%" class="column" data-notion-column-ratio="1.0625" dir="auto"><p id="22cf3b61-2379-808a-8a8b-f85a112dae6e" class="" dir="auto">Noticioso el Rey del arribo de la expedicion á ultramar, se circuló R.<span data-notion-inline-equation="^{l}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8491em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span></span></span></span></span></span></span></span></span></span></span></span></span> órden en 20 de Mayo de 1804 á los Gefes de aquellas provincias para q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> en el hospital de la capital y en los de las provincias se destinase una sala de vacunacion para conservar fresco el fluido y comunicarlo gratuitam.<span data-notion-inline-equation="^{te}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7936em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7936em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> de brazo á brazo á quantos se presentasen.</p></div></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

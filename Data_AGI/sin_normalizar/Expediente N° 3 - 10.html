@@ -1,0 +1,835 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Expediente N° 3 - 10</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="1fbf3b61-2379-802b-b085-ea2433874f16" class="page sans"><header><h1 class="page-title" dir="auto">Expediente N° 3 - 10</h1><p class="page-description" dir="auto"></p><table class="properties"><tbody><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/hashtag_gray.svg" style="width:14px;height:14px;display:block"/></span>Folio</th><td>38 - 70</td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/run_gray.svg" style="width:14px;height:14px;display:block"/></span>From (Remitente)</th><td><span class="selected-value select-value-color-pink">Francisco Balmis</span></td></tr><tr class="property-row property-row-date"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/calendar_gray.svg" style="width:14px;height:14px;display:block"/></span>Date</th><td><time datetime="1813-03-12">12/03/1813</time></td></tr><tr class="property-row property-row-status"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/burst_gray.svg" style="width:14px;height:14px;display:block"/></span>Estado</th><td><span class="status-value select-value-color-blue"><div class="status-dot status-dot-color-blue"></div>Sin normalizar</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/map-pin-alternate_gray.svg" style="width:14px;height:14px;display:block"/></span>Place</th><td><span class="selected-value select-value-color-orange">Cadiz</span></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>Summary</th><td>Contrata de la corveta María Pita y sesgo del Juez de Arribadas de la Coruña<br/>Expedición de adelantos de sueldo y salvo conductos<br/>Discusión sobre la utilidad de frascos en lugar de cristales<br/>Especificaciones particulares hechas en la Circular del 1 de Septiembre de 1803</td></tr></tbody></table></header><div class="page-body"><p id="1fbf3b61-2379-8089-bfc6-e01b53ac67dd" class="" dir="auto">[38]</p><p id="1fbf3b61-2379-80ff-a792-c86c3aacd764" class="" dir="auto">En R.<span data-notion-inline-equation="^{l}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8491em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span></span></span></span></span></span></span></span></span></span></span></span></span> Órden de 27 de Julio de 1803</p><div id="1fbf3b61-2379-80eb-b948-f91fb5b4152c" class="column-list" data-notion-column-list="" dir="auto"><div id="1fbf3b61-2379-8078-9779-d2ef68e3f1a4" style="width:37.5%" class="column" data-notion-column-ratio="0.375" dir="auto"><p id="1fbf3b61-2379-80da-8b4a-d0aa0cdf53a4" class="" dir="auto">Expediente N. 3.</p></div><div id="1fbf3b61-2379-8010-9301-e1b822d3c3ea" style="width:106.25%" class="column" data-notion-column-ratio="1.0625" dir="auto"><p id="1fbf3b61-2379-80d9-9c32-fe437eb9c4fe" class="" dir="auto">Se participó al Juez de Arribadas de la Coruña la formasion de la expedicion de la vacuna, y se le encargaba buscase y ajustase en aquel puerto un buque mercante bien acondicionado, de buen andar y de unas 250 toneladas, que se consideraba necesario para q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> fuese con comodidad la expedicion; y en el supuesto de que el Capitán ó Dueño deberá franquear á sus individuos [38v] todo lo principal del buque, estar á las órdenes del Director para la salida de aquel puerto y de las dos escalas y darles mesas y lo demas necesarios, segun costumbre; procediese desde luego á celebrar la Contrata de cuenta de la ~. Hacienda con las condiciones mas ventajosas y la de que se le pagase en la Havana el precio del fletam.<span data-notion-inline-equation="^{to}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7936em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7936em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">o</span></span></span></span></span></span></span></span></span></span></span></span></span> excepto aqeulla Cantidad que el Capitan ó dueño pidiese adelantada para su [39] habilitacion.</p><p id="1fff3b61-2379-8091-bbe2-cafd29ed8f12" class="" dir="auto">__________________________</p></div></div><p id="1fff3b61-2379-80c0-a44b-dcefa08fa65f" class="" dir="auto">En 10 de Agosto de 1803</p><div id="1fff3b61-2379-80e2-a9c9-cd4823f65038" class="column-list" data-notion-column-list="" dir="auto"><div id="1fff3b61-2379-80cf-b39b-e93a794b5802" style="width:37.5%" class="column" data-notion-column-ratio="0.375" dir="auto"><p id="1fff3b61-2379-80f0-9e6c-c1588b5ab654" class="" dir="auto">
+</p></div><div id="1fff3b61-2379-809e-9bc6-d8900816e253" style="width:112.5%" class="column" data-notion-column-ratio="1.125" dir="auto"><p id="1fff3b61-2379-804e-a239-eb91345ece80" class="" dir="auto">Contestó al Juez de Arribadas de la Coruña á dichas R.<span data-notion-inline-equation="^{l}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8491em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span></span></span></span></span></span></span></span></span></span></span></span></span> órden remitiendo las propuestas de D.<span data-notion-inline-equation="^{n}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span></span></span> José de Becerra, y de Tabanera y Sobrino, Armadores, el primero de la fragata Silph de 400 toneladas, y el segundo de la corbeta María Pita de 200 toneladas. Informaba que la segunda era mas velera que la otra, aunque no tan cómoda, [39v] y pide se le autorice para formar el ajuste y concluirlo con la q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> parezca mas á propósito.</p><p id="1fff3b61-2379-80fc-be68-caae90a8141c" class="" dir="auto">__________________________</p><p id="1fff3b61-2379-802b-8c94-fa2045cbc0a6" class="" dir="auto">Eran tan exôrbitantes las condiciones con que se pretendía fletar la fragata Silph, q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> así por esta circunstancia, como por la de ser un buque demasiado grande para el caso, se desechó desde luego.</p><p id="1fff3b61-2379-80cd-8919-e6a3abffdd8a" class="" dir="auto">Los Armadores de la Corveta María Pita presentaban ménos gravosa su [40] contrata, y en R.<span data-notion-inline-equation="^{l}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8491em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span></span></span></span></span></span></span></span></span></span></span></span></span> órden de 30 de Agosto se previno al Juez de Arribadas de la Coruña que valiendose de sus conocimientos, ó de acuerdo con otros peritos, procediese á arreglar un ajusto con el Armador desta Corveta, ó con el de otro buque qualquiera, baxo condiciones equitativas y ventajosas á la ~. Hacienda.</p><p id="1fff3b61-2379-809b-be1c-de42f7ad1fea" class="" dir="auto">___________________________</p><p id="1fff3b61-2379-80bc-bdc8-c7edf4a49fbd" class="" dir="auto">Habiendo llegado á la Coruña Balmis en 21 de Septiembre, escribió con fecha de 1° de Octubre siguiente ha- [40v] ciendo presente que entre los varios buques que se presentaban para formar la Contrata de la conduccion de la expedicion á América, ninguno ofrecía mayores ventajas que la fragata San José de D.<span data-notion-inline-equation="^{n}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span></span></span> Manuel de Goycochea, pues no solo pedía este por el fletamento de ella dos mil reales ménos al mes que el de la Corbeta Pita, sino que no debía correrle el pago hasta el dia en que se diese á la vela (cosa en que [41] ninguno se convencía, pues todos lo exîgían desde el momento de cerrarse la Contrata), y rebaxaba quatro cientos reales por la manutencion de cada individuo de primera mesa, y doscientos por los de segunda. Decía Balmis que no había otra dificultad para decidirse por Goycochea que la llegada de su fragata y q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> se reconociese; pero que se obligaba este á tenerla dentro de ocho dias en la Coruña.</p><p id="1fff3b61-2379-8053-835d-c01d71d255a0" class="" dir="auto">_____________________________</p><p id="1fff3b61-2379-80b4-b44f-ef00013136b9" class="" dir="auto">[41v] El Rey aprobó esta propuesta, como se puso por resolucion al márgen de la misma Carta de Balmis, y en concecuencia se expidieron las órdenes correspondientes al Juez de Arribadas en 11 de Octubre y al Ministerio de Hacienda, remitiendole á aquel la propuesta original para q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> pudiese formalizar la Contrata con el dueño de la fragata S.<span data-notion-inline-equation="^{n}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span></span></span> José, en caso de ser esta de las dimensiones [42] prefixadas, y de haber llegado ya á la Coruña, procurando hacer que moderase la anticipacion de tres meses de mesa que solicitaba. </p><p id="1fff3b61-2379-80c6-9a6e-df29790fdd13" class="" dir="auto">____________________________</p></div></div><p id="1fff3b61-2379-80b2-b796-e61e87e4b030" class="" dir="auto">Con fecha de 8 de Octubre, dia en que</p><div id="1fff3b61-2379-8012-8688-ff1818e91ddc" class="column-list" data-notion-column-list="" dir="auto"><div id="1fff3b61-2379-8020-a61f-cf9d35631208" style="width:37.5%" class="column" data-notion-column-ratio="0.375" dir="auto"><p id="1fff3b61-2379-80bd-8de4-d268489da9a1" class="" dir="auto">
+</p></div><div id="1fff3b61-2379-80ef-abcd-d351d9773fe3" style="width:162.5%" class="column" data-notion-column-ratio="1.625" dir="auto"><p id="1fff3b61-2379-80bb-8eae-cf563186effc" class="" dir="auto">debía llegar dicha fragata á la Coruña, participó Balmis que no habiéndose presentado aún esta, ni haber esperanza de q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> lo verificase por un accidente que le sobrevino, había pasado el Juez de Arribadas en la tarde [42v] de aquel mismo día á celebrar la Contrata con el dueño de la Corveta María Pita, que, despues de Goycochea, fué el que presentaba meyores ventajas,</p><p id="1fff3b61-2379-80ea-8122-eea2fab3c467" class="" dir="auto">_____________________________</p><p id="1fff3b61-2379-8017-8b9c-e26c84c4d5ce" class="" dir="auto">Con efecto en 12 del mismo remitió dicha contrata el Juez de Arribadas, otorgada, segun expresaba, con dictámen de peritos y de acuerdo con Balmis, así por la proporcion y seguridad de este buque, como por haber mo- [43] dificado los precios de su primera propuesta, rebajando 400 p.<span data-notion-inline-equation="^{s}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">s</span></span></span></span></span></span></span></span></span></span></span></span></span> f.<span data-notion-inline-equation="^{s}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">s</span></span></span></span></span></span></span></span></span></span></span></span></span> de flete y 40 de mesa por mes.</p><p id="1fff3b61-2379-804a-94b4-eb615afc50c4" class="" dir="auto">______________________________</p><p id="1fff3b61-2379-806c-943f-c2c0a4612811" class="" dir="auto">A Consecuencia de haberse aprobado esta contrata, se expidieron en 21 de Octubre las órdenes correspondientes al Juez de Arribadas para la pronta salida de la expedicion, al Ministerio de Hacienda para la entrega de la anticipacion estipulada por Tavanera, y al de Estado para q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> facilitase el salvo con- [43v] ducto de las protencias beligerantes.</p><p id="1fff3b61-2379-804d-9a43-d84b1b8aa807" class="" dir="auto">_______________________________</p><p id="1fff3b61-2379-803c-83dc-ed3b4875bcca" class="" dir="auto">Posteriormente participó el Juez de Arribadas en 19 del mismo que la Fragata San José, de Goycochea, había llegado á la Coruña el dia 12 despues de haber remitido la Contrata de Tavanera. </p><p id="1fff3b61-2379-80cf-af1f-c743eccc35e9" class="" dir="auto">Goycochea con fha. de 5 de Noviembre representa que en 1° de Octubre propuso á Balmis por escrito las condiciones con q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> presentaba su fragata para conducir la ex- [44] pedicion: que habiendo sido aprobado estas por el Gobierno, se presentó al Intendente de la Coruña para recibir la anticipacion contratada, y le contestó q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> en virtud de órden posterior había sido elegida la Coverta María Pita. Hace pres.<span data-notion-inline-equation="^{te}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7936em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7936em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> Goycochea q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> con esta novedad se halla sin saber qué hacer de su fragata, y pide q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> se le mande pagar el falso flete.</p><p id="1fff3b61-2379-8075-87b1-e51198e0699b" class="" dir="auto">______________________________</p><p id="1fff3b61-2379-8015-a38d-f3f9d3b90965" class="" dir="auto">La Secretaría hizo presente con este motivo [44v] que el falso flete que solicitaba Goycochea no le era debido en el caso presente en que la falta era suya, p.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> no había entrado el buque en la Coruña para la época q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> se había prefixado. Así que se desestimó el recurso de este interesado, mandandose activar la salida de la expedicion, y que si Goycochea tenía algo q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> repetir despues de verificada esta lo hiciese Contra el Juez de Arribadas y Balmis. </p></div></div><p id="1fff3b61-2379-8057-a737-cd6a0011c454" class="" dir="auto">[45]</p><p id="1fff3b61-2379-8087-b300-ebd98a733726" class="" dir="auto">Con fecha de 12 de Octubre de 1803 representó</p><div id="1fff3b61-2379-8005-90fc-cfb88f33b127" class="column-list" data-notion-column-list="" dir="auto"><div id="1fff3b61-2379-8078-a68a-fa8552b480a6" style="width:37.5%" class="column" data-notion-column-ratio="0.375" dir="auto"><p id="1fff3b61-2379-804a-aa9f-f25759c54f5e" class="" dir="auto">
+</p></div><div id="1fff3b61-2379-8071-b55e-d8dc750d9c90" style="width:112.5%" class="column" data-notion-column-ratio="1.125" dir="auto"><p id="1fff3b61-2379-80ae-859d-d179642392f6" class="" dir="auto">D.<span data-notion-inline-equation="^{n}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span></span></span> Juan Francisco Barrie, del Comercio de la Coruña, la intriga que había mediado en el fletamento de la corveta María Pita. Decía que el Juez de Arribadas se empeñó en preferir la Corveta, despreciando muchos barcos mas proporcionados para la expedicion de la vacuna, uno de ellos el q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> él presentó con condiciones equitativas, pues que entre estas y las de la Corveta había la diferencia de 614 [45v] pesos f.<span data-notion-inline-equation="^{s}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">s</span></span></span></span></span></span></span></span></span></span></span></span></span> al mes: que el Juez de Arribadas desechó sin embargo sus proposiciones á pretexto de que estaba formalizada ya la contrata con la corveta, pretexto infundado p.<span data-notion-inline-equation="^{s}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">s</span></span></span></span></span></span></span></span></span></span></span></span></span> no se celebró esta hasta el dia siguiente, aunque se diga q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> lo fué el dia 8. que la Corveta no llegaba á ser de 160 toneladas y no tenía entrepuentes, quando el Bergatín que él ofreció era mucho mas sólido, capaz y cómodo que [46] aquella: que hallandose con un crecido surtido de sombreros finos de su fábrica, le hubiera sido mui ventajoso haber verificado el viaje, que hubiera aprovechado para vender mucha parte de ellos, y que por esta consideracion había ofrecido fletar su Bergantin 200 p.<span data-notion-inline-equation="^{s}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">s</span></span></span></span></span></span></span></span></span></span></span></span></span> mas varato al mes q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> la Corveta, rebaxando igualmente á proporcion los demas precios de mesa, esta Concluía solicitando que cotejandose la Contrata que él [46v] había presentado con la que se celebró con la Corveta, se resolviese lo que se estimase justo.</p><p id="1fff3b61-2379-80e8-8160-cc666527c7b4" class="" dir="auto">___________________________</p><p id="1fff3b61-2379-800a-bca2-cff6962bd3e1" class="" dir="auto">Con este motivo hizo presente la Secret.<span data-notion-inline-equation="^{a}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span></span></span></span></span></span> que la sencilla exposicion de Barrie tenía el Carácter dela Verdad, y que aunq.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> nada podía asegurarse sobre los hechos que este refería, había seguramente no poco motivo de darle crédito al Considerar que el Juez de Arribadas no había enviado desde [47] el principio otras proposiciones que las de los dueños de la Corveta Pita y los de la fragata Silph, q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> se desecharon por sumamente gravosas al erario, siendo así que Balmis en una de sus cartas decía que había hasta siete buques distintos q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> se ofrecían á la expedicion. Hacíase cargo la Secretaría de que el daño estaba ya hecho, tanto mayor quanto mas favorable eran las proposiciones de Bar- [47v] ries, y que en este estado de cosas, para no retardar la salida de la expedicion, lo único que podría hacerse era comunicar órdenes mui reservadas al Intendente, desp.<span data-notion-inline-equation="^{s}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">s</span></span></span></span></span></span></span></span></span></span></span></span></span> de verificada aquella, acompañandole la representacion de D.<span data-notion-inline-equation="^{n}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span></span></span> Juan Francisco Barrie para que hiciese Comparecer á este sugeto y ratificarse en su contexto, exîgiendole los documentos q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> citaba en ella y no había remitido: que en seguida procurase ave- [48] riguar por los medios que fuesen posibles si era cierto que Barries y otros Armadores propusieron condiciones mas ventajosas q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> los de la Corveta, y qué motivo había intervenido para dar la preferencia á esta.</p><p id="1fff3b61-2379-80e4-bf80-da1c51d0f327" class="" dir="auto">El Rey se conformó con el dictámen de la Secretaría, y en 12 de Diciembre se comunicaron las órdenes correspondientes al Intendente de Exto. de la Coruña.</p><p id="1fff3b61-2379-80d4-8656-d9ebbd74911b" class="" dir="auto">____________________________</p></div></div><div id="1fff3b61-2379-80c3-824d-ee47dca5b8c3" class="column-list" data-notion-column-list="" dir="auto"><div id="1fff3b61-2379-8084-a860-d11a8eb2a8d1" style="width:37.5%" class="column" data-notion-column-ratio="0.375" dir="auto"><p id="1fff3b61-2379-808a-89d9-f5a9b1295395" class="" dir="auto">[48v]</p><p id="1fff3b61-2379-80fe-a619-e8147f5ba95f" class="" dir="auto">Expediente N. 4.</p></div><div id="1fff3b61-2379-80b4-9d73-fb7ef69479c0" style="width:112.5%" class="column" data-notion-column-ratio="1.125" dir="auto"><p id="1fff3b61-2379-8049-b004-c37811442cc2" class="" dir="auto">En 30 de Noviembre avisó el Juez de Arribadas haberse dado la vela en el mismo la Corveta María Pita, que Conducía la expedicion, á cargo del Teniente de fragata D.<span data-notion-inline-equation="^{n}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span></span></span> Pedro del Barzo.</p><p id="1fff3b61-2379-8078-9fc5-cee1c6e8915a" class="" dir="auto">Lo mismo participó con igual fecha Tavanera, dueño de la Corveta, el Gobernador de la Coruña con la de 3 de Diciembre, y el mismo Balmis con 30 de Nov.<span data-notion-inline-equation="^{bre}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8491em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">b</span><span class="mord mathnormal mtight">re</span></span></span></span></span></span></span></span></span></span></span></span></span>, en el momento de salir del Puerto, advirtiendo en P. D. q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> solo [49] iban 22 niño por quedarse uno en tierra enfermo.</p><p id="1fff3b61-2379-8049-a71a-c646b9d2fda9" class="" dir="auto">_____________________________</p></div></div><p id="1fff3b61-2379-808f-9ba4-f3f2633e1739" class="" dir="auto">Con fecha de 12 de Octubre</p><div id="1fff3b61-2379-809c-b0b8-f5b55eff04e2" class="column-list" data-notion-column-list="" dir="auto"><div id="1fff3b61-2379-807e-8690-d97dfee30caf" style="width:37.5%" class="column" data-notion-column-ratio="0.375" dir="auto"><p id="1fff3b61-2379-808c-9d95-de08cba804ed" class="" dir="auto">
+</p><p id="1fff3b61-2379-8023-8435-f3b598c31fa2" class="" dir="auto">Expediente N. 3.</p><p id="1fff3b61-2379-8091-b9d5-c72f7ec097b7" class="" dir="auto">
+</p><p id="1fff3b61-2379-809f-a303-c580cb058566" class="" dir="auto">
+</p><p id="1fff3b61-2379-8016-a1a5-ec0ff8fefea9" class="" dir="auto">
+</p><p id="1fff3b61-2379-800d-a7c3-c91361db475d" class="" dir="auto">
+</p><p id="1fff3b61-2379-804f-b715-c94709e2b01a" class="" dir="auto">
+</p><p id="1fff3b61-2379-80ce-be60-e8b6658ae406" class="" dir="auto">
+</p><p id="1fff3b61-2379-8083-8ac4-daeebe3f49bb" class="" dir="auto">
+</p><p id="1fff3b61-2379-80b6-a06c-db960dd5141b" class="" dir="auto">
+</p><p id="1fff3b61-2379-806f-a21f-e508bc052ba1" class="" dir="auto">
+</p><p id="1fff3b61-2379-8043-8aa5-f24d653317da" class="" dir="auto">*Esto confirma lo q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> dice Barrie</p></div><div id="1fff3b61-2379-8017-a690-d3ff97841db5" style="width:112.5%" class="column" data-notion-column-ratio="1.125" dir="auto"><p id="1fff3b61-2379-80ab-9459-e24295275f0d" class="" dir="auto">Representó D.<span data-notion-inline-equation="^{n}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span></span></span> José Becerra del Comercio de la Coruña que en 8 del mismo ofreció á Balmis su Bergantin la Valentina de mas de 22 toneladas, enviandola despues, igualm.<span data-notion-inline-equation="^{te}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7936em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7936em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> que al Juez de Arribadas, las proposiciones con que se ofrecía á conducir la expedicion. contestóle el primero que necesitaba verlo despacio, y el segundo que ya estaba cerra- [49v] da la Contrata con la corveta María Pita.</p><p id="1fff3b61-2379-80c0-b2ce-e657430a9380" class="" dir="auto">Becerra advierte una contradiccion manifiesta entre estas dos respuestas, y advierte igualmente que se ha procedido de ligero en el asunto sin detenerse á comparar unos buques con otros ni atender á la economía del Erario: q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> la corveta apénas tiene 16* toneladas, y carece de entrepuentes, y q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> sus condiciones eran mas equitativas q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> las q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span>presentaron los armadores de esta. </p><p id="1fff3b61-2379-8090-a731-c274c3052c87" class="" dir="auto">[50] </p><p id="1fff3b61-2379-8015-9268-de596f6e802c" class="" dir="auto">___________________________</p><p id="1fff3b61-2379-808f-b55b-e8de45f20b28" class="" dir="auto">Esta representacion tubo el mismo resultado que la anterior. En 12 de Diciembre se remitió al Intendente juntamente con la de Barrie, con las prevenciones reservadas de que se ha hecho mencion.</p><p id="1fff3b61-2379-80a3-b984-fae1807258dd" class="" dir="auto">___________________________</p></div></div><p id="1fff3b61-2379-80e1-930b-d19eda027549" class="" dir="auto">El S.<span data-notion-inline-equation="^{r}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span></span></span></span></span></span></span></span></span></span></span></span></span> Ministro de Marina, Grandallana,</p><div id="1fff3b61-2379-80e8-8234-fa2ec020bc9b" class="column-list" data-notion-column-list="" dir="auto"><div id="1fff3b61-2379-8032-8f3d-fdfdfd191768" style="width:37.5%" class="column" data-notion-column-ratio="0.375" dir="auto"><p id="1fff3b61-2379-80da-9774-c45f605c2568" class="" dir="auto">
+</p></div><div id="1fff3b61-2379-8064-ab0f-f0cc53f81da3" style="width:112.5%" class="column" data-notion-column-ratio="1.125" dir="auto"><p id="1fff3b61-2379-8038-89c6-c3b0645ac24a" class="" dir="auto">Remitió con fecha de 29 de Enero de 1804 una representacion documentada del Juez de Arribadas de la Coruña, en que este se qeuza de las atroces calumnias con [50v] que le habían infamado Becerra y Barrie en las que habían dirigido al Gobierno: q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> no era su ánimo hacer que se entorpeciese su resultado; pero q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> habiendo intervenido en las contratas como Juez de Arribadas, y siendo ademas Comandante de Marina de aquella provincia goza el fuero privativo de ellas, y deben por lo mismo acudir aquellos ante el Capitan Grãl. de Marina del Departamento, y nó ante el Intendente de Exto.</p><p id="1fff3b61-2379-809a-946c-e7e268126878" class="" dir="auto">[51]</p><p id="1fff3b61-2379-80cd-8e33-e42cd889f316" class="" dir="auto">___________________________</p><p id="1fff3b61-2379-807f-b7b9-c5fbe7811e68" class="" dir="auto">Hizo presente la Secretaría en su nota que quando se comunicó órden al Intendente en 12 de Diciembre 1903 para q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> oyese en justicia á Becerra y Barrie con intervencion del fiscal, solo se tubo en consideracion el perjuicio de que se quexaban con la preferencia dada á la Corveta y el gravámen que resultaba al Erario. Se prescindió por entónces, como era regular, de si fue Balmis [51v] el autor de este perjuicio, ó el Juez de Arribadas, ó si fueron ambos; y de consig.<span data-notion-inline-equation="^{te}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7936em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7936em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span>, no resultando aun delito probado ni reo determinado, no era posible elegir juez con acierto. La Secretaría reflexîonaba pues q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> era mui probable que formalizando Becerra y Barrier su demanda ante el Intendente la hubiesen determinado contra el Juez de Arribadas, lo q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> aun se ignoraba; y prescindiendo de si este goza ó nó su fuero particular [52] en este Caso, creía q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> lo mas acertado era encargar al Intendente q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span>, concluida que fuese la sumaria, diese cuenta con los autos originales, informando reservadamente si había habido colusion ú otro vicio en la preferencia de la Corveta, y qué perjuicios eran los que habían resultado así á los Armadores como al Erario.</p></div></div><p id="1fff3b61-2379-80be-aa4e-d8e9321d20b5" class="" dir="auto"> <span style="border-bottom:0.05em solid">Resolucion.</span>= “Digase al S.<span data-notion-inline-equation="^{or}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">or</span></span></span></span></span></span></span></span></span></span></span></span></span> Grandallana lo que se expone en la nota, pues yo dudo que en esta materia el Juez de Arribadas pueda reclamar el fuero de marina; pero yengo de acuerdo se puede proceder sin ofensa de uno y otra jurisdiccion dando arribas al q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> se elija [52v] entre los dos Ministerios y Consultando la providencia.”</p><p id="1fff3b61-2379-80c4-9583-d9b9113852e2" class="" dir="auto">_______________________</p><p id="200f3b61-2379-80fe-9042-d5f3233ce25e" class="" dir="auto">Ultimamente en 31 de Marzo</p><div id="200f3b61-2379-8019-9be9-dd2b8cdcdb52" class="column-list" data-notion-column-list="" dir="auto"><div id="200f3b61-2379-80b1-82aa-f8424a102a7b" style="width:37.5%" class="column" data-notion-column-ratio="0.375" dir="auto"><p id="200f3b61-2379-80cd-a27b-f4a7a86188a3" class="" dir="auto">
+</p></div><div id="200f3b61-2379-803a-8f2e-f4ce123b692b" style="width:162.5%" class="column" data-notion-column-ratio="1.625" dir="auto"><p id="200f3b61-2379-80a5-8050-cc9daa79246f" class="" dir="auto">Ocurrió Tavanera, dueño de la corveta María Pita, manifestando que noticioso de las reclamaciones de Becerra y Barrie, y de la Comision para que los riga en justicia, pide q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> este le considere por parte en la Causa, activando su Conclusion quanto sea posible. </p><p id="200f3b61-2379-8096-896a-f2e15c6096b1" class="" dir="auto">Se accedió á esta solicitud, y en 23 de abril se comunicó [53] al Intendente la orden Conveniente al efecto.</p><p id="200f3b61-2379-803c-a825-d84d46cadd14" class="" dir="auto">___________________</p></div></div><p id="200f3b61-2379-8058-a3be-c446c13e76dc" class="" dir="auto">Antes de salir la expedición, y con fecha de 2 de noviembre,</p><div id="200f3b61-2379-8029-bf6d-d214655d8506" class="column-list" data-notion-column-list="" dir="auto"><div id="200f3b61-2379-8078-b421-f19f4caadc1f" style="width:37.5%" class="column" data-notion-column-ratio="0.375" dir="auto"><p id="200f3b61-2379-803e-aa29-c704f3266ef5" class="" dir="auto">Expediente N. 5.</p></div><div id="200f3b61-2379-807c-8437-fd1b8dcd508e" style="width:112.5%" class="column" data-notion-column-ratio="1.125" dir="auto"><p id="200f3b61-2379-809f-91b3-ce7efc74a05e" class="" dir="auto">Participó Balmis las desavenencias continuas que ocurrían con Don Ramón Fernandez Ochoa, uno de sus Ayudantes, que resentido al parecer de que la Junta de Cirujanos nombrase por Vicedirector a Salvany y no a él, manifestó de varios modos el desprecio con que miraba [53v] a sus compañeros y aún al mismo Balmis, introduciendo entre ellos la desunión y desconfianza.</p><p id="200f3b61-2379-8028-b3e7-f75f42b2bf66" class="" dir="auto">En Real Orden de 18 del mismo se les mandó separar a Ochoa de la expedición, como a cualquiera otro que no fuese gustoso, sin permitir que se embarcase y exigiéndoles las cantidades que hubiese recibido adelantadas.</p><p id="200f3b61-2379-8029-a4b4-dbd3bd2d2584" class="" dir="auto">Balmis contestó la víspera de su salida dando cuenta de estar verificada [54] la separación de este individuo.</p><p id="200f3b61-2379-805f-9de3-d77f91245de1" class="" dir="auto">___________________</p></div></div><p id="200f3b61-2379-807f-b52d-f370fcd89abf" class="" dir="auto">Hallandose aun Balmis en Madrid pre-</p><div id="200f3b61-2379-8030-bd6d-ca0c00a7e500" class="column-list" data-notion-column-list="" dir="auto"><div id="200f3b61-2379-804d-9f13-d76fb9f72430" style="width:37.5%" class="column" data-notion-column-ratio="0.375" dir="auto"><p id="200f3b61-2379-8062-84da-ff7448f7fcaa" class="" dir="auto">Expediente N. 6.</p><p id="200f3b61-2379-80d2-8558-efd80419dadd" class="" dir="auto">
+</p><p id="200f3b61-2379-80a5-9aa6-fab4fed9078d" class="" dir="auto">*9<span data-notion-inline-equation="_o" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3014em;vertical-align:-0.15em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> D 331 r.<span data-notion-inline-equation="^{s}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">s</span></span></span></span></span></span></span></span></span></span></span></span></span> v.<span data-notion-inline-equation="^{on}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">o</span><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span></span></span></p></div><div id="200f3b61-2379-805b-b965-d9dafe46905d" style="width:93.75%" class="column" data-notion-column-ratio="0.9375" dir="auto"><p id="200f3b61-2379-8098-a4ef-e1a4acd3f2a7" class="" dir="auto">sentó en 7 de Septiembre la cuenta de los gastos ocasionados en aquella capital para habilitar la expedicion, importante * [<del>xxxx</del>].</p><p id="200f3b61-2379-8007-af52-c085cecee748" class="" dir="auto">Pedía al mismo tiempo que se le mandase pagar en la Coruña el alcance que le resultaba de 9.939 r.<span data-notion-inline-equation="^{s}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">s</span></span></span></span></span></span></span></span></span></span></span></span></span>: que se le abonen así mismo en aquella ciudad de 7 á 8 r.<span data-notion-inline-equation="^{s}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">s</span></span></span></span></span></span></span></span></span></span></span></span></span> en que regula la manutencion de los [54v] diez niños que sacaba de Madrid: que se le abonase ademas lo necesario para que volviesen estos desde la Coruña; y que en atencion á las circunstancias de entónces se solicitase un salvo conducto de las  naciones belligerantes para que pudiese hacer sin obstáculo su navegacion.</p><p id="200f3b61-2379-8052-b36e-d0e20d255bcf" class="" dir="auto">____________________</p><p id="200f3b61-2379-80d2-bb11-d499afa0d973" class="" dir="auto">Se le dixo en 20 del mismo que el Rey se había servido resolver que ademas de los [55] ochenta y un mil diez y nueve r.<span data-notion-inline-equation="^{s}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">s</span></span></span></span></span></span></span></span></span></span></span></span></span> que recibió en Tesorería mayor, se le entregasen en la Coruña otros seis mil para los gastos que hubiesen ocurrido y se ofreciesen mantener, vestir y habilitar de Camas á los niños q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> se embarcasen y restituir á Madrid los ya inoculados, con obligacion de dar cuenta formal; quedando el Rey en proporcionar el salvo conducto de las naciones beligerantes luego que se supiere el buque y nombre [55v] de su armadura.</p><p id="200f3b61-2379-805e-b71c-c228eefd796d" class="" dir="auto">______________________</p></div></div><p id="200f3b61-2379-807b-83fd-dfcef1701405" class="" dir="auto"> Con fecha de 1.° de Octubre dirigió ~</p><div id="200f3b61-2379-80b8-b386-fd26ca450174" class="column-list" data-notion-column-list="" dir="auto"><div id="200f3b61-2379-8003-83a1-c1def750d7cc" style="width:43.75%" class="column" data-notion-column-ratio="0.4375" dir="auto"><p id="200f3b61-2379-80e8-b79a-fcb0980947d2" class="" dir="auto">
+</p></div><div id="200f3b61-2379-8001-a3b5-db00c906712d" style="width:112.5%" class="column" data-notion-column-ratio="1.125" dir="auto"><p id="200f3b61-2379-80d9-b05c-fab33d291c14" class="" dir="auto">Balmis desde la Coruña cuenta formal de todos los gastos inclusos los del viage á aquel puerto: ascendía á 94 D 853 r.<span data-notion-inline-equation="^{s}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">s</span></span></span></span></span></span></span></span></span></span></span></span></span> y 25 mȓs, de que rebajados 81 D 619 r.<span data-notion-inline-equation="^{s}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">s</span></span></span></span></span></span></span></span></span></span></span></span></span> que recibió en Tesorería mayor, resultaba á su favor el alcance de 13 D 234 r.<span data-notion-inline-equation="^{s}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">s</span></span></span></span></span></span></span></span></span></span></span></span></span> y 25.</p><p id="200f3b61-2379-80cf-967d-edcfda63e1b3" class="" dir="auto">______________________</p><p id="200f3b61-2379-80d7-b81f-dc2d91070c27" class="" dir="auto">En R.<span data-notion-inline-equation="^{l}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8491em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span></span></span></span></span></span></span></span></span></span></span></span></span> órden de 12 del mismo se previno al Ministro de Hacienda hiciese que [56] por la Tesorería de Exército de la Coruña se pagase á Balmis el alcance de 7 D 234 r.<span data-notion-inline-equation="^{s}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">s</span></span></span></span></span></span></span></span></span></span></span></span></span> que le resultaba, rebajados los 6 D q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> se le habían entregado últimamente, mediante á haber sido aprobada la Cuenta que había presentado: Que así mismo se hiciese cargo del Intendente de Ex.<span data-notion-inline-equation="^{to}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7936em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7936em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">o</span></span></span></span></span></span></span></span></span></span></span></span></span> de aquella Ciudad de restituir quanto ántes á Madrid los seis niños, y de habilitar de ropas á los [56v] que se embarcasen en la expedicion. </p><p id="200f3b61-2379-80f6-b003-ee198ed98834" class="" dir="auto">_______________________</p></div></div><p id="200f3b61-2379-80e9-ab5a-d488066796d5" class="" dir="auto">En 14 de Diciembre de 1803</p><div id="200f3b61-2379-8077-a89f-dfc29b515464" class="column-list" data-notion-column-list="" dir="auto"><div id="200f3b61-2379-80a0-93b8-f7df7d18f130" style="width:43.75%" class="column" data-notion-column-ratio="0.4375" dir="auto"><p id="200f3b61-2379-80cf-8851-eac7f5b64ee5" class="" dir="auto">Expediente N. 7.</p></div><div id="200f3b61-2379-807d-8789-e1c26237c93d" style="width:112.5%" class="column" data-notion-column-ratio="1.125" dir="auto"><p id="200f3b61-2379-801b-89d7-f33fe0cae6eb" class="" dir="auto">Participó el Intend.<span data-notion-inline-equation="^{te}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7936em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7936em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> de Exto. de la Coruña, haber fallecido en Lugo á su regreso para Madrid Camilo Maldonado, uno de los niños que fueron con Balmis á la Coruña. </p><p id="200f3b61-2379-80c6-ab82-f81c72b48ba7" class="" dir="auto">En 28 del mismo se le Contestó el enterado. </p><p id="200f3b61-2379-804c-8dc8-e639cd28cf6e" class="" dir="auto">______________________</p><p id="200f3b61-2379-800a-83a4-f73573ee06fc" class="" dir="auto">Habiendo estipulado de Armador de la Nave [57] que conducía la expedicion de la vacuna q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> se le facilitase un salvo-conducto de las naciones beligerantes, se pasó oficio al Ministerio de Estado para q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> lo proporcionase. En 31 de Octubre de 1803 contestó el S.<span data-notion-inline-equation="^{or}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">or</span></span></span></span></span></span></span></span></span></span></span></span></span> Ministro de Estado que el Ministro Británico le había contestado que todos los Consules y Vice-Consules de su nacion en España se hallaban ya autorizados para dar certificaciones de esta clase. Acudió pues D.<span data-notion-inline-equation="^{n}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span></span></span> Pedro del Baico, Comand.<span data-notion-inline-equation="^{te}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7936em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7936em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> [57v] de la Coverta María Pita, al Vice-consul ingles en la Coruña, le dió este una certificacion, cuya traduccion remitió, en q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> aseguraba: “que hasta el dia de la fecha (12 de Noviembre) no había declaracion alguna hostil entre S. M. y el Rey de la Gran-Bretaña, y q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> continuaba la paz entre ambas cortes sin interrupcion segun el tratado de Anciens. “</p><p id="200f3b61-2379-80d4-91a1-d41ef5be17c7" class="" dir="auto">Ha dirigido esta [58] certificacion á todos los Comandantes de las fuerzas navales inglesas, pero como no era esto lo que se deseaba, sino un salvo conducto en toda forma, se remitió aquella al Ministerio de Estado para que viese si era posible conseguir esta otra cosa.</p><p id="200f3b61-2379-8021-813b-edc7d8669c1e" class="" dir="auto">Entre tanto se recibió por su conducto el que había pedido y logrado del Gobierno fances el Embaxador del Rey en Paris, dado á favor de la fragata San José que fué la que [58v] se eligió primero p.<span data-notion-inline-equation="^{a}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span></span></span></span></span></span> la expedicion. </p><p id="200f3b61-2379-8092-a706-faaecb61ab7b" class="" dir="auto">El S.<span data-notion-inline-equation="^{or}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">or</span></span></span></span></span></span></span></span></span></span></span></span></span> Secretario del Despacho de Estado prometía enviar el de Inglaterra luego, q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> la recibiese. Entre tanto la expedicion salió de la Coruña, y no consta se hubiese adelantado cosa alguna el el particular.</p><p id="200f3b61-2379-800d-a8d7-fbff6febd5b3" class="" dir="auto">_________________</p></div></div><p id="200f3b61-2379-8054-8c65-fe2258eb63fc" class="" dir="auto">El S.<span data-notion-inline-equation="^{or}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">or</span></span></span></span></span></span></span></span></span></span></span></span></span> Ministro de Estado remitió</p><div id="200f3b61-2379-801d-bebd-c9f8aca9ebfd" class="column-list" data-notion-column-list="" dir="auto"><div id="200f3b61-2379-8088-9322-e583a8b1575c" style="width:43.75%" class="column" data-notion-column-ratio="0.4375" dir="auto"><p id="200f3b61-2379-8090-81d8-d5fca8005831" class="" dir="auto">
+</p></div><div id="200f3b61-2379-80a2-aa5f-e57d1687ad9f" style="width:156.25%" class="column" data-notion-column-ratio="1.5625" dir="auto"><p id="200f3b61-2379-8059-9f95-cfc14561596b" class="" dir="auto">un 9 de Octubre de 1803 12 frasquitos de cristal de los inventados de en Inglaterra para conservar [59] y transportar el fluido vacuno, á fin de que se imitasen en la fabrica de San Ildefonso. Pasaronse dichos frasquitos á informe de la Junta de Cirujanos de Cámara, y contestó q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> eran mui útiles y preferibles á los vidrios planos usado hasta entónces. Añadía la Junta q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> para afirmarse en este concepto había remitido seis de los 12 frasquitos al Colegio de San Carlos de Madrid, encárgando á sus profesores que en tres de ellos pusiesen el fluido solo, y en los otros [59v] cantidad proporcionada en agua destinalada, por haberse experimentado anteriormente que disuleto el pus de la viruela natural producía el mismo y mas benigno efecto que ingiriendolo puro.</p><p id="200f3b61-2379-80cb-8ed2-c2140edc61c0" class="" dir="auto">En 21 de Octubre se encargó al Ministerio de Hacienda q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> en la fábrica de cristales de San Ildefonso se hiciese una porcion de frasquitos imitando á los de Inglaterra, y en 18 de Febrero 1804 remitió el S.<span data-notion-inline-equation="^{or}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">or</span></span></span></span></span></span></span></span></span></span></span></span></span> Soler [60] 24 elavorados en dicha fábrica, para q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> exâminandolos la Junta de facultativos que aprobó los de Inglaterra, dixese si estaban conformes, en cuyo caso se fabricaría mayor número de ellos y se venderían al público. </p><p id="200f3b61-2379-8005-ab8f-e9ee9af0b72d" class="" dir="auto">Remitidos á la Junta en 22 del mismo, contestó en 7 de Marzo que estaban bastante conformes con los de Inglaterra; pero habían sido infructuosos los experimentos hechos con el fluido conte- [60v] nido en ellos, y q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> pensaba por lo tanto tomar noticias sobre si los Ingleses los usaban para tomar el pus inmediatamente de la vaca.</p><p id="200f3b61-2379-80c6-910b-da028d143157" class="" dir="auto">En otro oficio de 24 de Marzo proponía la misma Junta que para decidir con mas acierto acerca de la utilidad de dichos frasquitos, sería Conveniente que el Embaxador del Rey en Londres pidiese al D.<span data-notion-inline-equation="^{r}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span></span></span></span></span></span></span></span></span></span></span></span></span> Jenner una instruccion del modo de recoger el fluido y co- [61] locarlo en ellos, y si se toma inmediatam.<span data-notion-inline-equation="^{te}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7936em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7936em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> de las vacas ó de los vacunados.</p><p id="200f3b61-2379-8081-8d6e-e8f611b44883" class="" dir="auto">___________________</p><p id="200f3b61-2379-80cb-992e-db8a43392746" class="" dir="auto">Conformandose el Rey con lo que proponía la Junta, se pasó en 13 de Abril 1804 la Correspond.<span data-notion-inline-equation="^{te}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7936em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7936em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> órden al Ministerio de Estado</p><p id="200f3b61-2379-80ee-8593-c9b611834ed0" class="" dir="auto">__________________</p><p id="200f3b61-2379-80e1-9bcf-ee0ee4caf8d1" class="" dir="auto">Contestó este en 17 del mismo diciendo que en 11 de Febrero de aquel año remitió á la Academia Médica de Madrid un frasquito de los inventados en Inglaterra [61v] con el fluido colocado según el método adoptado en aquel Reyno y con las instrucciones correspondientes, lo q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> participaba por si acaso era la voluntad de S. M. que franquease la Academia dichas intrucciones á la Junta de Cirujanos de Cámara.</p><p id="200f3b61-2379-804e-92ea-dfebf76d958a" class="" dir="auto">___________________</p><p id="200f3b61-2379-8020-b251-e4ffb006840b" class="" dir="auto">Hacíase cargo la Secretaría en la nota q.<span data-notion-inline-equation="^{e}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span></span></span></span> pues la experiencia había demostrado la inutilidad de este invento, y abandonadose su uso, como consta del [62] Semanario de Agricultura de 2 de Abril de 1804, era inútil pedir á la Academia médica las instrucciones referidas. Refería este periódico que se había inventado otro método mexor, reduciodo á dos vidrios planos de una pulgada en quadro, con una pequeña concavidad en el centro, donde quepa una gota de fluido, los vidrios raspados por los cantos para que unan herméticamente y envueltos en papel negro para que resista no solo á la accion del aire [62v] sino también á la de la luz. El mismo Jenner ha aprobado este método, y aseguró haber visto fluido vacuno guardado así por espacio de 17 semanas conservando todas sus qualidades específicas. Añadía el periódico, de acuerdo con lo que informaban los cirujanos, que no habían salido bien en Madrid las experiencias hechas con los frasquitos.</p></div></div><p id="200f3b61-2379-808e-96bc-e49499a2593f" class="" dir="auto"><span style="border-bottom:0.05em solid">Resolucion</span>= “Pasase esta noticia á la Junta y pídase á la Academia esa intruccion”</p><p id="200f3b61-2379-80db-b126-db5f95221625" class="" dir="auto">Así se hizo en 30 de Abril de 1804.</p><div id="200f3b61-2379-80f4-b7c8-ff7b6bc309e2" class="column-list" data-notion-column-list="" dir="auto"><div id="200f3b61-2379-8052-a67c-ea2a68da1f3b" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="200f3b61-2379-801e-9892-d52c9094ffa8" class="" dir="auto">
+</p></div><div id="200f3b61-2379-8051-8ed0-fcf11cfc48f0" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="200f3b61-2379-80bf-9071-dce2e63fc598" class="" dir="auto">[63]</p><p id="200f3b61-2379-807a-ac0b-c30e07f8bfb8" class="" dir="auto">_______________________</p></div></div><p id="200f3b61-2379-8058-8075-eb6ef0767b44" class="" dir="auto">Con oficio de 19 de Mayo de 1804</p><div id="200f3b61-2379-8021-943e-f0e5bd5cf217" class="column-list" data-notion-column-list="" dir="auto"><div id="200f3b61-2379-806d-91a5-cf97f5d7ba73" style="width:43.75%" class="column" data-notion-column-ratio="0.4375" dir="auto"><p id="200f3b61-2379-805d-86bd-c9768b50db04" class="" dir="auto">Expediente N. 9</p></div><div id="200f3b61-2379-805d-938d-c29181d82d01" style="width:106.25%" class="column" data-notion-column-ratio="1.0625" dir="auto"><p id="200f3b61-2379-8098-a24c-d80206a14636" class="" dir="auto">Remitió el Sr. Jenner del Despacho de Estado un tomito en idioma ingles sobre la inoculacion de la vacuna, segun se practica en el instituto de este ramo establecido en Londres, y las reglas para executarla traducidas al Castellano, Juntamente con el acuerdo ó propuesta de la Academia Médica Matritense acerca de este punto.</p><p id="200f3b61-2379-80d5-a036-c9a0a515aedd" class="" dir="auto">______________________</p><p id="200f3b61-2379-80c6-9e46-efe933340e94" class="" dir="auto">Remitido todo á las [63v] Juntas superiores de Medicina y Cirugía para que expusiesen su parecer, contestaron elogiando la propuesta de la Academia Médica, y añadiendo la última que nada de nuevo contenían los citados papeles á lo que la misma Junta tenía manifestado anteriormente. Hacía presente ademas que como la obrita inglesa podía contener algunas instrucciones útiles para la vacunación, convendría traducirlo á nuestro idioma.</p><p id="200f3b61-2379-8017-93cc-e53c952deff0" class="" dir="auto">Así se encargó a la [64] Academia Médica en 16 de junio de 1804.</p><p id="200f3b61-2379-8016-806b-d236f28195b7" class="" dir="auto">____________________</p></div></div><p id="200f3b61-2379-8002-8359-fe26bd9bac23" class="" dir="auto">Con fecha de 1.° de septiembre de 1803.</p><div id="200f3b61-2379-8064-a8a2-da5261aeaad5" class="column-list" data-notion-column-list="" dir="auto"><div id="200f3b61-2379-808e-8cdd-e65463a96479" style="width:43.75%" class="column" data-notion-column-ratio="0.4375" dir="auto"><p id="200f3b61-2379-807b-a7e5-c50808035b85" class="" dir="auto">Expediente N. 10.</p><p id="200f3b61-2379-801c-88a7-eabdb1a26a9c" class="" dir="auto">Circular de 1.° de septiembre de 1803 sobre la expedición de la vacuna.</p><p id="200f3b61-2379-80ca-89ff-f093a3fe7807" class="" dir="auto">
+</p><p id="200f3b61-2379-8020-80f5-ca6ee7b4fe0c" class="" dir="auto">Al Comandante General de Canarias.</p><p id="200f3b61-2379-8091-9443-c220c8c1c6d0" class="" dir="auto">
+</p><p id="200f3b61-2379-80dd-a6ca-c0a857874683" class="" dir="auto">
+</p><p id="200f3b61-2379-806d-bb54-c46e3f8f027c" class="" dir="auto">
+</p><p id="200f3b61-2379-803c-b667-fdf13338762c" class="" dir="auto">
+</p><p id="200f3b61-2379-803d-9aa3-fb63c914d418" class="" dir="auto">
+</p><p id="200f3b61-2379-802b-b400-c9bdd25f0f55" class="" dir="auto">
+</p><p id="200f3b61-2379-800e-ac29-f73f16575856" class="" dir="auto">
+</p><p id="200f3b61-2379-80ff-9d2a-dc58da641f05" class="" dir="auto">
+</p><p id="200f3b61-2379-80c3-972e-f7d68e16ea79" class="" dir="auto">
+</p><p id="200f3b61-2379-80db-b691-c6ed3fe39937" class="" dir="auto">
+</p><p id="200f3b61-2379-803a-854c-e7262162737a" class="" dir="auto">
+</p><p id="200f3b61-2379-80df-8b89-ffd26775f36d" class="" dir="auto">
+</p><p id="200f3b61-2379-80d9-a9ac-dd9cb02c598c" class="" dir="auto">
+</p><p id="200f3b61-2379-8044-8814-ce837fd353ed" class="" dir="auto">Al Gobernador de Puerto Rico.</p><p id="200f3b61-2379-8065-aa91-f4502636eba1" class="" dir="auto">
+</p><p id="200f3b61-2379-80b8-9bb0-f44f83dffada" class="" dir="auto">
+</p><p id="200f3b61-2379-80b6-afaa-ce3bde873e4d" class="" dir="auto">
+</p><p id="200f3b61-2379-8088-9316-c02a82d648dc" class="" dir="auto">
+</p><p id="200f3b61-2379-800e-b2a3-cc247c798abf" class="" dir="auto">
+</p><p id="200f3b61-2379-8050-afc3-e08ec58491f1" class="" dir="auto">
+</p><p id="200f3b61-2379-8058-bd6e-eb9f0ff71ff5" class="" dir="auto">
+</p><p id="200f3b61-2379-80e1-bc45-ec65f3f41bcc" class="" dir="auto">Al Gobernador de la Havana.</p><p id="200f3b61-2379-80cf-a8ba-c52f53e8749d" class="" dir="auto">
+</p><p id="200f3b61-2379-800d-bc88-c114d4e60d34" class="" dir="auto">
+</p><p id="200f3b61-2379-80b7-9020-efc2fdaacd00" class="" dir="auto">
+</p><p id="200f3b61-2379-807a-9879-f8d476648bef" class="" dir="auto">
+</p><p id="200f3b61-2379-8090-b0ce-d5f2eb0302ee" class="" dir="auto">Al Virrey de Nueva España.</p><p id="200f3b61-2379-80f2-8fec-cd28f51267d8" class="" dir="auto">
+</p><p id="200f3b61-2379-809a-9b39-fc461b84dba1" class="" dir="auto">
+</p><p id="200f3b61-2379-8080-b7d1-ffc8c4b7e268" class="" dir="auto">
+</p><p id="200f3b61-2379-8029-8cf2-c5097a1a3d63" class="" dir="auto">
+</p><p id="200f3b61-2379-80b7-adc8-d8dc15d344cc" class="" dir="auto">
+</p><p id="200f3b61-2379-8036-bd7d-c83f5c734cda" class="" dir="auto">
+</p><p id="200f3b61-2379-80a2-87c0-c550c011fcc7" class="" dir="auto">
+</p><p id="200f3b61-2379-802b-b70f-d39243fa9d49" class="" dir="auto">
+</p><p id="200f3b61-2379-80f8-a39c-d396e25dac21" class="" dir="auto">*Véase el Expediente N. 1.</p><p id="200f3b61-2379-80fd-a27f-d36b9259d7d0" class="" dir="auto">
+</p><p id="200f3b61-2379-8053-8244-c0261096b6ea" class="" dir="auto">Al Virrey de Santa Fe.</p><p id="200f3b61-2379-8086-a0a8-ea3e27b85363" class="" dir="auto">
+</p><p id="200f3b61-2379-80eb-9711-de6cd316534c" class="" dir="auto">
+</p><p id="200f3b61-2379-802b-8468-e5546e4eeee9" class="" dir="auto">
+</p><p id="200f3b61-2379-802b-8b79-debb3568d6c7" class="" dir="auto">
+</p><p id="200f3b61-2379-80e3-862a-c4daaf504fff" class="" dir="auto">
+</p><p id="200f3b61-2379-80cd-b899-e1c3bfad1745" class="" dir="auto">
+</p><p id="200f3b61-2379-8045-96f5-f956bebfb882" class="" dir="auto">Al Capitán General de Caracas.</p><p id="200f3b61-2379-80f9-a4eb-e16721acb790" class="" dir="auto">
+</p><p id="200f3b61-2379-80e9-8fc5-cc308718bd34" class="" dir="auto">
+</p><p id="200f3b61-2379-8036-af1c-c69b6703dee6" class="" dir="auto">
+</p><p id="200f3b61-2379-802d-99fc-c8179919de5f" class="" dir="auto">Al Presidente de Guatemala.</p><p id="200f3b61-2379-80f1-8907-f0b8ea031dc0" class="" dir="auto">
+</p><p id="200f3b61-2379-806e-b7ec-d4b5fad998f5" class="" dir="auto">
+</p><p id="200f3b61-2379-8082-96ef-ec124a0a433d" class="" dir="auto">Al Presidente de Quito.</p><p id="200f3b61-2379-8043-a69c-e3983fd6d617" class="" dir="auto">
+</p><p id="200f3b61-2379-807e-b9d9-ed5a803f2632" class="" dir="auto">Al Virrey del Perú.</p><p id="200f3b61-2379-8008-b73f-c60ac304ec58" class="" dir="auto">
+</p><p id="200f3b61-2379-809c-be3f-c20f149c1f18" class="" dir="auto">
+</p><p id="200f3b61-2379-8076-a897-fb44e7f6ba8a" class="" dir="auto">
+</p><p id="200f3b61-2379-8042-98bd-cb3d2770449b" class="" dir="auto">Al Presidente de Charcas.</p><p id="31af3b61-2379-8024-ac64-d0ec2321226c" class="" dir="auto">Al Presidente de Chile.</p></div><div id="200f3b61-2379-80e6-aa54-f7302fc5fb30" style="width:93.75000000000001%" class="column" data-notion-column-ratio="0.9375000000000001" dir="auto"><p id="200f3b61-2379-80b2-8b4b-e32499531801" class="" dir="auto">Se comunicó al Comandante General de Canarias, a los Virreyes, Presidentes y Gobernadores, Arzobispos y Obispos de ultramar la circular expedida sobre la expedición de la Vacuna. </p><p id="200f3b61-2379-80a1-a7ca-c8370b4f94df" class="" dir="auto">En ella se les instruía de la formación y objeto de esta: se le preveía que haría dos escalas, una en Tenerife y la otra en Puerto Rico, donde comunicarían gratuitamente el fluido de [64v] brazo a brazo durante su permanencia, que debía ser la más corta que posible fuese, enseñando las prácticas de las operaciones a los facultativos del país para que pudiesen continuarlas, y repartiesen ejemplares de la traducción del Tratado de Moreau de la Sarthe hecha por el mismo Balmis. Se les advertía franqueasen al Director los niños que necesitasen, previo el consentimiento de sus padres, asegurándoles que serían bien tratados y recomendados a los jefes [65] de ultramar para que cuidasen de su educación y establecimiento. Decíaseles que procurasen proporcionar hospedaje a la expedición de cuenta del Erario Público, ya que no quisieren hacerle este obsequio, debiendo costear este únicamente la asistencia y manutención de los niños y de ningún modo la de los comisionados. Finalmente se les encargaba procurasen persuadir con su ejemplo al buen recibimiento de la expedición y propagación de la vacuna dando las disposiciones que les [65v] dictase su celo, comunicando a su tiempo lo que resultare.</p><p id="200f3b61-2379-80c4-93df-c5354bb34456" class="" dir="auto">___________________</p><p id="200f3b61-2379-80cd-b64e-d1e369f81f72" class="" dir="auto">Lo mismo puntualmente se prevenía al Gobernador de Puerto Rico, previniéndole además que habilitase al Director y sus subalternos con las mesadas que llevasen devengadas, y les franquease los auxilios necesarios para continuar su viaje, ya fuese que se dividiese la expedición, o que lo [prosiguie?] juntos.</p><p id="200f3b61-2379-80b6-b3cd-fbddcc653da0" class="" dir="auto">____________________</p><p id="200f3b61-2379-8003-8447-f18e4410c3e9" class="" dir="auto">Lo substancial de esta [66] circular era la misma para todos los jefes, aunque admitía alguna modificaciones en su contexto según las prevenciones particulares que a cada uno se le hacían análogas a las circunstancias propias de cada país y al objeto de la expedición.</p><p id="200f3b61-2379-8058-b5fb-e6ba65f205f9" class="" dir="auto">Así al Gobernador de la Habana se le prevenía que, llegada que fuese la expedición a aquellas islas, hiciese satisfacer su haber conforme a la contrata celebrada con el Juez de Arribadas de la Coruña: que proporcionase buque [66v] para la travesía a Veracruz con escala en Campeche, si convenía. El encargo de proporcionar niños a Balmis se hizo generalmente a este jefe igualmente que a los demás.</p><p id="200f3b61-2379-8062-8d14-c03cc62b7fbc" class="" dir="auto">Decíasele al Virrey de Nueva España que para cuando llegase la expedición tuviese anticipadas las órdenes oportunas para que se le facilitasen carruajes y demás que fuese necesario, como alojamientos, etcétera: que en caso de llegar entera la expedición [67] a México dispusiese lo conveniente de acuerdo con el Director de ella para que parase, fuere por mar o por tierra, al Perú, conciliando la economía con la buena asistencia que debían encontrar en todas partes: que acordase con aquel a su tiempo los individuos que conviniese embarcar en la Nao de Acapulco para Filipinas, proporcionándoles niños expósitos o de otra clase, y algunos sueldos anticipados.</p><p id="200f3b61-2379-80f3-baa4-d6a2e023fde6" class="" dir="auto">Al Virrey de Santa [67v] Fe se le prevenía que no debiendo quedar defraudado el mérito del facultativo Don Lorenzo Verges*, y no habiendo sido posible auxiliarle con algunos niños a causa de su marcha precipitada, recibiere fresco el fluido, en caso de haberse frustrado sus tentativas, de los individuos de la expedición, quedando él encargado de propagarlo en el virreinato y continuando estos su viaje, si bien permitiéndoles vacunar en los pueblos del tránsito. [68] Por lo demás se le advertía lo que a todos en punto a preparar el ánimo del público en favor de la vacuna, a agasajar a la expedición, proporcionar niños, etcétera. </p><p id="200f3b61-2379-80b9-acc4-d0cab3190eca" class="" dir="auto">Al Capitán General de Caracas se le avisaba que en caso de dividirse la expedición y llegar parte de ella a aquellas provincias, las auxiliase y protegiese en los términos que quedan expresados para los demás; y en el de arribar toda ella dispusiese lo conveniente [68v] de acuerdo con el Director para la continuación de su viaje.</p><p id="200f3b61-2379-80f9-b7bb-c954b7250864" class="" dir="auto">Al Presidente de Guatemala se le prevenía que en caso de subdividirse la expedición para cualquiera de aquellas provincias de tierra firme, Yucatán o Campeche, auxiliase a sus individuos en cuanto necesitasen.</p><p id="200f3b61-2379-805f-86c3-f11637a2d469" class="" dir="auto">Al Presidente de Quito lo mismo en punto a Don Lorenzo Verges que al Virrey de Santa Fe respecto a su distrito.</p><p id="200f3b61-2379-80f5-b7db-ca7405de3a52" class="" dir="auto">[69] Al Virrey del Perú: que en caso de no haber salido la expedición de Acapulco para Filipinas lo hiciese desde el Callao en la primera ocasión, poniéndose de acuerdo para ello con el Director, a quien debería abonar el gasto extraordinario de la correspondencia de la comisión y algún otro menor que [reacionase?], presentando cuenta y mereciendo aprobación.</p><p id="200f3b61-2379-80f5-af48-fc3ab005c68d" class="" dir="auto">Al Presidente de Charcas las prevenciones generales para todos.</p><p id="200f3b61-2379-800c-8de3-ec5be2c8c640" class="" dir="auto">[69v] Al Presidente de Chile se le advertía lo mismo en todo respectivamente que al Virrey de Nueva España.</p><p id="200f3b61-2379-803b-8df1-cef8478119e1" class="" dir="auto">Al Virrey de Buenos Aires: que debiendo confluir allí su viaje la expedición, le proporcionase cuanto antes buque en que regresar a Europa, pagando el pasaje y mesa a sus individuos si fuese buque particular, y consultando siempre la economía del Erario.</p><p id="200f3b61-2379-80ac-8e64-f45f7e866ca1" class="" dir="auto">Al Capitán General de Filipinas se le anticipaba aviso [70] de la llegada de la expedición, bien fuese que saliese esta de Acapulco o del Callao, y en lo restante como a los demás con prevención de que aprovechase cualquier buque que viniese para la península o la Nao de Acapulco para que pudiese regresar a Europa.</p><p id="200f3b61-2379-80cf-ab08-cf3b4b2780ff" class="" dir="auto">__________________</p></div></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

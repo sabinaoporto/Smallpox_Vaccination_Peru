@@ -1,0 +1,768 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Resumen del extracto del expediente general</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="202f3b61-2379-804d-bd08-c09efeb017c1" class="page sans"><header><h1 class="page-title" dir="auto"><strong>Resumen del extracto del expediente general</strong></h1><p class="page-description" dir="auto"></p><table class="properties"><tbody><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/hashtag_gray.svg" style="width:14px;height:14px;display:block"/></span>Folio</th><td>287 - 315</td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/run_gray.svg" style="width:14px;height:14px;display:block"/></span>From (Remitente)</th><td><span class="selected-value select-value-color-pink">Francisco Balmis</span></td></tr><tr class="property-row property-row-date"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/calendar_gray.svg" style="width:14px;height:14px;display:block"/></span>Date</th><td><time datetime="1813-03-12">12/03/1813</time></td></tr><tr class="property-row property-row-status"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/burst_gray.svg" style="width:14px;height:14px;display:block"/></span>Estado</th><td><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Transcrito</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/map-pin-alternate_gray.svg" style="width:14px;height:14px;display:block"/></span>Place</th><td><span class="selected-value select-value-color-orange">Cadiz</span></td></tr></tbody></table></header><div class="page-body"><p id="202f3b61-2379-80cc-b79f-fee5cedc2118" class="" dir="auto">[287]</p><p id="202f3b61-2379-8058-b169-c7ab6a0ab352" class="" dir="auto">Brevísimo resumen del extracto del expediente general de la vacuna en ultramar</p><div id="325f3b61-2379-80b5-9329-fad579e4ce5a" class="column-list" data-notion-column-list="" dir="auto"><div id="325f3b61-2379-807a-9b72-dab001a8db9f" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="325f3b61-2379-80bd-b1cb-e43faa9137e1" class="" dir="auto">[288] Folio 1° n° 346</p><p id="325f3b61-2379-80a0-be30-d3ed7e248a50" class="" dir="auto">Expediente N. 1°</p></div><div id="325f3b61-2379-806d-b89b-f85eda57d8e4" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="325f3b61-2379-80d2-80db-e5d290d63e91" class="" dir="auto">De resultas de una representación del Ayuntamiento de Santa Fe de Bogotá, que manifestaba hallarse amenazada aquella ciudad de una epidemia de viruelas naturales, se consultó al Consejo que fue de Indias sobre si podría comunicarse la vacuna a ultramar y precaver por este medio para lo sucesivo los estragos [288v] que causaban estas en aquellos países. A tiempo precisamente que se estaba tratando del modo de realizar este pensamiento, ocurrió Don Francisco Xavier de Balmis, Físico de Cámara, que se empleaba diariamente en propagar la vacuna en Madrid, que había estado dos veces en América, y era traductor del tratado histórico escrito en francés por Moreau de la Sarthe, ofreciéndose a realizar una [289] expedición tan útil.</p><p id="325f3b61-2379-802a-b19f-fab0a79c2293" class="" dir="auto">Proponía que se compusiese esta de un Director, que sería él, de dos ayudantes, dos enfermeros y 15 o 20 niños de ocho a diez años que no hubiesen pasado viruelas, a fin de vacunarlos sucesivamente durante la navegación y conservar de este modo el fluido. Debía ir destinada la expedición a los cuatro virreinatos de América e Islas Filipinas, haciendo escala [289v] en Canarias y Puerto Rico, de donde pasaría a la Guaira y Caracas, y de aquí a La Habana, Yucatán, Campeche y Veracruz. Introducida la vacuna en este puerto, en Xalapa, la Puebla y México, se dividirían los individuos de la expedición, de acuerdo con el Virrey, a recorrer los varios distritos de Nueva España, reuniéndose después en México para pasar al Perú, y de aquí á Chile y [290] Buenos Aires.</p><p id="325f3b61-2379-803f-b724-f05e54f69133" class="" dir="auto">Los Cirujanos de Cámara Gimbernat, Galli y Lacaba, a quienes se pasó la exposición de Balmis para que informasen acerca de los varios puntos que contenía, contestaron aprobándola en un todo, y proponiendo para ayudantes a los licenciados Don José Salvany,</p></div></div><div id="325f3b61-2379-80dc-b33a-fdaa2af63041" class="column-list" data-notion-column-list="" dir="auto"><div id="325f3b61-2379-8065-a8bb-d23f01a605dc" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="325f3b61-2379-806c-93f5-cf7f1c639273" class="" dir="auto">*Este fue separado en la Coruña antes de la salida de la expedición por díscolo.</p></div><div id="325f3b61-2379-80b0-abdc-e5bce5a2020b" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="325f3b61-2379-8001-a3df-c4fa777fb459" class="" dir="auto">Don Ramón Fernández* Ochoa, y Don Manuel Julian Grajales individuos del colegio de San Carlos.</p><p id="325f3b61-2379-8067-a109-ca8b70a5df6b" class="" dir="auto">[290] Comunicáronse las órdenes correspondientes al Ministerio para elección y apresto del buque, y a Balmis la de su nombramiento y el de los tres ayudantes, encargándole propusiese sujetos para enfermeros con las dotaciones que contemplase justas.</p><p id="325f3b61-2379-809e-8ba8-e7ddd7512a39" class="" dir="auto">A propuesta de él quedaron nombrados para estos destinos Don Basilio Bolaños, Don Ángel [291] Crespo y Don Pedro Ortega con las dotaciones de 400 pesos, y para practicantes con la de 900 a Don Francisco Pastor y Don Rafael Lozano Pérez.</p></div></div><div id="325f3b61-2379-80ce-8330-f1f0999428c2" class="column-list" data-notion-column-list="" dir="auto"><div id="325f3b61-2379-80a9-bbff-f619909aa11c" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="325f3b61-2379-8014-a05d-ce26ada8d90a" class="" dir="auto">Expediente N. 3</p></div><div id="325f3b61-2379-8085-837b-cc6499958600" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="325f3b61-2379-8082-9a1b-fb57ee816284" class="" dir="auto">En Real Orden de 27 de julio de 1803 se participó al Juez de Arribadas de la Coruña la formación de la expedición de la vacuna, y se le encargaba buscase y ajustase en aquel puerto un buque mercante bien acondicionado, velero y de unas 250 toneladas.</p><p id="325f3b61-2379-80a4-a1b2-c33b564d9685" class="" dir="auto">[291v] Con este motivo ocurrieron algunas desavenencias entre los dueños y armadores de varios buques que se presentaron para este objeto, y se eligió por fin la corveta María Pita, cuyo mando se encargó al teniente de fragata Don Pedro del Barco.</p></div></div><div id="325f3b61-2379-803b-a12c-f5ac6a447887" class="column-list" data-notion-column-list="" dir="auto"><div id="325f3b61-2379-8050-87e3-f6b0b850371f" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="325f3b61-2379-805e-9c46-cb6d72dcd4b3" class="" dir="auto">Expediente N. 10</p></div><div id="325f3b61-2379-8012-be55-f40a0eb12443" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="202f3b61-2379-80cb-b18c-ea126318b575" class="" dir="auto">Con fecha de 1° de septiembre de 1803 se expidió circular a todos los jefes de las provincias de ultramar dándoles noticia [292] de la formación y destino de esta expedición filantrópica: se les advertía franqueasen al Director los niños que necesitase, previo el consentimiento de sus padres, asegurándoles que serían bien tratados y que se cuidaría de su educación y establecimiento. Decíaseles que procurasen proporcionar hospedaje a la expedición de cuenta del erario público, ya que no quisiesen hacerle este obsequio, debiendo costear [292v] aquel únicamente la asistencia y manutención de los niños, pero de ningún modo la de los demás. Finalmente, se les encargaba hiciesen por persuadir con su ejemplo al buen recibimiento de la expedición y propagación de la vacuna, tomando para ello las disposiciones que les dictase su celo y comunicando a su tiempo las resultas. Por lo demás, se les hacían aquellas advertencias propias [293] del objeto que podía llevar la expedición a la provincia de su mando.</p><p id="325f3b61-2379-8081-8598-e6fdf58f58c5" class="" dir="auto">En 3 de noviembre salió la expedición de la Coruña con dirección a Canarias; pero faltando en el expediente general el que hace relación a las tareas de aquella en estas islas, </p></div></div><div id="325f3b61-2379-80eb-be58-d834a2ec9ecf" class="column-list" data-notion-column-list="" dir="auto"><div id="325f3b61-2379-8023-9102-ffd43864d0a3" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="325f3b61-2379-8077-b569-f9c51c488cd8" class="" dir="auto">Expediente N. 11</p></div><div id="325f3b61-2379-80b4-81ab-e7c73a04c8c8" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="325f3b61-2379-8061-9307-cb212f514479" class="" dir="auto">solo se halla una carta de Balmis de 6 de enero de 1804 desde Santa Cruz de Tenerife, en que decía haber desempeñado su comisión [293v] con esmero y actividad, y que tenía dispuesto embarcarse aquella misma tarde para Puerto Rico. Daba cuenta al mismo tiempo de haber mandado a su apoderado en Madrid hiciese tirar dos mil ejemplares más de su traducción del tratado histórico de la vacuna, y se los enviase.</p><p id="202f3b61-2379-80bc-aed4-fb66dc24c1c0" class="" dir="auto">Fueron inútiles las diligencias que se practicaron en Tenerife para hallar el <span style="border-bottom:0.05em solid">cowpox</span> o viruelas [294] de las vacas, y solo pudo conseguirse que prendiese en ellas el fluido que se les comunicó de varias personas. </p></div></div><div id="325f3b61-2379-801e-8110-c71e1963fbee" class="column-list" data-notion-column-list="" dir="auto"><div id="325f3b61-2379-80e8-9453-f55dbf9a8c67" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="325f3b61-2379-8095-9c02-f0ad784e87f2" class="" dir="auto">Expediente N. 12</p></div><div id="325f3b61-2379-809f-8827-c219b261ad0c" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="202f3b61-2379-805a-8421-e05d5ce62159" class="" dir="auto">Cuando Balmis llegó a Puerto Rico encontró introducida ya la vacuna en esta isla por el cirujano Don Francisco Oller que la había enviado a pedir a la dinamarquesa de Santo <del>Domingo</del> Tomás; y sea que aquel se resintiese de que otro se le hubiera anticipado o de la acogida [294v] fría que tuvo por parte del gobernador, ello es que desde el momento de su llegada estuvieron ambos en abierta contradicción, sosteniendo Balmis ser falso el fluido que comunicaba Oller, que, según los hechos posteriores, ha resultado legítimo y verdadero.</p></div></div><div id="325f3b61-2379-80e6-b579-d2cc4e6dee18" class="column-list" data-notion-column-list="" dir="auto"><div id="325f3b61-2379-8087-b49c-c3fa1dc9612f" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="325f3b61-2379-80b8-976a-c924d59e92ea" class="" dir="auto">Expediente N. 13</p><p id="202f3b61-2379-80bf-96ad-e00269a885ff" class="" dir="auto">*Verges había sido enviado a Santa Fe en Compañía del Virrey Amat antes que saliese la expedición de la península.</p></div><div id="325f3b61-2379-80f9-85d9-ddeabd505e0a" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="202f3b61-2379-8014-b7b0-e782ab57201b" class="" dir="auto">En 20 de marzo arribó Balmis a Puerto Cabello, desde donde escribió con esta fecha manifestando: que habiendo [295] sabido la muerte del médico Verges*, tenía resuelto dividir la expedición en dos: una, destinada a internarse por el Reino de Santa Fe, Perú y Buenos Aires, debería embarcarse en la Guaira para Cartagena, a cargo del Vice Director Don José Salvany, de los ayudantes Grajales y Gutierrez y del enfermero Bolaños. La otra parte de la expedición, a sus órdenes y compuesta solo de enfermeros y practicantes, se dirigiría a La Habana; de aquí [295v] a Campeche y Yucatán, y pasando por Veracruz, Puebla de los Ángeles y México, hasta Guatemala.</p><p id="202f3b61-2379-8043-a1f2-e938431e86fe" class="" dir="auto">En Caracas propagó Balmis desde luego la vacuna, y dispuso la creación de una Junta Central encargada de la conservación y perpetuidad del fluido bajo el siguiente reglamento.</p><p id="202f3b61-2379-80c3-b207-c31b00fa3c2e" class="" dir="auto">1.<span data-notion-inline-equation="^{a}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span></span></span></span></span></span> = Esta Junta se componía de diez personas, seculares y eclesiásticas, que no disfrutaban sueldo alguno [296] por este encargo, condecorados y de probidad e influjo en la opinión pública: de siete profesores de medicina y cirugía, y de dos secretarios, uno de los cuales debería ser de la clase de los facultativos, todo bajo los auspicios de las autoridades de la provincia.</p><p id="202f3b61-2379-8083-87ba-f2d90c5b58fd" class="" dir="auto">2.<span data-notion-inline-equation="^{a}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span></span></span></span></span></span> A cargo de esta Junta estaba la conservación del fluido vacuno en una casa destinada al intento bajo su inmediata inspección, y en la cual debía existir de continuo uno [296v] de los cuatro niños que nacían diariamente en aquella ciudad. Cuidaba además de la remisión de fluido a los parajes en que era necesario, y de tomar las medidas oportunas para conservar este establecimiento.</p><p id="202f3b61-2379-8098-abca-f6be122dbb80" class="" dir="auto">3.<span data-notion-inline-equation="^{a}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span></span></span></span></span></span> Celebraba sus sesiones una vez a la semana, y en ellas exponían los dos secretarios, cada uno en su respectivo ramo, las observaciones oportunas, estando a cargo de los mismos llevar exactamente su respectiva [297] correspondencia y comunicar al capitán general y al reverendo obispo los estados y noticias cuyo conocimiento pudiese importarles. </p><p id="202f3b61-2379-8018-b3f2-ca37a8d88be7" class="" dir="auto">4.<span data-notion-inline-equation="^{a}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span></span></span></span></span></span> Entre los profesores individuos de la Junta había constantemente dos que alternaban por meses para practicar las operaciones.</p><p id="202f3b61-2379-8023-8e40-e573ef6dd75a" class="" dir="auto">En 15 de noviembre de 1805 resultaban vacunadas en Caracas 38 724 personas, y en una memoria que presentó el doctor Diaz [297v] facultativo de aquella ciudad, establecía de sus observaciones y experiencias las proposiciones siguientes:</p><p id="202f3b61-2379-80b9-a09f-f57fb0f6f8b4" class="" dir="auto">“Las pústulas vacunas modifican su carácter por el resultado de la atmósfera.”</p><p id="202f3b61-2379-8083-a160-ebe5dbeb4a2f" class="" dir="auto">“El fluido vacuno obra generalmente en todo el sistema.”</p><p id="202f3b61-2379-8049-9274-ef82bcf28271" class="" dir="auto">“El fluido vacuno aumenta las secreciones, y su acción mecánica es mucho más activa de lo que se ha creído.”</p><p id="202f3b61-2379-80a8-b42b-f586e21b6754" class="" dir="auto">“Como consecuencia [298] de la generalidad y fuerza de esta acción, el fluido vacuno tiene ya casos determinados en que puede ser ofensivo, así como obra con más certeza y benignidad en aquellas razas de hombres en quienes es más violenta la acción de las viruelas.”</p><p id="202f3b61-2379-8059-b66c-f0718e8596ee" class="" dir="auto">“Se observó que introducido el fluido en brazos de mujeres no libres del contagio de las viruelas, y cuya menstruación se [298v] había interrumpido por intervalos hasta la edad de 19 años, había hecho desaparecer esta enfermedad antes que se terminase a [corteza?] de sus pústulas.”</p><p id="202f3b61-2379-802f-89c3-d370e8ae1d3c" class="" dir="auto">“Que la vacuna restableció el sentido, movimiento y nutrición perdidos enteramente en los brazos y piernas de personas afectas a la parálisis.”</p><p id="202f3b61-2379-80f6-a763-fb4ae67d86fb" class="" dir="auto">“Que disipó casi de repente el asma inveterado de varios sujetos, particularmente [299] jóvenes.”</p><p id="202f3b61-2379-8082-8e60-d2b49303f257" class="" dir="auto">“Ha fortalecido igualmente la vista a algunas personas, haciendo cesar enteramente los dolores de cabeza que padecían algunas mujeres.”</p><p id="202f3b61-2379-808d-8dc1-c395f546806a" class="" dir="auto">“En el puerto de la Guaira el fluido vacuno pierde su actividad con mayor rapidez que en ningún otro punto de los situados entre los trópicos, y todas las precauciones que se puedan tomar no son bastantes a impedir [299v] que obren sobre él al momento de la operación el calor y la luz, de lo que resulta ser infructuoso en la mitad de los que se vacunan.”</p><p id="202f3b61-2379-8030-8b20-d06ef5ba1861" class="" dir="auto">“En el clima del partido de San Carlos, comparable en lo caluroso a lo más ardiente de la Siria, la vacuna obra con mayor actividad, particularmente en las personas robustas, acostumbradas a coger soles, a quienes suele causar erisipelas en los [300] brazos, fiebres, vómitos y otros síntomas, aunque poco peligrosos.“</p><p id="202f3b61-2379-8052-bf34-ce95c338daee" class="" dir="auto">“Comunicado inadvertidamente el fluido con lancetas que habían servido para dilatar bubones u otros tumores de igual naturaleza, produjo en los vacunados al caer las costras tumorcitos [cancrosos?], que se curaron al cabo de algunos días con la aplicación de cáusticos.”</p><p id="202f3b61-2379-80c0-a674-c841c8752428" class="" dir="auto">Se propagó felizmente el fluido en [300v] Maracaibo, islas Margaritas y provincias de Cumaná donde en mayo de 1805 ascendía ya a 20 000 el número de los vacunados.</p></div></div><div id="325f3b61-2379-80fd-8365-d37fbff81563" class="column-list" data-notion-column-list="" dir="auto"><div id="325f3b61-2379-8024-8978-d66e7ba186e2" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="325f3b61-2379-807b-8592-ee206234cd60" class="" dir="auto">Expediente N. 14</p></div><div id="325f3b61-2379-80f0-8e36-d0dcdc8626ca" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="202f3b61-2379-805f-aaa6-cb9959293ae0" class="" dir="auto">Noticioso el Rey del arribo de la expedición a ultramar, se circuló Real Orden en 20 de mayo de 1804 a los jefes de aquellos países para que en los hospitales de la capital y de las provincias se destinase una sala de vacunación para conservar fresco el [301] fluido y comunicarlo gratuitamente de brazo a brazo a cuantos se presentasen.</p></div></div><div id="325f3b61-2379-800b-b0ae-e9e6fff54ad5" class="column-list" data-notion-column-list="" dir="auto"><div id="325f3b61-2379-8002-ae05-fca245eac023" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="325f3b61-2379-8042-b264-dd3e464b1262" class="" dir="auto">Expediente N. 15</p></div><div id="325f3b61-2379-8038-8879-deb5331aaeb5" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="202f3b61-2379-807c-9af9-d1446aee1b20" class="" dir="auto">La circunstancia de haber pasado de Puerto Rico a La Habana Doña María Bustamante vacunada por Oller hizo que se introdujese la vacuna en dicha ciudad antes de la llegada de la expedición, y en tal grado que nada tuvo que corregir Balmis a lo que había practicado el doctor Don Tomás Romay, [301v] a quien en premio de sus servicios se le concedieron los honores de Médico de Familia.</p></div></div><div id="325f3b61-2379-80e2-be35-f13ced9a66e9" class="column-list" data-notion-column-list="" dir="auto"><div id="325f3b61-2379-80c2-9f9b-ee45aa13d796" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="325f3b61-2379-80b7-b19f-ec1b8ee6b590" class="" dir="auto">Expediente N. 17</p></div><div id="325f3b61-2379-8059-b194-e688c5dcab1a" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="325f3b61-2379-80ac-803d-d46330fb8971" class="" dir="auto">A fin de comunicar el fluido con más presteza al reino de Guatemala envió Balmis desde La Habana al ayudante Pastor por Campeche y Laguna de Tenerife, quien lo propagó felizmente en más de 200 000 personas, estableciendo un reglamento para su conservación [302] parecido en un todo al de Caracas.</p></div></div><div id="325f3b61-2379-806b-9b2a-d43b338dbe29" class="column-list" data-notion-column-list="" dir="auto"><div id="325f3b61-2379-807d-a332-d8d1d49ebbb9" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="325f3b61-2379-804d-ac13-f53443d3bc81" class="" dir="auto">Expediente N. 15</p></div><div id="325f3b61-2379-808c-ae00-d82e7e97edc8" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="202f3b61-2379-80be-93a9-d245f35c8211" class="" dir="auto">El que se aprobó para La Habana estaba formado sobre el mismo plan, con solo la diferencia de refundirse por él la Junta Central de Vacuna en la sociedad económica.</p><p id="202f3b61-2379-8054-aa3b-d9beb1d428a8" class="" dir="auto">Lo que se halla de interesante en este expediente son las observaciones siguientes de Balmis en que se fundaba para creer que no fuese dable encontrar [302v] el <span style="border-bottom:0.05em solid">cowpox</span> en las vacas del país, y las de Romay sobre los efectos y fenómenos de la vacuna.</p><p id="202f3b61-2379-8021-905c-d562ab45b1d7" class="" dir="auto">Las de Balmis son:</p><p id="202f3b61-2379-8055-a57e-f98e213925e4" class="" dir="auto">“1.<span data-notion-inline-equation="^{a}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span></span></span></span></span></span> El <span style="border-bottom:0.05em solid">cowpox</span> es una enfermedad endémica, propia solo del país en que se reúnen cierto número de circunstancias capaces de ocasionarla, y de ahí es que las mismas vacas de Berkeley perderían sin duda sus pústulas en el momento en que fuesen [303] trasladadas a otro país en que no concurriesen aquellas.</p><p id="202f3b61-2379-808f-8284-d9734d99065c" class="" dir="auto">2.<span data-notion-inline-equation="^{a}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span></span></span></span></span></span> La circunstancia de no ser contagiosa la vacuna hace que no pueda comunicarse de un animal a otro sino por medio de la inoculación, no siendo de esperar por consiguiente que se propagase ahora espontáneamente, que es lo mismo que sucede en la especie humana donde nadie se contagia a pesar de habitar entre [303v] muchos vacunados.</p><p id="202f3b61-2379-8055-9aa1-f291e8f56d35" class="" dir="auto">3.<span data-notion-inline-equation="^{a}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span></span></span></span></span></span> Se creyó en un tiempo que el <span style="border-bottom:0.05em solid">cowpox</span> se originaba inoculando el humor del gabarro que padecen los caballos; pero una multitud de hechos ha comprobado en el mismo Berkeley que en muchas vacadas se padecía el <span style="border-bottom:0.05em solid">cowpox</span> a pesar de no haber caballo alguno en ellas ni en sus inmediaciones.” </p><p id="202f3b61-2379-805a-bd12-f8f569cbeb03" class="" dir="auto">Las observaciones [304] de Romay son:</p><p id="202f3b61-2379-8032-bafb-eee6e7baef0c" class="" dir="auto">“1.<span data-notion-inline-equation="^{a}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span></span></span></span></span></span>= Hay pruebas, aunque negativas por ahora, de que la vacuna preserva del vómito negro: al menos ha observado que ningún europeo vacunado le había padecido, previniendo también que pueda ser preservativo de la fiebre amarilla por la afinidad que esta tiene con aquel.</p><p id="202f3b61-2379-80dc-88ba-d686344be6b5" class="" dir="auto">2.<span data-notion-inline-equation="^{a}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span></span></span></span></span></span>= Aunque aún no se había encontrado el <span style="border-bottom:0.05em solid">cowpox</span> en [304v] las vacas de la isla, se había observado que habiendo comunicado a algunas el fluido de personas vacunadas, padecieron la afección en toda su fuerza.</p><p id="202f3b61-2379-80a3-9d01-c6de413f8426" class="" dir="auto">3.<span data-notion-inline-equation="^{a}" class="notion-text-equation-token" contenteditable="false"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span></span></span></span></span></span> La vacuna cura la sarna y hay pruebas de que es antivenérea. Refiere algunos casos en La Habana de personas vacunadas teniendo pústulas venéreas que habían sanado perfectamente.”</p><p id="202f3b61-2379-80af-b46e-e043594d83fe" class="" dir="auto">[305] Estableciéndose Junta Subalterna de Vacuna en la ciudad de Trinidad, villa de Santa Clara, Cuba y Puerto Príncipe, y en 1806 resultaban vacunadas 15 824 personas en toda la isla.</p></div></div><div id="325f3b61-2379-8036-a4dd-dad76d2e0a6d" class="column-list" data-notion-column-list="" dir="auto"><div id="325f3b61-2379-8032-baaa-ec2cae4eb68c" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="202f3b61-2379-8070-9179-ebd11ac83231" class="" dir="auto">Expediente N. 16.</p></div><div id="325f3b61-2379-8083-a44d-e6e5f37d0743" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="325f3b61-2379-8083-aac2-dee6b48a52f7" class="" dir="auto">Pasó en seguida Balmis a Yucatán, y entró en Mérida en 28 de junio de 1804. Propagó allí desde luego la vacuna,</p></div></div><div id="325f3b61-2379-80f7-b16f-e8f0c6ad5544" class="column-list" data-notion-column-list="" dir="auto"><div id="325f3b61-2379-80a5-b29e-ef3b87f096bb" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="202f3b61-2379-8044-b8a0-cf25761caf52" class="" dir="auto">Expediente N. 18.</p></div><div id="325f3b61-2379-8058-a530-e02f71290ae6" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="325f3b61-2379-8013-985f-e76232638e1f" class="" dir="auto">y se dirigió a Veracruz donde estaba ya introducido el fluido por las fragatas O y [305v] Anfitrite que lo habían llevado de La Habana. Quejose mucho de la indolencia del pueblo de Veracruz, pues no presentándose persona alguna a las vacunaciones tuvo que hacerlas en diez soldados del regimiento fijo que le franqueó el gobernador, y salió precipitadamente de aquella ciudad para Xalapa por hallarse con síntomas de ser atacado de la fiebre [306] amarilla. Pasó luego a la Puebla donde tuvo excelente acogida, y propagó rápidamente el fluido en 12 741 personas, dejando establecida la Junta de Vacuna a imitación de la de Caracas, y para cuyos gastos se destinaron los fondos de comunidades. </p><p id="202f3b61-2379-8049-8d48-e7e3f775371c" class="" dir="auto">El expediente relativo a la expedición en México no presenta más que una serie de desavenencias entre el Virrey y Balmis, de que [306v] ningún bien resultó al público que se retrajo constantemente de presentarse a las operaciones, llevado sin duda del ejemplo de aquel jefe, que, según infiere Balmis, solo deseaba hacer valer el fluido que se había logrado de La Habana. De aquí provinieron el maltrato que dio a los niños, los desaires repetidos a la expedición, los pocos o ningunos progresos que hizo la vacuna y [307] las contradicciones que experimentó Balmis para su viaje a Filipinas, que pudo realizar al fin, después de haber propagado el fluido por sí y por sus ayudantes en Oaxaca, Guadalajara, Tala, Zacatecas, Valladolid de Michoacán y provincias internas, estableciendo en todas partes juntas encargadas de su conservación.</p><p id="202f3b61-2379-80c9-8590-e51e99bc624d" class="" dir="auto">Balmis, a pesar de las razones que tenía para presumir [307v] que no sería dable hallar el verdadero <span style="border-bottom:0.05em solid">cowpox</span>, creyó sin embargo haberlo encontrado en Puebla, y su ayudante Gutierrez junto a Valladolid de Michoacán; pero se ha visto posteriormente que uno y otro se equivocaron en sus conjeturas.</p><p id="325f3b61-2379-8001-84e2-fb404169ef7e" class="" dir="auto">__________</p></div></div><div id="325f3b61-2379-80e6-aa61-e5c60b370171" class="column-list" data-notion-column-list="" dir="auto"><div id="325f3b61-2379-808f-8647-fd46b25931ce" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="325f3b61-2379-8048-b87a-e1b665f860b0" class="" dir="auto">Expediente N. 19</p></div><div id="325f3b61-2379-800e-a6fe-e705f3e9edf0" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="202f3b61-2379-80af-bf71-df81ec85119d" class="" dir="auto">En 24 de mayo de 1804 llegó a Cartagena la división de la expedición a cargo de Salvany, que se separó de Balmis [308] en la Guaira. Propagose la vacuna, estableciose la Junta correspondiente bajo el mismo plan que las demás de su clase, y continuó la expedición su viaje para Santa Fe subiendo por el río de la Magdalena. Subdividiose esta en Mompox; y en tanto que Salvany difundía el fluido por los pueblos situados en las orillas del río hasta la capital, Grajales y Lozano hacían igual operación por [308v] el valle de Cúcuta, Pamplona, Girón, Tunja y Vélez, reuniéndose después con aquel. Estableciéronse Juntas Centrales en los pueblos de consideración regidas por un reglamento uniforme en todas sus partes a los demás; pero con la circunstancia, que solo en él se encuentra, de hacer extensiva la atención de aquellas, no solo a la conservación del fluido, sino a cuantos objetos pudieren tener [309] relación con la salud pública.</p><p id="202f3b61-2379-80a0-826b-e2f450859df1" class="" dir="auto">En 8 de marzo de 1805 emprendió su camino para el Perú, haciendo que Grajales y Bolaños se dirigiesen a las ciudades de Neiva y la Plata mientras que él con el practicante Lozano recorría la de Trujillo y provincia de Chocos hasta Popayán donde se reunió con ellos en 27 de mayo. Acudió a atajar la epidemia de viruelas [209v] que se manifestó en Quito, y se dirigió en seguida a Cuenca y Loja. El resultado de su tarea en el Virreinato de Santa Fe fue el establecimiento de Juntas Centrales y subalternas de vacuna en los pueblos en que las consideró necesarias; haber comunicado felizmente el fluido a mas de 100 000 personas, con las siguientes observaciones sobre la influencia y fenómeno de la vacuna.</p><p id="202f3b61-2379-80df-9711-f2b91d5cf07b" class="" dir="auto">[310] “Al paso que se desarrollaba la vacuna calmaban visiblemente los dolores de la dentición en los niños y se aceleraba la salida de los dientes.”</p><p id="202f3b61-2379-80e8-b85d-ccd9af5934c6" class="" dir="auto">“A los que padecían lombrices, aunque sentían algún quebranto de salud excitándoles un pequeño movimiento febril con retorcijones de vientre, poco después, bien por medio de la evacuación que algunos tenían, o [310v] con suministrar a otros un ligero amargo, se lograba que las arrojasen y quedasen perfectamente restablecidos.”</p><p id="202f3b61-2379-801f-8d90-f0841cb4da18" class="" dir="auto">“La vacuna ha arreglado a muchas mujeres que padecían supresión de menstruo o no la tenían reglado.”</p><p id="202f3b61-2379-800b-b63b-e64e067d51ef" class="" dir="auto">“Finalmente se ha observado ser un específico para la curación de la sarna, enfermedad muy común en aquellos países, advirtiendo que desaparece enteramente [311] a manera de encarnar al paso que se desea el grano de la vacuna. En los países más cálidos se notó que algunos sarnosos se hinchaban después de vacunados, principalmente por los extremos inferiores, efecto, según presumía Salvany, de su debilidad de piel y sequedad del clima, añadiendo que los había curado administrándoles interiormente quina y exteriormente fermentos [311v] resolutivos.”</p><p id="325f3b61-2379-80c7-9d47-fd6a3732e9da" class="" dir="auto">__________</p></div></div><div id="325f3b61-2379-807a-bb14-e2e3cf964120" class="column-list" data-notion-column-list="" dir="auto"><div id="325f3b61-2379-805d-b4a7-d7e2afb5b107" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="325f3b61-2379-80f4-a9e1-f0cbf4afe325" class="" dir="auto">Expediente N. 20</p></div><div id="325f3b61-2379-80f8-ae5b-ed2418bf5731" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="325f3b61-2379-8036-b5f8-dd486d1df37e" class="" dir="auto">No fue tan afortunado en el Perú, pues aunque propagó felizmente el fluido en Piura, Reque, Chepén, Cajamarca y varios otros pueblos vacunando hasta 22 000 personas, sufrió algunas persecuciones en otros y no pocos desaires en Lima donde se había recibido anteriormente el pus enviado por el Virrey de Buenos Aires,</p></div></div><div id="325f3b61-2379-8082-b02a-f810daaeb1d3" class="column-list" data-notion-column-list="" dir="auto"><div id="325f3b61-2379-80da-b1b1-f071ca8f935e" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="325f3b61-2379-809b-9534-e2184dfb5aac" class="" dir="auto">Expediente N. 21</p></div><div id="325f3b61-2379-80fa-9464-c30d2d5e0c07" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="325f3b61-2379-8023-995d-fce34732d8db" class="" dir="auto">a donde lo había llevado un [312] barco portugués procedente del Janeiro.</p><p id="325f3b61-2379-80c7-857a-ff4c579a41b3" class="" dir="auto">Salió por fin para Charcas, recorriendo antes las provincias de Arequipa, la Paz, Oruro, Cochabamba y Potosí, y comisionando uno de sus ayudantes al Reino de Chile y otro al del Cuzco.</p><p id="325f3b61-2379-80eb-836a-c6e87ab45be9" class="" dir="auto">Nada resulta en el expediente acerca de las tareas ulteriores de Salvany y sus ayudantes: solo se sabe que</p></div></div><div id="325f3b61-2379-803e-81d7-dab9b793f697" class="column-list" data-notion-column-list="" dir="auto"><div id="325f3b61-2379-8008-86b1-e5daa17f5c0a" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="325f3b61-2379-80c2-ae2e-fef109808d88" class="" dir="auto">Expediente N. 22</p></div><div id="325f3b61-2379-807c-a4b0-d1e0640e0848" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="325f3b61-2379-8046-af16-d29493505596" class="" dir="auto">en Chile se propagó la vacuna que se llevó [312v] de Buenos Aires; pero se ignora la llegada de Grajales a este reino, ni si Salvany pasó a Buenos Aires, como lo ofrecía.</p><p id="325f3b61-2379-808a-87b0-e88f48962823" class="" dir="auto">__________</p><p id="325f3b61-2379-803a-978e-f6e3b998f52f" class="" dir="auto">En cuanto a Balmis, habiéndose embarcado en Acapulco con los demás individuos de la expedición y los 26 niños que le proporcionaron en varios pueblos de Nueva España,</p></div></div><div id="325f3b61-2379-80ff-a6d8-ff72092ac4a3" class="column-list" data-notion-column-list="" dir="auto"><div id="325f3b61-2379-8075-b398-c3fa0f30b306" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="325f3b61-2379-8035-9c6f-d8e6eb26902d" class="" dir="auto">Expediente N. 24</p></div><div id="325f3b61-2379-8021-abd0-f22203809d54" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="325f3b61-2379-8016-ab14-f65b8816b5a5" class="" dir="auto">llegó felizmente a Manila en 19 de abril de 1805 y [313] propagó el fluido así en esta ciudad como en Macao y Cantón, mientras que Pastor y Ortega recorrían las islas de aquel archipiélago y vacunaban a más de 20 000 personas. Balmis regresó desde Macao en un buque portugués que venía a Lisboa, trayendo consigo algunos cajones de plantas vivas y otras curiosidades que cedió al Estado.</p><p id="325f3b61-2379-8074-8a64-ff962ffe1289" class="" dir="auto">__________</p><p id="325f3b61-2379-80d8-802d-f927fac0f0ca" class="" dir="auto">Posteriormente en 30 de noviembre de 1809 [313v] se ofreció a volver a Nueva España</p></div></div><div id="325f3b61-2379-806b-8a34-f221a2fb1d04" class="column-list" data-notion-column-list="" dir="auto"><div id="325f3b61-2379-8071-b43b-d52cd11eda1b" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="202f3b61-2379-80d5-8b22-dae8a06ff83c" class="" dir="auto">Expediente N. 25</p></div><div id="325f3b61-2379-8094-99ea-c34a8fb003ea" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="325f3b61-2379-80b6-a8ed-ccdda4298da3" class="" dir="auto">a continuar sus observaciones sobre el hallazgo del <span style="border-bottom:0.05em solid">cowpox</span> y asegurar la perpetuidad del fluido. De vuelta de su comisión, que ha sido en febrero de este año, ha dado cuenta del resultado de ella, reducido en substancia a no haber hallado aquel, contra lo que se prometía, y a haber formado un nuevo reglamento, cuya aprobación solicita, para la [314] conservación de la vacuna, poniéndola a cargo de los Intendentes o los Ayuntamientos constitucionales mas bien que al de las primitivas juntas, que por no tener responsabilidad alguna la habían descuidado enteramente. Recomienda con empeño a la rectora, a los dos hijos huérfanos de Don Pedro Ortega: a Don Francisco Pastor, a Don Antonio Pastor y a sí mismo [314v] por los servicios contraídos en ambas expediciones, particularmente en la última. Quejase de Salvany, de quien nada ha sabido desde que se separó de él en la Guaira; así como de que no se hayan cumplido todavía las promesas que se hicieron a los niños; y concluye proponiendo que se nombre un Inspector de Vacuna encargado de velar sobre el cumplimiento [315] de las medidas y providencias que se tomen para la conservación y propagación del fluido, y de recoger todas las noticias y datos que puedan contribuir a mejor formar la historia de la vacuna en ambos hemisferios. =</p><p id="325f3b61-2379-80c4-8d4d-db0bf11618f3" class="" dir="auto">En Cádiz a 12 de marzo de 1813.</p></div></div><div id="325f3b61-2379-806b-8969-f9320c3d4f42" class="column-list" data-notion-column-list="" dir="auto"><div id="325f3b61-2379-801b-8e49-d70cecf69621" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="325f3b61-2379-80e6-9741-e10aec4785a6" class="" dir="auto">
+</p></div><div id="325f3b61-2379-80cf-91d2-c72115dc0a3f" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="325f3b61-2379-80f5-8c57-ea1c12084e10" class="" dir="auto">Cádiz 23 de marzo de 1813.</p><p id="325f3b61-2379-8074-8948-c9e426e3529e" class="" dir="auto">A informe del Protomedicato, con remisión de las memorias reglamentos y observaciones. = Fecho en 3 de abril de 1813.</p></div></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
