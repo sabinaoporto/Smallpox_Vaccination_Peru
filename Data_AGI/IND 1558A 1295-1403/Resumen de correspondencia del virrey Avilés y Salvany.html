@@ -1,0 +1,767 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Resumen de correspondencia del virrey Avilés y Salvany</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="209f3b61-2379-80e3-8cb5-e245ccc63d62" class="page sans"><header><h1 class="page-title" dir="auto">Resumen de correspondencia del virrey Avilés y Salvany</h1><p class="page-description" dir="auto"></p><table class="properties"><tbody><tr class="property-row property-row-status"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/burst_gray.svg" style="width:14px;height:14px;display:block"/></span>Estado</th><td><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Transcrito</span></td></tr><tr class="property-row property-row-date"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/calendar_gray.svg" style="width:14px;height:14px;display:block"/></span>Fecha</th><td><time datetime="1807-08-29">August 29, 1807</time></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/hashtag_gray.svg" style="width:14px;height:14px;display:block"/></span>Folio</th><td>1296 - 1307</td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/run_gray.svg" style="width:14px;height:14px;display:block"/></span>From (remitente)</th><td></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/person-masculine_gray.svg" style="width:14px;height:14px;display:block"/></span>To (destinatario)</th><td></td></tr></tbody></table></header><div class="page-body"><p id="209f3b61-2379-80d3-96f6-dbf4887b3294" class="" dir="auto">[1296]</p><p id="209f3b61-2379-8093-8bb0-de0dca49bdd4" class="" dir="auto"><mark class="highlight-default_background" data-notion-highlight="default_background">Lima y noviembre 23 de 1805.</mark></p><div id="326f3b61-2379-8042-a353-e0ab5ba71534" class="column-list" data-notion-column-list="" dir="auto"><div id="326f3b61-2379-806c-958b-e422c0c18385" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="209f3b61-2379-80b0-81f7-d510100d191c" class="" dir="auto">El Virrey Avilés</p></div><div id="326f3b61-2379-809d-8851-eec88ac6c0e5" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="209f3b61-2379-8003-ac0a-d2eaf654f4dd" class="" dir="auto">n. 158</p></div></div><p id="209f3b61-2379-806d-95a8-ced6db8b10c0" class="" dir="auto">Participa que afligidos los habitantes de aquella ciudad con las terribles epidemias de viruelas, que han padecido en los últimos años, y continuaban todavía, esperaban con ansia el trozo de la expedición, que a cargo del Sub Director Salvany se hallaba ya en Riobamba próxima a Guayaquil, para disfrutar el beneficio, que el paternal amor de Vuestra Merced les dispensa, cuando recibió el pus, que el Virrey de Buenos Aires le remitía entre vidrios.</p><p id="209f3b61-2379-80ff-9c2a-cc1893c1d866" class="" dir="auto">Hechos algunos experimentos, resultó [1296v] en dos párvulos la verdadera vacuna a juicio del Protomedicato, y del fluido de estos se comunicó para asegurar su existencia, a crecido número de personas, y sucesivamente se transmitirá a los pueblos de la comarca con una instrucción, que enseñe la práctica.</p><p id="209f3b61-2379-804c-8066-d14ca5ab045c" class="" dir="auto">Añade que para tomar estas providencias antes de la llegada de la expedición, ha tenido dos objetos:  1°. libertar de la muerte a muchos, que estaban expuestos al contagio y 2°. destruir con la experiencia de los buenos efectos, la opinión de algunos, que por ignorancia o malicia quieren desacreditar la vacuna.</p><p id="209f3b61-2379-804d-a664-ecff2a57f39b" class="" dir="auto">Espera la expedición para formar [1297] el reglamento, con que había de gobernarse este prodigioso establecimiento.</p><p id="209f3b61-2379-8076-82c4-da0e18df492c" class="" dir="auto"><mark class="highlight-default_background" data-notion-highlight="default_background">A 9 de octubre de 1806.</mark></p><p id="209f3b61-2379-8039-af2e-c11a66811d6a" class="" dir="auto">Resolución puesta en otro extracto extensiva a este:</p><p id="209f3b61-2379-8068-b4c5-f27c4919cac0" class="" dir="auto">“Enterado”</p><p id="209f3b61-2379-8022-998e-d2b58f1b54d9" class="" dir="auto"><mark class="highlight-default_background" data-notion-highlight="default_background">Fecho en 24.</mark></p><p id="209f3b61-2379-8009-b52d-f809f3525954" class="" dir="auto"><mark class="highlight-default_background" data-notion-highlight="default_background">Lima [espacio en blanco] de j</mark><mark class="highlight-default_background" data-notion-highlight="default_background">ulio de 1806</mark></p><div id="326f3b61-2379-80e0-a71e-eff75f6cb3ad" class="column-list" data-notion-column-list="" dir="auto"><div id="326f3b61-2379-80e2-988c-e4bbefeeaf78" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="326f3b61-2379-8035-9c59-dca1ef11a4f1" class="" dir="auto">El Virrey Avilés</p></div><div id="326f3b61-2379-802d-bd22-facec18ff27c" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="326f3b61-2379-809a-9b5a-cf9504532529" class="" dir="auto">n. 189</p></div></div><p id="209f3b61-2379-8038-abc7-dc543f2a1cf7" class="" dir="auto">Participa que extendida la vacuna en aquella capital y en algunas provincias, se ha extinguido la epidemia de viruelas naturales, que las afligía; por lo que cuando arribó a Lima el Sub Director Salvany, que fue a fines de mayo de 1806, muy poco tuvo que hacer en esta parte; pero le previno que formase el reglamento correspondiente; [1297v] y luego que se lo presentó, procedió el Virrey a elegir los sujetos, que estimó a propósito para vocales de la Junta Central, de la que será presidente el Virrey, copresidente el arzobispo, vice presidente un oidor, vocales el alcalde de primer voto, el procurador síndico, un regidor, un individuo del Cabildo Eclesiástico, un cura, un individuo del cuerpo militar, otro de Real Hacienda, dos particulares de distinción, dos secretarios, y dos médicos consultores con voto informativo, que turnen por meses, igualmente que los secretarios.</p><p id="209f3b61-2379-8069-a6ac-e63ce2823385" class="" dir="auto">Sin dilación pasó el Virrey otro reglamento al vice presidente para que principiasen las conferencias, y ha excitado al Ayuntamiento a [1298] que contribuya de sus cuantiosos propios para los pequeños gastos de arrendamiento de casa, de escritorio, muebles, etcétera; y según lo que resuelve ofrece el Virrey expedir las demás providencias conducentes del intento, y a que se formen en semejantes términos juntas subalternas en las demás provincias del distrito.</p><p id="209f3b61-2379-80f5-b73b-e8aabfeef5af" class="" dir="auto"><mark class="highlight-default_background" data-notion-highlight="default_background">Lima 1</mark><mark class="highlight-yellow_background" data-notion-highlight="yellow_background"> de octubre de 1806</mark><mark class="highlight-default_background" data-notion-highlight="default_background">.</mark></p><p id="209f3b61-2379-80b7-ad32-e0cfd13583dc" class="" dir="auto">El Sub Director Salvany</p><p id="209f3b61-2379-80a2-8327-ed3f35194417" class="" dir="auto">Expone, acompañando <mark class="highlight-yellow_background" data-notion-highlight="yellow_background">copias de su correspondencia</mark> con los jefes, que en 9 de diciembre de 1805 entró en el Virreinato del Perú, teniendo ya noticia anticipada de que en Lima hacían grandes estragos las viruelas naturales, por lo que determinó viajar [1298v] con la aceleración, que permitía el cuidado de los niños conductores del pus, la Cordillera de los Andes, falta de caminos, y de toda comodidad en la estación más vigorosa de lluvias y nieves; sin embargo de lo cual hubiera arribado antes a Lima a no haberse detenido a cortar el contagio de viruelas en algunos pueblos del Virreinato de Santa Fe.</p><p id="209f3b61-2379-802b-9379-ec43350d50ee" class="" dir="auto">A su arribo a la ciudad de Piura en 23 de diciembre encontró <mark class="highlight-yellow_background" data-notion-highlight="yellow_background">dos cartas del Virrey de Lima</mark>, diciéndole en la primera que acelerase el viaje por la necesidad, en que se hallaba aquella capital, y en la segunda que ya se había logrado en ella la vacuna; con cuyo motivo se detuvo Salvany para reparar su salud quebrantada con la repentina mudanza del frío al calor, y sabiendo que en la ciudad de Trujillo [1299] comenzaba el contagio de viruelas, pasó a ella en 9 de enero de 1806, y logró cortarlo, vacunando e instruyendo a los facultativos, como en Piura.</p><p id="209f3b61-2379-802f-b420-f21bc45f8a40" class="" dir="auto">Sucesivamente salió para Lambayeque, y en los pueblos de indios del tránsito nombrados Paiján y Chocope vacunó a cuantos se le presentaron; pero si bien al principio estuvieron dóciles, comenzaron a dudar después, y llamaban a Salvany el Ante=Christo [sic], por lo que se salió con precipitación, comisionando al religioso Justiniano para que recorriese vacunando los pueblos de Vicús, Olmos, Motupe, Salas, Jayanca, Pacora Íllimo, Túcume, y Mochumí.</p><p id="209f3b61-2379-8035-bc11-f59a6bbaaf1e" class="" dir="auto">Refiere que a su arribo a la ciudad de Lambayeque en 26 de enero, nadie salió a recibirle; [1299v] de suerte que hubo de andar todo el pueblo para encontrar el alojamiento, que era inmundo y desproveído; por lo que y haber intentado robarle en él de noche, aceptó Salvany la casa de Don Joseph Delgado, quien mantuvo a sus expensas con el mayor lucimiento a los individuos y niños de la expedición, y estimulado el Ayuntamiento con este ejemplo, pagó algunos gastos.</p><p id="209f3b61-2379-804c-bb35-cf178a31a5ce" class="" dir="auto">No lo hizo así el de Piura; y a pesar de ser pueblos numerosos, no se propagó a proporción la vacuna, ni se hubiera hecho en ellos operación alguna, a no haber habido sujetos particulares, que deban el debido mérito a la comisión, a los cuales se debió también que en sus matrices se cantase misa solemne en acción de gracias por haber [1300] cesado el contagio y por la salud de Vuestra Majestad.</p><p id="209f3b61-2379-80dc-87c8-f3697bdd1ad2" class="" dir="auto">Desde Lambayeque salió para Cajamarca por los pueblos de Reque y de Chepén, donde hizo vacunaciones generales, y llegando al nombrado Pan de Azúcar, que es una hacienda del Teniente Coronel Don Juan Espinach, se escaparon de noche los arrieros, y permaneciendo allí la expedición cuatro días hasta que le vino socorro de otro pueblo, faltó la provisión y hubieron de mantenerse con maíz tostado. Esta necesidad y otras las socorrió el expresado Espinach; en cuya virtud siguió su ruta al Mineral de Chota, en donde hizo una vacunación general por que reinaba el contagio [1300v] de viruelas, dejando instruido, entre otros curiosos, al subdelegado Don Mariano Castro, que manifestó el mayor entusiasmo por la vacuna.</p><p id="209f3b61-2379-801b-855b-e99633702c9f" class="" dir="auto">Al entrar en la ciudad de Cajamarca en 9 de marzo, salió el subdelegado Don Joachin Miguel de Arnaco acompañado de todos los cuerpos a recibir la expedición; y habiendo dado al pueblo y a los indios la más alta idea de su objeto, hizo que estos la recibiesen con una danza, y que recitasen una loa en obsequio de Vuestra Majestad. En este pueblo, como en otros del Virreinato de Santa Fe, conoció Salvany cuan importante es que un juez ilustrado y activo persuada al pueblo bajo para que deponga sus recelos. En [1301] Cajamarca hizo dos vacunaciones generales para cortar el contagio de viruelas, que también reinaba: trabajó <mark class="highlight-teal_background" data-notion-highlight="teal_background">un plan interino para conservar la vacuna, interín que el Virrey del Perú disponía el que se hubiese de adoptar en todo el reino, remitiendo copias</mark> a las ciudades de Piura y Lambayeque: mientras permaneció allí la expedición fue mantenida por el referido Espinach; y antes que saliese se cantó en la matriz misa solemne con te deum.</p><p id="209f3b61-2379-806d-94b6-e0d171079e08" class="" dir="auto">Desde Cajamarca volvió la expedición segunda vez a Trujillo, donde se reunió a ella el practicante Lozano de vuelta de la provincia del Choco y el betlemita Justiniano, que desde Lambayeque [1301v] fue comisionado a los pueblos de indios Chiclayo y otros cinco, donde hizo numerosas vacunaciones; y avisado Salvany de que en la provincia de Chachapoyas comenzaban las viruelas, destinó al referido Lozano para que fuese a cortarla, y después a las de Cajamarquilla y Huarochirí; y hallándose el ayudante Grajales en Guayaquil, le escribió que pasara a vacunar en la provincia de Jaén, único punto, que faltaba del reino de Santa Fe, y que regresase recorriendo las de Huamachuco y Conchucos hasta Lima.</p><p id="209f3b61-2379-809b-80d2-ea0c49806717" class="" dir="auto">Durante la segunda mansión en Trujillo, obsequió y mantuvo a la expedición el gobernador Intendente Don Felipe del Risco, siendo [1302] el único magistrado de aquella ciudad adicto a la vacuna; y aunque al primer arribo experimentaron sus habitantes el beneficio de haberse cortado el contagio, la miraban después con indiferencia; de suerte que para conservarla, fue preciso vacunar por fuerza.</p><p id="209f3b61-2379-8065-a36d-cbaa575f3987" class="" dir="auto">En la misma ciudad encontró Salvany al arzobispo de Chancay Don Benito Moxó protector decidido de la vacuna desde que estuvo en Puerto Rico con la expedición; y a este prelado dice Salvany que se debe el pequeño obsequio y recibimiento que hizo el Ayuntamiento de Lima al entrar en esta ciudad en 23 de mayo, y de lo contrario ninguno habrían [1392v] tenido, por que habiéndose propagado la vacuna en gran parte de sus moradores, declamaban públicamente contra la expedición como no necesaria.</p><p id="209f3b61-2379-8069-8fc7-e70e8feed919" class="" dir="auto">El mezquino alojamiento que se le preparó demostraba el escarnio, con que se miraba; y por ser muy indecente, no quiso Salvany hacer en él vacunación general, también faltó el Ayuntamiento a la oferta de mantener a los niños a costa de sus propios, dejándolos un día sin comer, y muchos sin pan para el desayuno, ni avíos con que hacerlo, y sin luz de noche; de forma que se vio obligado Salvany a <mark class="highlight-yellow_background" data-notion-highlight="yellow_background">dar la queja al Virrey Avilés</mark>; y aunque <mark class="highlight-yellow_background" data-notion-highlight="yellow_background">este [1303] jefe manifestó gran sentimiento</mark>, determinando que se aseara el alojamiento con comodidad y decencia, y que se cuidase a los individuos de la expedición, nada bastó y le fue preciso <mark class="highlight-yellow_background" data-notion-highlight="yellow_background">acudir al alcalde de primer voto por dos veces</mark>, quien manifestando bastante repugnancia dispuso que pasase la expedición a otro alojamiento poco más decente, en donde determino Salvany hacer la vacunación general.</p><p id="209f3b61-2379-8078-a9d9-c4b9db8d2e5d" class="" dir="auto">Para ella dio el Virrey los avisos correspondientes; pero solo concurrieron 9 personas, por consecuencia del empeño, que se había tomado el deslucir la expedición, principalmente algunos del alto pueblo, que poco agradecidos a la beneficencia se Vuestra Majestad deseaban [1303v] que solo contrajeran mérito algunos facultativos del país, que sin precaución ni método habían propagado la vacuna hasta el extremo de envilecerla y de comerciar con ella, pues al arribo de la expedición se vendían públicamente cristales con el pus y piezas de tafetán inglés a precio muy subidos, y salían a vacunar a los pueblos comarcanos, y exigían cuatro pesos a cada vacunado.</p><p id="209f3b61-2379-8066-9d30-e54e9b564e89" class="" dir="auto">Esta conducta motivó que no pudiese Salvany cumplir sus deseos en los pueblos del tránsito hasta Lima, y que fuesen muy pocas las personas vacunadas; porque no habiendo producido efecto la mayor parte de las operaciones [1304] en unos y en otros haber sido falsa vacuna, se contagiaron de la viruela natural casi cuantos se habían expuesto a la operación: por consiguiente cuando llegaba Salvany a estos pueblos, discurriendo que procedía del mismo modo, despreciaban el específico.</p><p id="209f3b61-2379-80b0-8e9f-f8b6b01a97ef" class="" dir="auto">A pocos días de estar en Lima, <mark class="highlight-yellow_background" data-notion-highlight="yellow_background">envió el Virrey a Salvany el expediente de vacuna</mark> para que viese cuanto se había hecho; y en su inteligencia propuso la creación de una Junta Central en la capital y otras subalternas en las provincias bajo el plan, que formó y remitió al Virrey, quien inmediatamente dispuso que se pusiera en ejecución.</p><p id="209f3b61-2379-8016-9ad5-d2282c69ebbc" class="" dir="auto">Notando Salvany que a pesar de haberse [1304v] publicado por bando el arribo a Lima de la expedición y su objeto, nadie acudía, aunque eran muchísimos los que no habían pasado viruelas, lo hizo presente al Virrey, quien resolvió que Salvany avisase al público por boletas los días señalados para vacunar: tampoco bastó este medio por los dicterios, que <del>se</del> difundían aquellos mismos, que debieran haber entusiasmado al pueblo; y temiendo perder la vacuna, se vio precisado el Sub Director a salir por las calles con los niños, que la tenían en sazón preguntando si había algunos para comunicarla.</p><p id="209f3b61-2379-8027-bb2e-d5b6dc7655a1" class="" dir="auto">Sin embargo de todo hubo día de los [1305] señalados, en que solo se comunicó a un individuo; y sabiendo Salvany que en los pueblos principales del Perú, que había recorrido, no solamente descuidaban propagar el especifico a sus respectivas jurisdicciones, si también que lo dejaban extinguir, representó al nuevo Virrey Abascal, quien determinó que se efectuase el establecimiento de la Junta según dispuso su antecesor, y que en cada día de los señalados para vacunar, le fuesen presentado a Salvany algunas personas a fin de conservar el fluido.</p><p id="209f3b61-2379-8090-8277-dbabdb7b22bd" class="" dir="auto">Posteriormente supo que el Virrey determinó a instancia del Ayuntamiento que la vacuna se conserve en casa de Don Pedro Belomo facultativo [1305v] del Apostadero de Marina, y que las juntas se celebren en una de las salas capitulares; pero que nada se ha resuelto para conservar el específico en las provincias.</p><p id="209f3b61-2379-808f-b760-e12da1034989" class="" dir="auto">Concluye exponiendo que no puede dar noticia por ahora de las poblaciones del Perú, recorridas por la expedición, mediante que no se [bas?] han pasado sus subalternos; y solo la da de los vacunados por el mismo Salvany, cuyo número asciende a 22.726. Se proponía salir en 15 de octubre de 1806 para Charcas, recorriendo antes las provincias de Arequipa, la Paz, Oruro, Cochabamba y Potosí, comisionando a uno de sus ayudantes al reino de Chile, y otro al Cuzco. </p><p id="209f3b61-2379-803d-80b1-cb623a2e0366" class="" dir="auto">[1306] En <mark class="highlight-yellow_background" data-notion-highlight="yellow_background">representación separada de la misma fecha</mark> se lamenta Salvany del poco interés con que se mira la conservación de la vacuna a pesar de que todos elogian una expedición tan importante y conocen que procede de las viruelas el atraso de la población, de la agricultura, comercio e industria; y si se conserva en algunas pocas poblaciones, se halla estancada en su reino, no cuidando de propagarla al infeliz indio, que es la casta que más padece con las viruelas y la más necesaria. Dice que por la inacción, cavilosidades e intrigas reina la epidemia de viruelas en las provincias de Piura, Trujillo y Santa, que ha recorrido la expedición, dejando [1306v] planes para la creación de juntas; y a fin de remediar tanta desidia:</p><p id="209f3b61-2379-800e-baa6-f9e7814eabf6" class="" dir="auto">Propone lo primero que por una orden muy severa se mande al Virrey que ejecute cuanto contiene el reglamento de Salvany aprobado por su antecesor Avilés.</p><p id="209f3b61-2379-80b8-a1f9-cd973be0da19" class="" dir="auto">Lo segundo que se cree una plaza de Inspector o Director de Vacuna, dotando al sujeto que se nombre para este cargo con doce o catorce mil pesos y autorizándole con los honores del Consejo. Sus obligaciones deberán ser el celar el cumplimiento de los planes y representar a Vuestra Majestad y a los Virreyes cuanto convenga a su ejecución: visitar cada trienio uno de los tres Virreinatos del Perú,  Buenos Aires y Santa Fe, cuyas Juntas Centrales le informarán [1307] cada bimestre de todas sus operaciones y de las Juntas Subalternas; será recomendado a los virreyes, tribunales y comandantes para que le auxilien; y se le abonará la correspondencia de oficio. El aumento de población, el de los tributos y alcabalas recompensarán muy en breve estos gastos.</p><p id="209f3b61-2379-807f-9933-f1e697516340" class="" dir="auto"><mark class="highlight-yellow_background" data-notion-highlight="yellow_background">En otra representación de la propia fecha</mark> expone Salvany los inmensos trabajos, enfermedades y peligros, que él y los demás individuos han padecido por la falta de caminos, precipicios, caudalosos ríos, despoblados, aguas, nieves, calores, hambre y sed a las veces, y siempre caminando con criaturas; de suerte que todos se admiran de ver que con un sueldo tan miserable hayan podido superar [1307v] tales dificultades, pues no les alcanza para el sustento necesario: con esta consideración,</p><p id="209f3b61-2379-80be-a5a4-e465e1324df8" class="" dir="auto">Propone que Vuestra Majestad premie a los dos ayudantes Grajales y Lozano con los honores de Cirujanos de Cámara, y al enfermero Bolaños con los de Conserje de Palacio, u otra distinción.</p><p id="209f3b61-2379-8057-a66d-e0b7deaad10d" class="" dir="auto">A 29 de agosto de 1807.</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

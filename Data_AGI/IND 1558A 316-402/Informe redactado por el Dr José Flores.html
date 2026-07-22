@@ -1,0 +1,767 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Informe redactado por el Dr. José Flores a pedido del Consejo de Indias</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="1c4f3b61-2379-8005-87df-ef57fa49744e" class="page sans"><header><h1 class="page-title" dir="auto">Informe redactado por el Dr. José Flores a pedido del Consejo de Indias</h1><p class="page-description" dir="auto"></p><table class="properties"><tbody><tr class="property-row property-row-date"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/calendar_gray.svg" style="width:14px;height:14px;display:block"/></span>Date</th><td><time datetime="1803-02-28">February 28, 1803</time></td></tr><tr class="property-row property-row-status"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/burst_gray.svg" style="width:14px;height:14px;display:block"/></span>Estado</th><td><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Transcrito</span></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/hashtag_gray.svg" style="width:14px;height:14px;display:block"/></span>Folio</th><td>324 - 333</td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/run_gray.svg" style="width:14px;height:14px;display:block"/></span>From (Remitente)</th><td><span class="selected-value select-value-color-blue">Dr. José Flores</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/map-pin-alternate_gray.svg" style="width:14px;height:14px;display:block"/></span>Place</th><td><span class="selected-value select-value-color-green">Madrid</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/person-masculine_gray.svg" style="width:14px;height:14px;display:block"/></span>To (Destinatario)</th><td><span class="selected-value select-value-color-yellow">Rey</span></td></tr></tbody></table></header><div class="page-body"><p id="1c4f3b61-2379-8014-811f-d5426dc1dbc0" class="" dir="auto">[324]</p><p id="1c4f3b61-2379-80fe-ab7e-fb680301f7d2" class="" dir="auto">+</p><p id="1c4f3b61-2379-806f-95c7-fe2e666a29f1" class="" dir="auto">Muy Poderoso Señor</p><p id="1c4f3b61-2379-8001-a31d-e47b443934d9" class="" dir="auto">Jamás trabajos literarios, se coronaron con tanto suceso, como los míos. Hace veinte años, que el arte de curar se hallaba en Guatemala, decaído, olvidado, y aún despreciado. Me confió entonces la Real Universidad de San Carlos la cátedra de prima de medicina: y desde luego me propuse levantar la facultad sobre cimientos sólidos. Atraje discípulos: procuré libros: construí máquinas, e instrumentos: se hicieron demostraciones de geometría, de física, de química: una anatomía de cera, que no tiene semejante.</p><p id="1c4f3b61-2379-80b7-a027-c3253775e087" class="" dir="auto">Con este aparato presenté mis cursantes a examen delante del jefe de aquel reino  y demás superioridades. Se explicaron con grandeza: concluyeron sus cursos: se recibieron de médicos y cirujanos: se graduaron de doctores: se estableció el Real Protomedicato: vi al fin un cuerpo de facultativos, que reunían todos los conocimientos del arte: vi una facultad criada con unos principios, que desde su cuna ya anunciaba fuerzas gigantescas.</p><p id="1c4f3b61-2379-8059-9580-ff7ba6bf4cee" class="" dir="auto">Hice más: dejé mi patria: abandoné mis comodidades: pedí a Su Majestad licencia para viajar: corrí la Europa en circunstancias peligrosas: examiné sus escuelas más célebres; y cuál fue mi sorpresa cuando me hallo en ellas que a mi facultad de Guatemala nada faltaba y que aún podía, en punto de método [324v] de enseñanza, dar leyes.</p><p id="1c4f3b61-2379-803c-bfbb-eedf3351fc84" class="" dir="auto">Triunfante con esta experiencia retorné a esta corte en donde me reciben las cartas y gacetas de Guatemala, papel curioso e interesante. Me participan los nuevos exámenes, los adelantamientos: la invención del asa elástica, peregrino instrumentos en la obstetricia: y que la ciencia florece de un modo extraordinario. Pero las últimas noticias de la actividad del Protomedicato en preservar aquel reino de las viruelas, de que se hallaba amenazado por una de sus provincias distantes; y de su priesa en solicitar, y buscar el pus en las vacas, para practicar la vacuna, me transportan: y en esta dulce ebriedad mi alma deseaba un desahogo. Este es cabalmente el momento en que recibo el acordado de Vuestra Alteza para que exponga lo que me ocurra sobre el establecimiento de la vacuna en América. Este acordado es el complemento de mi gloria; porque me proporciona la ocasión más feliz para proponer un método fácil, y seguro, para extirpar las viruelas, y libertar para siempre a los habitantes de aquellos dominios del contagio más espantoso.</p><p id="1c4f3b61-2379-8001-aad4-cc6a528a6db2" class="" dir="auto">Suplico pues a Vuestra Alteza oiga con indulgencia las primicias de un médico, que se arde en el amor de su patria: en el de toda la América; en el de la humanidad entera.</p><p id="1c4f3b61-2379-801a-9114-e4f23391b123" class="" dir="auto">Los indios occidentales, aunque de un origen común con el resto de los hombres, su separación es un acontecimiento, que se pierde en la obscuridad de los siglos. Esparcidos en tierras inmensas, rodeados de vastas mares, y sin más utensilios que el filo de las piedras duras, solo pudieron [325] proveer a las primeras necesidades. Su vida errante, su desnudez, y alimentos especiales influyeron, con el transcurso del tiempo en su constitución física, de suerte que sus cuerpos aunque bien conformados tienen un aspecto, y sus rostros una fisonomía diferente de la de sus primeros padres. Endurecidos a todos los climas son sanos, y apenas sensibles a las enfermedades febriles: para las que la tradición de sus mayores, o lo más cierto, el instinto, que el criador ha puesto en todos los animales, les hizo conocer excelentes simples, de que usaban con ventaja.</p><p id="1c4f3b61-2379-805b-9fe6-f47b29580676" class="" dir="auto">Solo para las viruelas no tenían remedio. Esta era una enfermedad exótica en aquellos países, y enteramente desconocida de sus antepasados. Por desgracia el tejido de su cutis, y sus humores, eran de una complexión funesta para este mal: y las circunstancias en que se hallaban cuando le padecieron la primera vez, le hicieron extremadamente maligno, y mortal. Les acometió cuando en una catástrofe inaudita veían desaparecer sus antiguas constituciones, y rodar los tronos de sus príncipes: cuando unos hombres blancos, y peludos, montados en grandes animales, los atropellaban y tallaban: cuando veían disparar a sus enemigos, relámpagos, y truenos, que los despedazaban, y asombrados con el estruendo, les parecía que el cielo entero se desplomaba para sepultarlos. En este desastre se les comunicó el virus fatal: la fiebre violenta que los rendía: la podredumbre fétida de que se hallaban cubiertos ellos, sus hijos, y sus mujeres, les hizo creer que esta era otra [325v] arma de sus vencedores implacables, que no perdonaba ni la edad, ni el sexo.</p><p id="1c4f3b61-2379-809c-8892-efb9ea21bcf7" class="" dir="auto">Se sabe cuánto, el abatimiento del ánimo, y el espanto, aumentan la malignidad de los contagios; y así este primer acometimiento hizo en el nuevo mundo un estrago lamentable, de que apenas pudieron preservarse los que huyeron a los montes, y desiertos. Esta es pues la primera, y principal causa de la depopulación de la América.</p><p id="1c4f3b61-2379-8039-8061-c71634e3c662" class="" dir="auto">Es verdad, que en las expediciones militares, una tropa impetuosa, avarienta de gloria, y riquezas hizo correr la sangre a torrentes; pero estas causas de destrucción se contuvieron, y las heridas se cicatrizaron luego, que se plantó la justicia, y se establecieron los magistrados: y sí, en aquellos tiempos, algunos jefes escandalizaron con su violencia, y crueldades, se dejaron admirar muchos hombres beneficios, verdaderamente patriotas, que ejercieron la caridad más ardiente: la recopilación de Indias: la serie no interrumpida de Reales Cédulas desde la época del descubrimiento, hasta el presente reinado, y este supremo Consejo, son un monumento eterno, que confundirá para siempre a los declamadores. El mundo imparcial leerá con ternura en estas sabias leyes: que los indios, desde el principio de su conquista, fueron declarados vasallos libres, nobles, capaces de todos los empleos, y de optar a los beneficios, y dignidades: que sus tierras, y propiedades, son sagradas: que se les concedieron los [326] privilegios de menores, bajo la tutela inmediata de los fiscales togados: que se les dispensó, en lo posible, de las leyes eclesiásticas, civiles, y criminales: que no se les puede infligir el castigo de un azote, sin autos formales seguidos hasta la última instancia, y con sentencia definitiva de la audiencia del distrito: que no pagan más pechos, que un ligero tributo: que en los imperios, y gobiernos del antiguo mundo, no hay memoria de vasallos más privilegiados, y protegidos, que los indígenas de nuestra América: que la decantada tiranía de los españoles, es una quimera, y que la destrucción de los indios depende de otra causa, y estas son las viruelas.</p><p id="1c4f3b61-2379-8031-b3d4-d658a6b3b42c" class="" dir="auto">En Europa, este contagio desde que se introdujo en tiempo de las cruzadas, se radicó. El veneno pulula según la constitución de los años, y ya en uno, ya en otro estado, se padecen epidemias más, o menos malignas. Otras veces se entorpecen, o se manifiesta con su carácter benigno. Muchos hay, que no le adquieren, sino a su vejez, y otros pasan toda su vida sin haberle experimentado. No es así en América. <mark class="highlight-default_background" data-notion-highlight="default_background">El mal comienza por lo común en Veracruz, o en los Puertos de Yucatán. Al instante que algún mueble, ropa o persona infectada salta en tierra, el contagio comienza: y con la rapidez de una llama voraz se esparce de pueblo, en pueblo, por las dilatadas provincias de la Nueva España: llega a Oaxaca, atraviesa el Reino de Guatemala, y por Nicoya, y Costa Rica pasa a Panamá, Guayaquil, etcétera.</mark></p><p id="1c4f3b61-2379-80a3-9a2a-f0481e25a5c6" class="" dir="auto">El continente entero queda devastado. No se exceptúa [326v] clima frío, templado, ni caliente: ninguna persona que no le haya padecido antes se escapa; y el virus por falta de materia, se desvanece, y se consume, dejando por todas partes la amargura, y la desolación. Esta escena trágica se repite tantas veces, cuantas se nos lleva a desembarcar un presente tan funesto: pero qué tercera parte. Los jóvenes padres con sus hijos: dos generaciones: qué digo: innumerables generaciones.</p><p id="1c4f3b61-2379-80c7-acb4-f2fd6afc6c59" class="" dir="auto">Puedo asegurar del reino de Guatemala: y no dudo decir lo mismo de lo restante de nuestras Américas, que ningún pueblo prospera: que todos están extenuados, y muchos de quienes solo se encuentra el lugar en donde existieron. Cuántas veces he pasado por estas ruinas, y me he detenido a contemplar la belleza del cielo, la amenidad del país, los solares, las aguas, los árboles cargados de frutas deliciosas; sin advertir, en esta especie de paraíso, otros habitantes, que tigres, y serpientes: estas son resultas de las viruelas, y en particular de las tres últimas epidemias.</p><p id="1c4f3b61-2379-801a-9bac-d72a537cfee7" class="" dir="auto">En el año de 1749 en ocasión en que todos se hallaban postrados, sobrevino una tempestad: y no habiéndose podido ocurrir a tiempo a remediar los daños, que las inundaciones hicieron en las cementeras, el alivio de los que sobrevivieron, fue la penuria, y la escasez. A la de 1761 siguió la langosta. Este animal devorador se apareció al oriente de Nicaragua: taló las pingues costas del Mar del Sur, y llegó a las Chiapas, con una multiplicación tan prodigiosa, que [327] se llegó a ver una nube tan dilatada, y espesa que cubría el sol. Los indios Soques, y Sendales, antes numerosos y ricos, unos murieron de hambre, otros se huyeron, y pocos quedaron flacos, y miserables. Los consumió un insecto despreciable; que en su origen hubiera sido fácilmente destruido por brazos robustos; pero otra plaga su precursora, las viruelas, le había puesto el campo libre.</p><p id="1c4f3b61-2379-80e1-a0de-ff7ad7eafbb2" class="" dir="auto">La última epidemia es memorable. Diez, y nueve años habían pasado sin que se aparecieren las viruelas, cuando en 1779 entraron por su puerta ordinaria Veracruz, y fueron en un instante a sepultar 22 000 personas a México. El año siguiente continuaban sus destrozos en Oaxaca, de donde las llevó en posta a Guatemala, el correo ordinario del mes de junio. Este era un joven mulato, que tuvo harto vigor para entregar la valija en sus últimos suspiros: murió, y se lleva tras sí todos los chicos de su casa. A esta inesperada novedad, yo me hallaba en la arruinada Guatemala. Volé a la capital a entablar la inoculación. Era necesario para esto la autoridad del gobierno: y a pesar de la celeridad con que se practicaron las diligencias, y de la priesa que nos dimos a inocular, el mal hacia una mortandad tan general, que en esta borrasca naufragaron igualmente los indios, las castas, y los blancos.</p><p id="1c4f3b61-2379-80f2-858d-dea696be96a7" class="" dir="auto">Tan horroroso espectáculo me hizo la más viva impresión; y sumergido en una profunda melancolía meditaba: que cosa era esta ponzoña: cuál era la naturaleza [327v] de esta levadura tan fuerte, que le bastaba tan poco tiempo, para agriar, y corromper millares de hombres! Que el agua tan dura, que penetra al oro; antes de sufrir la más ligera compresión, se halla dividido en sus principios! Que el aire, impalpable, se haya analizado hasta la evidencia! Que la luz, primero entre los entes de la elasticidad, y sutileza, se haya descompuesto; y que una pústula asquerosa aún haya de ser un misterio!</p><p id="1c4f3b61-2379-8048-b038-d47c540f7ea7" class="" dir="auto">Me paseaba por por [sic] las escuelas de los árabes, de los cartesianos, de los mecánicos, de los metodistas: repasaba sus controversias, sus pretendidos específicos, sus métodos calefacientes, y refrigerantes: lo que se había atormentado los sydenhanes, los mortones, los boerrhaves: los esfuerzos inútiles de los primeros médicos de las cortes para prevenir la cruel guadaña, que afectaba hacer sus golpes más certeros sobre las testas coronadas. Estas consideraciones me hacían penetrar más, y más aquella gran verdad del padre de la medicina: que la vida es breve, y el arte largo, y difícil: si ciertamente más de setecientos años de estudio no han podido enseñar un remedio contra la malignidad de las viruelas.</p><p id="1c4f3b61-2379-80cf-b973-d2bb9b1f060f" class="" dir="auto">Los médicos recordamos con orgullo, que nuestros predecesores obraron la gran revolución de las letras: que promovieron, y formaron las academias: y que no han tenido poca parte en los nuevos, y estupendos descubrimientos; pero olvidamos nuestros pocos aciertos en la práctica; y que entre la infinidad de brebajes, y composiciones desagradables, con que se [328] consuela la credulidad de los enfermos, apenas tenemos cuatro drogas, que merezcan el nombre de remedio, y estas las hemos adquirido de los salvajes: no es esta nuestra única humillación. El asunto que trato nos hace inferir otra, y notable.</p><p id="1c4f3b61-2379-80ae-a507-c3f7494e6134" class="" dir="auto">A principios del siglo último una embajatriz inglesa, llevó de Constantinopla a Londres la inoculación, e hizo la experiencia más conveniente: inoculó a sus hijos. Se supo que de este modo los circasianos, y los georgianos preservaban a sus bellezas, para hacer con interés el comercio de los serrallos: que esta era una práctica muy antigua, tal vez originaria de la China, en donde, de tiempo inmemorial, el Emperador comisionaba, todos los años, a sus médicos, para que fueran a ingerir las viruelas a las provincias: servicio que les remuneraba largamente con preciosas peleterías. Una novedad tan ruidosa, conmovió los ánimos y lo que es muy ordinario en la profesión, las opiniones se dividieron: y el pro, y el contra, se agitó con calor, y aún con agriura. Las gentes sensatas suspendieron el juicio, y la inoculación se quedó estacionaria en Europa.</p><p id="1c4f3b61-2379-808c-adfe-dd0f85925568" class="" dir="auto">Entre tanto algunos misioneros del Pará, a quienes llegó esta nueva salvaban a sus indios con este método: y en una terrible epidemia en la Nueva Inglaterra, hoy Estados Unidos, esta fue la ancla de esperanza. La cuestión se renovó: la muerte prematura de dos archiduquesas en la casa de Austria: la heroína del norte que dio por sí misma el ejemplo en Rusia: la resolución casi general de los soberanos para preservarse por la inoculación, parecía dirimir la duda.</p><p id="1c4f3b61-2379-8028-a8ed-c03e0f390cb1" class="" dir="auto">En efecto: escoger el sujeto, elegir la edad, y la estación [328v] para inocular las viruelas, es hacerlas benignas. Es cierto. Pero por otro lado se dice: si se inoculan dos niños escogidos; pero el pus, que se transmite, hacer perecer doscientos incautos, y desprevenidos: y este grito temeroso acompañados de hitas mortuales, no convence menos; pues el virus de las viruelas inoculadas, y el de las naturales, es uno mismo, y sus cualidades no se distinguen, sino en razón de las circunstancias en que se reciben. Qué de lazaretos para aislar a los inoculados, y a sus asistentes! Qué de guardias para prohibir la comunicación! Cuántas veces se debería repetir este trabajo en los pueblos esparcidos, o cómo salpicados en un mundo; y sobre todo que ni acontecía el más leve descuido, la providencia no solo se haría nula, pero con ella misma se encendería el fuego de la destrucción.</p><p id="1c4f3b61-2379-800f-a38d-dce1255ca557" class="" dir="auto">Así vacilaban mis ideas cuando llegó la Real Orden de 1785 en que se mandaba observar el método para preservar a los pueblos del contagio de las viruelas, publicado por Don Francisco Gil, cirujano del Real Monasterio de San Lorenzo. y su sitio, e individuo de la Real Academia Médica de esta corte. Este era un proyecto antiguamente concebido en Francia, calcado sobre las providencias que se acostumbran tomar, para preservar de la peste: y lo particular concerniente a nuestra América era, que se pusiese el mayor cuidado en los puertos con pasajeros, y tripulaciones, de si había en ello algún infectado de viruelas o muebles, o ropas que les hubieren servido: que no se desembarcasen, o se custodiasen en Lazaretos, conforme las Leyes de los Contagios. El pensamiento [329] era bueno, y su ejecución no dependía, sino de la exactitud con que deberían hacerle observar los gobernadores de Yucatán, y Veracruz: y sobre todo era un Orden del Rey, que se debía obedecer, y por mi parte propuse hacerlo hasta el escrúpulo: y no tardó el caso de ejercitarme.</p><p id="1c4f3b61-2379-80e4-a888-fda017bfce31" class="" dir="auto">A principios del año de 1794 el Intendente de Ciudad Real de Chiapa, dio cuenta al gobierno de Guatemala, de que en Campeche, y Villahermosa se padecían viruelas, las que se extendían hasta los pueblos de Tabasco. El presidente me pasó el oficio, y en su contestación le expuse, la grandeza del peligro que amenazaba, y las providencias que se debían tomar; y que la primera era el cortar la comunicación con Yucatán; lo que era fácil, y se conseguía con solo poner dos hombres en el paso encarpado, y estrecho, que llaman el Campanario de Plátanos; y cerrar el camino del Palenque; pero ya sea que esta orden llegase tarde, o que no se cumpliese exactamente, el asesor de la Intendencia contestó, que la epidemia estaba ya declarada en los pueblos de Tuxtla. Era yo el primer Protomédico de todo el reino refundiéndose en mí las facultades del Protomedicato conforme a Real Cédula de 21 de Junio de 1793, y mi Real Título de la misma fecha. Era tiempo de usar de ellas; supliqué pues, y exhorté al presidente la nos tuviese, lo que ejecutó con firmeza.</p><p id="1c4f3b61-2379-8044-899e-d62c490feabf" class="" dir="auto">Con conocimiento del país, señalé los lugares, para establecer las guardias entre los límites de Suchitepéquez, y Soponusco [sic], y en las sierras de Totonicapán, no solo para interceptar el paso a los hombres, sino aún a los animales. Dispuse una larga instrucción de lo que se debía practicar en la Intendencia [329v] de Chiapa infestada: cómo se había de tratar a los enfermos de las viruelas naturales: el caso de asilar un pueblo para inocularlo en masa: el orden de hacer esta operación en grande: lo concerniente a las mujeres embarazadas, a los niños en dentición, a los verminosos, etcétera. Lo peculiar de los indios según su naturaleza, y sus alimentos: el método de preservarse los correos, para que sin que faltase la correspondencia de España, no llevasen a Oaxaca las viruelas, ni las trajesen a Guatemala: y en fin se detallaban todos los casos que podían ocurrir; la desinfección, y purificación, hasta la sofocación del contagio.</p><p id="1c4f3b61-2379-809d-a92b-e6053d15ac42" class="" dir="auto">Esta instrucción se imprimió, y se repartió de oficio en todo el reino: y su observancia en Ciudad Real nos dejó tranquilos; pero a la nueva de que las viruelas estaban en los pueblos de Tajumulco y Soloma, el primero situado en las faldas del volcán del mismo nombre, y el segundo en las alturas de Totonicapán, el sobresalto fue general. Se dividió inmediatamente la capital en cuarteles, cada uno al cargo de un individuo del Ayuntamiento, y de un competente número de vecinos principales, acompañados de un facultativo. Se hizo en cada cuartel un padrón de las personas que no habían pasado las viruelas, de su estado de salud, y el de sus facultades: se previno habitación para los pobres, ropa, y todo lo necesario. Se separó un facultativo, para la asistencia del Real Hospital, y demás enfermos ordinarios, y los pueblos de los indios quedaron a mi cargo. Todo estaba prevenido para recibir la enfermedad. Pero gracias a la actividad [330] de los corregidores de Quetzaltenango, y Totonicapán: gracias a la dulzura de los párrocos, y al empeño con que los vecinos de estos partidos concurrieron a cercar a Tajumulco, y a Soloma, allí se sofocó el contagio.</p><p id="1c4f3b61-2379-8019-b90a-f535da2b3a43" class="" dir="auto">Solo me acuerdo de una hita de catorce mil inoculados, de los que solo murieron cuarenta, y seis. Las demás con todo lo que ocurrió se halla en el expediente de esta materia, de que se hizo un puntual informe a Su Majestad por la vía de gracia, y justicia. Este negocio quedó concluido a principios de 1796. Y yo no salí de aquel reino, sino hasta fines de este año, con la confianza de que dejaba en el Protomedicato unos sucesores, de quienes conocía todo el celo, y talentos, y mis esperanzas no se engañaron.</p><p id="1ddf3b61-2379-80dc-8fa4-e29ab375f91b" class="" dir="auto">En las gacetas de Guatemala venidas en las últimas correspondencias, leí con harto dolor, que en las provincias orientales de aquel reino se experimentaban los estragos de la langosta, y que las occidentales se hallaban de nuevo amenazadas por las viruelas: que con fecha de 7 de abril último, el Intendente interino de Chiapa había dado cuenta al gobierno, de que algunos pueblos del norte se hallaban contagiados de esta enfermedad procedente de Yucatán, donde hacía dos años que se estaban padeciendo: que el presidente pasó el oficio al Protomedicato, y que este tribunal con presencia del expediente del año de 94 acordó todas sus providencias: que el Protomedicato interino doctor Don Josef Córdova, al incluir la acta al superior gobierno, le pintó la calamidad a que estaba expuesto todo el reino: que se circularon de nuevo las instrucciones, y se cerraron los pasos: todo lo que se observaba puntualmente.</p><p id="1ddf3b61-2379-8071-8eb2-e1a3d9a1e391" class="" dir="auto">Entre tanto, con las noticias que yo había anticipado del descubrimiento de la vacuna, y de lo que habían sabido por las [330v] gacetas de esta corte, y las de La Habana, se procuraron los mejores escritos, e instrucciones publicadas en Londres, y en Paris: se buscaban sin descansar las viruelas de las vacas: se examinaban estos animales en todas partes, y no encontrando el virus, el doctor Córdova se proponía experiencias originales, inoculando ovejas, fundadas en un analogismo perfecto: y el doctor Esparragosa se ocupaba en promover una subscripción, para despachar un correo extraordinario por haberse tenido noticia, de que o en México, o en Veracruz, se hallaba el pus vacuno, conducido por el Argonauta.</p><p id="1c4f3b61-2379-80e0-aadc-f5018db5387a" class="" dir="auto">No se lograron los deseos del profesor, ni los del público. El correo volvió sin el pus, porque aunque en efecto lo hubo en México, por muchas experiencias se le había encontrado inerte. La inspección de las vacas se seguía, la inoculación de las ovejas se repetía; y no se olvidaban los encargos por todas partes para solicitar el virus. A Trujillo se contestó de La Habana, que había llegado allí una corta porción entre dos cristales; pero que no había surtido el menor efecto. Sin duda por envejecido. Finalmente en fines de agosto llegó a Guatemala el pus vacuno, remitido de Veracruz, a donde había llegado del Nuevo Orleans, pero desvirtuado: el doctor Esparragoza inoculó inmediatamente varios niños sin efecto alguno. Se lamentan, y concluyen diciendo: que el primero que consiguiese el pus haría el mayor servicio a aquel reino. Estas son las noticias de aquellas partes que alcanzan hasta octubre.</p><p id="1ddf3b61-2379-8062-95c5-e0f6b5cbde53" class="" dir="auto">Qué peligro tan inminente! Qué instante tan preciso para arrebatar a la muerte los habitantes de tantos reinos, tan delatados, tan ricos, y tan fértiles! Qué brazos serán estos tan grandes, y tan poderosos, que abarquen un mundo que titubea al borde de un precipicio? Los del Monarca. [331] Qué manantial tan saludable será este, de donde <mark class="highlight-default" data-notion-highlight="default">dimane </mark>un remedio tan eficaz, y tan general? Vuestra Alteza. Sí Señor. El remedio contra la malignidad de las viruelas, no es ya un problema: no es la pócima desabrida de una botica, ni la receta abortada de los sistemas vanos, y contradictorios; no es un injerto que hace lozana una planta, y marchita todo un vergel. Es un pus dulce, que suministra el animal más útil al hombre: es un virus coercible que se maneja sin cordones de tropas, y sin impedir la comunicación, ni interceptar el comercio: es un antídoto, que el médico más feliz halló en las aldeas entre los pastores humildes: es un don de la providencia. Como tal lo han recibido del presidente Jefferson los jefes de los salvajes para llevarlo a las tribus septentrionales. Vuestra Alteza lo va a derramar desde la California, y los Apalaches, hasta los Patagones. Vuestra Alteza va a aniquilar al monstruo horrendo de las viruelas.</p><p id="1c4f3b61-2379-805e-93f3-e4707f5d8039" class="" dir="auto">Pero para acertar el golpe, es necesario orden, firmeza, y tesón: es preciso plantar el remedio de un modo sólido, y permanente: acompañarlo de una pompa, y aparato, que imponga: revertirlo de una ceremonia religiosa; y qué medio más seguro para hacer un remedio grato, que el mezclarle la dulzura, la suavidad, y la fragancia? Qué arbitrio más oportuno que acompañarlo con la religión, para que el pueblo lo venere, lo aprecie, y lo apetezca? Las gentes ilustradas saben muy bien, que además de ser justo dar a Dios gracias por sus beneficios, este ha sido el resorte vigoroso, y felizmente empleado por los legisladores de todas las edades, cuando han tratado de introducir, y radicar una costumbre. El profundo político, el que se hace obedecer, y se apodera de los corazones, es el [331v] que maneja sus móviles, y el que entre estos prefiere con destrezas el de la religión. El siglo mismo de la filosofía: el ponderado siglo de las luces, nos está ofreciendo sobre esta importante verdad, el ejemplo más memorable. Según esta idea propongo el proyecto siguiente:</p><ol type="1" id="1c4f3b61-2379-80f9-9f05-f986746e5148" class="numbered-list" start="1" dir="auto"><li><mark class="highlight-default_background" data-notion-highlight="default_background">Que no teniéndose noticia cierta; y aún cuando se tuviese, de que en La Habana, México, Guatemala, ni el Perú, se tenga fluido vacuno: se despachen con la mayor diligencia del Puerto de Cádiz dos barcos los más ligeros, para que sin mezclarse ningún motivo de interés, ni de comercio, se embarquen en ellos algunas vacas con viruelas verdaderas, y algunos jóvenes que lleven inoculado sucesivamente en los brazos el pus: que además de esto, entre dos cristales, encerados con extremo cuidado se ponga porción de pus escogido; y que a este fin se comisionen los facultativos más doctos, y prácticos del colegio de este puerto.</mark></li></ol><ol type="1" id="1c4f3b61-2379-80de-8c67-e2971da20bc4" class="numbered-list" start="2" dir="auto"><li><mark class="highlight-default_background" data-notion-highlight="default_background">Que uno de estos barcos se dirija a La Habana, para distribuir desde allí el remedio a Puerto Rico, a Trujillo, Yucatán, y Veracruz. El otro a Cartagena, para llevarlo a Santa Fe, la Guaira, posesiones extranjeras, Montevideo, Portobelo, Panamá, y demás Reinos Meridionales.</mark></li></ol><ol type="1" id="1c4f3b61-2379-8001-95db-cc947a25d084" class="numbered-list" start="3" dir="auto"><li>Que llegado el remedio a las capitales, se dividan estas en cuarteles, cada uno a cargo de los individuos del Ayuntamiento, y vecinos principales, acompañados de uno, o más, facultativos: que se haga un padrón exacto de todas las personas vacunadas, de su estado de salud, y comodidades: que para los necesitados que resultaren, se prepare habitación, ropa, y todos los demás auxilios: que hecho esto se comience [332] la vacunación: que concluida, y convalecidos los enfermos se agregue al padrón la nota del resultado: todo lo que se hará sucesivamente en cada cuartel.</li></ol><ol type="1" id="1c4f3b61-2379-80f0-9c1b-c38e3b0335d8" class="numbered-list" start="4" dir="auto"><li>Que en las cabeceras de provincia y de partido se ejecute esta operación en el mismo orden: para lo que los primeros, y más hábiles facultativos formarán instrucciones conforme a las de Europa, según su práctica, y adaptadas a la naturaleza, y mantenimientos de los indios.</li></ol><ol type="1" id="1c4f3b61-2379-80a2-af14-e88ed9538d4f" class="numbered-list" start="5" dir="auto"><li>Que en los pueblos, y misiones en donde no haya facultativo, español, o ladino, que se encargue esta operación, la practiquen por sí mismos los curas, y misioneros.</li></ol><ol type="1" id="1c4f3b61-2379-8059-9275-d6802f6ed97b" class="numbered-list" start="6" dir="auto"><li>Que cuando se lleve a baptizar un niño, el párroco después de administrar este sacramento advertirá, y persuadirá a los padrinos la obligación de volvérselo a llevar al cabo de 4 o 6 meses, cuando se hallare bien nutrido, y sano, para que se le administre la vacunación. Que en este acto, el monaguillo teniendo la vela encendida, y el párroco revertido de sobrepelliz y estola, vendecirá al niño, y rezará la oración; lo que concluido, el facultativo hará la operación, la que concluida rezará el párroco la deprecación, y prevendrá a los padrinos que sin falta le lleven la noticia del restablecimiento del niño, para sentar la partida en el libro. Este libro se llamará de vacunación: y se guardará con los otros libros parroquiales; y el pus vacuno, por si acaso no le hay fresco para ingerirlo de brazo a brazo, se guarde cuidadosamente entre dos cristales, en una caja separada, en la misma sacristía, en donde se custodian las crismeras. Y que los gastos para este libro, caja, y cristales, se saque de los fondos de cofradías.</li></ol><ol type="1" id="1c4f3b61-2379-8096-926d-fac931e36ac2" class="numbered-list" start="7" dir="auto"><li>[332v] Que se impretre de su santidad una bula, para que santifique esta práctica, y disponga la oración, y deprecación, que a de rezar el párroco: suplicándole así mismo acompañe esta gracia, con una solemne indulgencia, puesta esta buena obra se dirige a la conservación, y aumento de los fieles, y a la prosperidad de la monarquía católica.</li></ol><ol type="1" id="1c4f3b61-2379-807c-8fe5-cf7a8048cd61" class="numbered-list" start="8" dir="auto"><li>Que se ruege, y encargue a los reverendos arzobispos, y obispos hagan publicar esta bula con la mayor solemnidad, la exhorten, la prediquen, y expliquen en las iglesias, para instruir al pueblo, del beneficio inapreciable, que Dios nos ha hecho, dándonos a entender un remedio tan fácil, contra un mal, que a los que no mataba dejaba, o desfigurados, o ciegos, e inútiles para la sociedad, y para sí mismos. Que en sus visitas diocesanas tomen cuenta de si se practica la vacunación con su orden, y ceremonias: que visiten, y examinen el libro para ver si se lleva con el cuidado, y exactitud debidas.</li></ol><ol type="1" id="1c4f3b61-2379-80cd-9f02-fc2f152f11c0" class="numbered-list" start="9" dir="auto"><li>Que se mande a los Virreyes, presidentes y gobernadores protejan esta práctica, la autoricen, y la persuadan con su ejemplo: que den los auxilios correspondientes; estando a la mira de la menor falta para advertirla, corregirla, y enmendarla.</li></ol><ol type="1" id="1c4f3b61-2379-8013-bbb1-ce877cd15bf8" class="numbered-list numbered-list-digits-2" start="10" dir="auto"><li>Que las Reales Audiencias habiéndose establecido en aquellos dominios para la recta administración de justicia, y para la protección, y conservación de los indios, se instituye a estos tribunales por especiales ejecutores del establecimiento de la vacuna en su distrito. Que con lo que en un quinquenio enseñare la experiencia, y oyendo al Protomedicato, [333] los fiscales expongan, y pidan, lo que parezca adaptarse de nuevo, o reformarse, a fin de dar a la vacunación general, mayor solidez, acierto, y consistencia. Que al fin de cada año pidan a los párrocos, y estos tengan la obligación de pasarles una nota extraída del libro de vacunación, con las que al fin del quinquenio se formará un padrón de todo el distrito. Que las audiencias deberán hacer a Vuestra Alteza informes circunstanciados sobre todo lo que ocurra en este importante asunto: agregando los padrones de sus distritos: con lo que Vuestra Alteza podrá tener un estado general de los habitantes de los dominios de Su Majestad en las Indias, y de proveer lo conveniente.</li></ol><p id="1c4f3b61-2379-8005-bd55-d32383f19475" class="" dir="auto">Esto es lo que me ocurre sobre el establecimiento de la vacuna en América: sobre lo que Vuestra Alteza como en todo, resolverá lo mejor.</p><p id="1c4f3b61-2379-803d-86aa-cda663c7bcdd" class="" dir="auto">Madrid 28 de febrero de 1803.</p><p id="1c4f3b61-2379-80bc-9326-cb21207c6093" class="" dir="auto">Doctor Joseph Flores</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

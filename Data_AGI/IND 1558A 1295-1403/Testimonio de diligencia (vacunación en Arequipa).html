@@ -1,0 +1,773 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Testimonio de diligencia (vacunación en Arequipa)</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="210f3b61-2379-8074-b849-d97783533160" class="page sans"><header><h1 class="page-title" dir="auto">Testimonio de diligencia (vacunación en Arequipa)</h1><p class="page-description" dir="auto"></p><table class="properties"><tbody><tr class="property-row property-row-status"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/burst_gray.svg" style="width:14px;height:14px;display:block"/></span>Estado</th><td><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Transcrito</span></td></tr><tr class="property-row property-row-date"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/calendar_gray.svg" style="width:14px;height:14px;display:block"/></span>Fecha</th><td><time datetime="1806-05-09">May 9, 1806</time></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/hashtag_gray.svg" style="width:14px;height:14px;display:block"/></span>Folio</th><td>1386 - 1393</td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/run_gray.svg" style="width:14px;height:14px;display:block"/></span>From (remitente)</th><td></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/map-pin-alternate_gray.svg" style="width:14px;height:14px;display:block"/></span>Place</th><td><span class="selected-value select-value-color-gray">Arequipa</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/person-masculine_gray.svg" style="width:14px;height:14px;display:block"/></span>To (destinatario)</th><td></td></tr></tbody></table></header><div class="page-body"><p id="358f3b61-2379-8012-973a-fbb1a6e8f0b8" class="" dir="auto">[1386]</p><div id="358f3b61-2379-80ec-b07f-f0bec4c495f8" class="column-list" data-notion-column-list="" dir="auto"><div id="358f3b61-2379-8042-8c11-fb87d5c2e3bd" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="358f3b61-2379-80d4-980a-dcc4282934ed" class="" dir="auto">[Sello]</p></div><div id="358f3b61-2379-805a-b4d9-fe6a64561d54" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="358f3b61-2379-8037-9f2e-fcab10aeac12" class="" dir="auto">En cuartillo.</p><p id="358f3b61-2379-802f-9c87-d3e7d92c964b" class="" dir="auto">SELLO CUARTO, UN CUARTILLO, AÑOS DE MIL OCHOCIENTOS SEIS, Y OCHOCIENTOS Y SIETE.</p></div></div><div id="358f3b61-2379-80f6-9b97-f73a9301a4f8" class="column-list" data-notion-column-list="" dir="auto"><div id="358f3b61-2379-806a-9f1a-fdb4011aee3a" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="358f3b61-2379-80e9-a957-c70de51befcb" class="" dir="auto">Oficio del señor gobernador Intendente de Arequipa al Teniente Protomédico</p></div><div id="358f3b61-2379-80c8-a372-fc762bb10d44" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="358f3b61-2379-8026-9e29-d4a4023215c4" class="" dir="auto">Deseando el efecto de los santos paternales desvelos del Rey mi amo, bien manifestados en las Reales Ordenes de cuatro de agosto y primero de septiembre de mil ochocientos tres: y habiendo llegado a mis manos algunos cristales del virus de la vacuna, de los que introdujo en Montevideo el facultativo Don <mark class="highlight-red_background" data-notion-highlight="red_background">Antonio Machado de Carballo</mark>; pasó a Vuestra Merced cuatro de dichos cristales para que, juntando otros tantos facultativos que debe presidía, se haga un circunspecto examen o análisis del virus; a fin de saber si aún mantiene su virtud, o la ha perdido en el todo o en parte: lo cual evacuado, y sentando a continuación de este la relación que corresponda a manifestar ese escrutinio y su resultado, devolverá Vuestra Merced todo este gobierno intendencia para proceder a lo demás respectivo al propuesto laudable efecto. = Dios guarde a Vuestra merced muchos años. Arequipa noviembre ocho de mil ochocientos cinco = Bartolomé María de Salamanca = Señor bachiller Don <mark class="highlight-red_background" data-notion-highlight="red_background">José Antonio Zoldi Rosas</mark> Teniente Protomédico de este departamento = </p></div></div><div id="358f3b61-2379-80d8-889c-e93d0dcd02bf" class="column-list" data-notion-column-list="" dir="auto"><div id="358f3b61-2379-8044-9b3f-e1ecaca4a7a1" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="358f3b61-2379-8012-93b4-e1c2b66b899f" class="" dir="auto">Contestación</p></div><div id="358f3b61-2379-809d-b7b3-cdab42ecf9ec" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="358f3b61-2379-80ef-bd3d-f9fb9f74bc80" class="" dir="auto">En cumplimiento de lo que Vuestra Señoría me ordena en el oficio antecedente mandé concurrir a todos los facultativos de esta ciudad el día nueva de noviembre del año pasado de mil ochocientos cinco, y presidiéndolos les leí el referido oficio, y habiendo reconocido el pus vacuno contenido en los cristales remitidos por Vuestra Señoría, todos uniformemente acordamos ser necesario introducirlo en el cuerpo de algunos individuos a quienes no hubiese acometido la viruela natural para conocer de este modo su virtud, y asegurarnos con evidencia de que el enunciado pus gozaba de la verdadera fuerza suficiente para destruir el fomento de la viruela natural e impedir su contagio. Con esta resolución repartí los cristales en la forma siguiente = Al profesor médico Don <mark class="highlight-red_background" data-notion-highlight="red_background">Roque Aguirre y Urreta</mark><mark class="highlight-default_background" data-notion-highlight="default_background"> </mark>entregué uno: al cirujano latino Don <mark class="highlight-red_background" data-notion-highlight="red_background">Juan Manuel Bargas</mark> entregué uno: al cirujano latino Don <mark class="highlight-red_background" data-notion-highlight="red_background">Luis Agustín Rodríguez</mark> entregué dos: y al cirujano latino Don <mark class="highlight-red_background" data-notion-highlight="red_background">Manuel Hurtado</mark> entregué dos, encargándoles con la eficacia que exigía, el mayor cuidado y atención en averiguar los progresos y síntomas que observasen en los individuos vacunados, y la pronta relación de todo el resultado para contestar a Vuestra Señoría con la brevedad posible = Pusieron en efecto según arte los referidos facultativos el pus vacuno en diferentes sujetos: y esperando en los días necesarios las señales supervenientes e indispensables para caracterizar ser verdadera vacuna, no observaron la menor, quedando los operados en la misma situación que antes, sin notarse en su naturaleza alguna alteración, ni en las partes vacunadas la más ligera señal de areola; que es el signo inevitable, y faltando el cual no puede darse verdadera vacuna: de suerte que todos uniformemente son de parecer que el pus contenido en los cristales vino enteramente evaporado, y por consiguiente disipada en el todo su virtud. = [1386v] La misma diligencia practiqué con los cristales traídos de Lima, que Vuestra Señoría se sirvió remitirme a este fin el día diez y seis de diciembre del año próximo pasado entregándolos a los facultativos arriba referidos para que los pusiesen en práctica, observasen sus efectos, y me diesen parte del resultado: y habiendo puesto el pus en varios individuos y observando en los días necesarios el efecto que producía; todos me han contestado que se hallan satisfechos y desengañados de que tanto el pus remitido de Montevideo, como el que vino de Lima carecen en el todo de la virtud suficiente para propagar la vacuna verdadera. La demora que estos facultativos han padecido en hacer sus experimentos, me ha embarazado contestar a Vuestra Señoría con la prontitud que en su anterior oficio me ordena = Dios guarde a Vuestra Señoría muchos años. Arequipa y enero diez y siete de mil ochocientos seis = <mark class="highlight-red_background" data-notion-highlight="red_background">José Antonio Zoldi y Rosas</mark> = Señor gobernador Intendente y vicepatrón Real Don Bartolomé María de Salamanca = =</p></div></div><div id="358f3b61-2379-807a-a2c6-fbc596c318bc" class="column-list" data-notion-column-list="" dir="auto"><div id="358f3b61-2379-80fc-a831-d27b86264180" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="358f3b61-2379-804e-a02d-fc357e005808" class="" dir="auto">Oficio del Excelentísimo Señor Virrey del Reino</p></div><div id="358f3b61-2379-809a-810e-d323029a0f50" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="358f3b61-2379-8049-8558-e6080d5d49dc" class="" dir="auto">Las Reales Ordenes que comprehende el adjunto impreso manifiestan el incesante desvelo con que el soberano propende al beneficio de estos sus amados vasallos. Apenas se descubre el admirable específico de la vacuna, que excusa la muerte o deformidad de innumerables víctimas preparadas a la desoladora viruela, cuando dispone comunicar a toda la América su imponderable beneficio trasladándola de brazo a brazo por medio de una expedición formada y sostenida con gastos crecidos. No contenta la Real beneficencia con esta primera prueba de su paternal amor, quiere sea permanente el mismo beneficio, y previene se mantenga perenne el maravilloso pus en todas las capitales y en una sala destinada al intento. Se esperaba en esta capital el principio de tanto bien con el deseo de sus incontestables buenos efectos, y con el temor de la epidemia que afligía a sus habitantes, cuando la divina y suma bondad quiso anticiparnos el bien. Llegó el fluido vacuno en unos cristales que me remitió el Excelentísimo Señor Virrey de Buenos Aires, y ya se haya tan radicado como bien admitido. No queda más que hacer sino que sea general el beneficio entre todos los habitantes de este virreinato. Las distancias, la escasez de facultativos, la ignorancia, y otros obstáculos, pueden, demorándolo, dejar tiempo a la viruela para que continúe sus estragos: pero el celo de Vuestra Señoría es un remedio a estas dificultades. Ya he dispuesto como parece de mi decreto incluso en dicho impreso que los subdelegados inmediatos remitan párvulos que tomando la vacuna, y acompañados de facultativos, o en su defecto, de personas sensatas, puedan, restituidos a sus pueblos, trasladarla a los que la necesiten en sus respectivas inmediaciones. La misma diligencia de unas a otras distancias y poblaciones surtirá los proprios efectos. La práctica de la muy sencilla operación apoyada con la instrucción que se ha impreso en esta capital, y por grados, enseña todo lo necesario en la materia, son los medios para conseguirlos. La autoridad y persuasión de los párrocos y jueces ordinarios darán sobrado impulso para remover los inconvenientes y facilitar las dificultades, y como el asunto es de la mayor interesencia a la humanidad, no necesito recomendarlo a Vuestra Señoría por que estoy cierto de que por su parte hará todo cuando sea conducente al beneficio público, y a que se realicen las paternales intenciones del soberano: pero sí encargo a Vuestra Señoría que me informe sin pérdida de tiempo todo lo que le parezca convenir a mi noticia sobre el particular, y especialmente las resultadas que produzcan sus gestiones sobre la vacuna, su propagación, y perenne existencia = Dios guarde a Vuestra Señoría muchos años. Lima diciembre siete de mil ochocientos cinco = El Marqués de Avilés = Señor Gobernador Intendente de Arequipa =</p></div></div><div id="35af3b61-2379-806a-9951-f40655dca107" class="column-list" data-notion-column-list="" dir="auto"><div id="35af3b61-2379-8014-82af-fab75adbde10" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35af3b61-2379-8014-bf94-d11b94f655f7" class="" dir="auto">Decreto</p></div><div id="35af3b61-2379-8096-9d28-d53cb8351762" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35af3b61-2379-8045-8fca-fdfaa0216cbd" class="" dir="auto">Arequipa enero veinte y uno de mil ochocientos seis _ Por recibido: contéstese a su Excelencia acusando el recibo de los ejemplares que se acompañan: [1387] ofrézcase desempeñaré cuanto me corresponde en este asunto y beneficio del público: póngase con sus antecedentes, y tráigase para tomar las providencias que corresponden en la materia = Una rúbrica del Señor gobernador Intendente = <mark class="highlight-red_background" data-notion-highlight="red_background">Bracamonte</mark><mark class="highlight-default_background" data-notion-highlight="default_background"> </mark>=</p></div></div><div id="35af3b61-2379-80d7-8e6a-e14b0c8608dc" class="column-list" data-notion-column-list="" dir="auto"><div id="35af3b61-2379-809d-bad8-df558bcd91e2" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35af3b61-2379-808f-80dd-cca8a4df9ab3" class="" dir="auto">Nota</p></div><div id="35af3b61-2379-80a5-b70e-cfacc7ba387d" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35af3b61-2379-80cb-aab7-f8ebff38b4aa" class="" dir="auto">Contestado en veinte y tres número novecientos = =</p></div></div><div id="35af3b61-2379-80fd-a87d-ec119729f5e8" class="column-list" data-notion-column-list="" dir="auto"><div id="35af3b61-2379-8066-b8ea-debca57a580c" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35af3b61-2379-80bd-b058-fe1c158a5e57" class="" dir="auto">Decreto</p></div><div id="35af3b61-2379-80eb-a3e7-e36ba5513c93" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35af3b61-2379-8024-a5e5-cb7b647f6b61" class="" dir="auto">Arequipa febrero doce de mil ochocientos seis = Con sus antecedentes: y atendiendo a que no solo los repetidos Reales encargos y celo del Excelentísimo Señor Virrey han excitado el mío en la materia, sino también la propia obligación y justo deseo de hacer que esta provincia disfrute de un beneficio tan laudable en los efectos del fluido vacuno, para cuya consecución no he perdonando arbitrio mucho más habiendo tenido en mi poder algunos cristales que se sirvió remitirme confidencialmente dicho Señor Excelentísimo y unos otros conseguidos de Montevideo, los cuales entregados al Teniente de Protomédico Don <mark class="highlight-red_background" data-notion-highlight="red_background">José Antonio Zoldi Rosas</mark> con la instrucción impresa para la operación de inocular y los encargos más estrechos, solo produjeron en el conocimiento de los facultativos, a quienes dicho teniente repartió aquellos, haberse desvirtuado el fluido que ellos contenían, como me lo asegura en su carta contestación fecha diez y siete del pasado mes de enero: lo que sin embargo, y por que no ha dejado de recelarse en el concepto de algunos vecinos poca contracción respecto de los facultativos en las operaciones que entonces hicieron, o descuido en los cabezaleros de las casas en que fueron vacunados algunos niños, de suerte que por ello no se logró sin duda el efecto deseado a que todos debemos contribuir imitando la paternal piedad del Rey, y por disfrutar también de un preservativo que cede en bien de cada uno de los vivientes: llevando adelante ese celo que en mis deberes es incesante, y para cumplir con cuanto Su Excelencia me previene, y poder informar a su superior ánimo menudamente; cítese con noticia del ilustre Cabildo a una junta que se celebrará a mi presencia, la del señor teniente letrado de este gobierno, uno de los señores alcaldes ordinarios, síndico procurador general, alférez Real y un regidor, por el Teniente Protomédico, médicos y cirujanos de esta ciudad, y ante el secretario de este gobierno, en la cual teniéndose presentes las Reales Ordenes, superiores prevenciones, instrucción de inocular, mi orden excitativa a dicho Teniente Protomédico fecha ocho de noviembre del año próximo pasado de mil ochocientos cinco y su citada contestación de diez y siete de enero próximo pasado, expongan los cirujanos a quienes fueron entregados los cristales el número de personas que cada uno inoculó, sus casas y nombres, efectos que causó la operación y modo en que se practicó, análisis que del fluido vacuno hicieron antes de operar, si se tuvieron en consideración para ellos las circunstancias de la estación, la situación del vacunado, y demás particularidades que el arte y una buena física demandan: y finalmente expresen si llegaron a descubrir la causa o motivo de la desvirtuación del pus: todo lo que escrito por separado según el sentir de cada facultativo, se traiga el expediente para reglar mis sucesivas providencias en la materia, supuesto el que espero otros cristales que he encargado, y disponer las nuevas experiencias que deban hacerse con el objeto interesante a que todo se dirige = Salamanca = <mark class="highlight-red_background" data-notion-highlight="red_background">Juan Manuel de Bracamonte</mark> ==</p></div></div><div id="35af3b61-2379-801c-bec0-ce7c6ee6d338" class="column-list" data-notion-column-list="" dir="auto"><div id="35af3b61-2379-8044-8431-d01505733d13" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35af3b61-2379-8034-9cd3-ccf6784af8b3" class="" dir="auto">Junta</p></div><div id="35af3b61-2379-80f7-9d2a-f9fde4a73f2a" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35af3b61-2379-80bb-91de-f93bb1a99911" class="" dir="auto">En la muy noble y muy leal ciudad de Arequipa a veinte días del mes de febrero de mil ochocientos y seis años: estando en la Junta que previene el <mark class="highlight-default" data-notion-highlight="default">Auto de Fojas</mark> proveído a los márgenes del Oficio del Excelentísimo Señor Virrey del reino, su fecha siete de diciembre último, a presencia de su Señoría el señor gobernador Intendente, señores teniente letrado y demás que se mandaron concurrir, el Teniente Protomédico bachiller <mark class="highlight-red_background" data-notion-highlight="red_background">Don José Antonio Zoldi y Rosas</mark>, los médicos bachiller <mark class="highlight-red_background" data-notion-highlight="red_background">Don Pablo José del Carpio</mark> y <mark class="highlight-red_background" data-notion-highlight="red_background">Don Juan José de la Gala</mark>, licenciado <mark class="highlight-red_background" data-notion-highlight="red_background">Don José Valencia</mark>, presbítero, y <mark class="highlight-red_background" data-notion-highlight="red_background">Don Atanasio Trujillo</mark>, y los cirujanos latinos <mark class="highlight-red_background" data-notion-highlight="red_background">Don Roque Urreta</mark>, <mark class="highlight-red_background" data-notion-highlight="red_background">Don José Calle</mark>, <mark class="highlight-red_background" data-notion-highlight="red_background">Don Juan Manuel Vargas</mark>, <mark class="highlight-red_background" data-notion-highlight="red_background">Don Agustín Rodríguez</mark>, <mark class="highlight-red_background" data-notion-highlight="red_background">Don Manuel Ullauri</mark>, <mark class="highlight-red_background" data-notion-highlight="red_background">Don Juan de Dios Vargas</mark>, <mark class="highlight-red_background" data-notion-highlight="red_background">Don Manuel Hurtado</mark>, y <mark class="highlight-red_background" data-notion-highlight="red_background">Don Juan Díaz Delgado</mark>: leídos los documentos que dicho auto previene, y excitada la obligación de cada uno de aquellos por el celo de su señoría dicho Señor Gobernador, con lo que respectivamente expusieron; se acordó: en primero lugar que los facultativos a [1387v] quienes se repartieron los cristales e hicieron las operaciones sobre que rodó la contestación de <mark class="highlight-default" data-notion-highlight="default">fojas</mark> dada por dicho Teniente Protomédico, pongan por separado las razones puntuales que se han mandado, y que sin embargo de ello los demás médicos y cirujanos expresen así mismo por escrito sus pareceres: en segundo, que queda abierta esta Junta (sin perjuicio de las providencias que en el intermedio correspondan tomarse) para que pasado el despacho del próximo correo, en que se esperan los nuevos cristales de dicho pus o fluido, se haga nuevamente y en ella el análisis más exacto, y experiencias que convengan hasta las de proceder a la inoculación de algunos niños, para así lograr mejor el deseado efecto a que se aspira: y en tercero, que se reserva para en consecuencia de todo tratar sobre dotación del facultativo que más se distinga en la aplicación y celo por el beneficio público para propagarlo en esta provincia, luego que dichos efectos correspondan al esmero con que se procura conseguirlos, antes que: llegue la expedición destinada a este propósito por la piedad del soberano: y que así mismo se reserve producir el informe que pide el Excelentísimo señor Virrey en la materia hasta el resultado: y lo firmaron de que certifico = Bartolomé María de Salamanca = Doctor Mariano de Bustamante = Pedro Domingo Masías = Doctor José Ramírez Zegarra =  Manuel Flores = Francisco José de Rivero y Benavente = José Antonio Zoldi y Rosas = Juan José María de la Gala = Pablo José del Carpio = José Valencia = Bachiller Atanasio Trujillo = Roque de Aguirre Urreta = Juan Manuel Vargas = José Calle = Luis Agustin Rodríguez = Juan Manuel Ullauri = Juan de Dios Vargas = Manuel Hurtado = Juan Díaz = Juan Manuel de Bracamonte - Secretario de Gobierno ==  </p></div></div><div id="35af3b61-2379-8084-892c-c63c9e966b45" class="column-list" data-notion-column-list="" dir="auto"><div id="35af3b61-2379-8070-9e32-d7cb2c3b5fa0" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35af3b61-2379-8035-a5bd-ec1a450c11ad" class="" dir="auto">Certificación</p></div><div id="35af3b61-2379-80a4-b8ae-db8fa0271ada" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35af3b61-2379-80e4-b9ce-cf1c6c7192c7" class="" dir="auto">Don Juan Manuel Vargas cirujano latino del Regimiento de Infantería de Milicias de esta ciudad, y titular del Hospital de San Juan de Dios en ella, en cumplimiento del decreto de doce de febrero próximo pasado, corriente a <mark class="highlight-default" data-notion-highlight="default">fojas</mark>; certifico que el veinte y seis de noviembre del año próximo pasado de mil ochocientos cinco practiqué la operación de la inoculación vacuna en dos individuos, el primero llamado Manuel Begazo de edad de ocho años, a quien hice tres incisiones en cada brazo conforme a las reglas de mi arte: esto es levantado solo el epidermis, evitando la efusión de sangre, a fin de que esta no arrojase el virus etcétera, y del mismo modo al segundo llamado Manuel Evia de edad de siete años: y observando  cuidadosamente en ambos el progreso hasta los veinte y tantos días, no hubo la menor novedad ni alteración en ellos. Las incisiones se cicatrizaron sin formar areola, y arrojaron la ligera escara, de que inferí estas el virus desvirtuado, o destituido de su virtud vareolosa, por que la estación en que se hizo, era muy propia y benigna, y el estado de los sujetos muy capaz para recibir la inserción. Arequipa marzo diez de mil ochocientos seis = Juan Manuel Vargas === </p></div></div><div id="35af3b61-2379-807f-9785-e3712c92fd37" class="column-list" data-notion-column-list="" dir="auto"><div id="35af3b61-2379-8035-aaa5-f72fd68bc7ea" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35af3b61-2379-8081-a055-e22892c3b55c" class="" dir="auto">Otra</p></div><div id="35af3b61-2379-8010-a2ca-cafbc6b6263a" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35af3b61-2379-80c4-8413-f45ff9662b15" class="" dir="auto">Don Agustín Rodríguez cirujano latino, en cumplimiento del referido decreto, certifico que hice en veinte y siete del mismo noviembre la inserción del fluido vacuno en Juana Juárez de edad de veinte y dos años, a quien atentamente asistía por ver si se presentaba algún signo patognomónico de la verdadera vacuna en su progreso, la que no surgió ningún efecto. En el propio día vacuné en la casa de Doña María Mercedes Hurtado a dos individuos, el uno de dos años y medio, y el otro de edad de año y dos meses, en quienes también no produjo el efecto deseado. En todos estos tres hice la vacunación disolviendo primero el fluido vacuno con una gota de agua, y estando disuelto empapé la lanceta en el dicho fluido: y teniendo la lanceta perpendicularmente para que el fluido bajase hacia la punta mientras que con la otra mano extendía la piel del brazo introduje la lanceta horizontalmente entre la epidermis y cutis a la profundidad de dos milímetros, e hice varias direcciones con la punta de la lanceta: al principio le retiré un poco y de seguida la volví a introducir, y finalmente con el dedo pulgar comprimí la lanceta para enjugarla al tiempo de [1388] extraerla. Por lo que hace a la estación, edad, y tiempo, no debemos atribuir a que nos sirviese de embarazo: a lo que atribuyo el que no surtiese efecto, es, lo primero que fuese por parte del operante que recibió el fluido, el que no lo recibió en el tiempo debido que es desde el séptimo hasta el noveno día: o que a tiempo de guardarlo en los cristales lo expuso mucho al aire cálido, o con el progreso del tiempo se disipó su virtud. Fecha ut supra = Luis Agustín Rodríguez ===</p></div></div><div id="35af3b61-2379-8093-8517-d8d95f365d06" class="column-list" data-notion-column-list="" dir="auto"><div id="35af3b61-2379-805f-a220-fde6ef50749c" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35af3b61-2379-80a1-b92e-c0f4c2bb932a" class="" dir="auto">Otra</p></div><div id="35af3b61-2379-80c2-a5df-dff31e738ed5" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35af3b61-2379-80df-a1b1-e19af5a592f9" class="" dir="auto">Don Manuel Hurtado cirujano latino cumpliendo con el decreto referido, certifico que en el día diez y ocho de noviembre último inoculé a una muchacha nombrada Melchora de tal en casa de Doña María Luisa Cándido de edad de cuatro meses en la forma siguiente. Hice la inserción en el brazo hacia la parte externa separando del músculo deltoides según lo que previenen los vacunadores haciendo tres incisiones separadas una de otra tres milímetros introduciendo el pus con la lanceta perpendicular y luego haciendo unos movimientos como de entrar y sacar puesta la lanceta horizontalmente a fin de que quedase impregnado el fluido vacuno: que observé dicha operación hasta el undécimo día en los que advertí el poco fruto de ella pues no se había presentado ninguna de las señales que ordenan dichos vacunadores sin asomos de fiebre, areola, dolor bajo de la axila etcétera: por lo que me parece haber estado desvirtuado el pus o por la mala figura de los cristales, o por mala extracción de los vacunadores, o por haberse extraído este en mal tiempo o en mala situación como es haberlo expuesto a la impresión del aire o del sol, motivos suficientes por que juzgo no hubiese tenido efecto dicha operación, la que verifiqué en buena estación siendo la muchacha de fibra laxa y de buena complexión. Fecha ut supra = bachiller Manuel Hurtado ===</p></div></div><div id="35af3b61-2379-80bd-b8c9-ca6851990284" class="column-list" data-notion-column-list="" dir="auto"><div id="35af3b61-2379-806a-9b58-e626844a690d" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35af3b61-2379-80a5-9e13-f33d8b7e205b" class="" dir="auto">Otra</p></div><div id="35af3b61-2379-80c2-a224-cdac3111482e" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35af3b61-2379-805b-a8a6-e530ef8f8d56" class="" dir="auto">El licenciado en cirugía médica Don Roque de Aguirre Urreta en cumplimiento de lo mandado por el señor gobernador Intendente en su superior auto que precede. Certifico que a consecuencia de las operaciones hechas con el virus vacuno que se me entregó en unos cristales por el Teniente Protomédico de esta ciudad le pasé la razón que aquí copio a la letra y es del tenor siguiente = Habiéndose Vuestra Merced resuelto en nueve de noviembre próximo pasado hacer una junta de los profesores de la facultada reunida y que en ella se resolvió se indagase si era o no el verdadero pus vacuno, y no pudiendo resolver sin hacer los experimentos y observar sus resultados, se sirvió Vuestra Merced distribuir los cristales del pus vacuno en los individuos de dicha junta = He vacunado el nueve de noviembre a las once de su mañana con el virus vacuno de los dos cristales que Vuestra Merced se sirvió entregarme, a dos hijos de Don José Tadeo de Rivera nombrados Manuel de Rivera de un año y cuatro meses, y María Jacinta de Rivera de tres meses no cabales. Al principio hice la inserción en el brazo izquierdo, y a la otra en el muslo izquierdo entre la epidermis y cutis a presencia de los profesores Don Luis Agustín Rodríguez, Don Juan Manuel Ullauri, y Don Manuel Hurtado: luego de la inserción nos pusimos en expectación diaria a observar los síntomas que sobreviniesen: estos fueros ningunos. Dichos niños han conservado su alegría y jugado según su costumbre: en nada se ha alterado su salud, y las picaduras se han borrado del tercero al cuarto día de la operación, y no les sobrevino síntoma ninguno que caracterizase haber hecho el efecto deseado = Por lo que digo que el pus vacuno o no tuvo la virtud activa para surtir efecto, u el operante se descuidó en recibirle en el tiempo debido. Se lo participo a Vuestra Merced para su gobierno. Dios guarde a Vuestra Merced muchos años. Arequipa doce de diciembre de mil ochocientos cinco = Con igual motivo he practicado dicha operación de vacuna en diez y seis de diciembre próximo pasado en un hijo de Don Joaquín de Aquesolo llamado Domingo de Aquesolo de edad de cuatro meses en ambos brazos y a dicha María Jacinta de Rivera por segunda vez: y habiendo asistido [1388v] diariamente con toda exactitud para observar los síntomas o alteración en su naturaleza, no experimentaron, ni se notó la menor alteración en la salud de dichas crianzas, y se borraron las inserciones enteramente del cuarto al quinto día. Las expresadas criaturas se hallaban con sana salud, robustas, y en aptitud y disposición de recibir la vacunación, no menos que el que surtiese en ellas el efecto apetecido el virus siempre que estuviese con toda su virtud: e igualmente la estación de verano en que dichas operaciones se hicieron es la más aparente para ello en este país. Arequipa marzo diez de mil ochocientos seis = Roque de Aguirre Urreta ===</p></div></div><div id="35af3b61-2379-808c-8110-f691fd5119e7" class="column-list" data-notion-column-list="" dir="auto"><div id="35af3b61-2379-8050-a51a-f51861802562" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35af3b61-2379-800b-a6ab-d514a9acc5d0" class="" dir="auto">Junta</p></div><div id="35af3b61-2379-80b9-b080-fd4cf71c4b93" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35af3b61-2379-8069-a47b-e57503a7cd01" class="" dir="auto">Arequipa marzo doce de mil ochocientos seis _ Citados para este día a junta los señores teniente letrado de este gobierno Intendencia, alcalde ordinario de primero voto, síndico procurador general, alférez Real, y un regidor, el Teniente Protomédico, médicos y cirujanos subscriptos en el acto de veinte de febrero último; se celebró ella: y teniendo presentes los certificados que preceden, no menos que oídas las reflexiones y pareceres verbales de cada uno de los profesores, en que tomó la voz el bachiller Don Juan José de la Gala; resolvió su Señoría el señor gobernador Intendente que supuesto el que se tenían a la mano unos cristales de fluido vacuno recientemente traídos de Buenos Aires y Puno se inocularan algunos párvulos que para el efecto se tuvieron presentes en el número de diez y seis: y hecha la distribución por el Teniente Protomédico bachiller Don José Antonio Zoldi y Rosas, procedieron los facultativos a inocularlos en la forma siguiente = El cirujano latino Don Roque Aguirre Urreta, a Manuel Barzena de edad de tres meses, hijo de Don Antonio Barzena y Doña Josefa Wentuisen que viven en la calle que baja del Monasterio de Santa Teresa para la Buena Muerte, hizo dos incisiones en el brazo derecho con el fluido que se trajo de Buenos Aires, y dos ídem en el izquierdo con el de Puno = A Juana Carpio de edad de un año esclava de Doña Magdalena Carpio, calle de San Juan de Dios para el río, hizo en cada brazo dos incisiones con el fluido de Buenos Aires = A Jacinta Rivera hija legítima de Don José Tadeo de Rivera y de Doña Fabiana Bernedo, calle del Matadero, hizo dos incisiones en cada brazo con el fluido de Puno = A Juana Manuela Cáceres de edad de tres meses, hija de Don Domingo de Cáceres y de Doña Agustina Quesada esquina de la Buena Muerte, hizo dos incisiones en el brazo derecho con el fluido de Puno, y dos en el izquierdo con el de Buenos Aires. == Don Manuel Vargas cirujano latino, a Manuel Begazo de edad de diez años hijo de Valentín y de Manuela Rea, calle que desciende al Molino de San Lázaro, hizo dos incisiones en el brazo derecho con el fluido vacuno de Puno y dos en el izquierdo con el de Buenos Aires = A Pedro Chalcotupa de edad de dos años, hijo de Tomasa Chalcotupa calle de San Agustín, casa de Don Andrés Cuadros, hizo dos incisiones en el brazo izquierdo con el fluido de Buenos Aires y dos en el derecho con el de Puno = A Lorenza Vargas hija de Estefa Vargas, su edad siete meses (se halla en el hospital) hizo dos incisiones en cada brazo con el fluido de Buenos Aires. A Miguel Solares de edad de cinco meses hijo de Don Fermín Solares y de Doña Juana Lazo, calle de la Compañía [1389] para San Bernardo hizo dos incisiones en cada brazo con el fluido de Puno = Don Agustín Rodríguez a Clara Ersilla hija de Don José Manuel de Ersilla y de Doña Antonia Olmos, de edad de año y medio hizo dos incisiones en cada brazo con el fluido de Puno, casa de Begoña, calle de Mercaderes. A Nicolás Canseco de edad de cuatro años esclavo de Don José Canseco, en casa de su amo calle de San Francisco, hizo dos incisiones en el brazo derecho con el fluido de Buenos Aires, y dos en el izquierdo con el de Puno. A Andrea Hurtado de edad de cinco años hija de Nicolás Hurtado y de Lucía Herrera calle de Santa Marta hizo tres incisiones en cada brazo con el fluido de Puno. A Josefa Hurtado de edad de un año, hija de los mismos hizo dos incisiones en cada brazo con dicho fluido de Puno. = El cirujano Don Manuel Ullauri, a Felipe Oviedo criado de Doña Francisca Manrique, su edad seis años, esquina del callejón de Cálida hizo dos incisiones en el brazo derecho con el fluido de Puno, y dos en el izquierdo con el de Buenos Aires. A Miguel Virrueta hijo de Tomasa Suarez calle de San Juan de Dios, su edad cuatro meses, hizo dos incisiones en el brazo derecho con el fluido de Buenos Aires, y dos en el izquierdo con el de Puno. = El cirujano Don Juan de Dios Vargas a Margarita Llerena de edad de tres meses hija legítima de Don José Llerena; calle de la Soledad hizo dos incisiones en el brazo derecho con el fluido de Puno, y dos en el izquierdo con el de Buenos Aires = El cirujano Don Manuel Hurtado a Manuel Celedonio Armejo de edad de un año, hijo de María Armejo, casa de la Arcaya, calle de Santo Domingo para la plaza hizo dos incisiones en el brazo derecho con el fluido de Buenos Aires, y dos en el izquierdo con el de Puno. = Y concluidas así dichas operaciones, quedaron encargados los profesores de dar,, pasado el término de nueve días,, parte circunstanciado a este gobierno de las resultas, cada uno respectivamente, y cuidando entretanto de visitar diariamente a los inoculados para no solo hacer se guarde y haga guardar por sus padres el método correspondiente sino para observar también con prolijidad dichas resultas. Con lo cual se concluyó la junta y lo firmó su Señoría de que certifico = Bartolomé María de Salamanca = Ante mí Juan Manuel de Bracamonte ===</p></div></div><div id="35af3b61-2379-80c4-9a95-e8e7eac8407b" class="column-list" data-notion-column-list="" dir="auto"><div id="35af3b61-2379-8029-8cf1-f2499a1ab1e9" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35af3b61-2379-801e-ac32-cd593903acbe" class="" dir="auto">Razón</p></div><div id="35af3b61-2379-806a-8fe5-f1a3a4a120ca" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35af3b61-2379-80d2-af4f-d7a2921c988e" class="" dir="auto">Señor Teniente Protomédico doctor Don José Antonio Zoldi Rosas = El lunes treinta y uno de marzo con el aviso de Vuestra Merced, pasé a casa de Don Domingo de Cáceres en donde se hallaba la criatura vacunada de cuyo brazo extraje el fluido vacuno, e inoculé a una criatura llamada Catalina de edad de un año, hija de Don José Barberis y de Doña Anizeta Nieto, y otra llamada Nicolasa de edad de cuatro años hija de Doña María Evia: y habiéndoles hecho tres incisiones en cada brazo, pegaron todas perfectamente formando las areolas y demás signos de legítima vacuna, con cuya inspección, y deseando se propagase este precioso líquido preservativo de las viruelas pasé a inocular al debido tiempo de este niña hija de Barberis a los individuos siguientes = Primeramente en casa del Coronel Don Raymundo Gutiérrez a dos hijas suyas la una llamada Inés de edad de tres años: y habiéndole a esta acometido al tercero día de vacunada la picazón o comezón que es regular en el principio de esta enfermedad, estregó y rascó los brazos en la parte inoculada hasta el extremo de hacer llaga y que sobreviniese a esta una inflamación erisipelatosa que ocupaba toda la extensión [1389v] del brazo desde el hombro hasta los dedos y lleno todo de ampollas y flictenas que anunciaban ya la próxima gangrena sin haber dejado ni vestigio del lugar vacunado por que este se volvió todo una llaga, y perdida ya la esperanza del progreso de la vacuna: pero al séptimo día aparecieron todos los granos vaccinos naciendo de entre las llagas y erisipela que supurados al noveno fueron ellos bastantes para corregir el vicio erisipelatoso y acabar la enfermedad, y al segundo día de esto empezaron a secar junto con la erisipela, y hoy se haya perfectamente sano y libre de viruelas. La otra llamada Dominga, edad de nueve meses siguió todo el curso de la vacuna sin la menor alteración ni novedad, y lo mismo un negrito esclavo de la misma casa de edad de seis meses. De esta misma la transmití en el mismo día a una niña de quince años llamada Tomasa hija de Don Antonio Rivero y de Doña Brígida Ustariz, cuyos granos salieron al séptimo día y su progreso fue feliz, y a un hermano de esta misma de edad de trece años inoculado en el mismo día no le pegó, y aunque se ha inoculado segunda vez no le ha pegado, de que infiero tal vez hubiese ya este pasado las viruelas naturales por que en estos no pega por las observaciones que adelante diré. De esta misma niña y en el mismo día inoculé a tres hijos de Don Diego Llanos organista de la catedral y en todos ellos salieron tantos granos vaccinos cuantas incisiones hice, y también en un zambo esclavo de Don Juan Antonio Montufaz de edad de dos años. De la segunda llamada Nicolasa Evia extraje el líquido en el mismo día e inoculé a una niña sobrina mía llamada Manuela de edad de diez meses, y a dos negritos de edad de tres años esclavos del Coronel Don Domingo Tristán y todos han tenido feliz progreso y se hayan perfectamente sanos. Al décimo día y estando ya estos en supuración extraje el líquido primeramente de la hija menor del Coronel Don Raymundo Gutiérrez, e inoculé a dos niños hijos de Don Manuel Rey de Castro y de Doña Mauricia Arze que actualmente se hallan en octavo día de viruela con feliz éxito, y otro niño de este mismo de quien dudaban sus padres si le hubiesen dado legítimas viruelas por haber pasado esta enfermedad muy benigna en el Baño de Zura en donde no había facultativo que les decidiese si eran o no viruelas por ser muy pocas y benignas como dije antes: para sacarles de la duda lo inoculé en el mismo día y con el mismo fluido que a los demás, y no ha pegado ningún grano vaccino: lo que prueba, primero haber sido aquellas legítimas viruelas: segundo ser esta legítima vacuna preservadora de este terrible mal pues al que lo ha pasado no le pega como se ha verificado [1390] en este y en otro a quien por experimento he vacunado dos veces, y en ninguna ha padecido la más leve señal de grano. = En el mismo día de uno de los niños del organista, extraje el fluido e inoculé a dos colegiales hijos de Don José Dávila Ordoñez administrador de correos de Moquegua, que uno llamado Ramón tiene catorce años, y el otro Tadeo doce, y en ambos ha pegado y se hallan en octavo día de enfermedad, y de este mismo fluido a una criatura esclava de Doña Josefa Zaconeta, otra esclava de Doña Anizeta Nieto, y otra de Doña Estefa Castañeda todas tres de edad de un año poco más o menos y todas con feliz progreso. El fluido restante y que prontamente no hubo en quien emplearlo, lo recogí y conservo en cristales con las precauciones necesarias para evitar su descomposición a fin de que sirva para cuando el señor gobernador Intendente quiera mandar conducirlo a alguno de los lugares del partido, y también quedo con el cuidado de recoger algunas costras de aquellos granos de donde no he querido sacar el fluido por haber leído en una gaceta la observación de un cirujano, quien dice que la inoculación más segura y el modo mejor de conducir la vacuna es con las costras que reducidas a polvo sutil, y diluidas con una gota de agua para formar mucílago ha sido muy segura y nunca ha dejado de pegar. Me ha acomodado mucho este dictamen pues el grano de donde no se extrae el fluido se seca y forma una especie de lenteja cuya substancia es toda del fluido vacuno, y aunque este se desvirtuara algo por el frío o calor, sería solo en su superficie quedando en el centro su virtud muy eficaz por ser un cuerpo muy denso, y para la mayor seguridad protexto [sic] hacer experimento con dichas costras. = He observado que todos esto vacunados no padecen incomodidad más que la de una leve picazón en el sitio vacunado, dolor bajo de la axila, y todos al octavo día por la noche alguna fiebre que dura dos, tres, y hasta seis horas, y luego desaparece y al siguiente día la supuración o madurez de los granos que duran en estado de extracción hasta el onceno día, y al duodécimo empieza la desecación que dura hasta los veinte poco más o menos = Es todo lo acaecido y lo que puedo informar en el particular. Arequipa y abril veinte y cinco de mil ochocientos seis = Juan Manuel Vargas =</p></div></div><div id="35af3b61-2379-8049-9e6b-f267d6bfce58" class="column-list" data-notion-column-list="" dir="auto"><div id="35af3b61-2379-8062-922e-c570de34329e" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35af3b61-2379-8045-80d8-efe57ca84838" class="" dir="auto">Otra</p></div><div id="35af3b61-2379-8014-a6e9-ec23606f0273" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35af3b61-2379-80fe-8f01-c1d7720eeaff" class="" dir="auto">Señor Teniente de Protomédico doctor Don José Antonio Zoldi y Rosas = Habiendo resultado de la junta del doce de marzo ser nombrado por el señor gobernador Intendente para vacunar a todos cuantos se me presentasen, y que observase los síntomas en el curso de esta operación, y cumpliendo exactamente con el cargo que se me confió, digo: que los tres primeros vacunados por mí no tuvieron efecto: solo sí la que estaba a cargo del cirujano latino Don Roque Aguirre Arrueta [sic] se logró felizmente, de quien entre Don Roque y yo [1390v] extrajimos el fluido vacuno a presencia de Vuestra Merced y del bachiller Don Pablo José del Carpio y de Don Juan de Dios de Vargas y lo introdujimos en la hija de Don Domingo Cáceres y en una mulatilla. De estas dará a Vuestra Merced razón el citado Don Roque = Siendo la hija de dicho Cáceres vacunada el veinte y dos de marzo, se recogió el fluido el treinta y uno del propio mes, de la que transmigré a Clara Ersilla de edad de año y cuatro meses, hija legítima del escribano de Su Majestad José Manuel Ersilla y de Doña Antonia Salazar y Robles, y a Margarita <mark class="highlight-default" data-notion-highlight="default">Yañez </mark>su edad seis meses hija legítima de José Llerena y de Manuela Yañez. En estos observé que al tercero día apareció un tubérculo irregular en la superficie de la cutis, de color rojo, vivo y resplandeciente en el propio lugar de las picaduras: desde este día al sexto se vio que el tubérculo se distinguía esencialmente de toda otra afección porque estaba circunscripto, y tenía el grandor o volumen de una lenteja: se advirtió en su medio una hondura o depresión bien señalada, de color opaco y obscuro: sus bordes formaban una elevación o rodete que sobresalía de un color pálido, medio transparente, lleno de un fluido claro y sin color: su base estaba rodeada de un pequeño círculo inflamatorio rojo. Desde el sexto hasta el nono día crecieron los granos algo más, pero sí más dilatado: el día nono formó un círculo ancho de color de rosa acompañado de hinchazón y tensión en la parte: percibir un sentimiento de calor y de picazón en la parte por la acción que hacían dichas criaturas al rascarse: fueron acometidas de fiebre, sobresaltos, y estornudos, y la Llerena tuvo vómitos. Desde el día décimo principió la desecación en el centro del grano, y el duodécimo formó una corteza limpia, lisa, de color moreno bajo, y siempre hundido en el centro: el fluido que contenía el grano no era como el de las demás pústulas o granos, derramado y reducido en un punto céntrico, sino que estaba encerrado en el tejido esponjoso pues formaba vejiguillas separadas, y esto lo observé cuando piqué el grano vacuno: el fluido no salió de un golpe, sino a gotitas del propio lugar de la picadura. La corteza se cayó a más de los treinta días. = He visto de que no ha habido necesidad de administrar medicamento alguno. Siguieron sus tareas juveniles divertidos sin molestia: solo sí al nono día han estado incómodos por la fiebre. En los posteriores a estas criaturas se han pasado sin tener la menor incomodidad, y otras han sido molestadas al tercero y cuarto día de vómitos, calentura, y sobresaltos, y las más al nono día. = Tengo por inútil y perniciosa la deligación o vendaje, porque está establecido de que se use de tal vendaje cuando sea necesario aglutinar los labios de una herida o mantener apósito. Aquí no tenemos necesidad de tal vendaje respecto a que no hay que contener ni aglutinar. Esta reflexión hago, porque habiendo vacunado el veinte y tres de marzo a Melchora Wentuisen india criada de Doña Juana Wentuisen, y siguiendo la carrera bien hasta el día octavo, y en este día haber sucedido el que se le aflojó la venda, su señora por renovársela la comprimió tan demasiado que hizo que se abriese el grano vacuno en fuerza de la compresión, y se derramó todo el fluido vaccino, lo que me dio idea para abandonar el vendaje y hacer juicio para lo que servía la deligación, y seguir vacunando sin usar de él. Tampoco hayo por conveniente volver a introducir la lanceta por segunda vez empapada en el fluido vaccino, pues hecha la operación con todas las reglas que el arte nos franquea, sale precisamente feliz, y así más sirve de molestia a las criaturas que ser esencialmente necesaria la repetición. = Lista de todos los que desde el día veinte y tres de marzo he vacunado hasta el veinte y cinco de abril del presente año = Primeramente las de arriba mencionadas. De estas transmigré el fluido el siete de abril a Francisco Gil, su edad seis [1391] meses, hijo legítimo de Mariano Gil y de Juliana Valencia. = En el propio día a María Calderón, su edad nueve meses, hija legítima de Don Francisco Calderón y de Doña Josefa Ximenez = A Manuela Corrales su edad diez meses hija legítima de Bernardo Corrales y de María Llerena = A Antonia Fernández su edad tres meses hija legítima de Bernardo Fernández y de Gregoria Tapia = El día nueve de abril se vacunó con el fluido contraído de la vaca a Andrea Hurtado su edad cinco años hija de Lucía Hurtado = El día once se vacunó a Angela Alpaca, su edad siete meses, hija legítima de Juan Alpaca y de Melchora Alpaca = El día quince de abril a María Salas hija natural de Eugenia Salas, su edad cuatro meses = A Juan Antonio Flores de edad de un año y ocho meses hijo natural de Francisca Flores = El diez y seis de abril a Antonio Riveros su edad un año dos meses hijo natural de Evarista Riveros _ A Juan de Dios Rodríguez de edad de un mes, hijo legítimo de Don Pedro Rodríguez y de María Mercedes Riveros _ A Mauricia Rodríguez de edad de cuatro meses, hija legítima de José Rodríguez y de Narcisa Ayala _ A Manuel Ybarcena su edad cuatro meses hijo legítimo de Don Antonio Ybarcena y de Doña Josefa Galtier Wentuisen _ A Narcisa Llayqui su edad un año cinco meses hija natural de Pascuala Llayqui _ A Josefa Hurtado de edad de un año y un mes hija natural de Lucía Hurtado = El diez y siete de abril a María Mercedes Ortiz su edad siete meses hija natural de María Ortiz _ A Mariano Rodríguez su edad cuatro meses, hijo natural de Gregoria Rodriguez _ A María Antonia Gonzales su edad cuatro años hija natural de Juana Gonzales = El veinte y cuatro de abril a Mariano, huérfano, su edad seis meses _ A Joaquina huérfana su edad ocho meses = El veinte y cinco de abril a Carlos Góngora de edad de seis meses hijo legítimo de Cornelio Góngora y de Úrsula Nieto _ A Juliana Luna hija legítima de Sebastián Luna y de María Laguna, su edad once años = Veinte y cinco son los que han sido vacunado por mi mano hasta hoy día de la fecha, los mismo que por el celo y bien del público del señor gobernador Intendente y vice Real patrono de esta provincia se me han manifestado para las operaciones insinuadas, y que recomiendo a la sabia penetración de Vuestra Merced para su aprobación = Dios guarde a Vuestra Merced muchos años. Arequipa abril veinte y cinco de mil ochocientos seis = Luis Agustín Rodríguez. ===</p></div></div><div id="35af3b61-2379-80a2-b812-ebe3e743d6de" class="column-list" data-notion-column-list="" dir="auto"><div id="35af3b61-2379-8088-b8f0-e5aa7be80945" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35af3b61-2379-80b5-b91a-edef01becd14" class="" dir="auto">Otra</p></div><div id="35af3b61-2379-80a1-aade-cc16927fd185" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35af3b61-2379-80c7-be7e-d556ea5b1926" class="" dir="auto">Señor Teniente de Protomédico doctor Don José Antonio Zoldi y Rosas = Comunico a Vuestra Merced las observaciones progresos y número de los vacunados desde el día doce de marzo próximo pasado hasta el día de la fecha. En junta de dicho doce de marzo quedé encargado de cuatro criaturas vacunadas por mí en la sala de gobierno a presencia del señor gobernador Intendente, los señores del ilustre Cabildo de esta ciudad y demás particulares que concurrieron a una con los profesores de medicina, cirugía, y farmacia: digo que Manuel Barzena hijo de Don Antonio, Juana Manuela Cáceres hija de Don Domingo, y Juana Carpio del Doctor Don Pablo vacunadas con el fluido que nos vino de Buenos Aires y de Puno, no se consiguió el efecto deseado en ninguna de ellas, ni tuvieron la menor novedad en su salud: María Jacinta Rivera de Don José Tadeo fue vacunada con el fluido vacuno que vino de Puno: se le hizo dos incisiones en cada brazo: en esta se observó el diez y siete que apareció en el brazo izquierdo un grano o tubérculo pequeño en la superficie de la cutis, de color rojo y resplandeciente en el propio sitio de una de las picaduras, como también muchos estornudos, bostezos, sobresaltos y una leve fiebre: desde dicho día fue en aumento su volumen con una depresión en su medio bien señalada de color opaco y obscuro: formaba una elevación o rodete su borde o circunferencia, y sobresalía de color pálido medio transparente lleno de un fluido claro y sin color: su base estaba rodeada de un pequeño círculo inflamatorio rojo. Desde el diez y nueve hasta el veinte y dos, creció el grano poco menos de un medio real, y formó la areola un círculo ancho de color rosa, acompañado de hinchazón y tensión en la parte. Este día a las cinco de la tarde le extraje el fluido en presencia de Vuestra Merced, del Doctor Don Pablo Carpio, Don Luis Agustín Rodríguez, Don Juan de Dios Vargas, y de Don Eugenio Gomez farmacéutico de San Juan de Dios, y se vacunaron de brazo a brazo a Juana Manuela Cáceres y a Lorenza Vargas: a la primera se le hizo seis incisiones y tuvo cinco granos vaccinos muy hermosos, y ninguno la segunda. En dicha extracción del fluido vacuno vieron todos los arriba expresados que el fluido que contenía el grano vaccino no era como el de las demás pústulas o granos, derramado [1391v] en el tejido esponjoso y que formaba vejiguillas separadas, que cuando se picó el grano vacuno no salió de golpe el fluido sino a gotas muy pequeñas del lugar de la picadura: todas señales de verdadera y legítima vacuna con la cual se ha propagado con feliz éxito en beneficio del género humano = He observado que dichos vacunados no pierden su apetito, juegan según costumbre sin mayor incomodidad, regularmente les acomete al octavo día una ligera fiebre que en algunos dura media noche, y en otros menos por relación de las amas, y al siguiente día aparece la supuración o madurez de los granos, se puede extraer el fluido hasta el once: ya a los doce empieza la desecación y las costras caen regularmente del veinte y ocho de la operación. He advertido que el frío hace retardar el brote de los granos vaccinos dos o tres días más que en tiempo templado: presumo será por la compresión que el frío causa en todas las fibras y el tejido celular. </p></div></div><table id="35af3b61-2379-809d-8b8c-c026808c0ab1" class="simple-table" dir="ltr"><tbody><tr id="35af3b61-2379-8047-a243-ef30e24c0e61" dir="ltr"><td id="\}ju" class="" style="width:114.66250610351562px"></td><td id="{=jp" class="" style="width:315.6625061035156px"></td><td id="xByQ" class="" style="width:213px"></td><td id="joJ]" class="" style="width:58.662498474121094px">Edad</td><td id="pIPo" class="" style="width:59px"></td></tr><tr id="35af3b61-2379-8044-aa5c-f6e9e2befeb7" dir="ltr"><td id="\}ju" class="" style="width:114.66250610351562px">Vacunada en</td><td id="{=jp" class="" style="width:315.6625061035156px"></td><td id="xByQ" class="" style="width:213px"></td><td id="joJ]" class="" style="width:58.662498474121094px">Años</td><td id="pIPo" class="" style="width:59px">Meses</td></tr><tr id="35af3b61-2379-801a-a207-e5b61f2ac22e" dir="ltr"><td id="\}ju" class="block-color-blue_background" style="width:114.66250610351562px">12 de marzo</td><td id="{=jp" class="block-color-blue_background" style="width:315.6625061035156px">María Jacinta de Rivera de Don José Tadeo</td><td id="xByQ" class="block-color-blue_background" style="width:213px"></td><td id="joJ]" class="block-color-blue_background" style="width:58.662498474121094px">-</td><td id="pIPo" class="block-color-blue_background" style="width:59px">6 1/2</td></tr><tr id="35af3b61-2379-805d-a5c0-df82cca185ad" dir="ltr"><td id="\}ju" class="block-color-teal_background" style="width:114.66250610351562px">Marzo 22</td><td id="{=jp" class="block-color-teal_background" style="width:315.6625061035156px">Juana Manuela Cáceres de Don Domingo</td><td id="xByQ" class="block-color-teal_background" style="width:213px"></td><td id="joJ]" class="block-color-teal_background" style="width:58.662498474121094px">-</td><td id="pIPo" class="block-color-teal_background" style="width:59px">2 1/2</td></tr><tr id="35af3b61-2379-8069-bdc6-e09473ebfde2" dir="ltr"><td id="\}ju" class="block-color-teal_background" style="width:114.66250610351562px"></td><td id="{=jp" class="block-color-teal_background" style="width:315.6625061035156px">Lorenza Vargas de Estefa</td><td id="xByQ" class="block-color-teal_background" style="width:213px"></td><td id="joJ]" class="block-color-teal_background" style="width:58.662498474121094px">-</td><td id="pIPo" class="block-color-teal_background" style="width:59px">7 1/2</td></tr><tr id="35af3b61-2379-80bc-862a-f19c126d4e75" dir="ltr"><td id="\}ju" class="block-color-blue_background" style="width:114.66250610351562px">Marzo 31</td><td id="{=jp" class="block-color-blue_background" style="width:315.6625061035156px">Mariano Montufaz de Rosa</td><td id="xByQ" class="block-color-blue_background" style="width:213px"></td><td id="joJ]" class="block-color-blue_background" style="width:58.662498474121094px">1</td><td id="pIPo" class="block-color-blue_background" style="width:59px">5</td></tr><tr id="35af3b61-2379-80d4-a3c1-c5dae893b7c7" dir="ltr"><td id="\}ju" class="block-color-blue_background" style="width:114.66250610351562px"></td><td id="{=jp" class="block-color-blue_background" style="width:315.6625061035156px">María Vargas de Estefa</td><td id="xByQ" class="block-color-blue_background" style="width:213px"></td><td id="joJ]" class="block-color-blue_background" style="width:58.662498474121094px">1</td><td id="pIPo" class="block-color-blue_background" style="width:59px">7</td></tr><tr id="35af3b61-2379-8020-bbaa-cc4517ed302e" dir="ltr"><td id="\}ju" class="block-color-teal_background" style="width:114.66250610351562px">Abril 8</td><td id="{=jp" class="block-color-teal_background" style="width:315.6625061035156px">Bernardina Evia de N</td><td id="xByQ" class="block-color-teal_background" style="width:213px"></td><td id="joJ]" class="block-color-teal_background" style="width:58.662498474121094px">-</td><td id="pIPo" class="block-color-teal_background" style="width:59px">5</td></tr><tr id="35af3b61-2379-8091-8290-c878f7040a69" dir="ltr"><td id="\}ju" class="block-color-teal_background" style="width:114.66250610351562px"></td><td id="{=jp" class="block-color-teal_background" style="width:315.6625061035156px">Margarita Evia de N</td><td id="xByQ" class="block-color-teal_background" style="width:213px"></td><td id="joJ]" class="block-color-teal_background" style="width:58.662498474121094px">3</td><td id="pIPo" class="block-color-teal_background" style="width:59px">-</td></tr><tr id="35af3b61-2379-800a-8d14-e2bb38a7d53f" dir="ltr"><td id="\}ju" class="block-color-teal_background" style="width:114.66250610351562px"></td><td id="{=jp" class="block-color-teal_background" style="width:315.6625061035156px">María Briseño de Don Francisco</td><td id="xByQ" class="block-color-teal_background" style="width:213px"></td><td id="joJ]" class="block-color-teal_background" style="width:58.662498474121094px">1</td><td id="pIPo" class="block-color-teal_background" style="width:59px">-</td></tr><tr id="35af3b61-2379-80d6-93ae-c5a404d82ca7" dir="ltr"><td id="\}ju" class="block-color-blue_background" style="width:114.66250610351562px">Abril 9</td><td id="{=jp" class="block-color-blue_background" style="width:315.6625061035156px">Mateo de Rivero de Don Antonio</td><td id="xByQ" class="block-color-blue_background" style="width:213px"></td><td id="joJ]" class="block-color-blue_background" style="width:58.662498474121094px">1</td><td id="pIPo" class="block-color-blue_background" style="width:59px">-</td></tr><tr id="35af3b61-2379-805b-bf71-f5514d4628e0" dir="ltr"><td id="\}ju" class="block-color-blue_background" style="width:114.66250610351562px"></td><td id="{=jp" class="block-color-blue_background" style="width:315.6625061035156px">Norverto Carbajal de Evaristo</td><td id="xByQ" class="block-color-blue_background" style="width:213px"></td><td id="joJ]" class="block-color-blue_background" style="width:58.662498474121094px">3</td><td id="pIPo" class="block-color-blue_background" style="width:59px">2</td></tr><tr id="35af3b61-2379-8063-ba5d-ea4ed412bad6" dir="ltr"><td id="\}ju" class="block-color-teal_background" style="width:114.66250610351562px">Abril 17</td><td id="{=jp" class="block-color-teal_background" style="width:315.6625061035156px">Mariano Evaristo Gómez de Don Eugenio</td><td id="xByQ" class="block-color-teal_background" style="width:213px"></td><td id="joJ]" class="block-color-teal_background" style="width:58.662498474121094px">-</td><td id="pIPo" class="block-color-teal_background" style="width:59px">6</td></tr><tr id="35af3b61-2379-8016-b82e-d327265760ab" dir="ltr"><td id="\}ju" class="block-color-teal_background" style="width:114.66250610351562px"></td><td id="{=jp" class="block-color-teal_background" style="width:315.6625061035156px">Lorenza Rodríguez de Don José</td><td id="xByQ" class="block-color-teal_background" style="width:213px"></td><td id="joJ]" class="block-color-teal_background" style="width:58.662498474121094px">3</td><td id="pIPo" class="block-color-teal_background" style="width:59px">-</td></tr><tr id="35af3b61-2379-805c-9189-c0cf48d2427e" dir="ltr"><td id="\}ju" class="block-color-teal_background" style="width:114.66250610351562px"></td><td id="{=jp" class="block-color-teal_background" style="width:315.6625061035156px">Juana de Dios Carbajal de Evaristo</td><td id="xByQ" class="block-color-teal_background" style="width:213px"></td><td id="joJ]" class="block-color-teal_background" style="width:58.662498474121094px">1</td><td id="pIPo" class="block-color-teal_background" style="width:59px">1</td></tr><tr id="35af3b61-2379-80d2-8115-eb8fdbb6a65e" dir="ltr"><td id="\}ju" class="block-color-teal_background" style="width:114.66250610351562px"></td><td id="{=jp" class="block-color-teal_background" style="width:315.6625061035156px">Mariano Montoya y</td><td id="xByQ" class="block-color-teal_background" style="width:213px"></td><td id="joJ]" class="block-color-teal_background" style="width:58.662498474121094px"></td><td id="pIPo" class="block-color-teal_background" style="width:59px"></td></tr><tr id="35af3b61-2379-8042-b5d0-f957089de9fd" dir="ltr"><td id="\}ju" class="block-color-teal_background" style="width:114.66250610351562px"></td><td id="{=jp" class="block-color-teal_background" style="width:315.6625061035156px">María Montoya mellizos de Juan</td><td id="xByQ" class="block-color-teal_background" style="width:213px"></td><td id="joJ]" class="block-color-teal_background" style="width:58.662498474121094px">-</td><td id="pIPo" class="block-color-teal_background" style="width:59px">2 1/2</td></tr><tr id="35af3b61-2379-80bf-8fd9-eb5b0e7e71c1" dir="ltr"><td id="\}ju" class="block-color-teal_background" style="width:114.66250610351562px"></td><td id="{=jp" class="block-color-teal_background" style="width:315.6625061035156px">Jacinta Pérez de Josefa</td><td id="xByQ" class="block-color-teal_background" style="width:213px"></td><td id="joJ]" class="block-color-teal_background" style="width:58.662498474121094px">-</td><td id="pIPo" class="block-color-teal_background" style="width:59px">6</td></tr><tr id="35af3b61-2379-8063-9ed4-cc4dded1e3d3" dir="ltr"><td id="\}ju" class="block-color-blue_background" style="width:114.66250610351562px">Abril 25</td><td id="{=jp" class="block-color-blue_background" style="width:315.6625061035156px">Mateo Salamanca de María</td><td id="xByQ" class="block-color-blue_background" style="width:213px"></td><td id="joJ]" class="block-color-blue_background" style="width:58.662498474121094px">-</td><td id="pIPo" class="block-color-blue_background" style="width:59px">7</td></tr><tr id="35af3b61-2379-809b-a89f-c756582702cb" dir="ltr"><td id="\}ju" class="block-color-blue_background" style="width:114.66250610351562px"></td><td id="{=jp" class="block-color-blue_background" style="width:315.6625061035156px">Teodora Cornejo de José</td><td id="xByQ" class="block-color-blue_background" style="width:213px"></td><td id="joJ]" class="block-color-blue_background" style="width:58.662498474121094px">-</td><td id="pIPo" class="block-color-blue_background" style="width:59px">5</td></tr><tr id="35af3b61-2379-801f-ab8f-e229ea5fc3f7" dir="ltr"><td id="\}ju" class="block-color-blue_background" style="width:114.66250610351562px"></td><td id="{=jp" class="block-color-blue_background" style="width:315.6625061035156px">Julián García de María</td><td id="xByQ" class="block-color-blue_background" style="width:213px"></td><td id="joJ]" class="block-color-blue_background" style="width:58.662498474121094px">-</td><td id="pIPo" class="block-color-blue_background" style="width:59px">10</td></tr><tr id="35af3b61-2379-80ae-8f03-ef66f4f9765d" dir="ltr"><td id="\}ju" class="block-color-teal_background" style="width:114.66250610351562px">Abril 26</td><td id="{=jp" class="block-color-teal_background" style="width:315.6625061035156px">Juan Miguel Gómez de Don Eugenio</td><td id="xByQ" class="block-color-teal_background" style="width:213px"></td><td id="joJ]" class="block-color-teal_background" style="width:58.662498474121094px">1</td><td id="pIPo" class="block-color-teal_background" style="width:59px">7</td></tr><tr id="35af3b61-2379-80c3-a4f2-ec2e9e958e02" dir="ltr"><td id="\}ju" class="block-color-teal_background" style="width:114.66250610351562px"></td><td id="{=jp" class="block-color-teal_background" style="width:315.6625061035156px">Gertrudis Valdivia de N</td><td id="xByQ" class="block-color-teal_background" style="width:213px"></td><td id="joJ]" class="block-color-teal_background" style="width:58.662498474121094px">9</td><td id="pIPo" class="block-color-teal_background" style="width:59px">-</td></tr><tr id="35af3b61-2379-80bd-9d67-cc8c0083c2c8" dir="ltr"><td id="\}ju" class="block-color-teal_background" style="width:114.66250610351562px"></td><td id="{=jp" class="block-color-teal_background" style="width:315.6625061035156px">Petronila Ballón de N</td><td id="xByQ" class="block-color-teal_background" style="width:213px"></td><td id="joJ]" class="block-color-teal_background" style="width:58.662498474121094px">12</td><td id="pIPo" class="block-color-teal_background" style="width:59px">-</td></tr><tr id="35af3b61-2379-8060-84e5-f97acef95fd7" dir="ltr"><td id="\}ju" class="block-color-teal_background" style="width:114.66250610351562px"></td><td id="{=jp" class="block-color-teal_background" style="width:315.6625061035156px">Domingo Aquesolo de Don Joaquín</td><td id="xByQ" class="block-color-teal_background" style="width:213px"></td><td id="joJ]" class="block-color-teal_background" style="width:58.662498474121094px">-</td><td id="pIPo" class="block-color-teal_background" style="width:59px">9</td></tr><tr id="35af3b61-2379-80cf-a6da-e27b61b669b9" dir="ltr"><td id="\}ju" class="block-color-teal_background" style="width:114.66250610351562px"></td><td id="{=jp" class="block-color-teal_background" style="width:315.6625061035156px">Mariano Pérez de Alfonso</td><td id="xByQ" class="block-color-teal_background" style="width:213px"></td><td id="joJ]" class="block-color-teal_background" style="width:58.662498474121094px">2</td><td id="pIPo" class="block-color-teal_background" style="width:59px">4</td></tr><tr id="35af3b61-2379-8063-b251-f1aec10180e7" dir="ltr"><td id="\}ju" class="block-color-teal_background" style="width:114.66250610351562px"></td><td id="{=jp" class="block-color-teal_background" style="width:315.6625061035156px">Mariano Rodríguez de José</td><td id="xByQ" class="block-color-teal_background" style="width:213px"></td><td id="joJ]" class="block-color-teal_background" style="width:58.662498474121094px">-</td><td id="pIPo" class="block-color-teal_background" style="width:59px">9</td></tr><tr id="35af3b61-2379-80ca-91de-ea44d1548dc6" dir="ltr"><td id="\}ju" class="block-color-teal_background" style="width:114.66250610351562px"></td><td id="{=jp" class="block-color-teal_background" style="width:315.6625061035156px">Juana Carpio zambita del D. D. Pablo</td><td id="xByQ" class="block-color-teal_background" style="width:213px"></td><td id="joJ]" class="block-color-teal_background" style="width:58.662498474121094px">1</td><td id="pIPo" class="block-color-teal_background" style="width:59px">1</td></tr><tr id="35af3b61-2379-80cd-b002-cc8ce9ea16bb" dir="ltr"><td id="\}ju" class="block-color-teal_background" style="width:114.66250610351562px"></td><td id="{=jp" class="block-color-teal_background" style="width:315.6625061035156px">Doña Blaza Valdivia</td><td id="xByQ" class="block-color-teal_background" style="width:213px"></td><td id="joJ]" class="block-color-teal_background" style="width:58.662498474121094px">40</td><td id="pIPo" class="block-color-teal_background" style="width:59px">-</td></tr><tr id="35af3b61-2379-8005-823e-cf1bf2ef8922" dir="ltr"><td id="\}ju" class="block-color-teal_background" style="width:114.66250610351562px"></td><td id="{=jp" class="block-color-teal_background" style="width:315.6625061035156px">Juana Gonzales de N</td><td id="xByQ" class="block-color-teal_background" style="width:213px"></td><td id="joJ]" class="block-color-teal_background" style="width:58.662498474121094px">-</td><td id="pIPo" class="block-color-teal_background" style="width:59px">8</td></tr><tr id="35af3b61-2379-80fc-88b6-e11dd15b002d" dir="ltr"><td id="\}ju" class="block-color-teal_background" style="width:114.66250610351562px"></td><td id="{=jp" class="block-color-teal_background" style="width:315.6625061035156px">Gregoria Gonzales de N</td><td id="xByQ" class="block-color-teal_background" style="width:213px"></td><td id="joJ]" class="block-color-teal_background" style="width:58.662498474121094px">-</td><td id="pIPo" class="block-color-teal_background" style="width:59px">5</td></tr><tr id="35af3b61-2379-806b-b9d6-fdf70138440a" dir="ltr"><td id="\}ju" class="block-color-teal_background" style="width:114.66250610351562px"></td><td id="{=jp" class="block-color-teal_background" style="width:315.6625061035156px">María Manuela Moscoso de Juan</td><td id="xByQ" class="block-color-teal_background" style="width:213px"></td><td id="joJ]" class="block-color-teal_background" style="width:58.662498474121094px">2</td><td id="pIPo" class="block-color-teal_background" style="width:59px">8</td></tr><tr id="35af3b61-2379-8048-ae36-c3e2456c51e6" dir="ltr"><td id="\}ju" class="block-color-teal_background" style="width:114.66250610351562px"></td><td id="{=jp" class="block-color-teal_background" style="width:315.6625061035156px">Juana Moscoso de Juan</td><td id="xByQ" class="block-color-teal_background" style="width:213px"></td><td id="joJ]" class="block-color-teal_background" style="width:58.662498474121094px">-</td><td id="pIPo" class="block-color-teal_background" style="width:59px">10</td></tr><tr id="35af3b61-2379-80d2-ab29-e1742b6361e4" dir="ltr"><td id="\}ju" class="block-color-teal_background" style="width:114.66250610351562px"></td><td id="{=jp" class="block-color-teal_background" style="width:315.6625061035156px">María Gavina de la Casa de Misericordia</td><td id="xByQ" class="block-color-teal_background" style="width:213px"></td><td id="joJ]" class="block-color-teal_background" style="width:58.662498474121094px">-</td><td id="pIPo" class="block-color-teal_background" style="width:59px">4</td></tr><tr id="35af3b61-2379-8010-95d1-ee6ce15c74be" dir="ltr"><td id="\}ju" class="block-color-teal_background" style="width:114.66250610351562px"></td><td id="{=jp" class="block-color-teal_background" style="width:315.6625061035156px">María del Carmen ídem</td><td id="xByQ" class="block-color-teal_background" style="width:213px"></td><td id="joJ]" class="block-color-teal_background" style="width:58.662498474121094px">-</td><td id="pIPo" class="block-color-teal_background" style="width:59px">3</td></tr><tr id="35af3b61-2379-80e4-9e37-f94d2ce5f765" dir="ltr"><td id="\}ju" class="block-color-teal_background" style="width:114.66250610351562px"></td><td id="{=jp" class="block-color-teal_background" style="width:315.6625061035156px">María Escolástica ídem</td><td id="xByQ" class="block-color-teal_background" style="width:213px"></td><td id="joJ]" class="block-color-teal_background" style="width:58.662498474121094px">-</td><td id="pIPo" class="block-color-teal_background" style="width:59px">2 1/2</td></tr><tr id="35af3b61-2379-801e-a922-e001708db4d5" dir="ltr"><td id="\}ju" class="block-color-teal_background" style="width:114.66250610351562px"></td><td id="{=jp" class="block-color-teal_background" style="width:315.6625061035156px">Bernardina ídem</td><td id="xByQ" class="block-color-teal_background" style="width:213px"></td><td id="joJ]" class="block-color-teal_background" style="width:58.662498474121094px">-</td><td id="pIPo" class="block-color-teal_background" style="width:59px">2</td></tr><tr id="35af3b61-2379-80f2-b51b-fd0518287f99" dir="ltr"><td id="\}ju" class="block-color-teal_background" style="width:114.66250610351562px"></td><td id="{=jp" class="block-color-teal_background" style="width:315.6625061035156px">Don Francisco Ponce*</td><td id="xByQ" class="block-color-teal_background" style="width:213px">*Estos tres se han vuelto a</td><td id="joJ]" class="block-color-teal_background" style="width:58.662498474121094px">33</td><td id="pIPo" class="block-color-teal_background" style="width:59px">1</td></tr><tr id="35af3b61-2379-8065-b762-e4ae407f099c" dir="ltr"><td id="\}ju" class="block-color-teal_background" style="width:114.66250610351562px"></td><td id="{=jp" class="block-color-teal_background" style="width:315.6625061035156px">Justo Pastor de Figueroa*</td><td id="xByQ" class="block-color-teal_background" style="width:213px">vacunar en 9 de mayo porque </td><td id="joJ]" class="block-color-teal_background" style="width:58.662498474121094px">15</td><td id="pIPo" class="block-color-teal_background" style="width:59px">-</td></tr><tr id="35af3b61-2379-8075-9d0e-f6339584d9e9" dir="ltr"><td id="\}ju" class="block-color-teal_background" style="width:114.66250610351562px"></td><td id="{=jp" class="block-color-teal_background" style="width:315.6625061035156px">Silvestre Diaz*</td><td id="xByQ" class="block-color-teal_background" style="width:213px">no les pegó antes</td><td id="joJ]" class="block-color-teal_background" style="width:58.662498474121094px">5</td><td id="pIPo" class="block-color-teal_background" style="width:59px">-</td></tr><tr id="35af3b61-2379-80c6-af4c-d762d722d8b0" dir="ltr"><td id="\}ju" class="block-color-blue_background" style="width:114.66250610351562px">[1392] Mayo 4</td><td id="{=jp" class="block-color-blue_background" style="width:315.6625061035156px">Juana Campos de Atasiano</td><td id="xByQ" class="block-color-blue_background" style="width:213px"></td><td id="joJ]" class="block-color-blue_background" style="width:58.662498474121094px">-</td><td id="pIPo" class="block-color-blue_background" style="width:59px">11</td></tr><tr id="35af3b61-2379-80d0-bd94-f384cd30ce96" dir="ltr"><td id="\}ju" class="block-color-blue_background" style="width:114.66250610351562px"></td><td id="{=jp" class="block-color-blue_background" style="width:315.6625061035156px">Baltazar Aragones de Isabela</td><td id="xByQ" class="block-color-blue_background" style="width:213px"></td><td id="joJ]" class="block-color-blue_background" style="width:58.662498474121094px">-</td><td id="pIPo" class="block-color-blue_background" style="width:59px">5</td></tr><tr id="35af3b61-2379-8008-9bc9-f4e6e6cc8caa" dir="ltr"><td id="\}ju" class="block-color-blue_background" style="width:114.66250610351562px"></td><td id="{=jp" class="block-color-blue_background" style="width:315.6625061035156px">Juana Montufaz de Rosa</td><td id="xByQ" class="block-color-blue_background" style="width:213px"></td><td id="joJ]" class="block-color-blue_background" style="width:58.662498474121094px">-</td><td id="pIPo" class="block-color-blue_background" style="width:59px">4</td></tr><tr id="35af3b61-2379-80db-809e-e94af984103d" dir="ltr"><td id="\}ju" class="block-color-blue_background" style="width:114.66250610351562px"></td><td id="{=jp" class="block-color-blue_background" style="width:315.6625061035156px">Josefa Castro de Mariana</td><td id="xByQ" class="block-color-blue_background" style="width:213px"></td><td id="joJ]" class="block-color-blue_background" style="width:58.662498474121094px">-</td><td id="pIPo" class="block-color-blue_background" style="width:59px">6</td></tr><tr id="35af3b61-2379-80cc-9874-e2b0d24c9ebd" dir="ltr"><td id="\}ju" class="block-color-blue_background" style="width:114.66250610351562px"></td><td id="{=jp" class="block-color-blue_background" style="width:315.6625061035156px">Domingo zambito de la Casa de Goyeneche</td><td id="xByQ" class="block-color-blue_background" style="width:213px"></td><td id="joJ]" class="block-color-blue_background" style="width:58.662498474121094px">-</td><td id="pIPo" class="block-color-blue_background" style="width:59px">11</td></tr><tr id="35af3b61-2379-80a8-a4cb-d437cb2657a4" dir="ltr"><td id="\}ju" class="block-color-blue_background" style="width:114.66250610351562px"></td><td id="{=jp" class="block-color-blue_background" style="width:315.6625061035156px">Manuela Estefanía de la Casa de Misericordia</td><td id="xByQ" class="block-color-blue_background" style="width:213px"></td><td id="joJ]" class="block-color-blue_background" style="width:58.662498474121094px">-</td><td id="pIPo" class="block-color-blue_background" style="width:59px">4</td></tr><tr id="35af3b61-2379-8074-8ac6-f4c8ede304da" dir="ltr"><td id="\}ju" class="block-color-blue_background" style="width:114.66250610351562px"></td><td id="{=jp" class="block-color-blue_background" style="width:315.6625061035156px">Melchora ídem</td><td id="xByQ" class="block-color-blue_background" style="width:213px"></td><td id="joJ]" class="block-color-blue_background" style="width:58.662498474121094px">-</td><td id="pIPo" class="block-color-blue_background" style="width:59px">6</td></tr><tr id="35af3b61-2379-800d-8aa0-c38701ee8e0a" dir="ltr"><td id="\}ju" class="block-color-blue_background" style="width:114.66250610351562px"></td><td id="{=jp" class="block-color-blue_background" style="width:315.6625061035156px">María Josefa ídem</td><td id="xByQ" class="block-color-blue_background" style="width:213px"></td><td id="joJ]" class="block-color-blue_background" style="width:58.662498474121094px">-</td><td id="pIPo" class="block-color-blue_background" style="width:59px">4</td></tr><tr id="35af3b61-2379-8063-a3c1-ce03e832cb62" dir="ltr"><td id="\}ju" class="" style="width:114.66250610351562px"></td><td id="{=jp" class="" style="width:315.6625061035156px">Total 46 vacunados</td><td id="xByQ" class="" style="width:213px"></td><td id="joJ]" class="" style="width:58.662498474121094px"></td><td id="pIPo" class="" style="width:59px"></td></tr></tbody></table><div id="35af3b61-2379-8010-818e-eb1b5ebca98a" class="column-list" data-notion-column-list="" dir="auto"><div id="35af3b61-2379-80ae-b418-d61660cde913" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35af3b61-2379-8050-a102-f5295ab1242b" class="" dir="auto">
+</p></div><div id="35af3b61-2379-8080-a471-ec700a0bd32b" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35af3b61-2379-80ba-8521-eb889cfcdb42" class="" dir="auto">Nota</p><p id="35af3b61-2379-803a-bf44-d845212d51af" class="" dir="auto">María Jacinta de Rivera fue vacunada el mes de noviembre y diciembre del año próximo pasado sin haber surtido efecto como expresé a Vuestra Merced en la relación anterior, como también Lorenza Vargas = Arequipa seis de mayo de mil ochocientos seis = Roque de Aguirre Urreta ===</p></div></div><div id="35af3b61-2379-802d-9b8d-dfa3c0ca5b71" class="column-list" data-notion-column-list="" dir="auto"><div id="35af3b61-2379-807d-a87b-d94caf1c0bb9" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35af3b61-2379-805b-ac51-c8ce6b079026" class="" dir="auto">Oficio</p></div><div id="35af3b61-2379-8092-be6a-d9d62704bfe2" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35af3b61-2379-801d-bbf2-e5e60f83c136" class="" dir="auto">Acompaño a Vuestra Señoría las relaciones originales que han remitido a este tribunal los facultativos Don Roque Aguirre y Urreta, Don Juan Manuel Vargas, y Don Luis Agustín Rodríguez encargados de propagar la verdadera vacuna. Por su contexto verá Vuestra Señoría que el líquido remitido de la capital de Lima y del Virreinato de Buenos Aires no surtió en esta ciudad el más ligero efecto: pues habiéndose hecho con él la operación en varias criaturas que no habían sufrido la viruela natural, a ninguna sobrevino en el debido tiempo el grano vaccino, ni los síntomas que necesariamente deben precederlo y acompañarlo. Carecería sin duda hasta el día de hoy la humanidad de este beneficio, si el esmero y vigilancia con que Vuestra Señoría se interesa para prodigarle sus auxilios y socorros, no le hubiera proporcionado con la mayor brevedad el líquido vaccino haciéndolo traer desde la Villa de Puno con las precauciones y cuidado que exige un negocio tan interesante, y con el celo que acostumbra en todos los asuntos a que está obligado por su distinguido empleo = Para experimentar los efectos de este precioso tesoro mandó Vuestra Señoría concurriese con todos los facultativos aprobados de esta ciudad en la casa Intendencia, llevando cada uno de nosotros las criaturas que se nos proporcionasen para ponerles el fluido. En efecto así lo verificamos concurriendo todos, como igualmente el ilustre Cabildo de esta ciudad en la sala de gobierno el día doce de marzo del presente año, y a presencia de Vuestra Señoría y demás señores se puso el fluido en diez y siete individuos de diferentes edades: siendo de notar que para proceder con toda circunspección, hice vacunarlos a todos, haciéndoles en ambos brazos varias incisiones; pero con la diferencia de que en uno se les ponía el líquido traído de Puno, y en otro el que había llegado de Buenos Aires para conocer de este modo cual se hallaba con su entera virtud, o cual se hallaba desvirtuado = En efecto, de los diez y siete individuos vacunados en el referido día, solamente María Jacinta Rivera hija legítima de Don Tadeo Rivera experimentó los efectos felices de la verdadera vacuna: pues habiéndole hecho por mi mano dos incisiones en cada brazo con la lanceta humedecida con el líquido que Vuestra Señoría hizo traer de Puno, a los seis días de vacunada, le apareció un grano pequeño, de color rojo y resplandeciente en el mismo sitio de las picaduras, acompañado de estornudos, asperezas, sobresaltos, y ligera fiebre. Desde ese día tomó aumento dicho grano formando elevación en su circunferencia, la que ya se manifestaba con un círculo rojo. A los nueve días se formó la areola, permaneciendo en medio de ella el grano vaccino deprimido en su centro y lleno de un líquido cristalino y transparente que picado por varias partes con la lanceta, salía muy poco a poco por cada picadura. Este líquido extraído en el noveno día ha sido suficiente para propagarlo como ha sucedido hasta el presente en noventa y tres individuos, de los cuales, cuarenta y seis han sido vacunados por el profesor cirujano médico Don Roque Aguirre y Urreta, veinte y dos por Don Juan Manuel Vargas cirujano titular de este hospital de San Juan de Dios, y los veinte y cinco restantes por el cirujano latino Don Luis Agustín Rodríguez. = Por las relaciones de los tres facultativos referidos, y por la inspección atenta que personalmente [1392v] he hecho en la mayor parte de los vacunados en los días necesarios, se conoce el feliz éxito de la vacuna, sus progresos, y haberse observado en todos los vacunados los mismos síntomas en los días respectivos, de suerte que ya es fuera de duda hallarse propagada la verdadera vacuna en esta ciudad. = Para su conservación en lo sucesivo tanto en esta ciudad como en toda la provincia de este gobierno la sabia discreción y penetración de Vuestra Señoría proporcionará los medios y arbitrios que le parezcan más oportunos  = Dios guarde a Vuestra Señoría muchos años. Arequipa y mayo seis de mil ochocientos seis = José Antonio Zoldi y Rosas Teniente de Protomédico = Señor gobernador Intendente Y vicepatrón Real Don Bartolomé María de Salamanca ==</p></div></div><div id="35af3b61-2379-8060-a10d-dff122c8cfba" class="column-list" data-notion-column-list="" dir="auto"><div id="35af3b61-2379-808b-9b3c-f95266115b56" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35af3b61-2379-80a3-b82d-dcc75dbeb8bd" class="" dir="auto">Decreto</p></div><div id="35af3b61-2379-8087-9851-eb29115b75d1" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35af3b61-2379-8070-ae4c-cae7ce54f096" class="" dir="auto">Arequipa mayo seis de mil ochocientos seis = A sus antecedentes: y sacándose testimonio de lo necesario, dese cuenta a Su Majestad, y al Excelentísimo Señor Virrey del Reino, del feliz logro de la vacuna que se ha anticipado en esta ciudad: y para tomarse las demás providencias que convengan, tráigase este expediente al despacho, pasado que sea el de los correos = Salamanca = Juan Manuel de Bracamonte. </p></div></div><p id="35af3b61-2379-8087-b22d-e27fd3c35aa8" class="" dir="auto">Corresponde con sus originales que quedan en la secretaría de gobierno Intendencia de esta provincia a que me refiero. Y en virtud de lo mandado doy el presente en la muy noble y leal ciudad de Arequipa a siete días del mes de mayo de mil ochocientos y seis años =</p><p id="35af3b61-2379-806f-ad92-ce1817d92620" class="" dir="auto">
+</p><p id="35af3b61-2379-8084-90bb-c9713d01d2f9" class="" dir="auto">En testimonio [rúbrica] de verdad</p><p id="35af3b61-2379-8042-8599-c50d3ee4ce3b" class="" dir="auto">
+</p><div id="35af3b61-2379-80f2-ad83-f3143d1ecd06" class="column-list" data-notion-column-list="" dir="auto"><div id="35af3b61-2379-805a-88a1-fb40ec3aafc5" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35af3b61-2379-80db-9a36-effba226fb75" class="" dir="auto">De oficio</p></div><div id="35af3b61-2379-800f-ae70-de4467acce63" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35af3b61-2379-80db-94e7-fc44ac47bbc3" class="" dir="auto">Juan Manuel de Bracamonte.</p><p id="35af3b61-2379-80dd-8955-c2c7f283db05" class="" dir="auto">Escribano de Su Majestad público y de bienes de difuntos</p></div></div><p id="35af3b61-2379-80b2-a14b-ff59bdcf620f" class="" dir="auto">Los infrascriptos escribanos del Rey Excelentísimo Señor damos fe, y verdadero testimonio de que Don Juan Manuel de Bracamonte, por quien aparece signado, y firmado el testimonio que antecede es tal escribano de Su Majestad, público, y de bienes de difuntos como se titula, y nombra, fiel, legal, y de toda confianza, y que actualmente usa, y ejerce su oficio con [1393] cumplida legalidad, por lo cual, a todos sus semejantes, y demás actuaciones que ante él han pasado, y pasan se la ha dado, y da entera fe, y crédito en juicio, fuera de él. Y para que conste damos la presente en la más noble, y muy leal ciudad de Arequipa a nueve días del mes de mayo de mil ochocientos y seis años.</p><p id="35af3b61-2379-80d7-a072-e515dd5f9704" class="" dir="auto">
+</p><div id="35af3b61-2379-8095-8486-f015a6025efb" class="column-list" data-notion-column-list="" dir="auto"><div id="35af3b61-2379-80b9-9613-d13258465aa0" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35af3b61-2379-807e-bc01-dd661c6f0fa7" class="" dir="auto">En testimonio de verdad</p><p id="35af3b61-2379-8096-8d0e-c179be26b843" class="" dir="auto">Rafel Hurtado [rúbrica]</p></div><div id="35af3b61-2379-80f6-b198-dcbe10b54cd0" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35af3b61-2379-80af-8071-cebd43b6ad52" class="" dir="auto">En testimonio [rúbrica] de verdad</p><p id="35af3b61-2379-800d-8e5a-e20334671617" class="" dir="auto">José Manuel de Ersilla</p><p id="35af3b61-2379-806a-9612-f7dd4b75b16b" class="" dir="auto">Escribano de Su Majestad</p></div></div><p id="35af3b61-2379-801f-ac15-ccaf8ae69098" class="" dir="auto">
+</p><p id="35af3b61-2379-8010-9f09-cfeda58c5323" class="" dir="auto">En testimonio [rúbrica] de verdad</p><p id="35af3b61-2379-8039-8388-e2d0cd19e406" class="" dir="auto">José Nazareno de Rivera</p><p id="35af3b61-2379-8080-bd8a-de44c8224bdb" class="" dir="auto">Escribano de Su Majestad</p><p id="35bf3b61-2379-80f6-8c1e-e5ef59a764ee" class="" dir="auto">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

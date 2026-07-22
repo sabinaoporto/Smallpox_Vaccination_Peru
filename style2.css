@@ -39,8 +39,8 @@ nav 	{position: sticky;
 		margin: 0px;
 		padding-top: 25px;
 		padding-bottom: 25px;
-		padding-left: 60px;
-		padding-right: 60px;
+		padding-left: 15%;
+		padding-right: 15%;
 		display: flex;
 		justify-content: space-between;
 		font-size: 20px;
@@ -82,6 +82,8 @@ h1		{text-align: center;
 		padding: 15px;
 		border-top: 3px indigo double;
 		border-bottom: 3px indigo double;
+		margin-left: 10%;
+		margin-right: 10%;
 		}
 
 h2		{text-align: center;
@@ -103,11 +105,11 @@ article	{text-align: justify;
 				gap: 10px;
 				margin-top: 20px;
 				margin-bottom: 20px;
-				margin-left: 20px;
-				margin-right: 20x;
+				padding-left: 10%;
+				padding-right: 10%;
 				}
 
-.side_img 	{max-width: 40%;
+.side_img 	{max-width: 50%;
 			align-self: flex-start;
 			}
 
@@ -115,7 +117,7 @@ article	{text-align: justify;
 		gap: 10px;
 		width: 100%;
 		margin-bottom: 10px;
-		#border: 1px solid blue;
+		/*border: 1px solid blue;*/
 		padding-left: 10%;
 		padding-right: 10%;
 		}
@@ -124,7 +126,7 @@ article	{text-align: justify;
 		gap: 10px;
 		width: 100%;
 		margin-bottom: 10px;
-		#border: 1px solid green;
+		/*border: 1px solid green;*/
 		padding-left: 20%;
 		padding-right: 20%;
 		}
@@ -134,11 +136,14 @@ article	{text-align: justify;
 				#border: 1px solid red;
 				}
 
-.text article figure img	{width: 80%;
-							display: block;
-							margin: auto;
-							margin-bottom: 10px;
-							}
+/*You can set the margin property to auto to horizontally center the element within its container.*/
+
+.text article figure 		{display: block;
+									/*border: 1px solid red;*/
+									text-align: center;
+									}
+
+.text article figure img {margin-bottom: 10px;}
 
 #adults	{padding-top: 0px;
 		background-color: #fafdff;
@@ -169,9 +174,24 @@ article	{text-align: justify;
 				}
 
 .notion {display: flex;
+			padding-left: 10%;
+			padding-right: 10%;
 		}
 
 .notion article {width: 40%;}
+
+.goback	{background-color: aliceblue;
+			margin-left: 10%;
+			margin-right: 10%;
+			padding: 3%;
+			font-size: 16px;
+			border: 3px #c7e3ff groove;
+			text-align: center;
+			color: black;
+			}
+
+.button {text-decoration: none;
+			color: black;}
 
 iframe	{width: 70%;
 		height: 490px;

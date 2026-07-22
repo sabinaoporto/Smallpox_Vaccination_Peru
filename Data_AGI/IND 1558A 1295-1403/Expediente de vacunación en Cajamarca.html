@@ -1,0 +1,768 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Expediente de vacunación en Cajamarca</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="210f3b61-2379-809e-a685-f78b6a8d3332" class="page sans"><header><h1 class="page-title" dir="auto">Expediente de vacunación en Cajamarca</h1><p class="page-description" dir="auto"></p><table class="properties"><tbody><tr class="property-row property-row-status"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/burst_gray.svg" style="width:14px;height:14px;display:block"/></span>Estado</th><td><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Transcrito</span></td></tr><tr class="property-row property-row-date"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/calendar_gray.svg" style="width:14px;height:14px;display:block"/></span>Fecha</th><td><time datetime="1806-09-08">September 8, 1806</time></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/hashtag_gray.svg" style="width:14px;height:14px;display:block"/></span>Folio</th><td>1397 - 1401</td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/run_gray.svg" style="width:14px;height:14px;display:block"/></span>From (remitente)</th><td><span class="selected-value select-value-color-pink">Joaquin Miguel de Arnaco</span></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/map-pin-alternate_gray.svg" style="width:14px;height:14px;display:block"/></span>Place</th><td><span class="selected-value select-value-color-pink">Cajamarca</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/person-masculine_gray.svg" style="width:14px;height:14px;display:block"/></span>To (destinatario)</th><td></td></tr></tbody></table></header><div class="page-body"><p id="35df3b61-2379-80a9-b506-d969238b702f" class="" dir="auto">[1397]</p><div id="35df3b61-2379-8059-8eba-e67203fc5075" class="column-list" data-notion-column-list="" dir="auto"><div id="35df3b61-2379-8073-b2f7-f088e7c74bf1" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35df3b61-2379-8016-b536-e0d393987a06" class="" dir="auto">Oficio del Señor gobernador Intendente</p><p id="35df3b61-2379-809b-b2dd-c9f24aa88113" class="" dir="auto">De oficio</p></div><div id="35df3b61-2379-80dc-8ed4-ddbfd4437c0a" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35df3b61-2379-80dc-9fa7-de3f64425035" class="" dir="auto">Habiendo llegado a esta ciudad el Doctor Don José Malespina conduciendo los niños con el fin de que vacunados sirvan para el efecto de que se propague en todos aquellos individuos que quieran aprovecharse de este laudable beneficio, y porque estos no se demorasen con el fin de cumplir en esta parte con las piadosas intenciones del soberano como único objeto principal de su Real beneficencia; regresan ya vacunados por mi mano, y especialmente le re encargo que procure Vuestra Merced en su arribo, que este fluido se conserve fresco, para no exponerlo a que se malogre, y de este modo pueda comunicarse a todos de brazo, a brazo, y siendo ya regular que al recibo de esta, se halle ya en ese partido el señor Director de la Real Expedición Filantrópica, deberá Vuestra Merced esperar que a esfuerzos de su celo, se corte, y precava el contagio que expresa en su oficio de primero de la corriente = Dios guarde a Vuestra Merced muchos años Trujillo, y febrero diez de mil ochocientos seis = Felipe del Risco = Señor subdelegado de Cajamarca Don Joaquín Miguel de Arnaco = Señor subdelegado =</p></div></div><div id="35ef3b61-2379-8002-a604-d1783c259389" class="column-list" data-notion-column-list="" dir="auto"><div id="35ef3b61-2379-809f-9186-ec8dbc332676" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ef3b61-2379-8092-a8d3-f64b0fee0e4b" class="" dir="auto">Oficio de Don José Malespina</p></div><div id="35ef3b61-2379-8017-b1be-ffa9d5a30d5d" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ef3b61-2379-80d2-8ec2-f35b29651ad6" class="" dir="auto">Ahora que son las once del día acabo de llegar de la capital de Trujillo conduciendo los tres muchachos vacunados que con este objeto me entregó Vuestra Merced, y a cuya operación y a sus expensas se sirvió comisionarme. = El fluido está ya en sazón, y solo resta me prevenga Vuestra Merced el lugar destinado para vacunar, pues el público espera con impaciencia este admirable socorro para redimirse del contagio de la viruela natural que arrasa sus familias = Nuestro Señor guarde a Vuestra Merced muchos años. Cajamarca febrero catorce de mil ochocientos seis = José Malespina = Señor subdelegado Juez Real de este partido Don Joaquín Miguel de Arnaco =</p></div></div><div id="35ef3b61-2379-8083-a99e-ee1cc1173639" class="column-list" data-notion-column-list="" dir="auto"><div id="35ef3b61-2379-8090-b8e1-e0fd685c6b21" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ef3b61-2379-804c-801d-ccbaa7014aae" class="" dir="auto">Decreto</p></div><div id="35ef3b61-2379-807c-b178-d2a8835f10d1" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ef3b61-2379-8078-bf32-e5054faa58ad" class="" dir="auto">Cajamarca, y febrero catorce de mil ochocientos seis = Deposítense en el Hospital de Belén, y fíjense carteles anunciando al [1397v] público la feliz llegada de la vacuna; y que deben concurrir a dicho hospital a recibir el fluido: agréguese copia certificada de los indicados carteles, y fecho tráigase para proveer lo más que convenga = Arnaco =</p></div></div><div id="35ef3b61-2379-8034-a736-d3de2fb18f82" class="column-list" data-notion-column-list="" dir="auto"><div id="35ef3b61-2379-808d-92fb-ef0ef05775b0" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ef3b61-2379-80a1-8ef8-d53badb021a0" class="" dir="auto">Copia del cartel</p></div><div id="35ef3b61-2379-80db-b078-c5c9254dbac4" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ef3b61-2379-80d4-a2a2-e806d7c2afe5" class="" dir="auto">La terrible peste de viruelas que oprime y devora a este vecindario ha agitado mis cuidados y desvelos para solicitar los medios de su conservación y salud; a cuyo fin luego de que supe la llegada de la vacuna a la capital de Trujillo, he dirigido mis oficios al Señor Intendente despachando a Don José Malaespina [sic] con cuatro muchachos, para que vacunados condujesen el fluido en toda su actividad. A las once del día de ayer llegó felizmente este comisionado, y dichos cuatro muchachos se hayan depositados en el Hospital de los Padres Betlemitas, para que las personas de todas clases, y edades concurran a recibir el más precioso preservativo de la viruela, y para lo cual se tomarán las más eficaces providencias. La Europa entera ha experimentado los más admirables efectos de este incomparable descubrimiento, y nosotros en tan lamentable circunstancias debemos mirarlos como un particular beneficio de la providencia. Finalmente en nombre del Rey, y de la humanidad exhorto, y amonesto a todos los padres de familia, y demás estancos, y habitantes de mi jurisdicción concurran sin pérdida de tiempo al indicado hospital para redimir a las personas que [xxx] no están contagiadas de los fatales daños que está causando dicha peste. Cajamarca, y febrero catorce de mil ochocientos seis = Joaquín Miguel de Arnaco = Es copia fiel de su original al que me remito. Cajamarca, y febrero catorce de mil ochocientos seis de que certifico = Joaquín Miguel de Arnaco === </p></div></div><div id="35ef3b61-2379-80bc-8774-c2eb24b2910c" class="column-list" data-notion-column-list="" dir="auto"><div id="35ef3b61-2379-8013-b739-d2b110d6c5c3" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ef3b61-2379-80dd-9791-cdd499d65789" class="" dir="auto">Oficio del venerable cura de Ichocán, y alcaldes ordinarios de indios.</p><p id="35ff3b61-2379-80fc-8d4a-e567f69c83dc" class="" dir="auto">
+</p></div><div id="35ef3b61-2379-80ea-8e85-c013fb1e88df" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ef3b61-2379-8048-8a01-d1a6a7509e8e" class="" dir="auto">Muy señor mío con fecha quince de enero se recibió en este pueblo [xxx xxx] de Vuestra Merced a fin de que todos los que no hubiesen sufrido el pernicioso mal de viruelas, bajasen a esa villa a embacunarse, [sic] haciéndonos presente haber Vuestra Merced mandado varios de esa su capital a la ciudad de Trujillo, a fin de que estos trajesen consigo el pus, para de este modo evitar el grave contagio que se estaba experimentando en todos sus pueblos, por lo que reconociendo, y penetrados del amor que Vuestra Merced muestra a todo su gobierno, damos a [1938] Vuestra Merced las gracias por nuestra parte y nombre de todo este vecindario = Dios guarde a Vuestra Merced muchos años. Ichocán y marzo siete de mil ochocientos seis = José Higinio de Madalengoitia cura de Ichocán = Pedro García alcalde de primer voto = Mariano Alvarado alcalde de segundo voto = Cajamarca diez de marzo de mil ochocientos seis =</p></div></div><div id="35ff3b61-2379-804d-91de-c24b9e535677" class="column-list" data-notion-column-list="" dir="auto"><div id="35ff3b61-2379-8038-8839-e54fc88c9ab6" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ff3b61-2379-80dc-bced-ef2b65ea4c62" class="" dir="auto">Decreto</p></div><div id="35ff3b61-2379-8083-9656-fcc536e09123" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ff3b61-2379-80d3-8b6b-ff48300487ec" class="" dir="auto">A sus antecedentes = Arnaco =</p></div></div><div id="35ff3b61-2379-8006-9eb0-fd7fb726678b" class="column-list" data-notion-column-list="" dir="auto"><div id="35ff3b61-2379-806f-9aac-f0a47d8d6993" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ff3b61-2379-80f3-86aa-fa2ea687855f" class="" dir="auto">Oficio del Vice Director Don José Salvany</p></div><div id="35ff3b61-2379-8073-a0f8-c32c28cd4d1a" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ff3b61-2379-8058-b65b-f4192c1bc3fd" class="" dir="auto">Al objeto de llenar en un todo el deseo de Vuestra Merced, igual al que acompaña a Nuestro Soberano, y Excelentísimo Señor Virrey del reino, acerca de la propagación de la vacuna; y a fin de entusiasmar más a este pueblo, al que miro con la mayor satisfacción despreocupado de aquellas trabas que suelen oponerse por los que se tienen de sabios a cualquier útil invento, debido enteramente a la eficacia, y celo de Vuestra Merced, prelado eclesiástico, y de algunos principales vecinos: he tenido a bien el que se avise al público, que si alguno de los que hasta ahora han sido vacunados tuviese la menor novedad se sirva avisarme, para que pasando inmediatamente solo, o acompañado de los aplicados profesores de esta, gratuitamente a visitarlo, no haya motivo de calumniar al más apreciable específico; haciendo igualmente lo mismo cuantos padecieren el maligno contagio de la viruela natural, por no haber aún experimentado los dulces efectos de la vacuna = Si esta mi determinación es del agrado de Vuestra Merced estimaré que la manifieste al citado público; espero también de su favor, que avisará a los dichos facultativos que no verifiquen vacunación alguna sin mi anuencia, por no parecerme regular durante mi mansión en esta = Dios guarde a Vuestra Merced muchos años. Casa de vacuna marzo quince de mil ochocientos seis = José Salvany = Señor Don Joaquín Miguel de Arnaco Juez Real subdelegado de este partido =</p></div></div><div id="35ff3b61-2379-8072-9071-c54a1f16473d" class="column-list" data-notion-column-list="" dir="auto"><div id="35ff3b61-2379-80d4-a468-dcd2e263e114" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ff3b61-2379-8053-b614-eb709ea0ad61" class="" dir="auto">Decreto</p></div><div id="35ff3b61-2379-8073-97fb-de122de9468d" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ff3b61-2379-80cd-bfc9-c2962de037f2" class="" dir="auto">Cajamarca, y marzo diez y seis de mil ochocientos seis = Como se solicita, y para que tenga efecto en todas sus partes fíjense carteles con el extracto de este oficio en las esquinas acostumbradas; y fecho a los de su materia = Arnaco = fecha [1398v] ut supra =</p></div></div><div id="35ff3b61-2379-806e-a215-f357f34719f9" class="column-list" data-notion-column-list="" dir="auto"><div id="35ff3b61-2379-80b1-8010-d933fe1669e4" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ff3b61-2379-803e-b3aa-d49039c0c9c4" class="" dir="auto">Diligencia</p></div><div id="35ff3b61-2379-8042-ba0f-c5ece5968f3e" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ff3b61-2379-80ac-98be-c7f0f36644a6" class="" dir="auto">Se fijaron los carteles que se mandan en la providencia que antecede = Arnaco =</p></div></div><div id="35ff3b61-2379-80e4-9129-f00683cf8460" class="column-list" data-notion-column-list="" dir="auto"><div id="35ff3b61-2379-8022-b893-f1e07d71e011" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ff3b61-2379-80d0-94d3-c32f6139bd8d" class="" dir="auto">Oficio del Señor Juez Real subdelegado</p></div><div id="35ff3b61-2379-804a-9b6c-e94e0c0c0a91" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ff3b61-2379-8022-8e89-d780633629b9" class="" dir="auto">Las repetidas pestes de viruela natural, que asaltan de tiempo, en tiempo a esta población, y su partido, avivan mis cuidados para procurar por todos medios la conservación del prodigioso específico de la vacuna, que es la principal idea con que el paternal amor del Rey ha dirigido a sus más remotos dominios, y a costa de crecidas sumas, la Expedición Filantrópica del mando de Vuestra Merced; en este supuesto estimaré se sirva informarme a continuación de los medios más obvios, y oportunos para el intento y quien es la persona más apta, entre los facultativos, que ha observado en esta villa, para que evacue debidamente la importancia de este encargo = Dios guarde a Vuestra Merced muchos años. Cajamarca, y marzo veinte y cuatro de mil ochocientos seis = Joaquín Miguel de Arnaco = Señor Vice Director de la Expedición Filantrópica =</p></div></div><div id="35ff3b61-2379-8005-ac19-f4ea66e53c68" class="column-list" data-notion-column-list="" dir="auto"><div id="35ff3b61-2379-8077-8954-e54e0a758ac3" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ff3b61-2379-80dc-9482-d0e819a294d0" class="" dir="auto">Contestación del Vice Director Don José Salvany</p></div><div id="35ff3b61-2379-803d-ab84-f4f49fa38251" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ff3b61-2379-8033-a086-d172edcf9857" class="" dir="auto">Señor subdelegado Juez Real = En consecuencia del oficio que antecede debo informar a Vuestra Merced, que para que tenga efecto el ardiente anhelo, con que procura la propagación de la vacuna y su conservación se debe adoptar el método siguiente = Primero = Se pasará oficio al señor vicario de esta villa para que circule la orden conveniente a todos los curas de su jurisdicción a fin de que manden brevemente una relación de las personas de sus doctrinas que no hayan padecido la viruela natural y aún se hallen sin vacunar, cuyas nóminas deben dirigir a dicho vicario, para que este las pase al señor Juez Real = Segundo = Será de obligación de los curas del partido, pasar todos los meses al Juez Real la relación de los nacidos con distinción de sus sexos, clases, y edades para que se providencie su vacunación = Tercero = diez días se verificará dicha vacunación en la casa de Cabildo con presencia del Juez Real = Cuarto = No se permitirá por ningún motivo vacunaciones particulares sin permiso del Juez Real, pues estas para que no sean infructuosas deben verificarse por una mano diestra, y acostumbrada a herir únicamente las dos láminas del epidermis con conocimiento [1399] práctico, y positivo de la sazón del grano que presta el fluido. De otro modo serían muchas las personas que se creerían libres del contagio sin estarlo, y se ignoraría el número fijo de los vacunados cuya nómina se debe llevar exactamente con sus anotaciones para ocurrir al remedio de todos = Quinto = Se pasarán circulares para que con concepto a las nóminas, que remitan los curas concurran precisamente el día que se les señale todas las personas que no estén vacunadas a recibir el específico como solo disten cuatro leguas de esta villa. Las que residan a más distancia serán verificadas por medio de un sujeto inteligente, que para el caso comisionará el Juez Real = Sexto = Se llevará un libro donde se asienten todas las personas vacunadas, y de este modo se sabrá las que estén con el fluido en sazón para transmitirlo a otras = Séptimo = Este libro debe tener un margen de tres dedos para anotar todo raro acaecimiento, y cuanto contribuya a la historia de la vacuna, en cuyo caso se avisará de oficio a la metrópoli, para que se ponga en los papeles públicos lo que ocurra, y llegue fácilmente a noticia de los sabios a la mía, y demás facultativos, pero para esto se debe proceder con una crítica bien circunspecta, pues muchas veces por falta de observación, o de inteligencia se cree un fenómeno donde no lo hay, y lo que solo es un error, o impericia del facultativo = Octavo = Los granos de la perfecta vacuna son bien conocidos, y el estado de sazón para la extracción del fluido no puede equivocarse según las señales exteriores que los caracteriza: en este supuesto se pondrá el mayor cuidado en elegir siempre los más perfectos, para obviar toda anomalía, o falsa vacuna, en cuyo caso no quedan exentos los que la reciben de la viruela natural = Nono = Así mismo se pondrá el mayor esmero, y vigilancia, en que luego que reciban el fluido no se limpien la incisión, ni se la froten, o laven, por que esto impide el desarrollo de la vacuna, pues perdiendo el fluido su acción estimulante, no puede ejercer sus funciones = Décimo = [1399v] Se pondrá todo el cuidado posible en averiguar las personas en quienes por las causas antedichas, u otras no haya prendido perfectamente la vacuna, para volver a repetirles la operación. A este intento será útil, y aun necesario pasar oficio al señor vicario, para que avise a los curas exhorten a sus respectivos pueblos persuadiéndolos la importancia, e interés personal de la vacuna, y que avisen todas las personas en quienes no haya prendido haciéndoles entender que no es la picadura sino el grano que a ella sigue el que obra el efecto = Undécimo = Para que nunca falte fluido se conservará entre los que vayan naciendo distribuyendo las operaciones a proporción de las ocurrencias; y cuando se vea que va a pasarse el período de la vacuna, sin haber sujeto que esté en aptitud de recibirla, se conservará en terneras, cuyas transmisiones me ha visto ejecutar el padre Fray Rafael de Belén, y demás facultativos de esta villa = Estos son los puntos más breves, metódicos, y sencillos a que se puede reducir esta instrucción, que bien observada surtirá todo el efecto que se desea, y es conforme con las piadosas intenciones del Rey y desvelos de Vuestra Merced en el asunto = La persona más apta y a propósito para el desempeño de tan interesante materia es el reverendo padre Fray Rafael de Belén, por su pericia, por sus conocimientos, y sobre todo por la constante caridad, y dedicación que le he observado. Él fue quien vacunó los trecientos, y más individuos que por los esfuerzos, y actividad de Vuestra Merced; en las tristes circunstancias de la terrible peste que los devoraba lograron de este beneficio antes de mi ingreso, y él por razón de su instituto, y demás circunstancias que le adornar es en mi concepto el único capaz de llenar estos deberes = Tengo evacuado el informe que se sirve Vuestra Merced pedirme en el oficio que antecede cuyo objeto manifiesta todo el lleno de sus sentimientos por la humanidad y bien del estado. Yo doy a Vuestra Merced las gracias a nombre de la Real Expedición, no tan solo por esta dedicación verdaderamente filantrópica, sino también por la constancia, y esmero con que ha protegido, y fomentado la vacuna, prestando [1400] activamente cuantos auxilios he necesitado, de que tengo dado parte en obsequio del honor, y justicia, al Excelentísimo Señor Virrey del reino; que es cuanto debo decir a Vuestra Merced para su satisfacción. Cajamarca, y abril dos de mil ochocientos seis = José Salvany </p></div></div><div id="35ff3b61-2379-8050-b31f-eb83a2345ff0" class="column-list" data-notion-column-list="" dir="auto"><div id="35ff3b61-2379-80d0-8fad-eca6c1af5866" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ff3b61-2379-8076-866a-ceb9a1461a7a" class="" dir="auto">Decreto</p></div><div id="35ff3b61-2379-80fd-8652-c627efde370d" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ff3b61-2379-806b-98ef-fca981e254d0" class="" dir="auto">Cajamarca, y abril tres de mil ochocientos seis = Pásese oficio al reverendo padre prefecto Fray Rafael de Belén con copia de este informe, suplicándole que en atención a lo expuesto por el señor Vice Director tenga a bien hacerse cargo de la conservación de la vacuna contando con cuantos auxilios estén de parte de este juzgado, que es quien agita, y fomenta la grave importancia de este asunto = Arnaco =</p></div></div><div id="35ff3b61-2379-80dc-b7f0-e6f9ebec8e2f" class="column-list" data-notion-column-list="" dir="auto"><div id="35ff3b61-2379-8028-a294-d1349f27fb1d" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ff3b61-2379-8073-8d85-ec59edcc3874" class="" dir="auto">Constancia de haber pasado oficio al padre Fray Rafael</p></div><div id="35ff3b61-2379-80cf-87a4-d3345ecdccdb" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ff3b61-2379-808c-a736-d4388ccbacf0" class="" dir="auto">Nota = Con esta fecha cuatro del presente se pasó el oficio que se manda al padre prefecto de Belén = Arnaco =</p></div></div><div id="35ff3b61-2379-801c-ad7d-db087e28c034" class="column-list" data-notion-column-list="" dir="auto"><div id="35ff3b61-2379-8011-b4d6-d46d88266536" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ff3b61-2379-8015-a21b-d07465a57b5f" class="" dir="auto">Respuesta</p></div><div id="35ff3b61-2379-8038-a9b2-f883ba329f6d" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ff3b61-2379-80ab-9b64-e550201c20bd" class="" dir="auto">He visto con cuidado la instrucción dada por el señor Vice Director para la conservación del fluido de la vacuna, que se sirvió Vuestra Merced pasarme con oficio de ayer, el cual se dirige a que yo me haga cargo de esta importante obra en consecuencia del honor que se me hace en dicho informe = Yo estoy pronto a emplear mis cortos conocimientos, y toda la actividad de que sea capaz en esta piadosa, e interesante ocupación; con ella también cumpliré con las obligaciones de mi instituto, pero no pudiendo prestar francamente mi voluntad por estar sujeta a la santa obediencia de mi reverendísimo general, será preciso que se exija a su reverendísima el correspondiente permiso, quien no dudo lo franqueará en atención al interés que resulta a la humanidad, que es el que me mueve a aceptar por ahora dicho encargo, e interín se consulta a mi referido reverendísimo padre general a cuya voluntad estoy sujeto y no me es lícito separarme = Dios guarde a Vuestra Merced muchos años. Convento betlemita de Cajamarca, y abril cinco de mil ochocientos seis = Fray Rafael de Belén = Señor subdelegado Juez Real Don Joaquín Miguel de Arnaco =</p></div></div><div id="35ff3b61-2379-803f-9eeb-f0476f054e94" class="column-list" data-notion-column-list="" dir="auto"><div id="35ff3b61-2379-80c3-b2c1-ea8680341958" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ff3b61-2379-80ac-8c0b-c77bef2de271" class="" dir="auto">Auto</p></div><div id="35ff3b61-2379-8068-ad89-d9e1cde8fb55" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ff3b61-2379-8066-b97b-dbd94b885e66" class="" dir="auto">Cajamarca, y abril seis de mil ochocientos seis = A sus antecedentes: pásese oficio [1400v] al señor vicario de esta villa con inserción de los capítulos primero, segundo, y diez de la instrucción dada por el Vice Director de la vacuna que corre de fojas, para que a la mayor brevedad haga que los curas párrocos de la jurisdicción formen las relaciones que en ella se piden: y en atención a lo expuesto por el padre prefecto de Belén, sáquese testimonio de este expediente, y dese cuenta al Excelentísimo Señor Virrey, para que si su superioridad lo tuviese a bien disponga que el reverendísimo general de los betlemitas conceda el permiso necesario al expresado prefecto a fin de que se haga cargo de la vacuna, con el feliz suceso que bajo su dirección se está experimentando = Arnaco =</p></div></div><div id="35ff3b61-2379-80ff-84ed-e2d88b8e1cd4" class="column-list" data-notion-column-list="" dir="auto"><div id="35ff3b61-2379-8046-ba60-e2a8f406480c" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ff3b61-2379-808f-86f9-cb3a394c8549" class="" dir="auto">Constancia de haber pasado los oficios</p></div><div id="35ff3b61-2379-80a0-ba7d-d418234f23dc" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ff3b61-2379-806c-b718-e9aa640be3cb" class="" dir="auto">Nota = Con fecha diez del corriente se pasaron los oficios contenidos en la providencia que antecede = Arnaco =</p></div></div><div id="35ff3b61-2379-804c-ab80-eddc9a3acb67" class="column-list" data-notion-column-list="" dir="auto"><div id="35ff3b61-2379-805d-ab60-fb52b334e0aa" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ff3b61-2379-8011-8b60-ec4797a62772" class="" dir="auto">Oficio del Vice Director Don José Salvany</p></div><div id="35ff3b61-2379-8016-a60a-ef07d25c998c" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ff3b61-2379-80a3-9b95-d8fec0ef0b4d" class="" dir="auto">Efectuado en esta ciudad cuando he considerado necesario a la propagación de la vacuna, y a su perpetua conservación que es lo que más encarga nuestro soberano: he resuelto el inmediato lunes catorce continuar mi viaje para Trujillo, y lo pongo en noticia de Vuestra Merced a fin de que mande aprontarme dos muchachos que no hayan pasado viruelas; diez caballerías de carga, y cuatro de montar, las dos con sus correspondientes sillas, y las otras sin ellas = En atención de reinar en el pueblo de Contumazá según me han informado, la viruela natural, espero que mandará entregarme dos cholitos de los que se vacunaron el próximo pasado sábado cinco, para que a mi paso por el dicho pueblo pueda propagar el específico a cuantos no hubiesen pagado el feudo a tan maligno contagio; y en este caso necesito dos caballerías más de montar con sus correspondientes avíos = Repito a Vuestra Merced que sinceramente aprecio las debidas gracias, por los muchos favores que me ha dispensado durante mi mansión en esta, y deseo que me mande en todos tiempos preceptos de su agrado, para acreditar en la observancia de ellos lo obligado, y fino de mi voluntad = Dios guarde a Vuestra Merced muchos años. Cajamarca y abril once de mil ochocientos seis = José Salvany = Señor [1401] Miguel Arnaco subdelegado Juez Real de esta provincia etcétera =</p></div></div><div id="35ff3b61-2379-801a-9578-df9be0f6743d" class="column-list" data-notion-column-list="" dir="auto"><div id="35ff3b61-2379-8029-8cab-ef08769efe27" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ff3b61-2379-80d8-bc4a-ebbe21836953" class="" dir="auto">Decreto</p></div><div id="35ff3b61-2379-8093-a509-cd5c53dc959e" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ff3b61-2379-80c6-bce2-dc396db03b1e" class="" dir="auto">Cajamarca, y abril doce de mil ochocientos seis = El alcalde de naturales aprontará a la mayor brevedad los auxilios que pide el señor Vice Director de la vacuna para la continuación de su importante comisión, y poniendo a continuación la constancia de haberlo así ejecutado agréguese al expediente de la materia = Arnaco =</p></div></div><div id="35ff3b61-2379-803a-8f73-c3112dde7c42" class="column-list" data-notion-column-list="" dir="auto"><div id="35ff3b61-2379-8016-b702-d26f82d5396b" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ff3b61-2379-805d-8702-d16b0d6e70ff" class="" dir="auto">Obedecimiento</p></div><div id="35ff3b61-2379-808c-9ece-fa95a093cf53" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ff3b61-2379-8020-8535-e77d922a5d05" class="" dir="auto">Queda obedecido el decreto que antecede, y en su virtud prontos los bagajes y cholitos que pide el señor Vice Director. Cajamarca y abril trece de mil ochocientos seis =</p></div></div><div id="35ff3b61-2379-80a2-a457-defab62e2a17" class="column-list" data-notion-column-list="" dir="auto"><div id="35ff3b61-2379-807d-9ed3-c0749235658f" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ff3b61-2379-802f-a55e-dc512ce044d8" class="" dir="auto">Oficio del vicario de provincia</p></div><div id="35ff3b61-2379-8074-954e-c0a44930e0ef" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ff3b61-2379-8098-abc3-f5888f7cf16b" class="" dir="auto">Tengo recibido el oficio de Vuestra Merced con fecha catorce del pasado abril, en que me transcribe los capítulos primero, segundo, y diez de la instrucción que el caballero Vice Director de la Expedición Filantrópica dejó a Vuestra Merced para la conservación del fluido en que tanto interesa la humanidad: a este efecto tengo pasadas copias de dichos capítulos a los venerables curas de la comprehensión de esta vicaría, y quedo en practicar cuanto sea posible a fin de que por mi parte tenga todo su lleno la voluntad del soberano y mi obligación en obsequio de esta bella porción de sus vasallos = Dios guarde a Vuestra Merced muchos años. Cajamarca, y mayo dos de mil ochocientos seis = doctor Tadeo Celis = Señor Don Joaquín Miguel de Arnaco subdelegado Juez Real de Cajamarca</p></div></div><div id="35ff3b61-2379-8067-a9e4-fdfc72fbe66f" class="column-list" data-notion-column-list="" dir="auto"><div id="35ff3b61-2379-802e-bd1f-e4e65ea365b1" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ff3b61-2379-80b2-ae91-c493fbaedaa6" class="" dir="auto">Decreto</p></div><div id="35ff3b61-2379-80b8-8dc9-eafe0085b19d" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ff3b61-2379-80f3-9182-fea3a9b6c189" class="" dir="auto">Cajamarca y mayo dos de mil ochocientos seis = A los de su naturaleza = Arnaco =</p></div></div><div id="35ff3b61-2379-80b6-b264-d15717d37b86" class="column-list" data-notion-column-list="" dir="auto"><div id="35ff3b61-2379-80d4-b196-fa9496a475e5" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ff3b61-2379-80d2-a127-c0bf485d3936" class="" dir="auto">Oficio al prefecto</p></div><div id="35ff3b61-2379-8087-bd3e-f2940913f020" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ff3b61-2379-80c7-b369-d4c7c627c9e1" class="" dir="auto">Teniendo resuelto dar cuenta a Su Majestad de los progresos de la vacuna en este partido de mi mando, se servirá vuestra paternidad certificar a continuación, cuántas personas se han vacunado desde la salida del Vice Director de la Real Expedición Filantrópica, cuyo documento se debe agregar al expediente de su materia = Dios nuestro señor guarde a vuestra paternidad reverenda muchos años. Cajamarca y mayo treinta de mil ochocientos seis = Joaquín Miguel de Arnaco = Reverendo padre prefecto del Hospital de Belén Fray Rafael [1401v] de Belén =</p></div></div><div id="35ff3b61-2379-803a-9fc9-e2be6b0a2702" class="column-list" data-notion-column-list="" dir="auto"><div id="35ff3b61-2379-8040-ba87-f46480275545" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ff3b61-2379-80b8-95c3-c0d9952f90aa" class="" dir="auto">Certificación</p></div><div id="35ff3b61-2379-8052-985e-f7e3551ed98d" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ff3b61-2379-8040-91bf-dce3bfb6edf0" class="" dir="auto">Fray Rafael de Belén del mismo orden ex difinidor de provincia, ex prelado de Chachapoyas, ex presidente prefecto de este hospital, y actualmente encargado de la conservación de la vacuna, y de vacunar = Certifico en cuanto puedo debo, y ha lugar: que habiendo registrado prolijamente el libro de vacunaciones que corre a mi cargo resultan vacunadas desde once de mayo próximo pasado en que salió de aquí el señor Vice Director de la Real Expedición Filantrópica hasta la fecha ochocientas setenta, y una personas de todas edades y sexos según por menor consta desde desde fojas una hasta fojas once de dicho libro a que me remito. Así mismo certifico que siguen diariamente dichas vacunaciones, y que concurren de todas partes a recibir el fluido según los admirables esfuerzos, y activas providencias del señor subdelegado Juez Real y para que conste doy la presente en virtud del oficio que antecede en la dicha ciudad de Cajamarca a dos de junio de mil ochocientos seis años = </p></div></div><div id="35ff3b61-2379-803a-bc61-fc4a27820b38" class="column-list" data-notion-column-list="" dir="auto"><div id="35ff3b61-2379-807f-967b-c13dca08a083" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ff3b61-2379-80c0-a7a7-eb1c3f92c8e1" class="" dir="auto">Decreto</p></div><div id="35ff3b61-2379-803d-916f-ee52695c53ba" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="35ff3b61-2379-8009-addc-c47523fd1fa1" class="" dir="auto">Fray Rafael de Belén = Cajamarca, y junio dos de mil ochocientos seis = A sus antecedentes; y en virtud del júbilo con que recibió la vacuna todo este partido; pues llegó en las más lamentables circunstancias de la peste que padecía, sáquese testimonio del expediente por triplicado, y dese cuenta con él a Su Majestad por mano del Excelentísimo Señor Príncipe de la Paz = Arnaco =</p></div></div><p id="35ff3b61-2379-8076-9b24-c5b003c7efff" class="" dir="auto">Así consta y parece del expediente original que queda en esta subdelegación de mi cargo al que me refiero. Cajamarca septiembre ocho de mil ochocientos seis.</p><p id="35ff3b61-2379-805f-a8f2-e9ec6efc6a21" class="" dir="auto">Joaquín Miguel de Arnaco [con rúbrica]</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

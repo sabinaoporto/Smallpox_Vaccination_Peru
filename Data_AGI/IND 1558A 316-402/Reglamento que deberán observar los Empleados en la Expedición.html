@@ -1,0 +1,769 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Reglamento que deberán observar los Empleados en la Expedición</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="1c4f3b61-2379-80c0-894e-f5ce6bd267d7" class="page sans"><header><h1 class="page-title" dir="auto">Reglamento que deberán observar los Empleados en la Expedición</h1><p class="page-description" dir="auto"></p><table class="properties"><tbody><tr class="property-row property-row-date"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/calendar_gray.svg" style="width:14px;height:14px;display:block"/></span>Date</th><td><time datetime="1803-06-18">June 18, 1803</time></td></tr><tr class="property-row property-row-status"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/burst_gray.svg" style="width:14px;height:14px;display:block"/></span>Estado</th><td><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Transcrito</span></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/hashtag_gray.svg" style="width:14px;height:14px;display:block"/></span>Folio</th><td>361 - 365</td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/run_gray.svg" style="width:14px;height:14px;display:block"/></span>From (Remitente)</th><td><span class="selected-value select-value-color-pink">Francisco Xavier de Balmis</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/map-pin-alternate_gray.svg" style="width:14px;height:14px;display:block"/></span>Place</th><td><span class="selected-value select-value-color-green">Madrid</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/person-masculine_gray.svg" style="width:14px;height:14px;display:block"/></span>To (Destinatario)</th><td><span class="selected-value select-value-color-green">Josef Antonio Caballero - Ministro del Despacho de Gracia y Justicia de España e Indias</span></td></tr></tbody></table></header><div class="page-body"><p id="1c7f3b61-2379-80d2-93a4-e1bcc67477d5" class="" dir="auto">[361]</p><p id="1c7f3b61-2379-80cb-bf8d-ff3387085d4d" class="" dir="auto">Reglamento que deberán observar los empleados en la expedición destinada a conducir y propagar la inoculación de la verdadera vacuna, en los cuatro virreinatos de América, provincias de Yucatán, y Caracas, y en las Islas Antillas.</p><div id="31cf3b61-2379-8059-9460-f3ec1f065b51" class="column-list" data-notion-column-list="" dir="auto"><div id="31cf3b61-2379-8066-aa4a-e8d6accd0c5b" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1c7f3b61-2379-801a-b486-f5b1c4690938" class="" dir="auto">Artículo 1°</p></div><div id="31cf3b61-2379-8021-ad33-cdd945dea9cb" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1c7f3b61-2379-80bb-8c28-f7c32549f2d1" class="" dir="auto">Esta expedición constará de un Director, dos ayudantes, dos enfermeros; y un competente número de niños de 8 a 10 años que no hayan aún pasado las viruelas, para que progresivamente sean vacunados durante la navegación.</p></div></div><div id="31cf3b61-2379-80e2-951e-f8de0cea8f0f" class="column-list" data-notion-column-list="" dir="auto"><div id="31cf3b61-2379-8062-a944-d8575ad76a2e" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1c7f3b61-2379-8012-bebb-e525894d0453" class="" dir="auto">2°</p></div><div id="31cf3b61-2379-8001-a4d1-dc8085447636" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1c7f3b61-2379-8006-8a17-d5fd9712a08e" class="" dir="auto">El número de estos niños deberá ser, por lo menos, de 15 a 20; y respecto a que la expedición convendrá mejor que salga del puerto de la Coruña que de otro alguno, podrán sacarse de la Casa de Expósitos, o del hospicio de la ciudad de Santiago; porque, además de ahorrarse Su Majestad el transporte de ellos, si se condujesen de Madrid, tienen aquellos la ventaja de estar más acostumbrados a la vista del mar, y no les causará el horror que a estos, a quienes les es enteramente desconocida.</p></div></div><div id="31cf3b61-2379-80ed-840c-ff1628fafc9a" class="column-list" data-notion-column-list="" dir="auto"><div id="31cf3b61-2379-8018-b9a9-e5d7533376cf" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1c7f3b61-2379-8050-bc46-fd8a58ded269" class="" dir="auto">3°</p></div><div id="31cf3b61-2379-80a1-9810-d2c7aa6115e4" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1c7f3b61-2379-8074-abbe-cd519ae61296" class="" dir="auto">Cada niño deberá ir provisto de 6 camisas, un sombrero, tres pantalones, y tres chaquetas de lienzo; un pantalón, y chaqueta de paño, tres pañuelos para el cuello, y tres para las narices, y tres pares de zapatos, y un peine.</p></div></div><div id="31cf3b61-2379-8081-a6eb-df223b55e917" class="column-list" data-notion-column-list="" dir="auto"><div id="31cf3b61-2379-80f3-9fc5-f5dfa483a307" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1c7f3b61-2379-80fd-b2bb-d70d75bdc4d4" class="" dir="auto">[361v] 4º</p></div><div id="31cf3b61-2379-80ec-803e-fc32a7a48c55" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1c7f3b61-2379-8099-8ab4-ccfe2917e954" class="" dir="auto">El comandante del buque dará la mesa a todos los empleados de la expedición en el viaje de mar, y de cuenta de Vuestra Majestad</p></div></div><div id="31cf3b61-2379-8090-a210-ea6592b4bd02" class="column-list" data-notion-column-list="" dir="auto"><div id="31cf3b61-2379-8034-9f00-daa68b8c3b44" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1c7f3b61-2379-809c-8969-fb995a7fde91" class="" dir="auto">5°</p></div><div id="31cf3b61-2379-803e-b853-fe03ac5d0a34" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1c7f3b61-2379-8037-8f32-d139de32a165" class="" dir="auto">Como se han de hacer escalas, u arribadas en los puertos donde se ha de vacunar, será del cargo de los gobernadores disponer el alojamiento de todos los empleados en la expedición, y de que se les provea, y asista con los víveres necesarios.</p></div></div><div id="31cf3b61-2379-8073-bcb0-cb6c03463b54" class="column-list" data-notion-column-list="" dir="auto"><div id="31cf3b61-2379-807b-bf12-ca9030d58661" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1c7f3b61-2379-80d9-8237-c072a71842e9" class="" dir="auto">6°</p></div><div id="31cf3b61-2379-8098-8294-cc55a0778f72" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1c7f3b61-2379-804d-8b67-d4597f89e1f8" class="" dir="auto">Se llevará un botiquín con todo lo conveniente, y un poco de lienzo para las vacunaciones.</p></div></div><p id="1c7f3b61-2379-801e-94ec-df23bed37467" class="" dir="auto"><span style="border-bottom:0.05em solid">Obligaciones del Director</span></p><div id="31cf3b61-2379-804f-aa81-d5b481723e3d" class="column-list" data-notion-column-list="" dir="auto"><div id="31cf3b61-2379-80d6-ba9e-c31cfaf98a0b" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1c7f3b61-2379-8057-b9cc-c93eb65447fd" class="" dir="auto">Artículo 1°</p></div><div id="31cf3b61-2379-80a7-ab88-eaf062c18f64" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="31cf3b61-2379-800a-a319-edf037027075" class="" dir="auto">El profesor encargado de esta expedición, se nombrará Director de ella, y será responsable de todas las faltas que se comentan, y ocasionen atraso, o perjuicio en el feliz éxito de ella, que tanto interesa al bien de la humanidad, y el Real servicio.</p></div></div><div id="31cf3b61-2379-8081-a1f5-f52f694aaf73" class="column-list" data-notion-column-list="" dir="auto"><div id="31cf3b61-2379-80e0-9ce5-e18838622a47" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1c7f3b61-2379-809c-8a7e-f5d6f59cc9ec" class="" dir="auto">2°</p><p id="31cf3b61-2379-80d2-a48f-eaddb9979e44" class="" dir="auto">
+</p></div><div id="31cf3b61-2379-8027-b011-fbd1121ea836" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="31cf3b61-2379-804b-8777-cec23005767e" class="" dir="auto">Será de su obligación el vacunar progresivamente a los niños para conservar la vacuna fresca hasta llegar por lo menos a Puerto Rico; respecto a que logrando introducir en esta isla, la vacuna, queda asegurado el buen éxito de la expedición.</p></div></div><div id="31cf3b61-2379-80a5-b420-c01144be7b55" class="column-list" data-notion-column-list="" dir="auto"><div id="31cf3b61-2379-80c8-991e-e0df889b5da1" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1c7f3b61-2379-80a3-aa4b-f8b1fff15719" class="" dir="auto">[362] 3°</p></div><div id="31cf3b61-2379-806b-8072-e09ee94d7ea8" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="31cf3b61-2379-8018-b050-c9ffdb8aca10" class="" dir="auto">Si sucediese, que por ser extraordinariamente larga la navegación, o bajase el número de niños españoles ha mantener la vacuna fresca hasta Veracruz, deberán los gobernadores facilitarle otros del país donde se conozca la necesidad, siendo del cargo de aquellos, el restituirlos a sus casa, luego que hayan hecho el buen servicio deseado.</p></div></div><div id="31cf3b61-2379-8041-9eac-f19d2054f9f3" class="column-list" data-notion-column-list="" dir="auto"><div id="31cf3b61-2379-8000-8686-f9a6edfbadbf" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1c7f3b61-2379-80af-bcae-d8e2afaf13b8" class="" dir="auto">4°</p></div><div id="31cf3b61-2379-8083-9464-ffc1732ae37d" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="31cf3b61-2379-8061-82a7-edfac5fad7d4" class="" dir="auto">En el alojamiento que se le destinare en tierra, vacunará <span style="border-bottom:0.05em solid">gratis</span> a cuantos lo deseen persuadiendo a los demás a que se aprovechen del beneficio que les dispensa el amor paternal de nuestro Augusto Monarca, a lo que deberán contribuir con su ejemplo, y persuasión, los ministros de la iglesia y del Rey.</p></div></div><div id="31cf3b61-2379-80df-8476-efae3f49e546" class="column-list" data-notion-column-list="" dir="auto"><div id="31cf3b61-2379-80ad-b282-c0e9417e88d6" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="31cf3b61-2379-809f-983c-db629ea92e49" class="" dir="auto">5°</p></div><div id="31cf3b61-2379-80a8-80ea-fa3c4232279a" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="31cf3b61-2379-805f-900b-c78b7c470096" class="" dir="auto">Será de su cargo, el instruir a todos los profesores que se presenten de las admirables virtudes de este feliz descubrimiento, y de las dificultades que se presentan en su práctica; proporcionándoles además la obra que acaba de publicarse en castellano <span style="border-bottom:0.05em solid">Tratado Histórico</span> y <span style="border-bottom:0.05em solid">Práctico de la la Vacuna</span>, escrito por el <span style="border-bottom:0.05em solid">C. Moreau de la Sarthe</span> por ser la más completa, y contener los resultados de cuantos experimentos se han hecho hasta el día, a cuyo fin deberá llevarse un competente [362v] número de ejemplares, que recomendará el gobierno.</p></div></div><div id="31cf3b61-2379-8058-862b-cc46fb361463" class="column-list" data-notion-column-list="" dir="auto"><div id="31cf3b61-2379-80a7-a963-cac160af040e" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="31cf3b61-2379-8079-b4da-cb88eb4ad31c" class="" dir="auto">6°</p></div><div id="31cf3b61-2379-80e9-8a0a-c3204897957e" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="31cf3b61-2379-8021-8d41-e8892b4ef411" class="" dir="auto">Deben llevar un libro en que se exprese todo lo ocurrido desde la salida de España; como igualmente el resultado de las vacunaciones marítimas, y terrestres, con expresión del pueblo, y de los fenómenos, y anomalías que se presenten, tanto por la diversidad de los climas como por la variedad de colores, y castas de aquellos habitantes, llevando al pie de cada relación el visto bueno del jefe de aquel distrito, para presentarlas al regreso a España por medio de su celoso ministro, y que puedan publicarse los nuevos resultados que se hayan observado, para que sirvan de Ilustración pública, y de documento justificativo, del celo, trabajo, y buen desempeño del Director, y sus ayudantes.</p></div></div><div id="31cf3b61-2379-808e-84c4-d2563c0109c0" class="column-list" data-notion-column-list="" dir="auto"><div id="31cf3b61-2379-8041-a3c8-df78e6229f91" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1c7f3b61-2379-80b1-85b4-c22eb5409240" class="" dir="auto">7º </p></div><div id="31cf3b61-2379-8037-888b-e047266d6b85" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="31cf3b61-2379-802d-870b-ed65d8494887" class="" dir="auto">Como el mantener la salud de los niños sea tan interesante para el feliz éxito de la expedición, cuidará el Director de su conservación y podrá disponer, si lo hallare conveniente, de acuerdo con los gobernadores, salgan a el campo para divertirlos, y aliviarlos de las penalidades que ofrece la navegación, mayormente a los que no están acostumbrados a ella.</p></div></div><div id="31cf3b61-2379-80cd-8748-d8950b5e9647" class="column-list" data-notion-column-list="" dir="auto"><div id="31cf3b61-2379-808c-a3e4-da2ecebd1ac5" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1c7f3b61-2379-8008-95ee-cd2f0bb7d473" class="" dir="auto">[363] 8º </p></div><div id="31cf3b61-2379-80be-9c9d-e8f75d3bc8fb" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="31cf3b61-2379-801d-a044-d777019842c5" class="" dir="auto">Habiendo acreditado la experiencia, que no pocas veces ha quedado sin desarrollarse ni producido efecto alguno la vacuna, que se había ingerido; y considerando que semejante accidente en la mar puede frustrar o retardar, por lo menos, la expedición deberá el Director vacunar dos niños a la vez, para mejor precaverse de este riesgo, que tanto se debe temer.</p></div></div><div id="31cf3b61-2379-8027-80d0-eadbfeb1dbe7" class="column-list" data-notion-column-list="" dir="auto"><div id="31cf3b61-2379-800c-8ad7-cb961eb14fca" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1c7f3b61-2379-80df-a52c-f3632c0da8ca" class="" dir="auto">9º </p></div><div id="31cf3b61-2379-80fc-bcb3-eeda01c7a547" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="31cf3b61-2379-80ed-a29a-f6722af213d6" class="" dir="auto">Como que el Director debe ser responsable del feliz éxito de la expedición, deberán estarle subordinados todos los individuos de ella, en lo tocante al mejor desempeño de tan gloriosa comisión; y respecto a que el buque destinado a ella no ha de llevar otro objeto, que el de conducir a sus individuos, deberá su comandante ponerse de acuerdo con el Director para el día de su salida; de los puertos a donde arriben a fin de que no haya la menor demora en un negocio tan importante, y que pueda con anticipación tener vacunado uno de los niños, cuyos granos vacunales hayan empezado a desarrollarse en términos, que no dejen duda de ser producidos por la verdadera vacuna.</p></div></div><p id="31cf3b61-2379-8086-8b77-e9845bf67502" class="" dir="auto"><span style="border-bottom:0.05em solid">Obligación de los ayudantes de cirugía</span></p><div id="31cf3b61-2379-8004-acc7-ffeed46c523d" class="column-list" data-notion-column-list="" dir="auto"><div id="31cf3b61-2379-8086-8f37-e1bb3f308558" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="31cf3b61-2379-8095-9fe9-f4f590029b3d" class="" dir="auto">Artículo 1º</p></div><div id="31cf3b61-2379-8001-b60b-c9461503ce70" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="31cf3b61-2379-8032-bb4b-f3c6e46cef6c" class="" dir="auto">El cargo de estos ayudantes debe recaer [363v] en sujetos de buena educación, y de acreditado celo en la práctica de la vacunación, para que al lado del Director, adquieran los conocimientos necesarios, y sepan conocer los síntomas característicos de cada especie de vacuna, y distinguir la falsa de la verdadera, la época en que se presenta la materia vacunal en su estado perfecto para ser ingerida, pues la variedad con esta se desarrolla en cada individuo, obliga a no poder fijar el día en que debe extraerse para que produzca sus admirables propiedades, bastando pocas horas de anticipación, o de atraso, para privarla de ellas. Y como por desgracia los pocos que se han dedicado a vacunar en esta corte, carecen de todos estos conocimientos han contribuido más bien al descrédito de este feliz hallazgo, que a su propagación, y por consiguiente serán más útiles a la expedición, y al servicio del Rey, dos sujetos dispuestos a querer instruirse en esta parte, lo que lograrán fácilmente con su aplicación y celo, y podrán ponerse en estado de dirigir las expediciones parciales a que los destine el Director, de acuerdo con los Virreyes como queda dicho en el párrafo 6 y 7 del derrotero.</p></div></div><div id="31cf3b61-2379-80f9-8ced-ffb0d40c94df" class="column-list" data-notion-column-list="" dir="auto"><div id="31cf3b61-2379-80bc-b0a3-d7a126a314b2" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="31cf3b61-2379-80c1-8d0e-f4bd8d23aa62" class="" dir="auto">[364] 2º</p></div><div id="31cf3b61-2379-8081-9db6-d9bf3b0ba10f" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="31cf3b61-2379-805e-b379-f301b18bd24a" class="" dir="auto">Siempre que el Director, de acuerdo con los Virreyes, hallase por conveniente vayan a propagar la vacunación en otros pueblos, deberán obedecer inmediatamente para contribuir por su parte al más pronto desempeño, y persuadirán a todos para que se aprovechen del beneficio que en nuestros días, nos ha dispensado la omnipotencia, y les proporciona el amor paternal de nuestro Augusto Monarca.</p></div></div><div id="31cf3b61-2379-807b-ab8d-d8491b2b4a40" class="column-list" data-notion-column-list="" dir="auto"><div id="31cf3b61-2379-8046-a57b-f274b2362fe0" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="31cf3b61-2379-8046-9a3a-ca2518882eed" class="" dir="auto">3º</p><p id="31cf3b61-2379-8055-80f7-ff294a6fd7bf" class="" dir="auto">
+</p></div><div id="31cf3b61-2379-8002-a657-fa25592c2ffb" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="31cf3b61-2379-8061-988b-eadfc049468b" class="" dir="auto">Deberán llevar un asiento en que se exprese todo lo ocurrido desde que se separaron del Director, y el resultado de sus vacunaciones, dándole parte de las anomalías, o fenómenos, que se presenten nuevamente, y consultándole todos los casos, o dudas que se les ofrezcan, para que en su vista disponga el Director lo que mejor comprenda en la materia.</p></div></div><div id="31cf3b61-2379-80d3-aa3a-ec94bb592253" class="column-list" data-notion-column-list="" dir="auto"><div id="31cf3b61-2379-80fd-b9c4-e3e3738b13bb" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="31cf3b61-2379-80ed-b67a-e807061bf61d" class="" dir="auto">4º</p></div><div id="31cf3b61-2379-8022-9377-fb9eeea9f9a5" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="31cf3b61-2379-8062-b3cd-cbc4fa8fdfd9" class="" dir="auto">Será de su cargo la custodia del botiquín, y demás utensilios que se conduzcan; así como estarán obligados a ejercer todo lo que ocurra perteneciente a la cirugía en todos los empleados en la expedición.</p></div></div><p id="1c7f3b61-2379-80e1-b868-d72c8dcb92ea" class="" dir="auto">[364v] <span style="border-bottom:0.05em solid">Obligación de los enfermeros</span></p><div id="31cf3b61-2379-80a6-adf6-f2e58a624d52" class="column-list" data-notion-column-list="" dir="auto"><div id="31cf3b61-2379-8031-b5ed-f88b4e5d8010" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1c7f3b61-2379-8051-a28c-fc5a37123b9b" class="" dir="auto">Artículo 1º</p></div><div id="31cf3b61-2379-8086-8be0-f39e153f6f84" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="31cf3b61-2379-80a7-8bea-ddeb19dcd504" class="" dir="auto">Para el buen desempeño de este encargo, conviene recaiga en sujetos de juicio, y prudencia, que cuiden del buen orden de los niños que deben guardar, así en el mar, como en tierra, de su limpieza, y aseo, y de asistirlos con amor; y caridad.</p></div></div><div id="31cf3b61-2379-800d-9dbf-c93d44c2bcb9" class="column-list" data-notion-column-list="" dir="auto"><div id="31cf3b61-2379-80d0-84f1-d1a461495bfb" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1c7f3b61-2379-8053-a051-d4166f53b4f6" class="" dir="auto">2º</p></div><div id="31cf3b61-2379-802a-82b3-ed8bda535873" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="31cf3b61-2379-80ec-bdc1-e5705ff7bb2e" class="" dir="auto">Tendrán a su cargo las ropas de cada niño, para custodiarlas, y repartirlas cuando convenga, y hacerlas lavar, para mantenerlos con la limpieza; y aseo que tanto interesa para la conservación de la salud.</p></div></div><div id="31cf3b61-2379-803f-adf4-d924d2a78ee0" class="column-list" data-notion-column-list="" dir="auto"><div id="31cf3b61-2379-80fc-8ce8-f84f83653d98" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1c7f3b61-2379-806b-9f5b-f29b121d624a" class="" dir="auto">3º</p></div><div id="31cf3b61-2379-8019-879c-eb3e7d7370c0" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="31cf3b61-2379-8006-b0a8-c291ba1f363b" class="" dir="auto">No deberán separarse de los niños cuando salten a tierra; y cuando salgan al campo, para evitar algún extravío, y hacerles guardar la moderación, y buen orden que se requiere en una expedición tan respetable.</p></div></div><div id="31cf3b61-2379-8044-9366-cd2870ad6ea1" class="column-list" data-notion-column-list="" dir="auto"><div id="31cf3b61-2379-8097-b1b3-ce58e7f4f5bf" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="1c7f3b61-2379-8004-a4e9-e56a1afeb6ff" class="" dir="auto">4º</p></div><div id="31cf3b61-2379-80c7-a0bd-e4fd9e821ed0" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="31cf3b61-2379-80b2-becd-f9939da0d7a1" class="" dir="auto">Estarán subordinados enteramente al Director, a quien darán parte inmediatamente de lo que ocurra, para que aplique el remedio conveniente, y en caso [365] de no hallarse presente, a los ayudantes que deberán suplir en ausencia del Director.</p></div></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
