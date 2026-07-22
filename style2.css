@@ -239,6 +239,24 @@ iframe	{width: 70%;
 		height: auto;
 		min-height: 200px;
 		}
+
+	h1 {
+		margin-left: 0;
+		margin-right: 0;
+		}
+
+	.img_and_text,
+	.text,
+	.text2,
+	.notion {
+		padding-left: 20px;
+		padding-right: 20px;
+		}
+
+	.goback {
+		margin-left: 0;
+		margin-right: 0;
+		}
 	}
 
 
@@ -312,5 +330,24 @@ iframe	{width: 70%;
 	article {
 		padding-left: 12px;
 		padding-right: 12px;
+		}
+
+	h1 {
+		margin-left: 0;
+		margin-right: 0;
+		}
+
+	.img_and_text,
+	.text,
+	.text2,
+	.notion {
+		padding-left: 10px;
+		padding-right: 10px;
+		}
+
+	.goback {
+		margin-left: 0;
+		margin-right: 0;
+		padding: 15px;
 		}
 	}
