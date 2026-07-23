@@ -1,0 +1,770 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Recuento de Salvany de su paso por el Perú</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="364f3b61-2379-80d9-959d-dab0ec5bc4a9" class="page sans"><header><h1 class="page-title" dir="auto">Recuento de Salvany de su paso por el Perú</h1><p class="page-description" dir="auto"></p><table class="properties"><tbody><tr class="property-row property-row-status"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/burst_gray.svg" style="width:14px;height:14px;display:block"/></span>Estado</th><td><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Transcrito</span></td></tr><tr class="property-row property-row-date"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/calendar_gray.svg" style="width:14px;height:14px;display:block"/></span>Fecha</th><td><time datetime="1809-03-30">March 30, 1809</time></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/hashtag_gray.svg" style="width:14px;height:14px;display:block"/></span>Folio</th><td>1465 - 1472</td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/run_gray.svg" style="width:14px;height:14px;display:block"/></span>From (remitente)</th><td><span class="selected-value select-value-color-green">José Salvany</span></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/map-pin-alternate_gray.svg" style="width:14px;height:14px;display:block"/></span>Place</th><td><span class="selected-value select-value-color-red">La Paz - Argentina</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/person-masculine_gray.svg" style="width:14px;height:14px;display:block"/></span>To (destinatario)</th><td></td></tr></tbody></table></header><div class="page-body"><p id="3a6f3b61-2379-80a1-82c3-e4e27db4b919" class="" dir="auto">[1465]</p><div id="3a6f3b61-2379-8062-a62e-ea1dbfbfaa55" class="column-list" data-notion-column-list="" dir="auto"><div id="3a6f3b61-2379-80e0-b442-ea697450d4d6" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="3a6f3b61-2379-80b5-aa4a-de69b6e925fd" class="" dir="auto">
+</p></div><div id="3a6f3b61-2379-808d-8c0f-d52b35be63b2" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="3a6f3b61-2379-809b-9eec-c42dc9df7637" class="" dir="auto">Señor</p><p id="3a6f3b61-2379-8047-a9b3-dbb871ea3404" class="" dir="auto">A pesar del sentimiento grande que abriga mi corazón igual al de todo fiel vasallo que ve a su buen Rey apartado de su amado seno por una disimulación la más atroz, e inaudita la que sin duda me habría movido a discurrir con perplejidad si como español no conociera el carácter nacional de mis compatriotas, y sino supiera que no hay circunstancia alguna por más desesperada que sea en la que no pueda favorecernos la providencia: me asiste la dulce satisfacción de noticiar a Vuestra Alteza viva imagen del soberano, cuanto he efectuado por lo perteneciente a mi importante comisión desde el nueve de diciembre de mil ochocientos cinco que entré al reino del Perú, hasta el diez de noviembre de mil ochocientos ocho que fue mi salida.</p><p id="3a6f3b61-2379-80c0-9c78-cae75e4c3f62" class="" dir="auto">Informado en la ciudad de Cuenca que la capital de Lima estaba contagiada de la viruela a pesar de la distancia que media, que es más de seiscientas leguas procuré emprender mi viaje para ella con aquella aceleración [1465v] que permite el viajar con criaturitas y principalmente en la Cordillera de los Andes, falta de caminos de toda comodidad, y en una estación que era aquella muy rigurosa por la mucha lluvia y nieve: con todo habría sido mi arribo al Perú con alguna mayor anticipación, sino me hubiera sido forzoso propagar la vacuna en varias poblaciones del nuevo reino de Granada, y principalmente en la ciudad de Loja en la que como así mismo a cuarenta leguas alrededor hacia el contagio varioloso lamentables destrozos, al que apuré con increíble brevedad, y llegué a la ciudad de Piura primer punto del dicho reino el veinte y tres de diciembre del citado ochocientos cinco.</p><p id="3a6f3b61-2379-8004-9a7c-c6cc9892ad9b" class="" dir="auto">Esta igualmente afligida por la viruela que había asolado familias enteras, y continuaba moviendo al llanto y desesperación a las que o no habían sido víctimas de ella, o a quienes no habían pagado su debido feudo, me recibió como a su libertador, viendo con complacencia cumplidos los vivos deseos que le asistían, pues el veinte y tres de diciembre al nuevo de enero de mil ochocientos seis que fue mi salida, vacuné a tres mil quinientos instruí a varios curiosos, no olvidando la asistencia de cuantos infelices fueron contagiados.</p><p id="3a6f3b61-2379-80af-badf-e0ac97632252" class="" dir="auto">Durante mi residencia en dicha ciudad me notició el Excelentísimo Señor Marqués de Avilés entonces Virrey de reino, que a fuerza de repetidos ensayos se había logrado la vacuna de cristales en un niño del que propagándose a [1466] las demás se había extendido la vacunación, y por consiguiente contenido el apuro y aflicción en que se hallaba su corte: por cuya noticia se habría reparado la mucha falta de salud que experimenté por haber mudado precipitadamente de temperamento frigidísimo, a otro de mucho calor, como el de toda la provincia de Trujillo, sino se me hubiere al mismo tiempo participado que esta estaba infestada, deseándose en todas partes mi llegada para el pronto alivio.</p><p id="3a6f3b61-2379-80bd-9a6d-db6b99ebfd0c" class="" dir="auto">El estar en este entonces sin ningún ayudante, la mucha distancia de una población a otra, lo arenoso de los caminos y la fuerza del calor me tenían indeciso acerca del punto a que primeramente asistiría: pero viendo que la capital por razón de su clase y numerosa población debía ser la preferida determiné pasar a ella sin demorarme en otro lugar, con todo de distar de aquella ciento sesenta leguas para lo que elegí mi viaje por los inmensos despoblados dichos de Sechura, haciéndome al intento de seis muchachos para sucesivamente vacunarlos en el camino. Comisioné al mismo tiempo a un religioso betlemita nombrado Fray Lorenzo Justiniano de los Desamparados para que fuese a propagar el antídoto a varios pueblos de aquella subdelegación cuales fueron Vicús, Olmos, Motupe, Salas, Jayanca, Pacora, <mark class="highlight-default_background" data-notion-highlight="default_background">Íllimo, Túcume, y Mochumí, lo que verificó en un mil novecientos cincuenta y cuatro.</mark></p><p id="3a6f3b61-2379-8013-8676-d43a2f879845" class="" dir="auto">Una jornada antes de mi llegada a Trujillo [1466v] en el primer pueblo de indios dicho Paiján, fui asaltado de una rigurosísima calentura a causa de la sed que padecí, debida al haber estado dos días y medio sin beber agua por haberme desamparado el arriero que la conducía. Informados los naturales del fin por que pasaba, me suplicaron con las más sensibles expresiones que les hiciese partícipes del beneficio: y fueron tantos los ruegos que hube de ceder vacunando aquella tarde seiscientos veinte y tres. Como por mucha que sea la distancia, lo que se verifica entre indios se hace inmediatamente notorio, se esparció la voz en otro pueblo llamado Chocope de que el soberano enviaba la contra viruela, y comparecieron los alcaldes, y varios vecinos a rogarme que fuese a <span style="border-bottom:0.05em solid">inocularlos</span>, este era el modo como se expresaban, les prometí que lo efectuaría al día siguiente como lo hice a trescientos. Como los indios aunque son muy sencillos, y se pagan de poco, acostumbran a dudar de todo, y más con alguna justicia de lo que les propone el blanco, viendo la sencillez de la operación dudaron de ella, y no faltaron algunos diciendo que les había engañado, y que yo era el Ante-Christo [sic], en cuyo lance a no haberme tenido el cura escondido toda la tarde en un corral, no sé lo que me hubiera sucedido aunque discurro por los gritos de todos ellos, y llantos de las madres, y criaturitas que lo había pasado algo mal.</p><p id="3a6f3b61-2379-80b5-8635-d68c6b0e41b2" class="" dir="auto">[1467] Salí a media noche, y al inmediato diez y siete del referido enero llegué a Trujillo en el que permanecí hasta el veinte y dos, en cuyos días vacuné a dos mil setecientos sesenta y uno, e instruí a varios curiosos principalmente al señor Intendente, e ilustrísimo señor obispo, los que me ayudaron bastante en las operaciones. En Trujillo di parte al Excelentísimo Señor Virrey del derrotero que había seguido, y de lo que había padecido con los indios a lo que me contestó con las cartas copias n° 1 y 2. Como a mi ida a Trujillo al pasar por la provincia de Saña no me hubiese detenido a comunicar el específico, regresé a ella, en la que empezada a levantar cabeza la hidra variolosa. Me dirigí a su principal pueblo llamado Lambayeque, al que llegué el veinte y seis de enero, y residí hasta el trece del próximo febrero en cuyo tiempo me notició el Intendente de la provincia hallarse el partido de Cajamarca apestado. Pasé inmediatamente a él, dejando vacunados en Lambayeque a cuatro mil, disponiendo antes que el citado Fray Lorenzo pasara a recorrer los pueblos del partido nombrados Chiclayo, <mark class="highlight-default_background" data-notion-highlight="default_background">Monsefú, Eten, San Pedro, Magdalena, y Santiago de Cao en los que vacunó a tres mil quinientos ochenta indios, y a la continuación de mi viaje al paso por los pueblos de Reque y Chepén vacuné a ciento sesenta y uno y doscientos once en aquel.</mark></p><p id="3a6f3b61-2379-80bf-960e-d989c4990c55" class="" dir="auto">[1467v] El veinte del mismo febrero llegué a un despoblado vulgo dicho Pan de Azúcar en el que hube de permanecer con dos criaturitas, y el criado cuatro días con sus correspondientes noches, a causa de haberse escapado mientras de noche descansábamos los arrieros que nos conducían: sufrimos el riguroso ardor del sol que por estar aquel sitio bajo de la línea, obra en él con mucha fuerza, y el cruel aguijón del increíble número de mosquitos que le habitan, además de la precisión que tuvimos de mantenernos los dos últimos días con algunos granos de maíz seco, por haber sido la provisión de comestibles únicamente la precisa a causa del mucho calor. La casualidad hizo que a los cuatro días transitara por aquel paraje un indio quien por lo que le regalé pasó a la hacienda nombrada de Udima distante una jornada a buscar las caballerías necesarias para la continuación del viaje.</p><p id="3a6f3b61-2379-809c-9331-d3a099223318" class="" dir="auto">Dos días permanecí en esta hacienda vacuné a diez y nueve, y seguí para el partido de Chota: al llegar a su capital nombrada el Mineral de Chota o pueblo de Hualgayoc su Juez Real, y demás vecinos me hicieron ver los estragos que ocasionaba la viruela. Al objeto de que los del mineral o pueblo, y los miserables indios de las haciendas del contorno se entusiasmaran a favor de la vacuna, [1468] determiné pasar acompañado del subdelegado y primeras personas a una hacienda llamada Llaucán, a comunicarla, lo que logré en cuatrocientas setenta y seis, instruyendo igualmente a varios curiosos.</p><p id="3a6f3b61-2379-809b-b430-e9f8c5e6a359" class="" dir="auto">Salí de Llaucán el seis de marzo y llegué a Cajamarca el nueve del mismo, verifiqué dos vacunaciones que comprehendieron a mil ciento. Como en mi permanencia en los partidos de Piura y Saña mi único objeto fue cortar el contagio, [deseu?] y dando de proponer a aquellos Cabildos un régimen por el que pudiesen fácilmente conservar y propagar el específico en esta ciudad en los días que mediaron de una a otra vacunación trabajé, y presenté un plan por el que pudiesen verificarlo interinamente hasta que llegando a Lima, y con anuencia del Excelentísimo Señor Virrey trabajase uno que sirviere de norma a todo el reino: cuyo plan dirigí a los subdelegados de los dos referidos partidos y del de Cajamarca, como se ve por los recibos, copias n° 3, 4, y 5.</p><p id="3a6f3b61-2379-8092-9818-f1c5b791608a" class="" dir="auto">Visto los buenos efectos que había causado mi llegada a esta ciudad y sus contornos, resolví segunda vez mi camino para Trujillo, lo que efectué el catorce de abril. A mi arribo que fue el veinte encontré de vuelta de la provincia del Choco en el nuevo reino de Granada al segundo ayudante Don Rafael Lozano Pérez al que envié a recorrer las provincias de Chachapoyas, Cajamarquilla, [1468v] y Huaylas que igualmente que igualmente [sic] se hallaban infestadas, en las que vacunó a diez mil.</p><p id="3a6f3b61-2379-8000-9a67-d13e794d6454" class="" dir="auto">Avisado de hallarse el primer ayudante y el enfermero mayor en la ciudad de Guayaquil les escribí para que a la posible brevedad se encaminasen a las provincias de Huamachuco y Conchucos, después de haber propagado el específico en dicha ciudad, lo que verificó en dos mil, y en su tránsito para dichas provincias vacunó a cuatro mil ochocientos setenta, y en ellas a tres mil novecientos cinco.</p><p id="3a6f3b61-2379-8021-a609-ead49d4ee395" class="" dir="auto">En la ciudad de Trujillo con los vacunados a mi primer arribo, y los que se presentaron posteriormente a mi segundo fueron marcados con la indeleble cicatriz del grano veinte y dos mil setecientos sesenta y uno, teniendo la muy gloriosa satisfacción de dejar cortado el contagio en toda la provincia como se informará Vuestra Excelencia por el oficio que me pasó el Intendente de ella copia n° 6.</p><p id="3a6f3b61-2379-802d-9db1-e9ef2fd9834c" class="" dir="auto">De Trujillo me encaminé a la ciudad de Lima: en el viaje vacuné en las villas de Santa a veinte y tres, Huara a doscientos, Chancay veinte y cinco, y en el pueblo de Pativilca treinta y dos. El veinte y tres de mayo llegué a aquella capital en la que permanecí hasta el veinte y ocho de enero de mil ochocientos siete. En este tiempo con todo de haberse vacunado [1469] muchísimos, propagué el específico a diez y siete mil trescientos once. Con anuencia del Excelentísimo Señor Virrey Marqués de Avilés trabajé el plan que acompaño copia n° 7. al intento de que en ella, y en las demás Subalternas del reino se conservará y propagará la vacuna. Visto por el dicho Virrey el referido plan mandó que se cumpliese en todas sus partes para lo que expidió el decreto copia n° 8. mandando se me diese por aviso por el vice presidente de la Junta, lo que verificó este con el oficio copia n° 9. Cuanto al efecto de conservarse el específico había determinado el señor Marqués de Avilés, confirmó a su arribo el nuevo Virrey Excelentísimo Señor Abascal.</p><p id="3a6f3b61-2379-8098-ba01-f10f8cad65b7" class="" dir="auto">No obstante de haber merecido en la corte del Perú la mayor aceptación, y general estimación; a mi propartida resolvió la Universidad de San Marcos con anuencia del Virrey y Excelentísimo Cabildo en testimonio de gratitud al soberano y en recompensa de mi infatigable celo obsequiarme con ceñirme la borla doctoral, precedidos los exámenes literarios que se acostumbran en estos grados, como lo verá Vuestra Alteza por el impreso que acompaño. Dispuse antes de mi salida que el primer ayudante, y el enfermero pasaran a extender el Real beneficio en las provincias de Huarochirí, Jauja, Tarma, Huánuco, Panatagua y Canta lo que verificaron en nueve mil quinientos treinta y seis y que registradas estas se embarcaron para el reino de Chile, lo que han comprobado. Al segundo [1469v] ayudante lo destiné a las provincias de Huancavelica, Huamanga y el reino del Cuzco, y con su acostumbrado celo, respeto, y eficacia ha vacunado en ellas a veinte y cuatro mil cuarenta y uno.</p><p id="3a6f3b61-2379-8055-83e8-cfde095edc38" class="" dir="auto">A mi partida me encaminé al pueblo de Chilca al que llegué el treinta y uno del susodicho enero, me demoré tres días y vacuné a ciento cincuenta indios. De Chilca resolví pasar a vacunar al pueblo de Chincha, pero como los bagajeros que nos acompañaban iban forzados, al llegar a un despoblado dicho La Pampa del Imperial me botaron las cargas; a las dos criaturitas, y a mí, nos obligaron a que nos apeásemos; y con las caballerías se fueron aceleradamente. Permanecí en la citada Pampa todo aquel día, y su correspondiente noche: motivo suficiente para que los tres enfermásemos, y se perdiese la vacuna, como así sucedió. Al inmediato cinco, pasó un arriero quien movido de mi padecer, y de los lastimosos gemidos de los muchachitos nos condujo al más inmediato tambo distante cinco leguas de aquel sitio, y desde el que fuimos conducidos al referido pueblo de Chincha. A mi arribo di inmediatamente parte al señor Virrey de lo acontecido, y que se dignase enviarme vacuna a causa de no poder regresar a buscarla por un fuerte garrotillo que me asaltó, lo que verificó su Excelencia el seis de abril, y el trece vacuné [1470] a doscientos treinta y dos indios. El catorce pasé al pueblo de Santiago de Almagro y vacuné a ciento cuarenta y ocho.</p><p id="3a6f3b61-2379-8059-8c7d-fefa81ac1f75" class="" dir="auto">El diez y seis del mismo abril continué mi viaje para la ciudad de Ica a la que arribé el veinte y ocho. Con todo el haber viruelas en esta fue muy difícil entusiasmar a los indios a favor de la vacuna; pues entre ellas se esparció la voz de que iba a buscar todas las criaturitas para pasar a poblar una isla que era tan [sumamente?] lejos que forzosamente habían de ser todos pequeños “tal es la sencillez del indio digno objeto de la mayor compasión. El dicho rumor hirió tanto al sensible corazón de la tierna madre que prófuga vagaba por el monte escondiendo a su hijo. En vista de esto procuraron el subdelegado, el Cabildo y curas desplegar cuantos medios juzgaron oportunos para desimpresionarles del error en que estaban, y aunque se logró que se retirasen a sus casa, no fue posible que se presentasen a vacunar y así no obstante de ser Ica poblado, de ellos solo vacuné trescientas cincuenta y dos, y mil seiscientos de los demás vecinos.</p><p id="3a6f3b61-2379-80c3-9582-f4a3b7c6ef42" class="" dir="auto">Tuve por conveniente a pesar de no ser esta ciudad capital de provincia crear en ella una Junta Subalterna compuesta de los principales sujetos bajo la dirección del plan general, en virtud de ser muy numerosa su población, muy rica, y de mucho comercio. Acompaño a Vuestra Alteza la copia [1470v] del acta que al intento acordó su Cabildo n° 10. la que en todas sus partes confirmó el señor Virrey. Hube forzosamente de demorarme en esta a causa de un fuerte cólico, y rigurosas tercianas que padecí hasta el veinte y ocho de julio.</p><p id="3a6f3b61-2379-80f5-8e2e-cc0c443e0af0" class="" dir="auto">El treinta de este llegué a la villa de Nazca en la que hasta el siete del próximo agosto que salí vacuné a ciento noventa y cuatro. El inmediato diez llegué al pueblo de Acarí vacuné a quinientos diez y ocho. El trece del mismo salí de Acarí y pasé al pueblo de Caravelí viendo los muchos riesgos, y dificultades que me ponían a causa del peligroso, e intransitable camino por esta parte: vacuné en este pueblo a cuatrocientas dos, y dejé instrucciones para que sucesivamente fuesen propagando el antídoto como se ve por la contestación copia n° 11.</p><p id="3a6f3b61-2379-80c0-aa19-f2caef638248" class="" dir="auto">El cinco de septiembre fue mi arribo a la villa de Camaná en donde me detuve hasta el doce vacunando a cuatrocientas trece, dejando igualmente instrucciones a su Cabildo o Juez Real, para la perpetua conservación conforme se informará a Vuestra Alteza por la contestación copia n° 12.</p><p id="3a6f3b61-2379-8097-b93f-eaaea5e6a8c0" class="" dir="auto">El cinco del citado después de haber vacunado en el pueblo de Huchumayo a veinte y cinco, entré a la ciudad de Arequipa, y aunque determiné mi salida para el diciembre, como consta por el oficio y acta [1471] que me pasó al despedirme su ilustre Cabildo copias n° 13 y 14: no obstante a instancias de sus vecinos resolví permanecer hasta mediados de marzo de ochocientos ocho, en cuyo tiempo pasado oficio al gobernador Intendente noticiándole mi pronta salida, me detuvo a causa del general desconsuelo que padecía el vecindario, que se habría aumentado con mi salida; originado de la cruel epidemia de que adolecía no conocida hasta el día en este continente, a saber el terrible mal de rabia. Por los oficios n° 15 y 16 que me pasó el gobernador Intendente y por la copia n° 17, con la que que da el Cabildo gracias al soberano de haber enviado a ella la vacuna, verá Vuestra Alteza el esmero y empeño con que me porté durante mi larga residencia en ella a pesar de mi falta de salud, logrando por fin el dar con el método curativo para la tal enfermedad, lo que en ninguna parte del reino se consiguió, siendo víctimas al tercero día, los que eran mordidos o arañados por alguno de la excesiva abundancia de animales rabiosos que había en todo el Perú: dicho método fue aprobado y mandó seguir el Real Tribunal del Protomedicato de Lima. En Arequipa con todo de encontrar establecida la Junta Subalterna, reparé que su gobierno económico estaba defectuoso en muchos puntos debido a no habérsele pasado copia de todo el plan que trabajé en Lima, lo que se enmendó al recibir [1471v] la instrucción que dirigí y verá Vuestra Alteza en la contestación, copia n° 18. Fueron en esta vacunados veinte y cuatro mil, tres.</p><p id="3a6f3b61-2379-80e4-9a26-faa131573116" class="" dir="auto">Salí de aquella ciudad el quince de septiembre, y el veinte del mismo llegué a la ciudad de Puno vacunando en Vilque único pueblo del tránsito a cuarenta y cinco, y en Puno a mil noventa y cuatro hasta el siete del próximo noviembre en que permanecí: permanencia motivada al fuerte mal de corazón de que adolezco. En esta ciudad con todo de ser del reino del Perú y capital de provincia, no se había pasado por el superior gobierno el ejemplar que dicté en Lima para la conservación del específico, más yo lo verifiqué a los pocos días de mi arribo como consta por el oficio de contestación del gobernador Intendente copia n° 19 y por el acta que dictaron los representantes del Cabildo que va a formarse con la que se da gracias al monarca de haber enviado en este remoto país la vacuna, y es la copia n° 20. Al paso de los pueblos de Pomata y Zepita, para el reino de Buenos Aires al que entré el diez del citado noviembre, vacuné en aquel treinta y cuatro, y diez y ocho en este.</p><p id="3a6f3b61-2379-80ea-80f5-e1c12d67aefd" class="" dir="auto">De los ciento noventa y siete mil, cuatro que ha tenido la dicha de vacunar la Real Expedición en el reino del Perú, en ninguna de ellas se ha observado la menor novedad, antes bien admiro el ver la serenidad, y contento [1472] con que pasaron los períodos de la sencilla operación, y los demás felices resultados que corroboran ser la vacuna no solo preservativo de las viruelas naturales, si también eficaz remedio para varias enfermedades cutáneas, optalmias, y fluxiones rebeldes, y segura calma de los síntomas que suceden a la dentición, y a los que padecen lombrices.</p><p id="3a6f3b61-2379-80f7-9ed5-f5b973e1209d" class="" dir="auto">En cuantas poblaciones he demorado sin distinción a mi llegada han salido a recibirme sus Cabildos y vecindario, y en todas ellas se dieron gracias al todopoderoso por el descubrimiento del específico y por el beneficio del soberano en enviarlo con misa solemne y te deum, manifiesto el santísimo con asistencia de los jefes, tribunales, Cabildos, y primeras personas. En Arequipa y Cuzco, además de lo dicho hubo sermón en sus catedrales.</p><p id="3a6f3b61-2379-8062-8eb1-f19371f8d3f7" class="" dir="auto">Deseo Muy Poderoso Señor que cuanto he efectuado en el reino del Perú merezca la superior aprobación de Vuestra Alteza así como fui digno de la del augusto Rey padre, acerca de lo verificado desde que naufragué en la costa de Cartagena hasta mi llegada a Lima, como puede informarse Vuestra Alteza por la copia de la carta que recibí fecha en San Ildefonso veinte de septiembre de mil ochocientos siete, que acompaño con el n° 21.</p><p id="3a6f3b61-2379-805f-bdd2-cba2d2366f3f" class="" dir="auto">En el inmediato correo tendré el [1472v] honor de dar a Vuestra Alteza parte de lo efectuado hasta ahora en este Virreinato de Buenos Aires: en el entretanto solo me resta suplicar a Vuestra Alteza se digne recomendar a su Virrey la Real Expedición a fin de que esta pueda llenar las leyes de la humanidad, y que el derrotero para las provincias de Cochabamba, Charcas, y Potosí, cuyo viaje voy a emprender el inmediato cuatro, se sirva Vuestra Alteza mandar a este su muy leal, y obedientísimo vasallo.</p><p id="3a6f3b61-2379-8071-8217-d0547290079c" class="" dir="auto">Dios guarde la vida de los señores que componen a Vuestra Alteza y permita que acabe la Suprema Junta Nacional con el esplendor de ver restaurado cuanto antes a nuestro muy amado Fernando 7°. Paz y marzo 30 de 1809.</p><p id="3a6f3b61-2379-80a7-b4f1-f832b1c8f8b4" class="" dir="auto">
+</p><p id="3a6f3b61-2379-8093-8c75-e3920c6a3a78" class="" dir="auto">Señor</p><p id="3a6f3b61-2379-80fd-b56c-fe5fd0dd46dd" class="" dir="auto">
+</p><p id="3a6f3b61-2379-803a-96d0-cd4b8237bc7b" class="" dir="auto">José Salvany [con rúbrica]</p></div></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

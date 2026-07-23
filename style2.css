@@ -180,24 +180,25 @@ article	{text-align: justify;
 
 .notion article {width: 40%;}
 
-.goback	{background-color: aliceblue;
-			margin-left: 10%;
-			margin-right: 10%;
+button	{font-family: Giorgia, serif;
+			background-color: aliceblue;
 			padding: 3%;
 			font-size: 16px;
 			border: 3px #c7e3ff groove;
 			text-align: center;
-			color: black;
+			color: indigo;
+			cursor: pointer;
+			width: 90%;
+			display: block;
+			margin: 0 auto;
 			}
-
-.button {text-decoration: none;
-			color: black;}
 
 iframe	{width: 70%;
 		height: 490px;
 		padding: 20px; 
 		display: block;
 		border: 0;
+		overflow-x: visible;
 		}
 
 .interactive_map 	{display: block;
