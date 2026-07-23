@@ -193,6 +193,19 @@ button	{font-family: Giorgia, serif;
 			margin: 0 auto;
 			}
 
+.goback	{background-color: aliceblue;
+			margin-left: 10%;
+			margin-right: 10%;
+			padding: 3%;
+			font-size: 16px;
+			border: 2px indigo dotted;
+			text-align: center;
+			color: indigo;
+			}
+
+.button {text-decoration: none;
+			color: indigo;}
+
 iframe	{width: 70%;
 		height: 490px;
 		padding: 20px; 
