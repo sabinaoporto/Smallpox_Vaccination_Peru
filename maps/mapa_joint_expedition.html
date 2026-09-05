@@ -585,7 +585,7 @@ document.getElementById('prevBtn').onclick = ()=>{ if(step>0){ step--; render();
 
 // ------------- AQUÍ POR FIN SE USA TODA LA WEA ANTERIOR ---------------------------------------
 // se importa el json con los datos para que la cosa funcione
-fetch('paradas_join_expedition.json')
+fetch('paradas_joint_expedition.json')
   .then(res => {
     // bota error si el archivo no está en la misma carpeta o si no llega la respuesta del servidor
     if(!res.ok) throw new Error('No se pudo cargar viaje.json (status ' + res.status + ')');

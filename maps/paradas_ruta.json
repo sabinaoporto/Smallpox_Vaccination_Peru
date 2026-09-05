@@ -1,9 +1,9 @@
 {
   "colores": {
     "Joint expedition": "#ec2233",
-    "Join Expedition: Group led by Balmis": "#db22ec",
-    "Join Expedition: Group led by Francisco Pastor": "#ec2298",
-    "Join Expedition: Jose Salvany": "#ec7622",
+    "Joint Expedition: Group led by Balmis": "#db22ec",
+    "Joint Expedition: Group led by Francisco Pastor": "#ec2298",
+    "Joint Expedition: Jose Salvany": "#ec7622",
     "Sub-expedition Balmis": "#020792",
     "Sub-expedition Balmis: Group led by Balmis": "#228ee0",
     "Sub-expedition Balmis: Group led by Francisco Pastor": "#7E39FE",
@@ -53,7 +53,7 @@
     "texto_depart":"«[Balmis] Resolvió distribuir los componentes de la Expedición en dos grupos, que propagarían el fluido por rutas diferentes, con destino a la capital de la Capitanía General, Caracas. [...] La expedición salió el día 24 de Puerto Cabello [...]» Ramírez 1988, p.345.",
     "fotos":[], "links":[]},
 
-    {"id":"b1", "grupo":"Join Expedition: Group led by Balmis", "grupo_padre":"Joint expedition", "orden":2, "coords":[10.25,-67.59],
+    {"id":"b1", "grupo":"Joint Expedition: Group led by Balmis", "grupo_padre":"Joint expedition", "orden":2, "coords":[10.25,-67.59],
     "titulo":"Joint Expedition: Maracay",
     "llegada":"Arrival: March 26th 1804",
     "salida":"Departure: March 26th 1804",
@@ -61,7 +61,7 @@
     "texto_depart":"«En esta población Balmis se alojó durante pocas horas en la casa del Oidor D. Antonio Fernández de León, donde se le entregaron 40 pesos y “se le ofrecieron 6 mulas de silla para el viaje que debía seguir a las cinco de esa misma tarde [...]”.» Archila 1969, p.12, 14; Ramírez 1998, p.345.",
     "fotos":[], "links":[]},
 
-    {"id":"b2", "grupo":"Join Expedition: Group led by Balmis", "grupo_padre":"Joint expedition", "orden":2, "coords":[10.46,-66.98],
+    {"id":"b2", "grupo":"Joint Expedition: Group led by Balmis", "grupo_padre":"Joint expedition", "orden":2, "coords":[10.46,-66.98],
     "titulo":"Joint Expedition: Antímono, Caracas",
     "llegada":"Arrival: March 28th 1804",
     "salida":"Departure: March 28th 1804",
@@ -69,7 +69,7 @@
     "texto_depart":"",
     "fotos":[], "links":[]},
 
-    {"id":"b3", "grupo":"Join Expedition: Group led by Balmis", "grupo_padre":"Joint expedition", "orden":2, "coords":[10.48,-66.87],
+    {"id":"b3", "grupo":"Joint Expedition: Group led by Balmis", "grupo_padre":"Joint expedition", "orden":2, "coords":[10.48,-66.87],
     "titulo":"Joint Expedition: Caracas",
     "llegada":"Arrival: March 28th 1804",
     "salida":"Departure: unknown",
@@ -77,7 +77,7 @@
     "texto_depart":"",
     "fotos":[], "links":[]},
 
-    {"id":"b4", "grupo":"Join Expedition: Group led by Balmis", "grupo_padre":"Joint expedition", "orden":2, "coords":[10.60,-66.93],
+    {"id":"b4", "grupo":"Joint Expedition: Group led by Balmis", "grupo_padre":"Joint expedition", "orden":2, "coords":[10.60,-66.93],
     "titulo":"Joint Expedition: La Guaira",
     "llegada":"Arrival: May 6th 1804 (?)",
     "salida":"Departure: May 8th 1804",
@@ -85,7 +85,7 @@
     "texto_depart":"«La Real Expedición de la Vacuna salió del puerto de La Guayra a las nueve de la noche del 8 de mayo de 1804 fraccionada en dos partes.» Ricardo Archila 1969, p. 25.",
     "fotos":[], "links":[]},
 
-    {"id":"c1", "grupo":"Join Expedition: Group led by Francisco Pastor", "grupo_padre":"Joint expedition", "orden":3, "coords":[10.60,-66.93],
+    {"id":"c1", "grupo":"Joint Expedition: Group led by Francisco Pastor", "grupo_padre":"Joint expedition", "orden":3, "coords":[10.60,-66.93],
     "titulo":"Joint Expedition: La Guaira",
     "llegada":"Arrival: March 26th 1804",
     "salida":"Departure: March 31th 1804",
@@ -93,7 +93,7 @@
     "texto_depart":"«El último día del mismo mes de marzo, la Expedición pasó a la capital de la Capitanía General remontando la montaña del Avila y entrando en la ciudad de Caracas por el barrio de la Pastora» Ramírez 1988, p.346.",
     "fotos":[], "links":[]},
 
-    {"id":"c2", "grupo":"Join Expedition: Group led by Francisco Pastor", "grupo_padre":"Joint expedition", "orden":3, "coords":[10.48,-66.87],
+    {"id":"c2", "grupo":"Joint Expedition: Group led by Francisco Pastor", "grupo_padre":"Joint expedition", "orden":3, "coords":[10.48,-66.87],
     "titulo":"Joint Expedition: Caracas",
     "llegada":"Arrival: March 31th 1804 (?)",
     "salida":"Departure: unknown",
@@ -101,7 +101,7 @@
     "texto_depart":"",
     "fotos":[], "links":[]},
 
-    {"id":"c3", "grupo":"Join Expedition: Group led by Francisco Pastor", "grupo_padre":"Joint expedition", "orden":3, "coords":[10.60,-66.93],
+    {"id":"c3", "grupo":"Joint Expedition: Group led by Francisco Pastor", "grupo_padre":"Joint expedition", "orden":3, "coords":[10.60,-66.93],
     "titulo":"Joint Expedition: La Guaira",
     "llegada":"Arrival: May 6th 1804 (?)",
     "salida":"Departure: May 8th 1804",
@@ -109,7 +109,7 @@
     "texto_depart":"«La Real Expedición de la Vacuna salió del puerto de La Guayra a las nueve de la noche del 8 de mayo de 1804 fraccionada en dos partes.» Ricardo Archila 1969, p. 25.",
     "fotos":[], "links":[]},
 
-    {"id":"d1", "grupo":"Join Expedition: Jose Salvany", "grupo_padre":"Joint expedition", "orden":4, "coords":[10.60,-66.93],
+    {"id":"d1", "grupo":"Joint Expedition: Jose Salvany", "grupo_padre":"Joint expedition", "orden":4, "coords":[10.60,-66.93],
     "titulo":"Joint Expedition: La Guaira",
     "llegada":"Arrival: April 5th 1804",
     "salida":"Departure: April 6th 1804",
@@ -117,7 +117,7 @@
     "texto_depart":"y con urgencia se trasladó al día siguiente a la Capital.» Ramírez 1998, p.346-347.",
     "fotos":[], "links":[]},
 
-    {"id":"d2", "grupo":"Join Expedition: Jose Salvany", "grupo_padre":"Joint expedition", "orden":4, "coords":[10.48,-66.87],
+    {"id":"d2", "grupo":"Joint Expedition: Jose Salvany", "grupo_padre":"Joint expedition", "orden":4, "coords":[10.48,-66.87],
     "titulo":"Joint Expedition: Caracas",
     "llegada":"Arrival: April 6th 1804",
     "salida":"Departure: unknown",
@@ -125,7 +125,7 @@
     "texto_depart":"",
     "fotos":[], "links":[]},
 
-    {"id":"d3", "grupo":"Join Expedition: Jose Salvany", "grupo_padre":"Joint expedition", "orden":4, "coords":[10.60,-66.93],
+    {"id":"d3", "grupo":"Joint Expedition: Jose Salvany", "grupo_padre":"Joint expedition", "orden":4, "coords":[10.60,-66.93],
     "titulo":"Joint Expedition: La Guaira",
     "llegada":"Arrival: May 6th 1804 (?)",
     "salida":"Departure: May 8th 1804",

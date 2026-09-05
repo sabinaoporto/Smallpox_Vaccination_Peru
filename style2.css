@@ -213,6 +213,11 @@ iframe	{width: 70%;
 		border: 0;
 		}
 
+#iframe5 {
+	width: 85%;
+	border: 0;
+		}
+
 .interactive_map 	{display: block;
 					margin: 0 auto;
 					height: 90vh;

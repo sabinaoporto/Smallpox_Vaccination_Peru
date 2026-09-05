@@ -93,11 +93,38 @@ h3 {
 	border: 1px solid rgba(55, 53, 47, 0.09);
 }
 
-figure,
-aside,
-details {
+figure {
 	margin: 1.25em 0;
 	page-break-inside: avoid;
+}
+
+/*
+ * Toggles and callouts hold arbitrary content, so they can easily be taller
+ * than a page. They must stay breakable: avoiding breaks inside them makes
+ * Chromium push the whole block onto the next page, which leaves the previous
+ * page mostly empty before every long toggle.
+ */
+details,
+aside {
+	margin: 1.25em 0;
+}
+
+/* Keep a toggle's title on the same page as the start of its content. */
+summary {
+	page-break-after: avoid;
+	break-after: avoid;
+}
+
+/*
+ * Toggle headings render as <h1/h2/h3 style="display:inline-block"> inside
+ * <summary>. Without this reset, the heading's margin-top pushes it below the
+ * ::marker (▼), so the triangle and the title appear on separate lines.
+ */
+summary h1,
+summary h2,
+summary h3,
+summary h4 {
+	margin-top: 0;
 }
 
 figcaption {
@@ -764,4 +791,5 @@ blockquote.quote-large {
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
 }
 	
-</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="270f3b61-2379-8079-9555-d7dcfafe11e0" class="page sans"><header><h1 class="page-title" dir="auto">Decreto 2</h1><p class="page-description" dir="auto"></p><table class="properties"><tbody><tr class="property-row property-row-status"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/burst_gray.svg" style="width:14px;height:14px;display:block"/></span>Status</th><td><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Transcrito</span></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>Page (PDF)</th><td>16</td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>Pag (book)</th><td>6</td></tr><tr class="property-row property-row-date"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/calendar_gray.svg" style="width:14px;height:14px;display:block"/></span>Date</th><td><time datetime="1804-03-12">12/03/1804</time></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/arrow-circle-down_gray.svg" style="width:14px;height:14px;display:block"/></span>Place</th><td><span class="selected-value select-value-color-blue">Lima</span></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>Content</th><td>Acuse de recibo de la Real Orden de 4 de agosto de 1803 por el Virrey Avilés</td></tr></tbody></table></header><div class="page-body"><p id="2e9f3b61-2379-80e3-9672-dbbd7065fc07" class="" dir="auto">[6]</p><div id="367f3b61-2379-8004-9c44-c0cf2ef32ca9" class="column-list" data-notion-column-list="" dir="auto"><div id="367f3b61-2379-800d-9a8b-cc86be1465be" style="width:6.25%" class="column" data-notion-column-ratio="0.0625" dir="auto"><p id="367f3b61-2379-8064-a9e6-f08d1fdb99c0" class="" dir="auto"><span style="border-bottom:0.05em solid">Decreto.</span></p></div><div id="367f3b61-2379-80ff-9cad-c2b516d9f891" style="width:193.75%" class="column" data-notion-column-ratio="1.9375" dir="auto"><p id="367f3b61-2379-800c-b1be-fa21584ea3dc" class="" dir="auto">Lima marzo 12 de 1804 = Guárdese, y cúmplase lo que Su Majestad manda en esta Real Orden, acúsese su recibo, sáquese copia certificada de ella, y agregada a la que con fecha 1° de septiembre último se ha dirigido sobre el propio asunto por el Ministerio de Gracia y Justicia, tráigase para proveer = Avilés = Simón Rábago. =</p></div></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="270f3b61-2379-8079-9555-d7dcfafe11e0" class="page sans"><header><h1 class="page-title" dir="auto">Decreto 2</h1><p class="page-description" dir="auto"></p><table class="properties"><tbody><tr class="property-row property-row-status"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/burst_gray.svg" style="width:14px;height:14px;display:block"/></span>Status</th><td><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Transcrito</span></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>Page (PDF)</th><td>16</td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>Page (book)</th><td>6</td></tr><tr class="property-row property-row-date"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/calendar_gray.svg" style="width:14px;height:14px;display:block"/></span>Date</th><td><time datetime="1804-03-12">12/03/1804</time></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/arrow-circle-down_gray.svg" style="width:14px;height:14px;display:block"/></span>Place</th><td><span class="selected-value select-value-color-blue">Lima</span></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>Content</th><td>Acuse de recibo de la Real Orden de 4 de agosto de 1803 por el Virrey Avilés</td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Signed by</th><td></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Assistants</th><td></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Vaccination report</th><td></td></tr></tbody></table></header><div class="page-body"><p id="2e9f3b61-2379-80e3-9672-dbbd7065fc07" class="" dir="auto">[6]</p><div id="367f3b61-2379-8004-9c44-c0cf2ef32ca9" class="column-list" data-notion-column-list="" dir="auto"><div id="367f3b61-2379-800d-9a8b-cc86be1465be" style="width:12.5%" class="column" data-notion-column-ratio="0.125" dir="auto"><p id="367f3b61-2379-8064-a9e6-f08d1fdb99c0" class="" dir="auto"><span style="border-bottom:0.05em solid">Decreto.</span></p></div><div id="367f3b61-2379-80ff-9cad-c2b516d9f891" style="width:93.75%" class="column" data-notion-column-ratio="0.9375" dir="auto"><p id="367f3b61-2379-800c-b1be-fa21584ea3dc" class="" dir="auto">Lima marzo 12 de 1804 = Guárdese, y cúmplase lo que Su Majestad manda en esta Real Orden, acúsese su recibo, sáquese copia certificada de ella, y agregada a la que con fecha 1° de septiembre último se ha dirigido sobre el propio asunto por el Ministerio de Gracia y Justicia, tráigase para proveer = Avilés = Simón Rábago. =</p></div></div><p id="3d1f3b61-2379-80f7-87da-f0f4ad3e082c" class="" dir="auto">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
