@@ -145,9 +145,16 @@ article	{text-align: justify;
 
 .text article figure img {margin-bottom: 10px;}
 
+#code-actas li {
+	margin: 8px;
+	padding: 5px;
+	border-radius: 5px;
+}
+
 #adults	{padding-top: 0px;
 		background-color: #fafdff;
-		margin: 0px;
+		margin-left: 10%;
+		margin-right: 10%;
 		}
 
 .members	{
