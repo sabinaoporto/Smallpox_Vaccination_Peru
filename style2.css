@@ -32,6 +32,7 @@ footer 	{background-color: #cce6ff;
 
 nav 	{position: sticky;
 		top: 0;
+		z-index: 1000;
 		}
 
 #menu  {
@@ -75,6 +76,43 @@ nav a:active {text-shadow: 1px 1px 20px skyblue;
 			border-left: 3px lightblue double;
 			background-color: aliceblue;
 			}
+
+/*effects of the images/buttons in the route page*/
+
+figure a {
+    position: relative;
+    display: inline-block;
+}
+
+figure a img {
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+figure a:hover img {
+    opacity: 0.3;
+}
+
+.explore {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: aliceblue;
+    color: indigo;
+    border: 2px indigo double;
+    padding: 8px 16px;
+    font-size: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+figure a:hover .explore {
+    opacity: 1;
+}
+
+/*effects of the images/buttons in the route page: END*/
 
 h1		{text-align: center;
 		margin-top: 10px;

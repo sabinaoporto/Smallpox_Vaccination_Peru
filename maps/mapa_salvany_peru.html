@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Mapa del viaje - demo</title>
+
+<!-- importa Leaflet -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-polylinedecorator@1.6.0/dist/leaflet.polylineDecorator.js"></script>
+
+<!-- html, body: espacio que ocupa el mapa + fuente usada -->
+<!-- #map: ubica el borde inferior (80px) donde van los botones atrás/adelante -->
+<!-- #controls: estilo del espacio donde van los botones atrás/adelante -->
+<!-- button & button:disabled: aspecto de los botones habilitados y desabilitados -->
+<!-- leyenda: estilo de la leyenda :DDD -->
+<style>
+  
+  /* Reset y base */
+  * { box-sizing: border-box; }
+
+  html,body {
+    margin:0;
+    padding:0;
+    height:100%;
+    font-family:Tahoma, sans-serif;}
+
+  /* contenedor GIGANTE: ordena verticalmente mapa + info + botones */
+  .app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+  }
+
+  /* fila superior: info + mapa */
+  .row {
+    display: flex;
+    flex: 1;
+    min-height: 0; /* para evitar overflow */
+  }
+
+  /* Panel derecho con la info */
+  #sidebar {
+    width: 25%; /* ancho del panel de info */
+    background: #fafdff;
+    padding: 16px 16px 20px;
+    overflow-y: auto;
+    border-left: 2px solid #ddd; /* borde separarlo del mapa */
+    order: -1; /* hace que se vea en la derecha */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  #sidebar h2 {   /* titulo "bla expedition: bla" */
+    margin: 0 0 4px 0;  /* margen inferior de 4px y 0 en los otros */
+    font-size: 15px;
+    }
+
+  #sidebar .info-item {  /* margen luego de textos sobre llegada y salida */
+    margin-bottom: 6px;
+  }
+
+  #sidebar .info-item strong {
+    display: block;
+    font-weight: 600;  /* qué tan en negrita se ve llegada y salida */
+    color: #1f2430;
+    font-size: 0.9rem;
+  }
+
+  #sidebar .info-item p {
+    margin: 2px 0 0 0;  /* margen superior de 2px y 0 en los otros */
+    font-size: 0.95rem;
+  }
+
+/* style de las fotos que pueda haber en el panel de info */
+  #sidebar .fotos img { 
+    max-width: 100%;
+    border-radius: 6px;
+    margin: 4px 0;
+  }
+
+/* style de los links que pueda haber en el panel de info */
+  #sidebar .links a {
+    display: inline-block;
+    margin-right: 8px;
+    color: #3b82f6;
+    text-decoration: none;
+  }
+
+  .leyenda {position:absolute;
+    top:10px;
+    right:10px;
+    background:#fafdff;
+    padding:8px 12px;
+    border-radius:8px;
+    font-size:13px;
+    box-shadow:0 1px 4px rgba(0,0,0,.3);
+    z-index:1000;}
+
+  .leyenda span {display:inline-block;
+    width:15px;
+    height:10px;
+    border-radius:20%;
+    margin-right:6px;}
+  
+  .leyenda b {margin-bottom: 15px}
+
+  .leyenda summary {
+  cursor: pointer;       /* mano al pasar el mouse, para que se note que es clickeable */
+  font-weight: bold;
+  outline: none;         /* saca el contorno azul feo al hacer foco */
+  }
+
+  .leyenda details[open] summary {
+    margin-bottom: 6px;    /* separa el título de la lista solo cuando está abierta */
+    }
+
+  .leyenda details {
+    line-height: 1.4; /* controla el espacio entre cada línea de grupo dentro del <details> */
+    }
+  
+  /* Contenedor del mapa */
+  #map-container {
+    flex: 1;
+    position: relative;
+    background: #e5e5e5;
+    }
+
+  #map {position:absolute;
+    top:0;
+    bottom:0px;   /* ocupará todo el contenedor, la barra estará fuera */
+    left:0;
+    right:0;}
+  
+  /* barra inferior */
+  #controls {
+    height:80px;
+    background:#360275;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    padding:0 16px;
+    }
+
+  button {background:#CAA2FC;
+    border:none;
+    color:#22122b;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:15px;}
+
+  button:disabled {
+    background:#ebe1f7;
+    cursor:not-allowed;}
+
+  #step-info {
+    font-size:14px;
+    text-align:center;
+    min-width:220px;
+    }
+
+  .leaflet-popup-content-wrapper {
+    background: #fafdff;
+    }
+  
+  .leaflet-popup-tip {
+    background: #fafdff;
+    }
+
+  .popup-content {
+    max-width:250px;
+    }
+  
+  .popup-content img {width:100%;
+    border-radius:6px;
+    margin-top:6px;
+    }
+
+  .popup-content a {color:#3b82f6;}
+
+
+  /* para que en pantallas chicas no se me vaya al diablo todo */
+  @media (max-width: 700px) {
+    .row { flex-direction: column; }
+    
+    #sidebar {
+      width: 100%;
+      max-height: 40vh;
+      border-left: none;
+      border-bottom: 2px solid #ddd;
+      order: 0; }
+
+    #map-container {
+      flex: 1;
+      min-height: 60vh; }
+
+    #controls {
+      height: 56px;       /* más baja que en escritorio (80px) */
+      padding: 0 10px;    /* padding the 0 arriba y abajo y de 10 a los lados */
+      gap: 6px;
+      flex-wrap: nowrap; }
+
+    #step-info {
+      font-size: 12px;          /* texto más pequeño */
+      min-width: 0;             /* elimina el mínimo fijo de 220px */
+      flex: 1;                  /* ocupa el espacio disponible */
+      text-align: center;
+      white-space: nowrap;  /* The text continues on the same line until a <br> tag */
+      overflow: hidden;     /* the overflow is clipped, and the rest of the content is hidden */
+      text-overflow: ellipsis; } /* muestra "..." si el título es demasiado largo */
+  
+    button {
+      /*border: 1px red solid; moviendo esta línea ubico más facilmente qué estoy modificando*/
+      padding: 6px 8px;     /* padding the 6 arriba y abajo y de 8 a los lados */
+      font-size: 12px;
+      flex-shrink: 0; }     /* evita que los botones se encojan */
+  
+    .arrow {
+      display: none;
+      }
+  }
+
+
+ 
+</style>
+</head>
+
+<body>
+
+<div class="app"> <!-- div GIGANTE pa todo: mapa + info + botones -->
+  
+  <div class="row">  <!-- fila superior: info + mapa -->
+    
+    <div id="map-container">
+      <div id="map"></div> <!-- div vacío donde va ir el mapa -->
+    </div>
+
+    <div id="sidebar">  <!-- Panel derecho con la info -->
+
+      <!-- info sobre las paradas -->
+      <h2 id="titulo">Selecciona una parada</h2>
+      
+      <!-- arrival date -->
+      <div class="info-item" id="fecha-llegada" style="display:none;">
+        <strong>Arrival:</strong>
+        <p></p>
+      </div>
+      
+      <!-- departure date -->
+      <div class="info-item" id="fecha-salida" style="display:none;">
+        <strong>Departure:</strong>
+        <p></p>
+      </div>
+
+      <!-- texto_arrive -->
+      <div class="info-item" id="texto-arrive" style="display:none;">
+        <strong>About the arrival:</strong>
+        <p></p>
+      </div>
+
+      <!-- texto_depart -->
+      <div class="info-item" id="texto-depart" style="display:none;">
+        <strong>About the departure:</strong>
+        <p></p>
+      </div>
+
+      <!-- Fotos (si las hay) -->
+      <div class="info-item fotos" id="fotos-container" style="display:none;"></div>
+
+      <!-- Links (si los hay) -->
+      <div class="info-item links" id="links-container" style="display:none;"></div>
+
+    </div>
+
+  </div>
+
+<!-- div vacío donde va ir la leyenda -->
+<div class="leyenda" id="leyenda"></div>
+
+<!-- div vacío donde va ir la barra inferior con los botones (&larr es -> y &rarr es <-) -->
+<div id="controls">
+  <button id="prevBtn"><span class="arrow">&larr;</span> Previous</button>
+  <div id="step-info">Stop 0</div>
+  <button id="nextBtn">Next <span class="arrow">&rarr;</span></button>
+</div>
+
+
+<!-- javascript con el funcionamiento del mapa -->
+<script>
+
+// const map = L.map('map').setView([41.8, 1.5], 7); // anterior código
+// cargar el mapa sin centrarlo (para poder hacerlo responsive en pantallas pequeñas)
+const map = L.map('map'); 
+
+// Agrega el mapa base sacado de OpenStreetMap
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+
+// creación de variables que van a tomar su contenido del json
+let stops = [];           // paradas en la ruta (se llena con data.stops) con TODA su información (id, grupo, orden, coord, etc.)
+let colores = {};         // dicc colores por grupo (se llena con data.colores)
+let tramosDef = [];       // pares que conectan paradas [de,a] (se llena con data.tramos)
+let curvaturas = [];      // curvaturas calculadas para cada tramo
+let byId = {};            // dicc con los id unicos de las paradas
+let ordenAparicion = [];  // copia de stops que se ordena cuando se carga el archivo json de acuerdo a su campo orden
+let maxStep = 0;          // últ paso posible
+let step = 0;             // paso actual; si es 0 solo se ve el origen
+
+const markers = {};       // dicc donde se guardan los marcadores dibujados por id
+const lines = [];         // aquí se guardan las líneas dibujadas
+
+
+// ------------- función HTML para los pop-up: título en negrita, texto, foto, link -------------
+function popupHTML(s){
+  let html = `<div class="popup-content"><b>${s.titulo}</b><br>${s.llegada}<br>${s.salida}`;
+  s.fotos.forEach(f=> html += `<img src="${f}">`);
+  s.links.forEach(l=> html += `<br><a href="${l.url}" target="_blank">${l.label}</a>`);
+  html += `</div>`;
+  return html;
+}
+// ------------- fin de la función HTML para los pop-up -----------------------------------------
+
+// ------------- función para generar la info en un costado -------------------------------------
+function updateSidebar(stopData) {
+  // jalar la información del json
+  const titulo = document.getElementById('titulo');
+  const dateArrive = document.getElementById('fecha-llegada');
+  const dateDepart = document.getElementById('fecha-salida');
+  const txtArrive = document.getElementById('texto-arrive');
+  const txtDepart = document.getElementById('texto-depart');
+  const fotosDiv = document.getElementById('fotos-container');
+  const linksDiv = document.getElementById('links-container');
+
+  if (!stopData) {
+    titulo.textContent = 'Selecciona una parada';
+    dateArrive.style.display = 'none';
+    dateDepart.style.display = 'none';
+    txtArrive.style.display = 'none';
+    txtDepart.style.display = 'none';
+    fotosDiv.style.display = 'none';
+    linksDiv.style.display = 'none';
+    return;
+  }
+
+  titulo.textContent = stopData.titulo || 'Sin título';
+
+  // fecha de llegada
+  if (stopData.llegada) {
+    dateArrive.style.display = 'block';
+    dateArrive.querySelector('p').textContent = stopData.llegada;
+  } else {
+    dateArrive.style.display = 'none';
+  }
+  
+  // fecha de salida
+  if (stopData.salida) {
+    dateDepart.style.display = 'block';
+    dateDepart.querySelector('p').textContent = stopData.salida;
+  } else {
+    dateDepart.style.display = 'none';
+  }
+
+  // texto_arrive
+  if (stopData.texto_arrive && stopData.texto_arrive !== '-') {
+    txtArrive.style.display = 'block';
+    txtArrive.querySelector('p').textContent = stopData.texto_arrive;
+  } else {
+    txtArrive.style.display = 'none';
+  }
+
+  // texto_depart
+  if (stopData.texto_depart && stopData.texto_depart !== '-') {
+    txtDepart.style.display = 'block';
+    txtDepart.querySelector('p').textContent = stopData.texto_depart;
+  } else {
+    txtDepart.style.display = 'none';
+  }
+
+  // Fotos
+  if (stopData.fotos && stopData.fotos.length) {
+    fotosDiv.style.display = 'block';
+    fotosDiv.innerHTML = stopData.fotos.map(f => `<img src="${f}" alt="foto">`).join('');
+  } else {
+    fotosDiv.style.display = 'none';
+  }
+
+  // Links
+  if (stopData.links && stopData.links.length) {
+    linksDiv.style.display = 'block';
+    linksDiv.innerHTML = stopData.links.map(l =>
+      `<a href="${l.url}" target="_blank">${l.label}</a>`
+    ).join(' ');
+  } else {
+    linksDiv.style.display = 'none';
+  }
+}
+// ------------- fin de función para generar la info en un costado ------------------------------
+
+// ------------- función medium size (lol) para generar curvas en lugar de líneas ---------------
+// función que genera una lista de puntos que dibujan una curva (Bézier cuadrática) 
+// entre p1 (punto 1) y p2 (punto 2), los cuales se obtienen en base a la lat y long de cada coordenada.
+// curvature: qué tan "arqueada" es la curva (0 = línea recta)
+function curvedPoints(p1, p2, curvature = 0.2){
+  const [lat1,lng1] = p1, [lat2,lng2] = p2;
+
+  // calculo del punto medio entre origen y destino
+  const midLat = (lat1+lat2)/2;
+  const midLng = (lng1+lng2)/2;
+
+  // vector perpendicular a la línea p1->p2, usado para jalar el punto medio de la linea recta y generar la curva (como en un arco)
+  const dx = lng2-lng1, dy = lat2-lat1;
+  // Desplaza el punto medio en latitud
+  const offsetLat = midLat + (-dx)*curvature;
+  // Desplaza el punto medio en longitud
+  const offsetLng = midLng + (dy)*curvature;
+
+  // magia matemática que no entiendo :DDDD
+  // curva en 30 pasos usando la fórmula de Bézier cuadrática:
+  // B(t) = (1-t)^2 * P1 + 2(1-t)t * control + t^2 * P2
+  const points = [];    // puntos de la curva
+  const steps = 30;     // cantidad de segmentos que forman la curva (más = más suave)
+  for(let i=0;i<=steps;i++){
+    const t = i/steps;
+    const lat = (1-t)*(1-t)*lat1 + 2*(1-t)*t*offsetLat + t*t*lat2;
+    const lng = (1-t)*(1-t)*lng1 + 2*(1-t)*t*offsetLng + t*t*lng2;
+    points.push([lat,lng]);
+  }
+  return points;
+}
+// ------------- fin de función medium size (lol) para generar curvas en lugar de líneas --------
+
+
+
+// ------------- función para evitar superposiciones de curvas ----------------------------------
+// Si varios tramos conectan exactamente el mismo par de coordenadas, se les reparten curvaturas distintas
+function calcularCurvaturas(){
+  // curvatura si NO se comparten coordenadas, "de base"
+  const curvaturaBase = 0.2;
+  // caso contrario, la curvatura se aleja 0.15 (mayor valor, más separación)
+  const separacion = 0.2;
+
+  // dicc {par de coordenadas : lista de tramos de conectan}
+  const gruposPorPar = {};
+  // recorre los tramos, guardando su indice
+  tramosDef.forEach((t, i)=>{
+    let de, a;
+    if (Array.isArray(t)) {
+      de = t[0];
+      a = t[1];
+    } else {
+      de = t.de;
+      a = t.a;
+    }
+    // obtiene las coordenadas de origen y destino del tramo
+    const c1 = byId[de].coords, c2 = byId[a].coords;
+    //  ??
+    const key = [c1.join(','), c2.join(',')].sort().join('|');
+    if(!gruposPorPar[key]) gruposPorPar[key] = [];
+    gruposPorPar[key].push(i);
+  });
+
+  // array de curvaturas vacío
+  curvaturas = new Array(tramosDef.length);
+
+  // recorre la lista de indices que comparten el mismo par de coord (gruposPorPar)
+  Object.values(gruposPorPar).forEach(indices=>{
+    // cuenta cuántos tramos hay en ese grupo
+    const n = indices.length;
+    // guarda sus posiciones
+    indices.forEach((idxTramo, posEnGrupo)=>{
+
+      // ??
+      const offset = (posEnGrupo - (n-1)/2) * separacion;
+      
+      // guarda la curvatura final del tramo
+      curvaturas[idxTramo] = curvaturaBase + offset;
+    });
+  });
+}
+// ------------- fin de la función para evitar curvas superpuestas ------------------------------
+
+
+
+// ------------- función GIGANTE que va a dibujar el mapa de acuerdo con el número de paso ------
+function render(){
+  // cada vez que se presiona un botón, se borra todo lo que había antes, para que no hayan problemas de que se sobreescriban puntos cuando se retrocede o que se muestre algo posterior antes de llegar ahí
+  Object.values(markers).forEach(m=>map.removeLayer(m));  // quita cada marcador del mapa
+  lines.forEach(l=>map.removeLayer(l));                   // quita cada línea del mapa
+  for(const k in markers) delete markers[k];              // vacía el dicc donde se guardan los marcadores dibujados por id
+  lines.length = 0;                                       // vacía la variable que guardaba las líneas ya dibujadas
+
+  // visibles almacena las paradas visibles en función al número de paso
+  const visibles = ordenAparicion.slice(0, step+1);
+  
+  // Crea un conjunto (set) solo con los ids de esas paradas, para consultar rápido después (parte con tramosDef.forEach)
+  const visibleIds = new Set(visibles.map(s=>s.id));
+
+  // por cada parada visible, se crea un punto sobre sus coord
+  visibles.forEach(s=>{
+    const m = L.circleMarker(s.coords, {radius:8,
+                                        color:"#fff",
+                                        weight:2,
+                                        fillColor: colores[s.grupo]||"#333",
+                                        fillOpacity:1
+    
+    // coloca el punto en el mapa y lo asocia con su pop up
+    }).addTo(map).bindPopup(popupHTML(s));
+    
+    // guarda el punto en markers, de acuerdo a su id, para poder borrarlo después
+    markers[s.id] = m;
+  });
+
+  // por cada tramo con ambos extremos visibles, se va a dibujar una curva
+  tramosDef.forEach((t, i)=>{
+    let de, a, caminoManual, paradas;
+    if (Array.isArray(t)) {
+      de = t[0];
+      a = t[1];
+      caminoManual = null;
+      paradas = null;
+    } else {
+      de = t.de;
+      a = t.a;
+      caminoManual = t.camino || null;
+      paradas = t.paradas_intermedias || null;
+    }
+
+    if (!visibleIds.has(de) || !visibleIds.has(a)) return;
+      const s1=byId[de], s2=byId[a];
+      const color = colores[s2.grupo] ||"#333";
+
+      let puntosCurva;
+      if (caminoManual && caminoManual.length) {
+        puntosCurva = caminoManual;
+      } else {
+        // cálculo de los puntos de la curva entre ambas coord
+      puntosCurva = curvedPoints(s1.coords, s2.coords, curvaturas[i]);
+      }
+      
+      // dibuja la curva con el color del grupo de destino
+      const line = L.polyline(puntosCurva, {color, weight:2.5}).addTo(map);
+      // guarda la línea en lines para poder borrarla después
+      lines.push(line);
+      const decorador = L.polylineDecorator(line, {
+        patterns: [{
+          offset: '100%',                    // dónde va la punta: 100% = en el final/destino
+          repeat: 0,                        // (solo una punta)
+          symbol: L.Symbol.arrowHead({
+            pixelSize: 10,                  // tamaño de la flecha en píxeles
+            pathOptions: { color, fillOpacity: 1, weight: 0 } // mismo color que la línea
+          })
+        }]
+      }).addTo(map);
+      lines.push(decorador); // se guarda junto con las líneas, para que se borre en el próximo render()
+
+      //console.log('Tramo:', t, 'paradas', paradas);
+      if (paradas && paradas.length) {
+        paradas.forEach(p => {
+          const mini = L.circleMarker(p.coords, {
+            radius: 7,
+            color: "#fff",
+            weight: 1.5,
+            fillColor: color,
+            fillOpacity: 1
+          }).addTo(map);
+
+          //console.log('Dibujando parada:', p);
+          if (p.titulo) {
+            mini.bindPopup(`
+            <div class="popup-content">
+            <b>${p.titulo}</b>
+              ${p.texto ? `<br>${p.texto}` : ''}
+              </div>
+            `);
+          }
+          lines.push(mini);
+        });
+      }
+    });
+
+  // actualiza el panel lateral y el texto de la barra inferior de acuerdo con la última parada visible
+  const last = visibles[visibles.length-1];
+  // panel:
+  updateSidebar(last);
+
+  // todo lo demás es barra inferior:
+  document.getElementById('step-info').textContent =
+    `Stop ${step} of ${maxStep} — ${last.titulo}`;
+  
+  //desabilitación de botones si se está en la primera parada (anterior > prevBtn) o en la última (siguiente > nextBtn)
+  document.getElementById('prevBtn').disabled = step===0;
+  document.getElementById('nextBtn').disabled = step===maxStep;
+
+  // Si la parada trae un "zoom" propio en el JSON, usamos ese; si no, mantenemos el zoom actual del mapa
+  if(step>0){
+    const zoomObjetivo = (last.zoom !== undefined) ? last.zoom : map.getZoom();
+    map.flyTo(last.coords, zoomObjetivo); // flyTo anima tanto la posición como el zoom a la vez
+  }
+}
+// ------------- fin de la función GIGANTE que va a dibujar el mapa -----------------------------
+
+
+
+// ------------- función petit para rellenar la leyenda -----------------------------------------
+function buildLeyenda(){
+  // busca el div de leyenda en el html y lo completa
+  const cont = document.getElementById('leyenda');
+  // arma la lista de grupos con su color (el título va en summary)
+  const items = Object.entries(colores)
+    .map(([g,c])=>`<span style="background:${c}"></span>${g}`).join("<br>");
+    // <details> = empieza cerrada, para que empiece abierta colocar <details open>
+    cont.innerHTML = `<details><summary>Groups of the Expedition</summary>${items}</details>`;
+}
+// ------------- fin de la función para rellenar la leyenda -------------------------------------
+
+
+
+// ------------- BOTONES ------------------------------------------------------------------------
+// botón siguiente!!! avanza y (re)dibuja, salvo en el paso final 
+document.getElementById('nextBtn').onclick = ()=>{ if(step<maxStep){ step++; render(); } };
+// botón anterior!!! retrocede y (re)dibuja, salvo en el paso final 
+document.getElementById('prevBtn').onclick = ()=>{ if(step>0){ step--; render(); } };
+// ------------- FIN DE BOTONES -----------------------------------------------------------------
+
+
+
+// ------------- AQUÍ POR FIN SE USA TODA LA WEA ANTERIOR ---------------------------------------
+// se importa el json con los datos para que la cosa funcione
+fetch('paradas_salvany_peru.json?t=' + Date.now()) 
+  .then(res => {
+    // bota error si el archivo no está en la misma carpeta o si no llega la respuesta del servidor
+    if(!res.ok) throw new Error('No se pudo cargar viaje.json (status ' + res.status + ')');
+    // si todo bien, se convierte el json en javascript (TT_TT)
+    return res.json();
+  })
+  // se empiezan a llenar los objetos que están al principio del java (stops, colores, etc...)
+  .then(data => {
+    stops = data.stops;
+    colores = data.colores;
+    tramosDef = data.tramos;
+
+    // construcción de un dicc id para facilitar búsquedas
+    byId = Object.fromEntries(stops.map(s=>[s.id,s]));
+    // se ordenan las paradas de acuerdo al campo orden y se guardan en ordenAparicion 
+    ordenAparicion = stops.slice().sort((a,b)=>a.orden-b.orden);
+    // se calcula el último paso posible
+    maxStep = ordenAparicion.length - 1;
+    calcularCurvaturas();
+
+    // Centrar en el primer punto
+    const primerPunto = ordenAparicion[0];
+    if (primerPunto) {
+      map.setView(primerPunto.coords, 7);
+    }
+
+    // se construye la leyenda
+    buildLeyenda();
+    // se dibuja el mapa !!!!!
+    render();
+  })
+  // se muestra un mensaje de error en la barra inferior si es que algo falla
+  .catch(err => {
+    document.getElementById('step-info').textContent = 'Error cargando datos: ' + err.message;
+    // se muestra el error en la consola (se abre con F12)
+    // no se ve si no se abre, es para que yo pueda ubicar el error más fácilmente
+    console.error(err);
+  });
+// ------------- FIN: MAPA CREADO, SABINA FELIZ (Y CALVA) ---------------------------------------
+
+</script>
+</body>
+</html>
