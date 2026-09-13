@@ -186,7 +186,7 @@
     "titulo":"Sub-expedition Salvany - Salvany & Lozano: Quito",
     "llegada":"16 July 1805",
     "salida":"13 September 1805",
-    "texto_arrive":"In the Indiferente 1558A, f. 242v-243, it is recorded: «[...] Salvany y Lozano saliese precipitadamente de Popayán dirigiéndose a Quito por la provincia de Los Pastos, en cuyo viaje fueron cortando el contagio e instruyendo a los facultativos en los pueblos [243] de Túquerres, Patía, Herradura, Villas de Ibarra y de Otavalo hasta el Cayambe, o a los curiosos por falta de aquellos para que comunicasen y propagasen el fluido. A su llegada a quito en 16 de julio fueron recibidos a distancia de una legua por el cabildo los tribunales y la nobleza [...]».",
+    "texto_arrive":"In the Indiferente 1558A, f. 242v-243, it is recorded: «[...] Salvany y Lozano saliese precipitadamente de Popayán dirigiéndose a Quito por la provincia de Los Pastos, en cuyo viaje fueron cortando el contagio e instruyendo a los facultativos en los pueblos [243] de Túquerres, Patía, Herradura, Villas de Ibarra y de Otavalo hasta el Cayambe, o a los curiosos por falta de aquellos para que comunicasen y propagasen el fluido. A su llegada a Quito en 16 de julio fueron recibidos a distancia de una legua por el cabildo los tribunales y la nobleza [...]».",
     "texto_depart":"In the Indiferente 1558A, f. 244, it is recorded: «Al cabo de dos meses de mansión en Quito donde propagaron el fluido y se repusieron de sus fatigas y quebranto de salud, y después de haber celebrado una función solemne de iglesia en acción de gracias al todo poderoso, salió el 13 de septiembre con dirección a Cuenca [...]».",
     "fotos":["towns_visited/popayan-quito.png"], "links":[]},
 
@@ -216,7 +216,7 @@
     "titulo":"Sub-expedition Salvany - Salvany & Lozano (+ Fray Lorenzo): Loja",
     "llegada":"Unknown",
     "salida":"10 December 1805",
-    "texto_arrive":"In the Indiferente 1558A, f. 246-246v, it is recorded: «Salió la expedición de Cuenca en 16 de noviembre con dirección a la ciudad de Loxa pasando por los pueblos de Cumbe, Nabón y Oña donde logró cortar el contagio por medio de más de 900 vacunaciones.».",
+    "texto_arrive":"In the Indiferente 1558A, f. 246-246v, it is recorded: «Salió la expedición de Cuenca en 16 de noviembre con dirección a la ciudad de Loja pasando por los pueblos de Cumbe, Nabón y Oña donde logró cortar el contagio por medio de más de 900 vacunaciones.».",
     "texto_depart":"In the Indiferente 1558A, f. 246v, it is recorded: «En Loxa ascendieron a 1500 los vacunados y quedaron instruidos varios curiosos no solo en el modo de comunicar la vacuna a las personas sino también a las vacas y de estas a aquellas. Salió del Loja en 10 de diciembre [...]».",
     "fotos":["towns_visited/cuenca-loja.png"], "links":[]},
 
