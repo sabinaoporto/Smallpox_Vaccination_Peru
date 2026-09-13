@@ -52,7 +52,7 @@
     "llegada":"Arrival: 23 December 1805",
     "salida":"Departure: 9 January 1806",
     "texto_arrive":"On a letter from Salvany date 30 March 1809, signed in La Paz,  he recounts: «[...] llegué a la ciudad de Piura primer punto del dicho reino [Perú] el veinte y tres de diciembre del citado ochocientos cinco.», Indiferente 1558A, f. 1465v.",
-    "texto_depart":"In the same letter, Salvany continues: «[...] me recibió como a su libertador, viendo con complacencia cumplidos los vivos deseos que le asistían, pues el veinte y tres de diciembre al nuevo de enero de mil ochocientos seis que fue mi salida, vacuné a tres mil quinientos instruí a varios curiosos, no olvidando la asistencia de cuantos infelices fueron contagiados.», Indiferente 1558A, f. 1465v.",
+    "texto_depart":"In the same letter, Salvany continues: «[...] me recibió como a su libertador, viendo con complacencia cumplidos los vivos deseos que le asistían, pues el veinte y tres de diciembre al nueve de enero de mil ochocientos seis que fue mi salida, vacuné a tres mil quinientos instruí a varios curiosos, no olvidando la asistencia de cuantos infelices fueron contagiados.», Indiferente 1558A, f. 1465v.",
     "fotos":[], "links":[]
     },
 
@@ -166,10 +166,10 @@
     "fotos":[], "links":[]
     },
 
-    {"id":"s34", "grupo":"Sub-expedition Salvany: Salvany & Lozano", "grupo_padre":"Sub-expedition Salvany", 
+    {"id":"s34", "grupo":"Sub-expedition Salvany: Salvany", "grupo_padre":"Sub-expedition Salvany", 
     "orden":15,
     "coords":[-6.7643, -78.60691], "zoom": 9,
-    "titulo":"Sub-expedition Salvany - Salvany & Lozano: Mineral de Chota - Hualgayoc",
+    "titulo":"Sub-expedition Salvany - Salvany: Mineral de Chota - Hualgayoc",
     "llegada":"",
     "salida":"",
     "texto_arrive":"In Salvany's letter to Jose Antonio Caballero from 1 October 1806 is recorded: «A mi salida de Lambayeque seguí para Cajamarca, pasando por los pueblos de Reque, y de Chepén en quienes hice una vacunación general, recibiendo el beneficio doscientas diez, y seis personas en el primero, y ciento, y sesenta, y una en el segundo. El veinte del mismo mes llegué al despoblado vulgo dicho Pan de Azúcar en el que hube de hacer noche, y permanecer en el cuatro días por haberse escapado mientras descansábamos los arrieros que me conducían. [...] La casualidad hizo que a los cuatro días transitara por aquel paraje un indio, quien por lo que le regalé, pasó a la hacienda nombrada Udima, distante una jornada del lugar en que estábamos», Indiferente 1558A, f. 1327.",
@@ -177,10 +177,10 @@
     "fotos":[], "links":[]
     },
 
-    {"id":"s35", "grupo":"Sub-expedition Salvany: Salvany & Lozano", "grupo_padre":"Sub-expedition Salvany", 
+    {"id":"s35", "grupo":"Sub-expedition Salvany: Salvany", "grupo_padre":"Sub-expedition Salvany", 
     "orden":15,
     "coords":[-6.745950854543954, -78.52954130898765],
-    "titulo":"Sub-expedition Salvany - Salvany & Lozano: Llaucán",
+    "titulo":"Sub-expedition Salvany - Salvany: Llaucán",
     "llegada":"Arrival: unknown",
     "salida":"Departure: 6 March 1806",
     "texto_arrive":"In Salvany's account of his journey through Peru from 30 March 1809, signed in La Paz,  he says: «determiné pasar acompañado del subdelegado y primeras personas a una hacienda llamada Llaucán, a comunicarla, lo que logré en cuatrocientas setenta y seis, instruyendo igualmente a varios curiosos. Salí de Llaucán el seis de marzo [...]», Indiferente 1558A, f. 1468.",
@@ -188,10 +188,10 @@
     "fotos":[], "links":[]
     },
 
-    {"id":"s36", "grupo":"Sub-expedition Salvany: Salvany & Lozano", "grupo_padre":"Sub-expedition Salvany", 
+    {"id":"s36", "grupo":"Sub-expedition Salvany: Salvany", "grupo_padre":"Sub-expedition Salvany", 
     "orden":15,
     "coords":[-7.16378, -78.50027],
-    "titulo":"Sub-expedition Salvany - Salvany & Lozano: Cajamarca",
+    "titulo":"Sub-expedition Salvany - Salvany: Cajamarca",
     "llegada":"Arrival: 9 March 1806",
     "salida":"Departure: 14 April 1806",
     "texto_arrive":"In Salvany's letter to Jose Antonio Caballero from 1 October 1806 is recorded: «Salí de Llaucán el seis de marzo, y llegué a Cajamarca el nueve del mismo. A mi arribo a esta ciudad su subdelegado Don Joaquin Miguel de Arnaco dio al público la más alta idea de la importancia de la expedición [...]», Indiferente 1558A, f. 1237v.",
@@ -199,10 +199,10 @@
     "fotos":[], "links":[]
     },
 
-    {"id":"s37", "grupo":"Sub-expedition Salvany: Salvany & Lozano", "grupo_padre":"Sub-expedition Salvany", 
+    {"id":"s37", "grupo":"Sub-expedition Salvany: Salvany", "grupo_padre":"Sub-expedition Salvany", 
     "orden":15,
     "coords":[-8.11599, -79.02998],
-    "titulo":"Sub-expedition Salvany - Salvany & Lozano: Trujillo (again)",
+    "titulo":"Sub-expedition Salvany - Salvany: Trujillo (again)",
     "llegada":"Arrival: 20 April 1806",
     "salida":"Departure: unknown",
     "texto_arrive":"In Salvany's letter to Jose Antonio Caballero from 1 October 1806 is recorded: «[..] resolví continuar segunda vez mi camino para Trujillo, lo que efectué el catorce de abril. A mi arribo que fue el veinte, encontré de vuelta de la provincia del Choco al practicante Don Rafael Lozano Pérez, y al padre betlemita Fray Lorenzo Justiniano [...] fuimos obsequiados, y mantenidos a expensas de su citado Gobernador Intendente, quien procuró por los medios más eficaces que recibiera el beneficio que conducíamos la mayor parte de los que no habían contraído la viruela, y con todo [...] experimenté tal inacción o desidia en algunas gentes que fue forzoso después de no bastado la gratificación que daba dicho intendente a los que concurrían, obligarlos de por fuerza a ser vacunados, a fin de que no quedase yo sin vacuna [...]», Indiferente 1558A, f. 1328v-1329.",
