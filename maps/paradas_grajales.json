@@ -5,61 +5,6 @@
   },
 
   "stops": [
-    {"id":"l5", "grupo":"Sub-expedition Salvany: Lozano", "grupo_padre":"Sub-expedition Salvany", 
-    "orden":17,
-    "coords":[-12.04318, -77.02824], "zoom": 8,
-    "titulo":"Sub-expedition Salvany - Lozano: Lima",
-    "llegada":"",
-    "salida":"",
-    "texto_arrive":"In a missive from Simón Ravago, from 28 January 1807, it is recorded Lozano was still in Lima: «[...] prevengase a este haga que Dn. Rafael Perez, encargado en conducir el Pus Vacuno por la Carretera del Cuzco, se ponga inmediatamente en camino, informando lo mismo a los demás Empleados de la Expedición Filantrópica, cuya existencia en esta Capital es ya innecesaria [...]» (Bacuna file in Lastres, 1954, p. 215). In addition to this, in a letter from 30 March 1809, Salvany mentions he instructed Lozano to go to Huancavelica, Huamanga, and Cuzco before leaving Lima:«Dispuse antes de mi salida [...] Al segundo [1469v] ayudante lo destiné a las provincias de Huancavelica, Huamanga y el reino del Cuzco [...]» Indiferente 1558A, f. 1435v.",
-    "texto_depart":"",
-    "fotos":[], "links":[]
-    },
-
-    {"id":"l6", "grupo":"Sub-expedition Salvany: Lozano", "grupo_padre":"Sub-expedition Salvany", 
-    "orden":17,
-    "coords":[-12.78691, -74.97298],
-    "titulo":"Sub-expedition Salvany - Lozano: Huancavelica",
-    "llegada":"",
-    "salida":"",
-    "texto_arrive":"In a letter from 30 March 1809, Salvany records: «Al segundo ayudante lo destiné a las provincias de Huancavelica, Huamanga y el reino del Cuzco, y con su acostumbrado celo, respeto, y eficacia ha vacunado en ellas a veinte y cuatro mil cuarenta y uno.» Indiferente 1558A, f. 1469v. (He refers to Lozano as the segundo ayudante.)",
-    "texto_depart":"",
-    "fotos":[], "links":[]
-    },
-
-    {"id":"l7", "grupo":"Sub-expedition Salvany: Lozano", "grupo_padre":"Sub-expedition Salvany", 
-    "orden":17,
-    "coords":[-13.162544022674956, -74.21728227960666],
-    "titulo":"Sub-expedition Salvany - Lozano: Huamanga",
-    "llegada":"",
-    "salida":"",
-    "texto_arrive":"In a letter from 30 March 1809, Salvany records: «Al segundo ayudante lo destiné a las provincias de Huancavelica, Huamanga y el reino del Cuzco, y con su acostumbrado celo, respeto, y eficacia ha vacunado en ellas a veinte y cuatro mil cuarenta y uno.» Indiferente 1558A, f. 1469v. (He refers to Lozano as the segundo ayudante.)",
-    "texto_depart":"",
-    "fotos":[], "links":[]
-    },
-
-    {"id":"l8", "grupo":"Sub-expedition Salvany: Lozano", "grupo_padre":"Sub-expedition Salvany", 
-    "orden":17,
-    "coords":[-13.53188, -71.96701],
-    "titulo":"Sub-expedition Salvany - Lozano: Cuzco",
-    "llegada":"",
-    "salida":"",
-    "texto_arrive":"In a letter from 30 March 1809, Salvany records: «Al segundo ayudante lo destiné a las provincias de Huancavelica, Huamanga y el reino del Cuzco, y con su acostumbrado celo, respeto, y eficacia ha vacunado en ellas a veinte y cuatro mil cuarenta y uno.» Indiferente 1558A, f. 1469v. (He refers to Lozano as the segundo ayudante.) Also, in the Bacuna file, there a letter from Lozano from 23 January 1807 is recorded: «Recibí el Oficio de U. con fha. 20 y en el que me incluye el del Sor. Vice-Presidente de la Junta Central de Vacuna para que diga si determino seguir mi viage para el Cuzco, y en su contestación digo: que siempre que se me entreguen quinientos pesos para gastos de Expedición y una Orden que exprese que donde quiera que llegase se me franquee la plata que necesite y todos los demas auxilios, estoy pronto a salir el Miercoles 28 del presente, para mi destino [...]» (Lastres, 1954, p. 203).",
-    "texto_depart":"",
-    "fotos":[], "links":[]
-    },
-
-    {"id":"l9", "grupo":"Sub-expedition Salvany: Lozano", "grupo_padre":"Sub-expedition Salvany", 
-    "orden":17,
-    "coords":[-15.84003, -70.02198],
-    "titulo":"Sub-expedition Salvany - Lozano: Puno",
-    "llegada":"",
-    "salida":"",
-    "texto_arrive":"On 16 December 1807, in a letter from Salvany, it is recorded Lozano was still in Cuzco, and was supposed to go to Puno: «[...] aguardo con impaciencia que el ayudante Don Rafael Lozano Pérez me avise haber ya recorrido la provincia del Cuzco, para pasar a reunirme con él inmediatamente en la villa de Puno, desde donde juntos propagaremos el específico al inmenso gentío de esta provincia, al del Collao, y al de los Yungas; pues no me atrevo a verificarlo solo [...]» Indiferente 1558A, f. 1435v.",
-    "texto_depart":"",
-    "fotos":[], "links":[]
-    },
-
     {"id":"r15", "grupo":"Sub-expedition Salvany: Grajales & Bolaños", "grupo_padre":"Sub-expedition Salvany", 
     "orden":18,
     "coords":[-12.04318, -77.02824],
@@ -347,7 +292,7 @@
     }
   ],
 
-  "tramos": [["l5","l6"], ["l6","l7"],["l7","l8"], ["l8","l9"],
+  "tramos": [
 ["r15","r16"], ["r16","r17"], ["r17","r18"], ["r18","r19"], ["r19","r20"], 
 ["r20","r21"], ["r21","r22"], ["r22","r23"], ["r23","r24"], ["r24","r25"],
 ["r25","r26"], ["r26","r27"], ["r27","r28"], ["r28","r29"], ["r29","r30"], 
