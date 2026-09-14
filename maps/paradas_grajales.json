@@ -71,17 +71,6 @@
     "fotos":["towns_visited/Panataguas_(Panao).png"], "links":[]
     },
 
-    {"id":"r21", "grupo":"Sub-expedition Salvany: Grajales & Bolaños", "grupo_padre":"Sub-expedition Salvany", 
-    "orden":18,
-    "coords":[-13.07556, -76.38528],
-    "titulo":"Sub-expedition Salvany - Grajales & Bolaños: Cañete",
-    "llegada":"",
-    "salida":"",
-    "texto_arrive":"On 30 March 1809, in a letter from Salvany, it is recorded: «Dispuse antes de mi salida que el primer ayudante, y el enfermero pasaran a extender el Real beneficio en las provincias de Huarochirí, Jauja, Tarma, Huánuco, Panatagua y Canta lo que verificaron en nueve mil quinientos treinta y seis y que registradas estas se embarcaron para el reino de Chile, lo que han comprobado.» Indiferente 1558A, f. 1469.",
-    "texto_depart":"",
-    "fotos":[], "links":[]
-    },
-
     {"id":"r22", "grupo":"Sub-expedition Salvany: Grajales & Bolaños", "grupo_padre":"Sub-expedition Salvany", 
     "orden":18,
     "coords":[-11.46722, -76.62417],
@@ -294,7 +283,7 @@
 
   "tramos": [
 ["r15","r16"], ["r16","r17"], ["r17","r18"], ["r18","r19"], ["r19","r20"], 
-["r20","r21"], ["r21","r22"], ["r22","r23"], ["r23","r24"], ["r24","r25"],
+["r20","r22"], ["r22","r23"], ["r23","r24"], ["r24","r25"],
 ["r25","r26"], ["r26","r27"], ["r27","r28"], ["r28","r29"], ["r29","r30"], 
 ["r30","r31"], ["r31","r32"], ["r32","r33"], ["r33","r34"], ["r34","r35"],
 ["r35","r36"], ["r36","r37"], ["r37","r38"], ["r38","r39"]]
