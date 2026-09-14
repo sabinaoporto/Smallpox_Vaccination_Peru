@@ -213,7 +213,7 @@
     "coords":[-12.04318, -77.02824], "zoom": 8.5,
     "titulo":"Sub-expedition Salvany - Salvany, Lozano & Fray Lorenzo: Lima",
     "llegada":"23 May 1806",
-    "salida":"28 January 1807",
+    "salida":"28 January 1807 (Salvany's departure)",
     "texto_arrive":"In Salvany's letter to Jose Antonio Caballero from 1 October 1806 is recorded: «Debo confesar por lo que observé a mi llegada que fue el veinte, y tres de mayo, que la muy poca distinción que del Excelentísimo Cabildo mereció la Real Expedición fue principalmente debida a los respetos de este dignísimo prelado [Benito María de Moxó Arzobispo de la Plata] [...]», Indiferente 1558A, f. 1329.",
     "texto_depart":"In Salvany's account of his journey through Peru from 30 March 1809, signed in La Paz,  he says: «De Trujillo me encaminé a la ciudad de Lima: en el viaje vacuné en las villas de Santa a veinte y tres, Huara [sic] a doscientos, Chancay veinte y cinco, y en el pueblo de Pativilca treinta y dos. El veinte y tres de mayo llegué a aquella capital en la que permanecí hasta el veinte y ocho de enero de mil ochocientos siete.», Indiferente 1558A, f. 1468v.",
     "fotos":[], "links":[]
@@ -388,7 +388,7 @@
     {"id":"l9", "grupo":"Sub-expedition Salvany: Lozano", "grupo_padre":"Sub-expedition Salvany", 
     "orden":17,
     "coords":[-15.84003, -70.02198],
-    "titulo":"Sub-expedition Salvany - Lozano: Puno",
+    "titulo":"Sub-expedition Salvany - Lozano: Puno?",
     "llegada":"",
     "salida":"",
     "texto_arrive":"On 16 December 1807, in a letter from Salvany, it is recorded Lozano was still in Cuzco, and was supposed to go to Puno: «[...] aguardo con impaciencia que el ayudante Don Rafael Lozano Pérez me avise haber ya recorrido la provincia del Cuzco, para pasar a reunirme con él inmediatamente en la villa de Puno, desde donde juntos propagaremos el específico al inmenso gentío de esta provincia, al del Collao, y al de los Yungas; pues no me atrevo a verificarlo solo [...]» Indiferente 1558A, f. 1435v.",
