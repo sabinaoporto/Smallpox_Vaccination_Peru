@@ -1,4 +1,4 @@
-. 		{font-family: Giorgia, serif;
+. 		{font-family: Tahoma, sans-serif;
 		}
 
 *, *::before, *::after {
@@ -147,8 +147,18 @@ article	{text-align: justify;
 				padding-right: 10%;
 				}
 
+#text_manuscripts	{text-align: justify;
+		padding-left: 20px;
+		padding-right: 20px;
+		margin-top: 10px;
+		margin-bottom: 10px;		
+		background-color: #fafdff;
+		max-width: 70%;
+		}
+
 .side_img 	{max-width: 50%;
-			align-self: flex-start;
+			margin: 0px;
+			align-self: center;
 			}
 
 .text 	{display: flex;
@@ -183,6 +193,11 @@ article	{text-align: justify;
 
 .text article figure img {margin-bottom: 10px;}
 
+ol {list-style-position: outside;
+	padding-left: 15px;
+	}
+ol li {padding-left: 15px;}
+
 #code-actas li {
 	margin: 8px;
 	padding: 5px;
@@ -206,8 +221,8 @@ article	{text-align: justify;
 
 .members div	{border: 1px #c7e3ff solid;
 				margin: 10px;
-				width: 400px;
-				height: 250px;
+				width: 350px;
+				height: 275px;
 				background-color: white;
 				}
 
@@ -261,6 +276,7 @@ iframe	{width: 70%;
 #iframe5 {
 	width: 85%;
 	border: 0;
+	padding-top: 0px;
 		}
 
 .interactive_map 	{display: block;
@@ -397,6 +413,10 @@ iframe	{width: 70%;
 		padding-left: 12px;
 		padding-right: 12px;
 		}
+
+	#text_manuscripts {
+		max-width: 100%;
+	}
 
 	h1 {
 		margin-left: 0;

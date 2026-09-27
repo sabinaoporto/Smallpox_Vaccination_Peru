@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="80">
+	<g id="d" transform="rotate(45 40,40)" stroke="#000" stroke-width=".3">
+		<path d="M 40,6 V 40 L 33.2,33.2 z" fill="#00b3ff"/>
+		<path d="M 40,6 V 40 L 46.8,33.2 z" fill="#0ff"/>
+	</g>
+	<use xlink:href="#d" transform="rotate(90 40,40)"/>
+	<use xlink:href="#d" transform="rotate(180 40,40)"/>
+	<use xlink:href="#d" transform="rotate(270 40,40)"/>
+	<g id="r" stroke="#000" stroke-width=".3">
+		<path d="M 40,0 V 40 L 32,32 z" fill="#03f"/>
+		<path d="M 40,0 V 40 L 48,32 z" fill="#c8ffff"/>
+	</g>
+	<use xlink:href="#r" transform="rotate(90 40,40)"/>
+	<use xlink:href="#r" transform="rotate(180 40,40)"/>
+	<use xlink:href="#r" transform="rotate(270 40,40)"/>
+</svg>

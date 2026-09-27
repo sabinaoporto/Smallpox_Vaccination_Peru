@@ -1,0 +1,797 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Untitled</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+	/* Paint a complete callout box on every PDF page fragment. */
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+/*
+ * Toggles and callouts hold arbitrary content, so they can easily be taller
+ * than a page. They must stay breakable: avoiding breaks inside them makes
+ * Chromium push the whole block onto the next page, which leaves the previous
+ * page mostly empty before every long toggle.
+ */
+details,
+aside {
+	margin: 1.25em 0;
+}
+
+/* Keep a toggle's title on the same page as the start of its content. */
+summary {
+	page-break-after: avoid;
+	break-after: avoid;
+}
+
+/*
+ * Toggle headings render as <h1/h2/h3 style="display:inline-block"> inside
+ * <summary>. Without this reset, the heading's margin-top pushes it below the
+ * ::marker (▼), so the triangle and the title appear on separate lines.
+ */
+summary h1,
+summary h2,
+summary h3,
+summary h4 {
+	margin-top: 0;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="3e8f3b61-2379-8037-972f-e0f83855dadb" class="page sans"><div class="page-body"><table id="3e8f3b61-2379-8034-8cd6-c12bd1c749c1" class="simple-table" dir="ltr"><tbody><tr id="3e8f3b61-2379-8032-8b63-c9e06cbe9baa" dir="ltr"><td id="wkM;" class=""><strong>Folio</strong></td><td id="&gt;?Iq" class=""><strong>Reference numbe</strong>r</td><td id="xboF" class=""><strong>File name</strong></td><td id="B^?S" class=""><strong>Content</strong></td></tr><tr id="3e8f3b61-2379-80fc-b4e3-dba22442699e" dir="ltr"><td id="wkM;" class="">1 – 286</td><td id="&gt;?Iq" class="">INDIFERENTE,1558A,N.1<br/>Expedición filantrópica de la vacuna. Extracto general.</td><td id="xboF" class="">SDR_C_11503_0166 - SDR_C_11503_0452</td><td id="B^?S" class="">[1813, marzo 12. Cádiz]<br/>Extracto general del expediente de la vacuna en Ultramar.<br/>(1802 - 1809 Incompleto)</td></tr><tr id="3e8f3b61-2379-80f9-8675-e2d2d9efd98f" dir="ltr"><td id="wkM;" class="">287 – 315</td><td id="&gt;?Iq" class="">INDIFERENTE,1558A,N.2<br/>Brevísimo resumen del extracto del expediente general de la vacuna en ultramar</td><td id="xboF" class="">SDR_C_11503_0453 - SDR_C_11503_0481</td><td id="B^?S" class="">[1813, abril 3]<br/>Breve resumen del extracto del expediente general de la vacuna en Ultramar.</td></tr><tr id="3e8f3b61-2379-80cf-9304-eb3a72f4d6a9" dir="ltr"><td id="wkM;" class="">316 – 402</td><td id="&gt;?Iq" class="">INDIFERENTE,1558A,N.3<br/>Expediente de Vacuna. 1802 y 1803. Nº1. Origen de la expedición de la vacuna: representación del Ayuntamiento de Santa Fe y consultas del Consejo sobre el particular</td><td id="xboF" class="">SDR_C_11503_0482 - SDR_C_11503_0580</td><td id="B^?S" class="">1802 - 1803<br/>Expediente sobre el origen de la expedición de la vacuna: representación del Ayuntamiento de Santa Fé, consultas del Consejo de Indias, nombramiento de Francisco Javier Balmis, reglamento y derrotero de la expedición…</td></tr><tr id="3e8f3b61-2379-8011-9136-e549ed288c30" dir="ltr"><td id="wkM;" class="">403 – 414</td><td id="&gt;?Iq" class="">INDIFERENTE,1558A,N.4<br/>Permiso concedido al médico de familia Don Lorenzo Verges para que pase a Santa Fe con el Virrey Amar, con el fin de propagar la vacuna</td><td id="xboF" class="">SDR_C_11503_0581 - SDR_C_11503_0598</td><td id="B^?S" class="">1803<br/>Expediente sobre el permiso concedido a Lorenzo Verges, médico, para que pase a Santa Fe con el virrey Amar con el fin, entre otros, de propagar la vacuna.</td></tr><tr id="3e8f3b61-2379-8010-a407-f528470eb282" dir="ltr"><td id="wkM;" class="">415 – 446</td><td id="&gt;?Iq" class="">INDIFERENTE,1558A,N.5<br/>Expediente tramitado por la Secretaría de Hacienda para que a los miembros de la expedición de la vacuna se le abonen sus salarios a cargo de la Real Hacienda.</td><td id="xboF" class="">SDR_C_11504_0009 - SDR_C_11504_0051</td><td id="B^?S" class="">1803 – 1805<br/>Expediente de la Circular de 4-VIII-1803 de la Secretaría de Hacienda sobre la Expedición de la vacuna a costa de la Real Hacienda. Contestaciones a la Circular.</td></tr><tr id="3e8f3b61-2379-806e-96c7-cbd93a4ed5d0" dir="ltr"><td id="wkM;" class="">447 – 466</td><td id="&gt;?Iq" class="">INDIFERENTE,1558A,N.6<br/>Resolución del Rey sobre la propagación de la vacuna en ambas Américas y Filipinas, como los medios adoptados para conseguirlo</td><td id="xboF" class="">SDR_C_11504_0052 - SDR_C_11504_0073</td><td id="B^?S" class="">1803, IX, 1. San Ildefonso<br/>Circular comunicando la resolución del rey sobre la propagación de la vacuna y medios para conseguirlo.</td></tr><tr id="3e8f3b61-2379-80af-b2b2-d2b5dec4c1f9" dir="ltr"><td id="wkM;" class="">467 – 478</td><td id="&gt;?Iq" class="">INDIFERENTE,1558A,N.7<br/>Expediente relativo a la situación de la viruela en la Provincia de Cartagena de Indias</td><td id="xboF" class="">SDR_C_11504_0074 - SDR_C_11504_0089</td><td id="B^?S" class="">1803 – 1805<br/>Expedientes sobre la propagación de la vacuna en Cartagena de Indias.</td></tr><tr id="3e8f3b61-2379-8072-b3de-f1e1f78f5263" dir="ltr"><td id="wkM;" class="">479 – 492</td><td id="&gt;?Iq" class="">INDIFERENTE,1558A,N.8<br/>Expediente relativo a la recepción de la Real Orden sobre la propagación de la vacuna en Nuevo México y Perú</td><td id="xboF" class="">SDR_C_11504_0090 - SDR_C_11504_0109</td><td id="B^?S" class="">1803, V, 20. Aranjuez<br/>Oficio para que se auxilie en la propagación de la vacuna. Contestaciones.</td></tr><tr id="3e8f3b61-2379-8051-ac01-e6c177bde602" dir="ltr"><td id="wkM;" rowspan="2" class="">493 – 656</td><td id="&gt;?Iq" class="">INDIFERENTE,1558A,N.9<br/>Expediente relativo a la expedición de la vacuna en Caracas</td><td id="xboF" class="">SDR_C_11504_0111 - SDR_C_11504_0268</td><td id="B^?S" rowspan="2" class="">1804 – 1808<br/>Expedientes sobre la propagación de la vacuna en Venezuela: cartas de Manuel Guevara Vasconcelos, y Juan de Casas, Capitanes Generales de Venezuela informando sobre la propagación, la Junta Central, instancias de Manuel Ponte, Antonio Fernández León, memorias de José Domingo Díaz, miembro de la Junta y expediente de Vicente Salias con quejas sobre el Capitán General y reflexiones sobre la vacuna</td></tr><tr id="3e8f3b61-2379-80c8-bf5b-ee299faae8b3" dir="ltr"><td id="&gt;?Iq" class="">INDIFERENTE,1558A,N.10<br/>Instancias, oficios, informes, memorias, reflexiones sobre la falsa vacuna</td><td id="xboF" class="">SDR_C_11504_0269 - SDR_C_11504_0283</td></tr><tr id="3e8f3b61-2379-8095-b779-f719545903e4" dir="ltr"><td id="wkM;" class="">657 – 665</td><td id="&gt;?Iq" class="">INDIFERENTE,1558A,N.11<br/>Expediente sobre la llegada de la vacuna a La Habana y preparación del viaje hacia Campeche y Veracruz</td><td id="xboF" class="">SDR_C_11504_0284 - SDR_C_11504_0294</td><td id="B^?S" class="">1804<br/>Expedientes sobre la expedición de la vacuna en Cuba.</td></tr><tr id="3e8f3b61-2379-8045-b78b-ee22c4124f00" dir="ltr"><td id="wkM;" class="">666 – 668</td><td id="&gt;?Iq" rowspan="3" class="">INDIFERENTE,1558A,N.12<br/>Expediente relativo a la llegada de las fragatas de la expedición de la vacuna a Veracruz, la organización de la vacunación y expedición para Filipinas. Expediente sobre la extinción de la vacuna en Xalapa.</td><td id="xboF" class="">SDR_C_11504_0295 - SDR_C_11504_0297</td><td id="B^?S" class="">1804 – 1807<br/>Expedientes sobre la expedición de la vacuna en Nueva España:<br/>- Carta del Virrey José de Iturrigaray</td></tr><tr id="3e8f3b61-2379-802d-9844-f168ff676125" dir="ltr"><td id="wkM;" class="">669 – 681</td><td id="xboF" class="">SDR_C_11504_0298 - SDR_C_11504_0312</td><td id="B^?S" class="">- Veracruz</td></tr><tr id="3e8f3b61-2379-80d9-845f-dcb1c556d935" dir="ltr"><td id="wkM;" class="">682 – 685</td><td id="xboF" class="">SDR_C_11504_0313 - SDR_C_11504_0318</td><td id="B^?S" class="">- Jalapa</td></tr><tr id="3e8f3b61-2379-8058-9b40-f6d782e7a7b8" dir="ltr"><td id="wkM;" class="">686 – 747</td><td id="&gt;?Iq" class="">INDIFERENTE,1558A,N.14<br/>Oficios, informes y nóminas de los vacunados</td><td id="xboF" class="">SDR_C_11504_0319 - SDR_C_11504_0396</td><td id="B^?S" class="">- Puebla de los Angeles</td></tr><tr id="3e8f3b61-2379-806d-8a63-f3d2295482e4" dir="ltr"><td id="wkM;" class="">748 – 753</td><td id="&gt;?Iq" class="">INDIFERENTE,1558A,N.15<br/>Expediente sobre la llegada de la expedición de la vacuna a la ciudad de la Purísima Concepción de Celaya y actuaciones realizadas.</td><td id="xboF" class="">SDR_C_11504_0397 - SDR_C_11504_0405</td><td id="B^?S" class="">- Celaya</td></tr><tr id="3e8f3b61-2379-80da-b540-d3f010b23561" dir="ltr"><td id="wkM;" class="">754 – 807</td><td id="&gt;?Iq" class="">INDIFERENTE,1558A,N.16<br/>Actuaciones para la propagación de la vacuna en las Provincias internas, pertenecientes al Virreinato de Nueva España</td><td id="xboF" class="">SDR_C_11504_0406 - SDR_C_11504_0472</td><td id="B^?S" class="">- Provincias Internas</td></tr><tr id="3e8f3b61-2379-80ce-b334-e4ba98809540" dir="ltr"><td id="wkM;" class="">808 – 836</td><td id="&gt;?Iq" rowspan="2" class="">INDIFERENTE,1558A,N.17<br/>Actuaciones del Obispo de Oaxaca para la propagación de la vacuna en Oaxaca y actuaciones de Francisco de Balmis en Zacatecas</td><td id="xboF" class="">SDR_C_11504_0489 - SDR_C_11504_0521</td><td id="B^?S" class="">- Oaxaca</td></tr><tr id="3e8f3b61-2379-8076-b725-e6096a743e11" dir="ltr"><td id="wkM;" class="">837 – 849</td><td id="xboF" class="">SDR_C_11504_0473 - SDR_C_11504_0488</td><td id="B^?S" class="">- Zacatecas</td></tr><tr id="3e8f3b61-2379-8003-93e8-df7b63468763" dir="ltr"><td id="wkM;" rowspan="2" class="">850 – 953</td><td id="&gt;?Iq" rowspan="2" class="">INDIFERENTE,1558A,N.18<br/>Expediente sobre el recibimiento y actuaciones sobre la llegada de la expedición de la vacuna a Guadalajara, a Valladolid y a Guanajuato</td><td id="xboF" class="">SDR_C_11504_0522 - SDR_C_11504_0605</td><td id="B^?S" rowspan="2" class="">- Guadalajara</td></tr><tr id="3e8f3b61-2379-8044-977e-df8024cea132" dir="ltr"><td id="xboF" class="">SDR_C_11505_0009 - SDR_C_11505_0035</td></tr><tr id="3e8f3b61-2379-807e-9505-c1b4e8febed3" dir="ltr"><td id="wkM;" class="">954 – 975</td><td id="&gt;?Iq" class="">INDIFERENTE,1558A,N.19<br/>Expediente sobre la llegada y actuaciones de la expedición de la vacuna a la villa de Lagos, en México.</td><td id="xboF" class="">SDR_C_11505_0036 - SDR_C_11505_0063</td><td id="B^?S" class="">- Villa de Lagos</td></tr><tr id="3e8f3b61-2379-8082-9176-ff34b4a1cd4e" dir="ltr"><td id="wkM;" class="">976 – 996</td><td id="&gt;?Iq" rowspan="2" class="">INDIFERENTE,1558A,N.13<br/>Memoriales, oficios, índices, informes, listas de los individuos vacunados<a href="https://app.notion.com/p/3e8f3b6123798037972fe0f83855dadb?pvs=21">[1]</a><br/>INDIFERENTE,1558A,N.20<br/>Expediente sobre la Real administración de la expedición y su acogida en los lugares de destino<br/>INDIFERENTE,1558A,N.21<br/>Actuaciones de la expedición de la vacuna en la ciudad de México</td><td id="xboF" class="">SDR_C_11505_0064 - SDR_C_11505_0087</td><td id="B^?S" class="">- Acapulco</td></tr><tr id="3e8f3b61-2379-809c-be9f-fc641e50fee6" dir="ltr"><td id="wkM;" class="">997 – 1112</td><td id="xboF" class="">SDR_C_11505_0088 - SDR_C_11505_0217</td><td id="B^?S" class="">- Quejas de Balmis sobre el Virrey, embarque en Acapulco hacia Filipinas, ordenes al Virrey de Nueva España, carta del virrey.<a href="https://app.notion.com/p/3e8f3b6123798037972fe0f83855dadb?pvs=21">[2]</a></td></tr><tr id="3e8f3b61-2379-80d9-a48d-ffcac2ac8a0e" dir="ltr"><td id="wkM;" class="">1113 – 1255</td><td id="&gt;?Iq" class="">INDIFERENTE,1558A,N.22<br/>Expediente sobre los viajes a oriente y la llegada de Balmis a Portugal</td><td id="xboF" class="">SDR_C_11505_0218 - SDR_C_11505_0381</td><td id="B^?S" class="">1804 – 1807<br/>Expedientes de la vacuna en Filipinas: llegada de Balmis a Manila, pasa a Cantón y Macao, regreso de Balmis a Lisboa...</td></tr><tr id="3e8f3b61-2379-80ff-9929-d65766ed3e48" dir="ltr"><td id="wkM;" class="">1256 – 1284</td><td id="&gt;?Iq" class="">INDIFERENTE,1558A,N.23<br/>Reglamento para la propagación y estabilidad de la vacuna en el Reyno de Guatemala</td><td id="xboF" class="">SDR_C_11505_0382 - SDR_C_11505_0414</td><td id="B^?S" class="">1804 – 1806<br/>Expedientes de la vacuna en Guatemala.</td></tr><tr id="3e8f3b61-2379-802c-92f8-e118a7e9ea05" dir="ltr"><td id="wkM;" class="">1285 – 1290</td><td id="&gt;?Iq" class="">INDIFERENTE,1558A,N.24<br/>José Salvany, médico de la expedición, informa al Secretario de Estado y del Despacho Universal de Gracia y Justicia de los trabajos que ha realizado en Santa Fe de Bogotá y otros territorios.</td><td id="xboF" class="">SDR_C_11505_0415 - SDR_C_11505_0421</td><td id="B^?S" class="">1805, III, 1. Santa Fe<br/>Carta de José Salvany al Secretario de Gracia y Justicia.</td></tr><tr id="3e8f3b61-2379-80ab-8def-f3ca0b0b63ab" dir="ltr"><td id="wkM;" class="">1290 – 1294<a href="https://app.notion.com/p/3e8f3b6123798037972fe0f83855dadb?pvs=21">[3]</a></td><td id="&gt;?Iq" class="">INDIFERENTE,1558A,N.25<br/>Expediente sobre la introducción de la vacuna en el Virreinato de Buenos Aires</td><td id="xboF" class="">SDR_C_11505_0422 - SDR_C_11505_0425</td><td id="B^?S" class="">1805, VIII, 5.<br/>Carta del Marqués de Sobremonte, virrey de Buenos Aires, al secretario de Gracia y Justicia.</td></tr><tr id="3e8f3b61-2379-8053-bbe6-cfe3df769e66" dir="ltr"><td id="wkM;" rowspan="2" class="">1295 – 1403</td><td id="&gt;?Iq" class="">INDIFERENTE,1558A,N.26<br/>Virreynato del Perú. Expediente de vacuna. nº20</td><td id="xboF" rowspan="2" class="">SDR_C_11505_0426 - SDR_C_11505_0553</td><td id="B^?S" rowspan="2" class="">1805 – 1807<br/>Expedientes de los progresos de la vacuna en el virreinato del Perú: cartas del virrey, de José Salvany, encargado de la expedición, del gobernador intendente de Arequipa y el subdelegado de Cajamarca.</td></tr><tr id="3e8f3b61-2379-806b-b2df-c8ef6b5ae5b0" dir="ltr"><td id="&gt;?Iq" class="">INDIFERENTE,1558A,N.27<br/>Expediente sobre la vacunación en la Provincia de Arequipa</td></tr><tr id="3e8f3b61-2379-80e6-b35f-f5c3a84e8682" dir="ltr"><td id="wkM;" class="">1404 – 1432</td><td id="&gt;?Iq" class="">INDIFERENTE,1558A,N.28<br/>Reglamentos de la vacuna para España e Indias por Francisco Xavier Balmis</td><td id="xboF" class="">SDR_C_11505_0554 - SDR_C_11505_0585</td><td id="B^?S" class="">1807<br/>Expedientes sobre los Reglamentos de vacuna para España e Indias presentados por Francisco Javier Balmis.</td></tr><tr id="3e8f3b61-2379-806c-91d4-d83754cd186f" dir="ltr"><td id="wkM;" class="">1433 – 1490</td><td id="&gt;?Iq" class="">INDIFERENTE,1558A,N.29<br/>Expediente sobre la petición de José Salvany Lleopart, subdirector de la Expedición Filantrópica, para obtener el oficio en Indias. Expediente de vacuna nº23</td><td id="xboF" class="">SDR_C_11505_0586 - SDR_C_11505_0600<br/>SDR_C_11505_0606<br/>SDR_C_11506_0009 - SDR_C_11506_0065</td><td id="B^?S" class="">1807 – 1809<br/>Expediente sobre la solicitud de José Salvany de la intendencia de Arequipa o la plaza de tesorero de Lima.</td></tr><tr id="3e8f3b61-2379-80c5-ac22-c70f24f57ebb" dir="ltr"><td id="wkM;" class="">1491 – 1492</td><td id="&gt;?Iq" class=""></td><td id="xboF" class="">SDR_C_11506_0066 - SDR_C_11506_0067</td><td id="B^?S" class="">1809<br/>Petición de María Dolores Rodríguez Panadero, mujer de Basilio Beato de Bolaños, enfermero de la expedición.</td></tr><tr id="3e8f3b61-2379-806b-8f42-c15aebcd5681" dir="ltr"><td id="wkM;" class="">1493 – 1552</td><td id="&gt;?Iq" class="">INDIFERENTE,1558A,N.30<br/>Actuaciones realizadas en las Islas Filipinas en relación con la implantación de la vacuna</td><td id="xboF" class="">SDR_C_11506_0068 - SDR_C_11506_0132</td><td id="B^?S" class="">1809 – 1810<br/>Expediente sobre la Junta de Vacunación de Manila propuesta por Francisco Javier Balmis y reglamento de la misma.</td></tr><tr id="3e8f3b61-2379-801a-ae53-c52abbe4d95d" dir="ltr"><td id="wkM;" class="">1553 – 1555</td><td id="&gt;?Iq" rowspan="3" class="">INDIFERENTE,1558A,N.31<br/>Actuaciones sobre la vacuna de la viruela</td><td id="xboF" class="">SDR_C_11506_0133 - SDR_C_11506_0136</td><td id="B^?S" class="">1813, abril, 3. Cádiz<br/>Minuta de oficio del Ministerio de la Gobernación de Ultramar al Presidente del Tribunal del Protomedicato.</td></tr><tr id="3e8f3b61-2379-8049-98c1-de80f3935a93" dir="ltr"><td id="wkM;" class="">1556 – 1557</td><td id="xboF" class="">SDR_C_11506_0136 - SDR_C_11506_0137</td><td id="B^?S" class="">1820, noviembre, 18. Madrid<br/>Minuta del Real Orden al Gobernador de Yucatán.</td></tr><tr id="3e8f3b61-2379-80ad-b9cb-d3b6d016eba6" dir="ltr"><td id="wkM;" class="">1558 – 1560</td><td id="xboF" class="">SDR_C_11506_0138 - SDR_C_11506_0140</td><td id="B^?S" class="">S. F.<br/>Varios</td></tr></tbody></table><p id="3e8f3b61-2379-803d-b030-fde1e2d6a761" class="" dir="auto">[1] According to the description PARES provides for this <em>signatura</em>, I am assuming it concerns the folios of Acapulco, despite being the only one escaping the logical increasing order.</p><p id="3e8f3b61-2379-8058-89c0-c84fd105c8b8" class="" dir="auto">[2] A frequently quoted document that is contained in this file is the list of children Balmis took to the Philippines. This one corresponds to folio 1056, file SDR_C_11505_0154.</p><p id="3e8f3b61-2379-80f5-8d19-ec858b58d5ee" class="" dir="auto">[3] This is a mistake on the part of the AGI, as in the actual documents they jump from folio 1290 to 1291v, to 1292. I am not modifying it for the sake of preserving the original classifications and to avoid further confusion.</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
