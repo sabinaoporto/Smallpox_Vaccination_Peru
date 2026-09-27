@@ -1,10 +1,18 @@
 name: Build Pagefind Index
 
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 permissions:
   contents: write
-  
-on:
-  workflow_dispatch:
+  pages: write
+  id-token: write
 
 jobs:
   build-pagefind:
@@ -51,3 +59,19 @@ jobs:
           git add pagefind
           git commit -m "Actualizar índice Pagefind" || echo "Sin cambios en el índice"
           git push
+
+      - name: Preparar artifact para Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+  deploy:
+    needs: build-pagefind
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Desplegar a GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
