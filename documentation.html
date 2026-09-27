@@ -27,6 +27,14 @@
             element: "#search",
             showSubResults: true
         });
+
+        document.getElementById("search").addEventListener("click", (e) => {
+            const link = e.target.closest("a");
+            if (link) {
+                link.target = "_blank";
+                link.rel = "noopener";
+            }
+        });
     });
 </script>
 	
